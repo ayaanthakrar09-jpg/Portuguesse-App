@@ -9,8 +9,7 @@ const upcoming = [
   {
     path: "/vocab",
     title: "Vocab",
-    milestone: 2,
-    text: "Flashcards with example sentences, audio and spaced repetition, so words come back just before you forget them.",
+    text: "Words organised into levels that get harder, practised with flashcards, fill-in-the-blank and typing exercises.",
   },
   {
     path: "/speaking",
