@@ -13,6 +13,8 @@ Read `CLAUDE.md` first (goals, stack, content rules, working style). This file i
 Branch `vocab-draft` holds a first flashcard version: `src/data/vocab.json` (40 pt-PT words, all `verified: false`), `src/lib/srs.js` (spaced repetition: Again/Hard/Good/Easy, "already known"), and `src/pages/Vocab.jsx` (session with keyboard shortcuts: Space, then 1 to 4). It was tested and worked. The user asked to plan Vocab properly before building, so it was kept off `main`. Reuse it when it fits. Push the branch to GitHub as a backup if the user agrees.
 
 ## Next: plan Vocab (nothing built yet)
+The agreed brief for this is in `VOCAB_PROMPT.md` (levels with a pass-to-unlock test, units by topic inside levels, words and phrases, rising exercise difficulty). The branch `vocab-draft` is also on GitHub now.
+
 The user wants Vocab to be the biggest section, organised in **levels** that get harder. Inside each level, the exercise types are part of the level and rise in difficulty: flashcards, fill-in-the-blank, typing the word (more later, such as matching).
 
 Agreed advice to confirm with the user before building:
