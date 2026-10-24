@@ -1,0 +1,9 @@
+[
+  { "id": "p1", "pt": "Bom dia! Como estás?", "en": "Good morning! How are you?", "verified": false },
+  { "id": "p2", "pt": "Muito prazer em conhecer-te.", "en": "Nice to meet you. (informal)", "verified": false },
+  { "id": "p3", "pt": "Pode repetir, por favor?", "en": "Can you repeat that, please?", "verified": false },
+  { "id": "p4", "pt": "Onde fica a estação de comboios?", "en": "Where is the train station?", "verified": false },
+  { "id": "p5", "pt": "Queria um café, se faz favor.", "en": "I'd like a coffee, please.", "verified": false },
+  { "id": "p6", "pt": "Não faz mal.", "en": "No problem. / It doesn't matter.", "verified": false },
+  { "id": "p7", "pt": "Falo um pouco de português.", "en": "I speak a little Portuguese.", "verified": false }
+]
