@@ -4,11 +4,28 @@ export function speechSupported() {
   return typeof window !== "undefined" && "speechSynthesis" in window;
 }
 
-function findEuropeanVoice() {
-  return speechSynthesis.getVoices().find((voice) => voice.lang.replace("_", "-").toLowerCase() === "pt-pt");
+function normaliseLang(lang) {
+  return lang.replace("_", "-").toLowerCase();
 }
 
-// Resolves to "ok", "no-pt-pt-voice" (spoke with whatever the browser chose) or "unsupported".
+// Prefer European Portuguese, accept Brazilian as a flagged fallback, never use a non-Portuguese voice.
+function pickVoice() {
+  const voices = speechSynthesis.getVoices();
+  const european = voices.find((voice) => normaliseLang(voice.lang) === "pt-pt");
+  if (european) return { voice: european, status: "ok" };
+  const other = voices.find((voice) => normaliseLang(voice.lang).startsWith("pt"));
+  if (other) return { voice: other, status: "brazilian-voice" };
+  return { voice: null, status: "no-portuguese-voice" };
+}
+
+export const speechMessages = {
+  unsupported: "This browser can't play speech. Try Edge or Chrome.",
+  "no-portuguese-voice":
+    "No Portuguese voice is installed on this device, so audio is switched off rather than reading Portuguese with an English accent. Add Portuguese (Portugal) in Windows Settings > Time & language > Speech, then restart your browser.",
+  "brazilian-voice": "Only a Brazilian Portuguese voice is installed, so the accent will not be European.",
+};
+
+// Resolves to "ok", "brazilian-voice", "no-portuguese-voice" or "unsupported".
 export async function speak(text) {
   if (!speechSupported()) return "unsupported";
 
@@ -20,13 +37,15 @@ export async function speak(text) {
     });
   }
 
-  const voice = findEuropeanVoice();
+  const { voice, status } = pickVoice();
+  if (!voice) return status;
+
   const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "pt-PT";
+  utterance.voice = voice;
+  utterance.lang = voice.lang;
   utterance.rate = 0.9;
-  if (voice) utterance.voice = voice;
 
   speechSynthesis.cancel();
   speechSynthesis.speak(utterance);
-  return voice ? "ok" : "no-pt-pt-voice";
+  return status;
 }

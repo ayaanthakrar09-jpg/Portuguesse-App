@@ -2,16 +2,11 @@ import { Route, Routes } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import ComingSoon from "./pages/ComingSoon";
+import Vocab from "./pages/Vocab";
 import { useProgress } from "./lib/useProgress";
 
 // Sections that are not built yet show an honest "coming" page instead of a fake screen.
 const upcoming = [
-  {
-    path: "/vocab",
-    title: "Vocab",
-    milestone: 2,
-    text: "Flashcards with example sentences, audio and spaced repetition, so words come back just before you forget them.",
-  },
   {
     path: "/speaking",
     title: "Speaking",
@@ -41,6 +36,7 @@ export default function App() {
       <main className="main">
         <Routes>
           <Route path="/" element={<Dashboard progress={progress} updateProgress={updateProgress} />} />
+          <Route path="/vocab" element={<Vocab progress={progress} updateProgress={updateProgress} />} />
           {upcoming.map((page) => (
             <Route key={page.path} path={page.path} element={<ComingSoon {...page} />} />
           ))}
