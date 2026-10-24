@@ -8,7 +8,8 @@ export function emptyProgress() {
     version: 1,
     days: [], // dates (YYYY-MM-DD) on which you practised
     practisedPhrases: 0,
-    cards: {}, // flashcards, added in Milestone 2: { id: { due: "YYYY-MM-DD", ... } }
+    cards: {}, // spaced repetition per vocab item: { id: { due: "YYYY-MM-DD", ... } }
+    vocab: { passedLevels: [] }, // levels whose test you have passed
   };
 }
 

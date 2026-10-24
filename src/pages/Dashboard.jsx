@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Icon from "../components/Icon";
 import phrases from "../data/phrases.json";
 import { speak, speechMessages } from "../lib/speech";
+import { learnedCount } from "../lib/srs";
 import { currentStreak, dateKey, exportBackup, readBackup } from "../lib/storage";
 
 function greeting() {
@@ -34,7 +35,7 @@ function lastSevenDays(days) {
 
 // The four learning areas. `ready` is false until that milestone is built.
 const activities = [
-  { to: "/vocab", label: "Vocab", icon: "vocab", color: "pink", ready: false },
+  { to: "/vocab", label: "Vocab", icon: "vocab", color: "pink", ready: true },
   { to: "/speaking", label: "Speaking", icon: "speaking", color: "red", ready: false },
   { to: "/reading", label: "Reading", icon: "reading", color: "blue", ready: false },
   { to: "/slang", label: "Slang", icon: "slang", color: "yellow", ready: false },
@@ -121,7 +122,7 @@ export default function Dashboard({ progress, updateProgress }) {
           <h2 className="card-title">Your progress</h2>
           <div className="side-stats">
             <div className="side-stat"><span className="stat-value">{currentStreak(progress.days)}</span><span className="stat-label">day streak</span></div>
-            <div className="side-stat"><span className="stat-value">{Object.keys(progress.cards).length}</span><span className="stat-label">words learned</span></div>
+            <div className="side-stat"><span className="stat-value">{learnedCount(progress.cards)}</span><span className="stat-label">words learned</span></div>
             <div className="side-stat"><span className="stat-value">{progress.practisedPhrases}</span><span className="stat-label">phrases practised</span></div>
           </div>
           <ul className="week">

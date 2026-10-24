@@ -276,6 +276,47 @@ ul { padding: 0; list-style: none; }
 
 .session-foot { display: grid; gap: 8px; justify-items: start; }
 
+.back-link { justify-self: start; margin-left: -10px; }
+
+/* Levels: the big numeral is the level's identity, set in the accent colour */
+.levels { display: grid; gap: 14px; }
+.level-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 22px;
+}
+.level-number { font-size: 3.6rem; font-weight: 700; line-height: 1; letter-spacing: -0.04em; color: var(--accent); min-width: 1ch; }
+.level-card.is-locked { opacity: 0.6; }
+.level-card.is-locked .level-number { color: var(--muted); }
+.level-body { display: grid; gap: 6px; }
+
+/* Units: a numbered sequence, worked through in order */
+.units { display: grid; padding: 0; margin: 0; list-style: none; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--surface); }
+.unit-row { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px; padding: 18px 20px; }
+.unit-row + .unit-row { border-top: 1px solid var(--line); }
+.unit-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  font-weight: 600;
+}
+.unit-body { display: grid; gap: 6px; }
+.unit-done { color: var(--muted); font-size: 0.875rem; }
+
+.meter { display: grid; gap: 4px; }
+.meter-track { height: 6px; border-radius: 999px; background: var(--surface-2); overflow: hidden; max-width: 320px; }
+.meter-fill { display: block; height: 100%; background: var(--accent); border-radius: inherit; }
+.meter-label { color: var(--muted); font-size: 0.85rem; }
+
 /* ---------- Narrower screens ---------- */
 @media (max-width: 1100px) {
   .home { grid-template-columns: minmax(0, 1fr); }
@@ -304,6 +345,12 @@ ul { padding: 0; list-style: none; }
   .panel-row .btn { grid-column: 1 / -1; }
   .stats-3 { grid-template-columns: 1fr; }
   .ratings { grid-template-columns: repeat(2, 1fr); }
+
+  .level-card { grid-template-columns: auto 1fr; padding: 20px; gap: 16px; }
+  .level-card > .btn, .level-card > p { grid-column: 1 / -1; }
+  .level-number { font-size: 2.8rem; }
+  .unit-row { grid-template-columns: auto 1fr; padding: 16px; }
+  .unit-row > .btn, .unit-row > .unit-done { grid-column: 2; justify-self: start; }
 }
 
 @media (prefers-reduced-motion: reduce) {

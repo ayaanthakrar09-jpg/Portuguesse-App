@@ -1,0 +1,16 @@
+{
+  "passMark": 0.8,
+  "levels": [
+    {
+      "id": 1,
+      "title": "First steps",
+      "units": [
+        { "id": "l1-greetings", "title": "Greetings and courtesy", "topic": "greetings" },
+        { "id": "l1-cafe", "title": "At the café", "topic": "food" },
+        { "id": "l1-around", "title": "Getting around", "topic": "travel" },
+        { "id": "l1-people", "title": "People and family", "topic": "people" },
+        { "id": "l1-time", "title": "Numbers and time", "topic": "time" }
+      ]
+    }
+  ]
+}
