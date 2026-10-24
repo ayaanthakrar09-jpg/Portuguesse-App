@@ -251,6 +251,7 @@ ul { padding: 0; list-style: none; }
   border-radius: var(--radius-lg);
   padding: clamp(24px, 5vw, 44px);
   display: grid;
+  grid-template-columns: minmax(0, 1fr); /* stops wide content (accent keys) stretching the card on phones */
   justify-items: start;
   gap: 18px;
 }
@@ -311,6 +312,45 @@ ul { padding: 0; list-style: none; }
 }
 .unit-body { display: grid; gap: 6px; }
 .unit-done { color: var(--muted); font-size: 0.875rem; }
+.unit-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px; }
+
+/* Typing exercise */
+.type-row { display: flex; gap: 10px; width: 100%; }
+.type-input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: 1.25rem;
+  padding: 11px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--text);
+}
+.type-input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.type-input.is-correct, .type-input.is-accent { border-color: #5fc08a; }
+.type-input.is-wrong { border-color: var(--red); }
+
+.accent-keys { display: flex; flex-wrap: wrap; gap: 6px; }
+.accent-key {
+  font: inherit;
+  min-width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--text);
+  cursor: pointer;
+}
+.accent-key:hover { border-color: #3f7a5f; }
+
+.feedback { display: grid; gap: 8px; width: 100%; border-top: 1px solid var(--line); padding-top: 16px; }
+.feedback-title { font-weight: 600; font-size: 1.1rem; }
+.feedback.is-correct .feedback-title, .feedback.is-accent .feedback-title { color: #7fd6a3; }
+.feedback.is-wrong .feedback-title { color: #ff8a7a; }
+
+.missed { display: grid; gap: 6px; }
+.missed li { display: flex; flex-wrap: wrap; gap: 4px 12px; }
 
 .meter { display: grid; gap: 4px; }
 .meter-track { height: 6px; border-radius: 999px; background: var(--surface-2); overflow: hidden; max-width: 320px; }
@@ -350,7 +390,7 @@ ul { padding: 0; list-style: none; }
   .level-card > .btn, .level-card > p { grid-column: 1 / -1; }
   .level-number { font-size: 2.8rem; }
   .unit-row { grid-template-columns: auto 1fr; padding: 16px; }
-  .unit-row > .btn, .unit-row > .unit-done { grid-column: 2; justify-self: start; }
+  .unit-actions { grid-column: 2; justify-content: flex-start; }
 }
 
 @media (prefers-reduced-motion: reduce) {

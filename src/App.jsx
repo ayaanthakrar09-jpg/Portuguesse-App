@@ -5,6 +5,7 @@ import ComingSoon from "./pages/ComingSoon";
 import VocabHome from "./pages/vocab/VocabHome";
 import LevelPage from "./pages/vocab/LevelPage";
 import FlashcardSession from "./pages/vocab/FlashcardSession";
+import TypingSession from "./pages/vocab/TypingSession";
 import { useProgress } from "./lib/useProgress";
 
 // Sections that are not built yet show an honest "coming" page instead of a fake screen.
@@ -41,6 +42,7 @@ export default function App() {
           <Route path="/vocab" element={<VocabHome progress={progress} />} />
           <Route path="/vocab/level/:levelId" element={<LevelPage progress={progress} />} />
           <Route path="/vocab/unit/:unitId" element={<FlashcardSession progress={progress} updateProgress={updateProgress} />} />
+          <Route path="/vocab/unit/:unitId/type" element={<TypingSession progress={progress} updateProgress={updateProgress} />} />
           <Route path="/vocab/review" element={<FlashcardSession review progress={progress} updateProgress={updateProgress} />} />
           {upcoming.map((page) => (
             <Route key={page.path} path={page.path} element={<ComingSoon {...page} />} />

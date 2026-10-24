@@ -9,7 +9,7 @@ export function emptyProgress() {
     days: [], // dates (YYYY-MM-DD) on which you practised
     practisedPhrases: 0,
     cards: {}, // spaced repetition per vocab item: { id: { due: "YYYY-MM-DD", ... } }
-    vocab: { passedLevels: [] }, // levels whose test you have passed
+    vocab: { passedLevels: [], typing: {} }, // levels whose test you passed; best typing score per unit
   };
 }
 
