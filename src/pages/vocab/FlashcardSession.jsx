@@ -9,8 +9,13 @@ import { displayPt, findUnit, genderText, isLevelOpen, openItems } from "../../l
 const ratingText = { again: "Again", hard: "Hard", good: "Good", easy: "Easy" };
 
 // One component for both a unit's flashcards (/vocab/unit/:unitId) and the review of due items (/vocab/review).
-export default function FlashcardSession({ progress, updateProgress, review = false }) {
+// The key starts a fresh session when you move from one unit straight to another.
+export default function FlashcardSession(props) {
   const { unitId } = useParams();
+  return <Session key={unitId ?? "review"} unitId={unitId} {...props} />;
+}
+
+function Session({ progress, updateProgress, review = false, unitId }) {
   const unit = review ? null : findUnit(unitId);
   const passed = progress.vocab.passedLevels;
   const today = dateKey();
