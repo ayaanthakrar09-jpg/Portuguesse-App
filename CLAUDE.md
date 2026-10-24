@@ -1,5 +1,7 @@
 # Portuguese (pt-PT) learning app
 
+**Start here:** read `HANDOFF.md` for the current status and what to do next.
+
 ## Goal
 Web app to learn **European Portuguese** (never Brazilian). Four areas: Vocab (flashcards + spaced repetition), Speaking (listen, repeat into mic, compare), Reading (short texts, tap-to-translate, questions), Slang (labelled expressions). Grammar, CEFR levels and the AI tutor are out of scope until later.
 
