@@ -26,7 +26,7 @@ export const speechMessages = {
 };
 
 // Resolves to "ok", "brazilian-voice", "no-portuguese-voice" or "unsupported".
-export async function speak(text) {
+export async function speak(text, { rate = 0.9 } = {}) {
   if (!speechSupported()) return "unsupported";
 
   // Some browsers load their voice list a moment after the page opens.
@@ -43,7 +43,7 @@ export async function speak(text) {
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.voice = voice;
   utterance.lang = voice.lang;
-  utterance.rate = 0.9;
+  utterance.rate = rate;
 
   speechSynthesis.cancel();
   speechSynthesis.speak(utterance);

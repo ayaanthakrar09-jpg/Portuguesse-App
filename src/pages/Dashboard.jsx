@@ -36,7 +36,7 @@ function lastSevenDays(days) {
 // The four learning areas. `ready` is false until that milestone is built.
 const activities = [
   { to: "/vocab", label: "Vocab", icon: "vocab", color: "pink", ready: true },
-  { to: "/speaking", label: "Speaking", icon: "speaking", color: "red", ready: false },
+  { to: "/speaking", label: "Speaking", icon: "speaking", color: "red", ready: true },
   { to: "/reading", label: "Reading", icon: "reading", color: "blue", ready: false },
   { to: "/slang", label: "Slang", icon: "slang", color: "yellow", ready: false },
 ];

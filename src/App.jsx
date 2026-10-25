@@ -8,16 +8,12 @@ import FlashcardSession from "./pages/vocab/FlashcardSession";
 import TypingSession from "./pages/vocab/TypingSession";
 import ChoiceSession from "./pages/vocab/ChoiceSession";
 import LevelTest from "./pages/vocab/LevelTest";
+import SpeakingHome from "./pages/speaking/SpeakingHome";
+import SpeakingSession from "./pages/speaking/SpeakingSession";
 import { useProgress } from "./lib/useProgress";
 
 // Sections that are not built yet show an honest "coming" page instead of a fake screen.
 const upcoming = [
-  {
-    path: "/speaking",
-    title: "Speaking",
-    milestone: 3,
-    text: "Hear a sentence, say it into your microphone, and see which words the browser understood.",
-  },
   {
     path: "/reading",
     title: "Reading",
@@ -47,6 +43,8 @@ export default function App() {
           <Route path="/vocab/unit/:unitId" element={<FlashcardSession progress={progress} updateProgress={updateProgress} />} />
           <Route path="/vocab/unit/:unitId/choose" element={<ChoiceSession progress={progress} updateProgress={updateProgress} />} />
           <Route path="/vocab/unit/:unitId/type" element={<TypingSession progress={progress} updateProgress={updateProgress} />} />
+          <Route path="/speaking" element={<SpeakingHome progress={progress} />} />
+          <Route path="/speaking/:unitId" element={<SpeakingSession progress={progress} updateProgress={updateProgress} />} />
           <Route path="/vocab/review" element={<FlashcardSession review progress={progress} updateProgress={updateProgress} />} />
           {upcoming.map((page) => (
             <Route key={page.path} path={page.path} element={<ComingSoon {...page} />} />

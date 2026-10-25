@@ -435,6 +435,20 @@ ul { padding: 0; list-style: none; }
 .gap.is-correct { border-color: #5fc08a; color: #7fd6a3; }
 .gap.is-wrong { border-color: var(--red); color: #ff8a7a; }
 
+/* Speaking */
+.page-section { display: grid; }
+.speak-sentence { font-size: clamp(1.6rem, 4.8vw, 2.3rem); font-weight: 600; letter-spacing: -0.015em; line-height: 1.25; }
+.word-heard { color: #7fd6a3; }
+.word-missed { color: var(--muted); opacity: 0.6; text-decoration: underline dotted; text-underline-offset: 6px; }
+.heard { display: grid; gap: 2px; width: 100%; border-top: 1px solid var(--line); padding-top: 14px; }
+.heard p[lang] { font-size: 1.15rem; }
+.speak-score { font-weight: 550; }
+.speak-score.is-all { color: #7fd6a3; }
+.btn.is-listening { background: var(--red); border-color: var(--red); color: #fff; animation: listening 1.2s ease-in-out infinite; }
+@keyframes listening {
+  50% { box-shadow: 0 0 0 8px rgba(229, 80, 63, 0.18); }
+}
+
 .missed { display: grid; gap: 6px; }
 .missed li { display: flex; flex-wrap: wrap; gap: 4px 12px; }
 
