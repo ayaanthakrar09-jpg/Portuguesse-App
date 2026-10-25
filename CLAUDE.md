@@ -3,7 +3,7 @@
 **Start here:** read `HANDOFF.md` for the current status and what to do next.
 
 ## Goal
-Web app to learn **European Portuguese** (never Brazilian). Four areas: Vocab (flashcards + spaced repetition), Speaking (listen, repeat into mic, compare), Reading (short texts, tap-to-translate, questions), Slang (labelled expressions). Grammar, CEFR levels and the AI tutor are out of scope until later.
+Web app to learn **European Portuguese** (never Brazilian). Five areas: Vocab (levels, flashcards, exercises, spaced repetition), Speaking (listen, repeat into mic, compare), Reading (short texts, tap-to-translate, questions), Grammar (short explanations plus drills, starting with the present tense), Slang (labelled expressions). CEFR levels and the AI tutor are out of scope until later.
 
 ## Stack
 React + Vite, JavaScript, plain CSS (variables, dark theme default), JSON content files, `localStorage` for progress. Keep dependencies minimal. No database or login yet.

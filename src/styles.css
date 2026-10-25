@@ -236,6 +236,7 @@ ul { padding: 0; list-style: none; }
 .c-red { background: var(--red); }
 .c-blue { background: var(--blue); color: #fff; }
 .c-yellow { background: var(--yellow); }
+.c-green { background: var(--tile); }
 .activity.is-soon .activity-circle { opacity: 0.45; }
 .activity-soon { color: var(--muted); font-size: 0.75rem; margin-top: -6px; }
 
@@ -478,7 +479,7 @@ ul { padding: 0; list-style: none; }
     z-index: 10;
   }
   .brand { display: none; }
-  .nav-list { grid-template-columns: repeat(5, 1fr); }
+  .nav-list { grid-auto-flow: column; grid-auto-columns: 1fr; }
   .nav-link { flex-direction: column; gap: 3px; padding: 8px 4px; font-size: 0.75rem; text-align: center; }
 
   .panel-row { grid-template-columns: auto 1fr; }
@@ -573,3 +574,15 @@ ul { padding: 0; list-style: none; }
   .reading-text { font-size: 1.15rem; }
   .word-panel { bottom: 88px; }
 }
+
+/* ---------- Grammar ---------- */
+.grammar-card { gap: 16px; max-width: 760px; }
+.grammar-card > p { max-width: 62ch; }
+.verb-table { border-collapse: collapse; width: 100%; max-width: 420px; }
+.verb-table th, .verb-table td { padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line); text-align: left; }
+.verb-table tr:last-child th, .verb-table tr:last-child td { border-bottom: 0; }
+.verb-table th { font-weight: 400; color: var(--muted); }
+.verb-table td[lang] { font-size: 1.3rem; font-weight: 600; color: var(--accent); }
+.verb-table td:last-child { width: 1%; padding-right: 0; }
+.grammar-examples { display: grid; gap: 10px; }
+.grammar-notes { display: grid; gap: 8px; padding-left: 18px; list-style: disc; color: var(--muted); }

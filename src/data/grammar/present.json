@@ -1,0 +1,197 @@
+[
+  {
+    "id": "g-ser",
+    "title": "ser",
+    "summary": "to be: who or what someone is",
+    "intro": [
+      "Ser means \"to be\" for what someone or something is: name, nationality, job, character, and also the time.",
+      "It's irregular, so the forms have to be learnt by heart."
+    ],
+    "table": [
+      { "person": "eu", "form": "sou" },
+      { "person": "tu", "form": "és" },
+      { "person": "ele / ela / você", "form": "é" },
+      { "person": "nós", "form": "somos" },
+      { "person": "eles / elas / vocês", "form": "são" }
+    ],
+    "examples": [
+      { "pt": "Eu sou inglês.", "en": "I'm English. (a woman says inglesa)" },
+      { "pt": "A Rita é professora.", "en": "Rita is a teacher." },
+      { "pt": "Nós somos amigos.", "en": "We're friends." },
+      { "pt": "São oito horas.", "en": "It's eight o'clock." }
+    ],
+    "notes": [
+      "No \"a\" before jobs: Sou estudante = I'm a student.",
+      "Você exists, but in Portugal it can sound distant or even rude. Use tu with friends; with strangers use o senhor / a senhora, or just the verb: É de Lisboa?",
+      "Vós (an old form of \"you all\") is only heard in some northern regions. This app uses vocês."
+    ],
+    "drills": [
+      { "type": "form", "person": "eu", "answer": "sou" },
+      { "type": "form", "person": "tu", "answer": "és" },
+      { "type": "form", "person": "ela", "answer": "é" },
+      { "type": "form", "person": "nós", "answer": "somos" },
+      { "type": "form", "person": "eles", "answer": "são" },
+      { "type": "form", "person": "vocês", "answer": "são" },
+      { "type": "sentence", "before": "Eu ", "after": " de Londres.", "answer": "sou", "en": "I'm from London." },
+      { "type": "sentence", "before": "A Rita ", "after": " professora.", "answer": "é", "en": "Rita is a teacher." },
+      { "type": "sentence", "before": "Tu ", "after": " muito simpático.", "answer": "és", "en": "You're very nice." },
+      { "type": "sentence", "before": "Nós ", "after": " portugueses.", "answer": "somos", "en": "We're Portuguese." },
+      { "type": "sentence", "before": "O João e a Ana ", "after": " irmãos.", "answer": "são", "en": "João and Ana are brother and sister." },
+      { "type": "sentence", "before": "", "after": " oito horas.", "answer": "São", "en": "It's eight o'clock." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-estar",
+    "title": "estar",
+    "summary": "to be: how or where someone is now",
+    "intro": [
+      "Estar also means \"to be\", but for how or where something is right now: feelings, health, location, weather and other states that change."
+    ],
+    "table": [
+      { "person": "eu", "form": "estou" },
+      { "person": "tu", "form": "estás" },
+      { "person": "ele / ela / você", "form": "está" },
+      { "person": "nós", "form": "estamos" },
+      { "person": "eles / elas / vocês", "form": "estão" }
+    ],
+    "examples": [
+      { "pt": "Estou cansado.", "en": "I'm tired. (a woman says cansada)" },
+      { "pt": "Onde estás?", "en": "Where are you?" },
+      { "pt": "O café está frio.", "en": "The coffee is cold." },
+      { "pt": "Hoje está calor.", "en": "It's hot today." }
+    ],
+    "notes": [
+      "Estar a + verb is how European Portuguese says you're doing something now: Estou a comer = I'm eating. (In Brazil: estou comendo.)",
+      "Describing words change with gender: cansado (man), cansada (woman)."
+    ],
+    "drills": [
+      { "type": "form", "person": "eu", "answer": "estou" },
+      { "type": "form", "person": "tu", "answer": "estás" },
+      { "type": "form", "person": "ele", "answer": "está" },
+      { "type": "form", "person": "nós", "answer": "estamos" },
+      { "type": "form", "person": "elas", "answer": "estão" },
+      { "type": "form", "person": "você", "answer": "está" },
+      { "type": "sentence", "before": "A Ana ", "after": " cansada hoje.", "answer": "está", "en": "Ana is tired today." },
+      { "type": "sentence", "before": "Onde ", "after": " tu?", "answer": "estás", "en": "Where are you?" },
+      { "type": "sentence", "before": "Nós ", "after": " em Lisboa.", "answer": "estamos", "en": "We're in Lisbon." },
+      { "type": "sentence", "before": "Eu ", "after": " a trabalhar.", "answer": "estou", "en": "I'm working." },
+      { "type": "sentence", "before": "Os meninos ", "after": " na escola.", "answer": "estão", "en": "The children are at school." },
+      { "type": "sentence", "before": "O café ", "after": " frio.", "answer": "está", "en": "The coffee is cold." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-ser-estar",
+    "title": "ser or estar?",
+    "summary": "choosing the right \"to be\"",
+    "intro": [
+      "Use ser for what something is: identity, origin, job, character, the time.",
+      "Use estar for how or where it is now: feelings, where someone is, the weather, states that change.",
+      "Quick test: if it describes the person or thing in general, use ser. If it could be different in an hour, use estar."
+    ],
+    "examples": [
+      { "pt": "O Pedro é alto.", "en": "Pedro is tall. (always: ser)" },
+      { "pt": "O Pedro está cansado.", "en": "Pedro is tired. (right now: estar)" },
+      { "pt": "A sopa é boa.", "en": "The soup is good. (a good soup in general)" },
+      { "pt": "A sopa está boa.", "en": "The soup tastes good. (this bowl, now)" }
+    ],
+    "notes": [
+      "For where a fixed place is, Portuguese uses ser or ficar, not estar: Onde é a estação? / Onde fica a estação?"
+    ],
+    "drills": [
+      { "type": "choice", "before": "O Pedro ", "after": " alto.", "options": ["é", "está"], "answer": "é", "en": "Pedro is tall.", "why": "Height describes him in general: ser." },
+      { "type": "choice", "before": "Eu ", "after": " cansado.", "options": ["sou", "estou"], "answer": "estou", "en": "I'm tired.", "why": "How you feel right now: estar." },
+      { "type": "choice", "before": "A Rita ", "after": " de Coimbra.", "options": ["é", "está"], "answer": "é", "en": "Rita is from Coimbra.", "why": "Where someone comes from: ser." },
+      { "type": "choice", "before": "Nós ", "after": " em casa.", "options": ["somos", "estamos"], "answer": "estamos", "en": "We're at home.", "why": "Where someone is now: estar." },
+      { "type": "choice", "before": "O meu pai ", "after": " médico.", "options": ["é", "está"], "answer": "é", "en": "My father is a doctor.", "why": "A job: ser." },
+      { "type": "choice", "before": "O café ", "after": " frio.", "options": ["é", "está"], "answer": "está", "en": "The coffee is cold.", "why": "A state that changes: estar." },
+      { "type": "choice", "before": "Hoje ", "after": " sol.", "options": ["é", "está"], "answer": "está", "en": "It's sunny today.", "why": "The weather: estar." },
+      { "type": "choice", "before": "", "after": " três horas.", "options": ["São", "Estão"], "answer": "São", "en": "It's three o'clock.", "why": "The time: ser." },
+      { "type": "choice", "before": "Tu ", "after": " muito simpático.", "options": ["és", "estás"], "answer": "és", "en": "You're very nice.", "why": "Character, in general: ser." },
+      { "type": "choice", "before": "Vocês ", "after": " contentes?", "options": ["são", "estão"], "answer": "estão", "en": "Are you (all) pleased?", "why": "A feeling right now: estar." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-ter",
+    "title": "ter",
+    "summary": "to have, and to be hungry, cold, twenty…",
+    "intro": [
+      "Ter means \"to have\". Portuguese also uses it where English uses \"to be\": for age, hunger, thirst, feeling cold or hot, and fear."
+    ],
+    "table": [
+      { "person": "eu", "form": "tenho" },
+      { "person": "tu", "form": "tens" },
+      { "person": "ele / ela / você", "form": "tem" },
+      { "person": "nós", "form": "temos" },
+      { "person": "eles / elas / vocês", "form": "têm" }
+    ],
+    "examples": [
+      { "pt": "Tenho vinte anos.", "en": "I'm twenty. (literally: I have twenty years)" },
+      { "pt": "Tens irmãos?", "en": "Do you have brothers or sisters?" },
+      { "pt": "Temos fome.", "en": "We're hungry." },
+      { "pt": "Ela tem frio.", "en": "She's cold." }
+    ],
+    "notes": [
+      "têm (they have) has a hat on the e; tem (he or she has) doesn't. They sound almost the same.",
+      "Tenho de + verb = I have to: Tenho de trabalhar. In Portugal you'll mostly hear tenho de; Brazilians usually say tenho que."
+    ],
+    "drills": [
+      { "type": "form", "person": "eu", "answer": "tenho" },
+      { "type": "form", "person": "tu", "answer": "tens" },
+      { "type": "form", "person": "ela", "answer": "tem" },
+      { "type": "form", "person": "nós", "answer": "temos" },
+      { "type": "form", "person": "eles", "answer": "têm" },
+      { "type": "form", "person": "você", "answer": "tem" },
+      { "type": "sentence", "before": "Eu ", "after": " vinte anos.", "answer": "tenho", "en": "I'm twenty." },
+      { "type": "sentence", "before": "Quantos anos ", "after": " tu?", "answer": "tens", "en": "How old are you?" },
+      { "type": "sentence", "before": "A Rita ", "after": " dez anos.", "answer": "tem", "en": "Rita is ten." },
+      { "type": "sentence", "before": "Nós ", "after": " fome.", "answer": "temos", "en": "We're hungry." },
+      { "type": "sentence", "before": "Eles ", "after": " dois filhos.", "answer": "têm", "en": "They have two children." },
+      { "type": "sentence", "before": "Eu ", "after": " de trabalhar amanhã.", "answer": "tenho", "en": "I have to work tomorrow." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-ir",
+    "title": "ir",
+    "summary": "to go, and \"going to\" for the future",
+    "intro": [
+      "Ir means \"to go\".",
+      "It's also the everyday way to talk about the future: ir + verb, just like English \"going to\". Vou comer = I'm going to eat."
+    ],
+    "table": [
+      { "person": "eu", "form": "vou" },
+      { "person": "tu", "form": "vais" },
+      { "person": "ele / ela / você", "form": "vai" },
+      { "person": "nós", "form": "vamos" },
+      { "person": "eles / elas / vocês", "form": "vão" }
+    ],
+    "examples": [
+      { "pt": "Vou ao Porto amanhã.", "en": "I'm going to Porto tomorrow." },
+      { "pt": "Vais de comboio?", "en": "Are you going by train?" },
+      { "pt": "Vamos jantar fora.", "en": "We're going to have dinner out." },
+      { "pt": "Eles vão à praia.", "en": "They're going to the beach." }
+    ],
+    "notes": [
+      "Going to a place: ir a. With the: a + o = ao (ao Porto), a + a = à (à praia).",
+      "Vamos! on its own means \"Let's go!\""
+    ],
+    "drills": [
+      { "type": "form", "person": "eu", "answer": "vou" },
+      { "type": "form", "person": "tu", "answer": "vais" },
+      { "type": "form", "person": "ele", "answer": "vai" },
+      { "type": "form", "person": "nós", "answer": "vamos" },
+      { "type": "form", "person": "elas", "answer": "vão" },
+      { "type": "form", "person": "vocês", "answer": "vão" },
+      { "type": "sentence", "before": "Eu ", "after": " ao Porto amanhã.", "answer": "vou", "en": "I'm going to Porto tomorrow." },
+      { "type": "sentence", "before": "Tu ", "after": " de comboio?", "answer": "vais", "en": "Are you going by train?" },
+      { "type": "sentence", "before": "Nós ", "after": " jantar fora.", "answer": "vamos", "en": "We're going to have dinner out." },
+      { "type": "sentence", "before": "A Ana ", "after": " à praia.", "answer": "vai", "en": "Ana is going to the beach." },
+      { "type": "sentence", "before": "Eles ", "after": " trabalhar amanhã.", "answer": "vão", "en": "They're going to work tomorrow." },
+      { "type": "sentence", "before": "Amanhã ", "after": " chover.", "answer": "vai", "en": "It's going to rain tomorrow." }
+    ],
+    "verified": false
+  }
+]

@@ -10,6 +10,8 @@ import ChoiceSession from "./pages/vocab/ChoiceSession";
 import LevelTest from "./pages/vocab/LevelTest";
 import ReadingHome from "./pages/reading/ReadingHome";
 import ReadingText from "./pages/reading/ReadingText";
+import GrammarHome from "./pages/grammar/GrammarHome";
+import GrammarTopic from "./pages/grammar/GrammarTopic";
 import SpeakingHome from "./pages/speaking/SpeakingHome";
 import SpeakingSession from "./pages/speaking/SpeakingSession";
 import { useProgress } from "./lib/useProgress";
@@ -50,6 +52,8 @@ export default function App() {
           <Route path="/vocab/unit/:unitId/type" element={<TypingSession progress={progress} updateProgress={updateProgress} />} />
           <Route path="/reading" element={<ReadingHome progress={progress} />} />
           <Route path="/reading/:textId" element={<ReadingText progress={progress} updateProgress={updateProgress} />} />
+          <Route path="/grammar" element={<GrammarHome progress={progress} />} />
+          <Route path="/grammar/:topicId" element={<GrammarTopic progress={progress} updateProgress={updateProgress} />} />
           {speakingReady ? (
             <>
               <Route path="/speaking" element={<SpeakingHome progress={progress} />} />

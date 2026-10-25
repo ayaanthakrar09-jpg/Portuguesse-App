@@ -6,6 +6,7 @@ const links = [
   { to: "/vocab", label: "Vocab", icon: "vocab" },
   { to: "/speaking", label: "Speaking", icon: "speaking" },
   { to: "/reading", label: "Reading", icon: "reading" },
+  { to: "/grammar", label: "Grammar", icon: "grammar" },
   { to: "/slang", label: "Slang", icon: "slang" },
 ];
 
