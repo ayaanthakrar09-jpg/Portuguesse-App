@@ -16,7 +16,7 @@ export default function LevelPage({ progress }) {
       <Link to="/vocab" className="btn btn-quiet back-link">Back to Vocab</Link>
       <header className="page-head">
         <h1 className="page-title">Level {level.id}: {level.title}</h1>
-        <p className="muted">Each unit is one topic. Meet its words with flashcards, then type them from English.</p>
+        <p className="muted">Each unit is one topic. Meet its words with flashcards, then multiple choice, then type them from English.</p>
       </header>
 
       <ol className="units">
@@ -26,6 +26,7 @@ export default function LevelPage({ progress }) {
           const started = unit.items.some((item) => progress.cards[item.id]);
           const fresh = unit.items.filter((item) => !progress.cards[item.id]).length;
           const flashcardsLeft = due + fresh > 0;
+          const choice = progress.vocab.choice?.[unit.id];
           const typing = progress.vocab.typing?.[unit.id];
           return (
             <li key={unit.id} className="unit-row">
@@ -33,7 +34,11 @@ export default function LevelPage({ progress }) {
               <div className="unit-body">
                 <h2 className="card-title">{unit.title}</h2>
                 <Meter value={learned} max={unit.items.length} label={`${learned} of ${unit.items.length} learned${due ? `, ${due} due` : ""}`} />
-                {typing && <p className="meter-label">Typing best: {typing.best} of {typing.total} first time</p>}
+                {(choice || typing) && (
+                  <p className="meter-label">
+                    Best first time: {[choice && `multiple choice ${choice.best} of ${choice.total}`, typing && `typing ${typing.best} of ${typing.total}`].filter(Boolean).join(", ")}
+                  </p>
+                )}
               </div>
               <div className="unit-actions">
                 {flashcardsLeft ? (
@@ -43,6 +48,7 @@ export default function LevelPage({ progress }) {
                 ) : (
                   <span className="unit-done">Flashcards done</span>
                 )}
+                {started && <Link to={`/vocab/unit/${unit.id}/choose`} className="btn">Multiple choice</Link>}
                 {started && <Link to={`/vocab/unit/${unit.id}/type`} className="btn">Type it</Link>}
               </div>
             </li>

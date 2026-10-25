@@ -2,22 +2,15 @@ import { useRef, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import Icon from "../../components/Icon";
 import { markAnswer } from "../../lib/answers";
+import { shuffle, withBestScore } from "../../lib/exercises";
 import { speak, speechMessages } from "../../lib/speech";
 import { dateKey } from "../../lib/storage";
 import { rate } from "../../lib/srs";
 import { displayPt, findUnit, isLevelOpen } from "../../lib/vocab";
+import SessionResult from "./SessionResult";
 
 // Letters English keyboards lack. Optional: a missing accent still counts.
 const ACCENTS = ["á", "à", "â", "ã", "ç", "é", "ê", "í", "ó", "ô", "õ", "ú"];
-
-function shuffle(list) {
-  const copy = [...list];
-  for (let i = copy.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
-  }
-  return copy;
-}
 
 // The key starts a fresh session when you move from one unit straight to another.
 export default function TypingSession(props) {
@@ -73,12 +66,7 @@ function Session({ progress, updateProgress, unitId }) {
   }
 
   function saveScore() {
-    const score = unit.items.length - missed.length;
-    updateProgress((previous) => {
-      const typing = previous.vocab.typing ?? {};
-      const best = Math.max(score, typing[unit.id]?.best ?? 0);
-      return { ...previous, vocab: { ...previous.vocab, typing: { ...typing, [unit.id]: { best, total: unit.items.length } } } };
-    });
+    updateProgress((previous) => withBestScore(previous, "typing", unit, unit.items.length - missed.length));
   }
 
   function addAccent(letter) {
@@ -99,32 +87,13 @@ function Session({ progress, updateProgress, unitId }) {
 
   /* ---------- Finished ---------- */
   if (queue.length === 0) {
-    const score = unit.items.length - missed.length;
     return (
-      <section className="page">
-        <h1 className="page-title">{score} of {unit.items.length} right first time</h1>
-        <div className="card">
-          {missed.length === 0 ? (
-            <p>Every answer was right at the first attempt.</p>
-          ) : (
-            <>
-              <p>These come back sooner in your reviews:</p>
-              <ul className="missed">
-                {missed.map((item) => (
-                  <li key={item.id}>
-                    <span lang="pt-PT">{displayPt(item)}</span>
-                    <span className="muted">{item.en}</span>
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-          <div className="actions">
-            <Link to={backTo} className="btn btn-primary">Back to Level {unit.level}</Link>
-            <button className="btn" onClick={() => { setQueue(shuffle(unit.items)); setMissed([]); }}>Type them again</button>
-          </div>
-        </div>
-      </section>
+      <SessionResult
+        unit={unit}
+        missed={missed}
+        againText="Type them again"
+        onAgain={() => { setQueue(shuffle(unit.items)); setMissed([]); }}
+      />
     );
   }
 
