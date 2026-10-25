@@ -10,6 +10,7 @@ export function emptyProgress() {
     practisedPhrases: 0,
     cards: {}, // spaced repetition per vocab item: { id: { due: "YYYY-MM-DD", ... } }
     vocab: { passedLevels: [], tests: {}, choice: {}, typing: {} }, // levels passed, test results, best exercise scores per unit
+    reading: {}, // best question score per text: { textId: { best, total } }
   };
 }
 

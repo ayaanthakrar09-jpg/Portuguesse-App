@@ -497,3 +497,79 @@ ul { padding: 0; list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* ---------- Reading ---------- */
+.text-list { display: grid; gap: 12px; }
+.text-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+}
+.text-row:hover { border-color: #3f7a5f; }
+.text-level {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 600;
+}
+.text-body { display: grid; gap: 2px; }
+
+.reading-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(20px, 4vw, 36px);
+  display: grid;
+  gap: 18px;
+}
+.reading-text { display: grid; gap: 14px; font-size: 1.3rem; line-height: 1.7; max-width: 62ch; }
+.word {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0 1px;
+  margin: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  border-bottom: 1px dotted transparent;
+}
+.word:hover { border-bottom-color: var(--muted); }
+.word.is-selected { background: var(--accent); color: var(--accent-ink); }
+
+/* Stays in view at the bottom of the screen while you read */
+.word-panel {
+  position: sticky;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  min-height: 60px;
+}
+.word-panel strong { font-size: 1.15rem; margin-right: 6px; }
+
+.reading-questions { display: grid; gap: 22px; padding-left: 0; list-style: none; }
+.reading-questions li { display: grid; gap: 10px; }
+.question-title { font-weight: 550; display: flex; align-items: center; gap: 10px; }
+
+@media (max-width: 760px) {
+  .text-row { grid-template-columns: auto 1fr; }
+  .text-row > .btn { grid-column: 2; justify-self: start; }
+  .reading-text { font-size: 1.15rem; }
+  .word-panel { bottom: 88px; }
+}

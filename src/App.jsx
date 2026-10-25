@@ -8,18 +8,23 @@ import FlashcardSession from "./pages/vocab/FlashcardSession";
 import TypingSession from "./pages/vocab/TypingSession";
 import ChoiceSession from "./pages/vocab/ChoiceSession";
 import LevelTest from "./pages/vocab/LevelTest";
+import ReadingHome from "./pages/reading/ReadingHome";
+import ReadingText from "./pages/reading/ReadingText";
 import SpeakingHome from "./pages/speaking/SpeakingHome";
 import SpeakingSession from "./pages/speaking/SpeakingSession";
 import { useProgress } from "./lib/useProgress";
 
+// Speaking is built but switched off until it has been tried with a real microphone.
+// Set this to true to turn it back on (and `ready` for Speaking in Dashboard.jsx).
+const speakingReady = false;
+const speakingSoon = {
+  title: "Speaking",
+  text: "Hear a sentence, say it into your microphone, and see which words the browser understood.",
+  note: "Switched off for now. It comes back after it has been tried with a real microphone.",
+};
+
 // Sections that are not built yet show an honest "coming" page instead of a fake screen.
 const upcoming = [
-  {
-    path: "/reading",
-    title: "Reading",
-    milestone: 4,
-    text: "Short European Portuguese texts. Tap any word for its meaning, then answer a few questions.",
-  },
   {
     path: "/slang",
     title: "Slang",
@@ -43,8 +48,16 @@ export default function App() {
           <Route path="/vocab/unit/:unitId" element={<FlashcardSession progress={progress} updateProgress={updateProgress} />} />
           <Route path="/vocab/unit/:unitId/choose" element={<ChoiceSession progress={progress} updateProgress={updateProgress} />} />
           <Route path="/vocab/unit/:unitId/type" element={<TypingSession progress={progress} updateProgress={updateProgress} />} />
-          <Route path="/speaking" element={<SpeakingHome progress={progress} />} />
-          <Route path="/speaking/:unitId" element={<SpeakingSession progress={progress} updateProgress={updateProgress} />} />
+          <Route path="/reading" element={<ReadingHome progress={progress} />} />
+          <Route path="/reading/:textId" element={<ReadingText progress={progress} updateProgress={updateProgress} />} />
+          {speakingReady ? (
+            <>
+              <Route path="/speaking" element={<SpeakingHome progress={progress} />} />
+              <Route path="/speaking/:unitId" element={<SpeakingSession progress={progress} updateProgress={updateProgress} />} />
+            </>
+          ) : (
+            <Route path="/speaking/*" element={<ComingSoon {...speakingSoon} />} />
+          )}
           <Route path="/vocab/review" element={<FlashcardSession review progress={progress} updateProgress={updateProgress} />} />
           {upcoming.map((page) => (
             <Route key={page.path} path={page.path} element={<ComingSoon {...page} />} />
