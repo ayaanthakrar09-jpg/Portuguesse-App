@@ -1,5 +1,7 @@
 // Question pieces shared by the unit exercises and the level test.
 
+import Icon from "../../components/Icon";
+
 const instructions = {
   "pt-en": "What does this mean?",
   "en-pt": "Pick the Portuguese",
@@ -100,6 +102,15 @@ export function AnswerField({ inputRef, value, onChange, result, buttonText }) {
         </div>
       )}
     </>
+  );
+}
+
+// Green tick or red cross that pops in when an answer is marked.
+export function ResultMark({ ok }) {
+  return (
+    <span className={`result-mark ${ok ? "is-ok" : "is-no"}`} aria-hidden="true">
+      <Icon name={ok ? "check" : "cross"} size={18} />
+    </span>
   );
 }
 

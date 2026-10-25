@@ -7,7 +7,7 @@ import { speak, speechMessages } from "../../lib/speech";
 import { dateKey } from "../../lib/storage";
 import { rate } from "../../lib/srs";
 import { findUnit, isLevelOpen } from "../../lib/vocab";
-import { AnswerField, QuestionPrompt, typeHint } from "./Questions";
+import { AnswerField, QuestionPrompt, ResultMark, typeHint } from "./Questions";
 import SessionResult from "./SessionResult";
 
 // The key starts a fresh session when you move from one unit straight to another.
@@ -104,6 +104,7 @@ function Session({ progress, updateProgress, unitId }) {
         {result && (
           <div className={`feedback is-${result}`} role="status">
             <p className="feedback-title">
+              <ResultMark ok={result !== "wrong"} />
               {result === "correct" ? "Correct" : result === "accent" ? "Correct, but check the accents" : "Not quite"}
             </p>
             {result !== "correct" && (

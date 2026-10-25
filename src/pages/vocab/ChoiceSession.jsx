@@ -6,7 +6,7 @@ import { speak, speechMessages } from "../../lib/speech";
 import { dateKey } from "../../lib/storage";
 import { rate } from "../../lib/srs";
 import { displayPt, findUnit, isLevelOpen } from "../../lib/vocab";
-import { Choices, QuestionPrompt } from "./Questions";
+import { Choices, QuestionPrompt, ResultMark } from "./Questions";
 import SessionResult from "./SessionResult";
 
 // The key starts a fresh session when you move from one unit straight to another.
@@ -97,7 +97,7 @@ function Session({ progress, updateProgress, unitId }) {
 
         {answered && (
           <div className={`feedback ${correct ? "is-correct" : "is-wrong"}`} role="status">
-            <p className="feedback-title">{correct ? "Correct" : "Not quite"}</p>
+            <p className="feedback-title"><ResultMark ok={correct} />{correct ? "Correct" : "Not quite"}</p>
             <div className="example">
               <button className="btn btn-icon btn-small" onClick={() => say(displayPt(item))} aria-label={`Listen to ${displayPt(item)}`}>
                 <Icon name="speaker" size={16} />

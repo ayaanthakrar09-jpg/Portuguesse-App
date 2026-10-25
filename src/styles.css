@@ -330,6 +330,8 @@ ul { padding: 0; list-style: none; }
 .type-input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .type-input.is-correct, .type-input.is-accent { border-color: #5fc08a; }
 .type-input.is-wrong { border-color: var(--red); }
+.type-input.is-correct:focus-visible, .type-input.is-accent:focus-visible { outline-color: #5fc08a; }
+.type-input.is-wrong:focus-visible { outline-color: var(--red); }
 
 .accent-keys { display: flex; flex-wrap: wrap; gap: 6px; }
 .accent-key {
@@ -345,7 +347,35 @@ ul { padding: 0; list-style: none; }
 .accent-key:hover { border-color: #3f7a5f; }
 
 .feedback { display: grid; gap: 8px; width: 100%; border-top: 1px solid var(--line); padding-top: 16px; }
-.feedback-title { font-weight: 600; font-size: 1.1rem; }
+.feedback-title { font-weight: 600; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
+
+/* Answer marked: the tick pops in, a wrong answer gives a short shake */
+.result-mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: none;
+  animation: mark-pop 0.28s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+.result-mark svg { stroke-width: 2.6; }
+.result-mark.is-ok { background: #5fc08a; color: #0b2218; }
+.result-mark.is-no { background: var(--red); color: #fff; }
+
+@keyframes mark-pop {
+  from { transform: scale(0.3); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes shake {
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+.type-input.is-wrong, .choice.is-wrong { animation: shake 0.3s ease-in-out; }
+.choice.is-correct { animation: mark-pop-soft 0.25s ease-out; }
+@keyframes mark-pop-soft {
+  50% { transform: scale(1.03); }
+}
 .feedback.is-correct .feedback-title, .feedback.is-accent .feedback-title { color: #7fd6a3; }
 .feedback.is-wrong .feedback-title { color: #ff8a7a; }
 
@@ -451,5 +481,5 @@ ul { padding: 0; list-style: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; }
+  * { transition: none !important; animation: none !important; }
 }
