@@ -586,3 +586,7 @@ ul { padding: 0; list-style: none; }
 .verb-table td:last-child { width: 1%; padding-right: 0; }
 .grammar-examples { display: grid; gap: 10px; }
 .grammar-notes { display: grid; gap: 8px; padding-left: 18px; list-style: disc; color: var(--muted); }
+.grammar-practice { grid-template-columns: 1fr auto; max-width: 760px; }
+@media (max-width: 760px) {
+  .grammar-practice { grid-template-columns: 1fr; }
+}

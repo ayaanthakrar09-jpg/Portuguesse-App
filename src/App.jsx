@@ -12,6 +12,7 @@ import ReadingHome from "./pages/reading/ReadingHome";
 import ReadingText from "./pages/reading/ReadingText";
 import GrammarHome from "./pages/grammar/GrammarHome";
 import GrammarTopic from "./pages/grammar/GrammarTopic";
+import GrammarPractice from "./pages/grammar/GrammarPractice";
 import SpeakingHome from "./pages/speaking/SpeakingHome";
 import SpeakingSession from "./pages/speaking/SpeakingSession";
 import { useProgress } from "./lib/useProgress";
@@ -54,6 +55,7 @@ export default function App() {
           <Route path="/reading/:textId" element={<ReadingText progress={progress} updateProgress={updateProgress} />} />
           <Route path="/grammar" element={<GrammarHome progress={progress} />} />
           <Route path="/grammar/:topicId" element={<GrammarTopic progress={progress} updateProgress={updateProgress} />} />
+          <Route path="/grammar/:topicId/practice" element={<GrammarPractice updateProgress={updateProgress} />} />
           {speakingReady ? (
             <>
               <Route path="/speaking" element={<SpeakingHome progress={progress} />} />

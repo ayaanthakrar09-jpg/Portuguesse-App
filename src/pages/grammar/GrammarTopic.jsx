@@ -4,11 +4,12 @@ import Icon from "../../components/Icon";
 import { findTopic } from "../../lib/grammar";
 import { speak, speechMessages } from "../../lib/speech";
 
-export default function GrammarTopic() {
+export default function GrammarTopic({ progress }) {
   const topic = findTopic(useParams().topicId);
   const [voiceNote, setVoiceNote] = useState("");
 
   if (!topic) return <Navigate to="/grammar" replace />;
+  const score = progress.grammar?.[topic.id];
 
   async function say(text) {
     const outcome = await speak(text);
@@ -70,6 +71,17 @@ export default function GrammarTopic() {
           </ul>
         )}
         {voiceNote && <p className="note" role="status">{voiceNote}</p>}
+      </div>
+
+      <div className="card panel-row grammar-practice">
+        <div>
+          <h2 className="card-title">Practise {topic.title}</h2>
+          <p className="muted">
+            {topic.drills.length} questions, getting harder.
+            {score ? ` Your best: ${score.best} of ${score.total} right first time.` : ""}
+          </p>
+        </div>
+        <Link to={`/grammar/${topic.id}/practice`} className="btn btn-primary">{score ? "Practise again" : "Practise"}</Link>
       </div>
 
       <p className="note">Not yet checked by a native speaker.</p>
