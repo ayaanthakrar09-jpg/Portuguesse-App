@@ -1,7 +1,8 @@
 import { Link, Navigate, useParams } from "react-router-dom";
 import { dueCards } from "../../lib/srs";
 import { dateKey } from "../../lib/storage";
-import { findLevel, isLevelOpen } from "../../lib/vocab";
+import { TEST_LENGTH } from "../../lib/exercises";
+import { findLevel, isLevelOpen, passMark } from "../../lib/vocab";
 import { Meter } from "./VocabHome";
 
 export default function LevelPage({ progress }) {
@@ -55,6 +56,32 @@ export default function LevelPage({ progress }) {
           );
         })}
       </ol>
+
+      <LevelTestCard level={level} result={progress.vocab.tests?.[level.id]} passed={progress.vocab.passedLevels.includes(level.id)} />
     </section>
+  );
+}
+
+function LevelTestCard({ level, result, passed }) {
+  return (
+    <div className={`card test-card ${passed ? "is-passed" : ""}`}>
+      <div>
+        <h2 className="card-title">Level {level.id} test</h2>
+        <p className="muted">
+          {TEST_LENGTH} questions from all units, getting harder as you go. Pass with {Math.round(passMark * 100)}% to open the next level.
+          Take it whenever you feel ready, as often as you like.
+        </p>
+      </div>
+      {result && (
+        <p>
+          {passed ? "Passed. " : ""}Best score {result.best}%, last attempt {result.last.percent}%.
+        </p>
+      )}
+      <div className="actions">
+        <Link to={`/vocab/level/${level.id}/test`} className={`btn ${passed ? "" : "btn-primary"}`}>
+          {result ? "Retake the test" : "Take the test"}
+        </Link>
+      </div>
+    </div>
   );
 }

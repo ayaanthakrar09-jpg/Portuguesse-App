@@ -2,15 +2,13 @@ import { useRef, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import Icon from "../../components/Icon";
 import { markAnswer } from "../../lib/answers";
-import { shuffle, withBestScore } from "../../lib/exercises";
+import { shuffle, typeQuestion, withBestScore } from "../../lib/exercises";
 import { speak, speechMessages } from "../../lib/speech";
 import { dateKey } from "../../lib/storage";
 import { rate } from "../../lib/srs";
-import { displayPt, findUnit, isLevelOpen } from "../../lib/vocab";
+import { findUnit, isLevelOpen } from "../../lib/vocab";
+import { AnswerField, QuestionPrompt, typeHint } from "./Questions";
 import SessionResult from "./SessionResult";
-
-// Letters English keyboards lack. Optional: a missing accent still counts.
-const ACCENTS = ["á", "à", "â", "ã", "ç", "é", "ê", "í", "ó", "ô", "õ", "ú"];
 
 // The key starts a fresh session when you move from one unit straight to another.
 export default function TypingSession(props) {
@@ -69,17 +67,6 @@ function Session({ progress, updateProgress, unitId }) {
     updateProgress((previous) => withBestScore(previous, "typing", unit, unit.items.length - missed.length));
   }
 
-  function addAccent(letter) {
-    const field = input.current;
-    const start = field.selectionStart ?? typed.length;
-    const end = field.selectionEnd ?? typed.length;
-    setTyped(typed.slice(0, start) + letter + typed.slice(end));
-    requestAnimationFrame(() => {
-      field.focus();
-      field.setSelectionRange(start + 1, start + 1);
-    });
-  }
-
   async function say(text) {
     const outcome = await speak(text);
     setVoiceNote(outcome === "ok" ? "" : speechMessages[outcome]);
@@ -99,8 +86,7 @@ function Session({ progress, updateProgress, unitId }) {
 
   /* ---------- Question ---------- */
   const item = queue[0];
-  const answer = displayPt(item);
-  const hint = [item.type === "phrase" ? "phrase" : item.gender ? "noun (article optional)" : "word", item.formality].filter(Boolean).join(", ");
+  const { answer } = typeQuestion(item);
 
   return (
     <section className="page">
@@ -111,35 +97,9 @@ function Session({ progress, updateProgress, unitId }) {
 
       <form className="flashcard" onSubmit={check}>
         <span className="chip">{unit.title}</span>
-        <p className="muted">Type this in Portuguese</p>
-        <h1 className="flash-word">{item.en}</h1>
-        <p className="muted">{hint}</p>
-
-        <div className="type-row">
-          <input
-            ref={input}
-            className={`type-input ${result ? `is-${result}` : ""}`}
-            value={typed}
-            onChange={(event) => setTyped(event.target.value)}
-            readOnly={Boolean(result)}
-            lang="pt-PT"
-            autoFocus
-            autoComplete="off"
-            autoCorrect="off"
-            autoCapitalize="off"
-            spellCheck={false}
-            aria-label="Your answer in Portuguese"
-          />
-          <button type="submit" className="btn btn-primary">{result ? "Next" : "Check"}</button>
-        </div>
-
-        {!result && (
-          <div className="accent-keys" aria-label="Accented letters">
-            {ACCENTS.map((letter) => (
-              <button key={letter} type="button" className="accent-key" onClick={() => addAccent(letter)}>{letter}</button>
-            ))}
-          </div>
-        )}
+        <QuestionPrompt question={typeQuestion(item)} />
+        <p className="muted">{typeHint(item)}</p>
+        <AnswerField inputRef={input} value={typed} onChange={setTyped} result={result} buttonText={result ? "Next" : "Check"} />
 
         {result && (
           <div className={`feedback is-${result}`} role="status">

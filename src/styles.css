@@ -381,6 +381,17 @@ ul { padding: 0; list-style: none; }
 .choice.is-correct { border-color: #5fc08a; background: rgba(95, 192, 138, 0.16); }
 .choice.is-wrong { border-color: var(--red); background: rgba(229, 80, 63, 0.16); }
 .choice.is-dim { opacity: 0.5; }
+.choice.is-picked { border-color: var(--accent); background: rgba(242, 193, 78, 0.12); }
+.choice.is-picked .choice-key { border-color: var(--accent); color: var(--accent); }
+
+/* Level test */
+.test-track { height: 4px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin-top: -8px; }
+.test-track span { display: block; height: 100%; background: var(--accent); transition: width 0.25s; }
+.test-card.is-passed, .test-result.is-passed { border-color: #5fc08a; }
+.review-list { display: grid; gap: 14px; }
+.review-list li { display: grid; gap: 2px; padding-top: 14px; border-top: 1px solid var(--line); }
+.review-list li:first-child { padding-top: 0; border-top: 0; }
+.review-list s { color: #ff8a7a; }
 
 .gap-sentence { display: grid; gap: 8px; }
 .gap-pt { font-size: clamp(1.5rem, 4.5vw, 2rem); font-weight: 600; letter-spacing: -0.015em; line-height: 1.3; }

@@ -6,13 +6,8 @@ import { speak, speechMessages } from "../../lib/speech";
 import { dateKey } from "../../lib/storage";
 import { rate } from "../../lib/srs";
 import { displayPt, findUnit, isLevelOpen } from "../../lib/vocab";
+import { Choices, QuestionPrompt } from "./Questions";
 import SessionResult from "./SessionResult";
-
-const instructions = {
-  "pt-en": "What does this mean?",
-  "en-pt": "Pick the Portuguese",
-  blank: "Fill the gap",
-};
 
 // The key starts a fresh session when you move from one unit straight to another.
 export default function ChoiceSession(props) {
@@ -87,7 +82,6 @@ function Session({ progress, updateProgress, unitId }) {
   }
 
   const { item, kind } = question;
-  const optionsInPortuguese = kind !== "pt-en";
 
   return (
     <section className="page">
@@ -98,32 +92,8 @@ function Session({ progress, updateProgress, unitId }) {
 
       <div className="flashcard">
         <span className="chip">{unit.title}</span>
-        <p className="muted">{instructions[kind]}</p>
-
-        {kind === "blank" ? (
-          <div className="gap-sentence">
-            <p className="gap-pt" lang="pt-PT">
-              {question.before}
-              <span className={`gap ${answered ? (correct ? "is-correct" : "is-wrong") : ""}`}>{answered ? question.answer : " "}</span>
-              {question.after}
-            </p>
-            <p className="muted">{question.prompt}</p>
-          </div>
-        ) : (
-          <h1 className="flash-word" lang={kind === "pt-en" ? "pt-PT" : undefined}>{question.prompt}</h1>
-        )}
-
-        <div className="choices" role="group" aria-label="Options">
-          {question.options.map((option, index) => {
-            const state = !answered ? "" : option === question.answer ? "is-correct" : option === picked ? "is-wrong" : "is-dim";
-            return (
-              <button key={option} className={`choice ${state}`} onClick={() => choose(option)} disabled={answered} lang={optionsInPortuguese ? "pt-PT" : undefined}>
-                <span className="choice-key" aria-hidden="true">{index + 1}</span>
-                {option}
-              </button>
-            );
-          })}
-        </div>
+        <QuestionPrompt question={question} filled={answered ? question.answer : ""} state={answered ? (correct ? "is-correct" : "is-wrong") : ""} />
+        <Choices question={question} picked={picked} reveal={answered} onPick={choose} />
 
         {answered && (
           <div className={`feedback ${correct ? "is-correct" : "is-wrong"}`} role="status">

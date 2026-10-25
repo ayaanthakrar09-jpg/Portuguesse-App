@@ -7,6 +7,7 @@ import LevelPage from "./pages/vocab/LevelPage";
 import FlashcardSession from "./pages/vocab/FlashcardSession";
 import TypingSession from "./pages/vocab/TypingSession";
 import ChoiceSession from "./pages/vocab/ChoiceSession";
+import LevelTest from "./pages/vocab/LevelTest";
 import { useProgress } from "./lib/useProgress";
 
 // Sections that are not built yet show an honest "coming" page instead of a fake screen.
@@ -42,6 +43,7 @@ export default function App() {
           <Route path="/" element={<Dashboard progress={progress} updateProgress={updateProgress} />} />
           <Route path="/vocab" element={<VocabHome progress={progress} />} />
           <Route path="/vocab/level/:levelId" element={<LevelPage progress={progress} />} />
+          <Route path="/vocab/level/:levelId/test" element={<LevelTest progress={progress} updateProgress={updateProgress} />} />
           <Route path="/vocab/unit/:unitId" element={<FlashcardSession progress={progress} updateProgress={updateProgress} />} />
           <Route path="/vocab/unit/:unitId/choose" element={<ChoiceSession progress={progress} updateProgress={updateProgress} />} />
           <Route path="/vocab/unit/:unitId/type" element={<TypingSession progress={progress} updateProgress={updateProgress} />} />

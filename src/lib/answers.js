@@ -24,11 +24,15 @@ export function acceptedAnswers(item) {
 }
 
 // Returns "correct", "accent" (right apart from accents) or "wrong".
-export function markAnswer(typed, item) {
+export function markText(typed, acceptedList) {
   const answer = tidy(typed);
   if (!answer) return "wrong";
-  const accepted = acceptedAnswers(item).map(tidy);
+  const accepted = acceptedList.map(tidy);
   if (accepted.includes(answer)) return "correct";
   if (accepted.map(withoutAccents).includes(withoutAccents(answer))) return "accent";
   return "wrong";
+}
+
+export function markAnswer(typed, item) {
+  return markText(typed, acceptedAnswers(item));
 }
