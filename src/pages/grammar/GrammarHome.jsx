@@ -6,7 +6,7 @@ export default function GrammarHome({ progress }) {
     <section className="page">
       <header className="page-head">
         <h1 className="page-title">Grammar</h1>
-        <p className="muted">The present tense: the four verbs you'll use most, then the regular verb patterns. Best done in this order.</p>
+        <p className="muted">The present tense: the verbs you'll use most and the regular verb patterns. Best done in this order.</p>
       </header>
 
       <ol className="units">

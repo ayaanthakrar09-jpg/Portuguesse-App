@@ -318,5 +318,128 @@
       { "type": "sentence", "verb": "discutir", "before": "Eles ", "after": " sempre sobre futebol.", "answer": "discutem", "en": "They always argue about football." }
     ],
     "verified": false
+  },
+  {
+    "id": "g-fazer",
+    "title": "fazer",
+    "summary": "to do, to make, and the weather",
+    "intro": [
+      "Fazer means \"to do\" or \"to make\". It's also used for the weather and, in Portugal, for birthdays.",
+      "It's irregular: watch eu faço and ele faz."
+    ],
+    "table": [
+      { "person": "eu", "form": "faço" },
+      { "person": "tu", "form": "fazes" },
+      { "person": "ele / ela / você", "form": "faz" },
+      { "person": "nós", "form": "fazemos" },
+      { "person": "eles / elas / vocês", "form": "fazem" }
+    ],
+    "examples": [
+      { "pt": "O que fazes ao fim de semana?", "en": "What do you do at the weekend?" },
+      { "pt": "Faço anos amanhã.", "en": "It's my birthday tomorrow." },
+      { "pt": "Hoje faz frio.", "en": "It's cold today." },
+      { "pt": "Eles fazem desporto.", "en": "They do sport." }
+    ],
+    "notes": [
+      "Fazer anos (literally \"to make years\") is how Portugal says it's someone's birthday: A Rita faz anos hoje.",
+      "Weather: faz frio / faz calor. Está frio / está calor are also common.",
+      "Desporto (sport) is the Portugal word; esporte is Brazilian."
+    ],
+    "drills": [
+      { "type": "form", "person": "eu", "answer": "faço" },
+      { "type": "form", "person": "tu", "answer": "fazes" },
+      { "type": "form", "person": "ele", "answer": "faz" },
+      { "type": "form", "person": "nós", "answer": "fazemos" },
+      { "type": "form", "person": "elas", "answer": "fazem" },
+      { "type": "form", "person": "você", "answer": "faz" },
+      { "type": "sentence", "before": "Eu ", "after": " anos amanhã.", "answer": "faço", "en": "It's my birthday tomorrow." },
+      { "type": "sentence", "before": "O que ", "after": " tu ao fim de semana?", "answer": "fazes", "en": "What do you do at the weekend?" },
+      { "type": "sentence", "before": "Hoje ", "after": " muito frio.", "answer": "faz", "en": "It's very cold today." },
+      { "type": "sentence", "before": "Nós ", "after": " o jantar.", "answer": "fazemos", "en": "We make dinner." },
+      { "type": "sentence", "before": "Eles ", "after": " desporto todos os dias.", "answer": "fazem", "en": "They do sport every day." },
+      { "type": "sentence", "before": "A Ana ", "after": " bolos muito bons.", "answer": "faz", "en": "Ana makes very good cakes." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-poder",
+    "title": "poder",
+    "summary": "can, may, and asking politely",
+    "intro": [
+      "Poder means \"can\" or \"may\". Put another verb straight after it: Posso ajudar = I can help.",
+      "It's irregular only in the eu form: posso."
+    ],
+    "table": [
+      { "person": "eu", "form": "posso" },
+      { "person": "tu", "form": "podes" },
+      { "person": "ele / ela / você", "form": "pode" },
+      { "person": "nós", "form": "podemos" },
+      { "person": "eles / elas / vocês", "form": "podem" }
+    ],
+    "examples": [
+      { "pt": "Posso entrar?", "en": "May I come in?" },
+      { "pt": "Podes repetir, por favor?", "en": "Can you say that again, please?" },
+      { "pt": "Pode trazer a conta, se faz favor?", "en": "Could you bring the bill, please? (to a waiter)" },
+      { "pt": "Hoje não podemos.", "en": "We can't today." }
+    ],
+    "notes": [
+      "To a waiter or a stranger, use the ele/ela form without a pronoun: Pode trazer…? It's polite without sounding distant.",
+      "Não pode ser = that's not possible / that can't be right."
+    ],
+    "drills": [
+      { "type": "form", "person": "eu", "answer": "posso" },
+      { "type": "form", "person": "tu", "answer": "podes" },
+      { "type": "form", "person": "ela", "answer": "pode" },
+      { "type": "form", "person": "nós", "answer": "podemos" },
+      { "type": "form", "person": "eles", "answer": "podem" },
+      { "type": "form", "person": "vocês", "answer": "podem" },
+      { "type": "sentence", "before": "", "after": " entrar?", "answer": "Posso", "en": "May I come in?" },
+      { "type": "sentence", "before": "Tu ", "after": " repetir, por favor?", "answer": "podes", "en": "Can you say that again, please?" },
+      { "type": "sentence", "before": "", "after": " trazer a conta, se faz favor?", "answer": "Pode", "en": "Could you bring the bill, please?" },
+      { "type": "sentence", "before": "Nós não ", "after": " ir hoje.", "answer": "podemos", "en": "We can't go today." },
+      { "type": "sentence", "before": "Eles ", "after": " ficar cá em casa.", "answer": "podem", "en": "They can stay at our place." },
+      { "type": "sentence", "before": "Amanhã eu ", "after": " ajudar.", "answer": "posso", "en": "I can help tomorrow." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-querer",
+    "title": "querer",
+    "summary": "to want, and how to order politely",
+    "intro": [
+      "Querer means \"to want\". Like poder, put another verb straight after it: Quero ir = I want to go.",
+      "Watch ele quer: no -e on the end."
+    ],
+    "table": [
+      { "person": "eu", "form": "quero" },
+      { "person": "tu", "form": "queres" },
+      { "person": "ele / ela / você", "form": "quer" },
+      { "person": "nós", "form": "queremos" },
+      { "person": "eles / elas / vocês", "form": "querem" }
+    ],
+    "examples": [
+      { "pt": "Queres um café?", "en": "Do you want a coffee?" },
+      { "pt": "Quero ir à praia.", "en": "I want to go to the beach." },
+      { "pt": "Ela quer aprender português.", "en": "She wants to learn Portuguese." },
+      { "pt": "Queria um café, se faz favor.", "en": "I'd like a coffee, please." }
+    ],
+    "notes": [
+      "In cafés and shops, people say Queria… (I'd like) rather than Quero… (I want). Queria is a past form used to sound polite; just learn it as a phrase for now."
+    ],
+    "drills": [
+      { "type": "form", "person": "eu", "answer": "quero" },
+      { "type": "form", "person": "tu", "answer": "queres" },
+      { "type": "form", "person": "ele", "answer": "quer" },
+      { "type": "form", "person": "nós", "answer": "queremos" },
+      { "type": "form", "person": "elas", "answer": "querem" },
+      { "type": "form", "person": "você", "answer": "quer" },
+      { "type": "sentence", "before": "", "after": " um café?", "answer": "Queres", "en": "Do you want a coffee?" },
+      { "type": "sentence", "before": "Eu ", "after": " ir à praia.", "answer": "quero", "en": "I want to go to the beach." },
+      { "type": "sentence", "before": "A Ana ", "after": " aprender português.", "answer": "quer", "en": "Ana wants to learn Portuguese." },
+      { "type": "sentence", "before": "Nós ", "after": " jantar fora hoje.", "answer": "queremos", "en": "We want to eat out tonight." },
+      { "type": "sentence", "before": "Eles não ", "after": " sair hoje.", "answer": "querem", "en": "They don't want to go out today." },
+      { "type": "sentence", "before": "O que ", "after": " tu fazer amanhã?", "answer": "queres", "en": "What do you want to do tomorrow?" }
+    ],
+    "verified": false
   }
 ]
