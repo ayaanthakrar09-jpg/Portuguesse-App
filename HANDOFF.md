@@ -3,7 +3,7 @@
 Read `CLAUDE.md` first (goals, stack, content rules, working style). This file is the current status.
 
 ## Done (on `main`)
-Pushed to GitHub up to "Add the level test…". The commits after that (tick/cross feedback, Speaking, Reading, Grammar, Slang, this file) are **local only**: the user chose not to push yet. Ask before pushing.
+Everything up to the Slang quiz is pushed to GitHub (26 October 2026). Ask the user before each push; they run it from their Terminal panel.
 
 - **App shell:** React + Vite, dark green theme (colours are variables at the top of `src/styles.css`), sidebar that becomes a bottom bar on phones, dashboard with phrase of the day, streak, progress panel, backup/restore of progress as a JSON file. No leaderboard (user doesn't want one).
 - **Speech out:** `src/lib/speech.js` only speaks with a Portuguese voice (prefers pt-PT), never an English one. `speak(text, { rate })` supports a slower rate.
