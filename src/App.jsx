@@ -13,6 +13,7 @@ import ReadingText from "./pages/reading/ReadingText";
 import GrammarHome from "./pages/grammar/GrammarHome";
 import GrammarTopic from "./pages/grammar/GrammarTopic";
 import GrammarPractice from "./pages/grammar/GrammarPractice";
+import SlangHome from "./pages/slang/SlangHome";
 import SpeakingHome from "./pages/speaking/SpeakingHome";
 import SpeakingSession from "./pages/speaking/SpeakingSession";
 import { useProgress } from "./lib/useProgress";
@@ -28,12 +29,6 @@ const speakingSoon = {
 
 // Sections that are not built yet show an honest "coming" page instead of a fake screen.
 const upcoming = [
-  {
-    path: "/slang",
-    title: "Slang",
-    milestone: 5,
-    text: "Everyday expressions, labelled formal, informal or rude, with when and where people say them.",
-  },
 ];
 
 export default function App() {
@@ -56,6 +51,7 @@ export default function App() {
           <Route path="/grammar" element={<GrammarHome progress={progress} />} />
           <Route path="/grammar/:topicId" element={<GrammarTopic progress={progress} updateProgress={updateProgress} />} />
           <Route path="/grammar/:topicId/practice" element={<GrammarPractice updateProgress={updateProgress} />} />
+          <Route path="/slang" element={<SlangHome />} />
           {speakingReady ? (
             <>
               <Route path="/speaking" element={<SpeakingHome progress={progress} />} />

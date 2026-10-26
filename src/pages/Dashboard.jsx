@@ -39,7 +39,7 @@ const activities = [
   { to: "/speaking", label: "Speaking", icon: "speaking", color: "red", ready: false },
   { to: "/reading", label: "Reading", icon: "reading", color: "blue", ready: true },
   { to: "/grammar", label: "Grammar", icon: "grammar", color: "green", ready: true },
-  { to: "/slang", label: "Slang", icon: "slang", color: "yellow", ready: false },
+  { to: "/slang", label: "Slang", icon: "slang", color: "yellow", ready: true },
 ];
 
 export default function Dashboard({ progress, updateProgress }) {

@@ -590,3 +590,45 @@ ul { padding: 0; list-style: none; }
 @media (max-width: 760px) {
   .grammar-practice { grid-template-columns: 1fr; }
 }
+
+/* ---------- Slang ---------- */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+.filter:hover { color: var(--text); border-color: #3f7a5f; }
+.filter.is-on { background: var(--surface-2); color: var(--text); border-color: var(--accent); }
+
+.switch { display: inline-flex; align-items: center; gap: 10px; color: var(--muted); font-size: 0.9rem; cursor: pointer; justify-self: start; }
+.switch input { width: 18px; height: 18px; accent-color: var(--accent); }
+
+.slang-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.slang-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+.slang-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.slang-pt { font-size: 1.6rem; font-weight: 650; letter-spacing: -0.02em; line-height: 1.15; }
+.slang-en { font-size: 1.05rem; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-size: 0.78rem; padding: 3px 10px; border-radius: 999px; background: var(--surface-2); color: var(--muted); }
+.tag.is-informal { color: #9cc4ff; }
+.tag.is-rude { background: rgba(229, 80, 63, 0.18); color: #ff8a7a; }
+.tag.is-unsure { background: rgba(242, 193, 78, 0.14); color: var(--accent); }
+
+@media (max-width: 760px) {
+  .slang-list { grid-template-columns: 1fr; }
+}
