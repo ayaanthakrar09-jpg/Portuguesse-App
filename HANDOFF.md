@@ -3,7 +3,7 @@
 Read `CLAUDE.md` first (goals, stack, content rules, working style). This file is the current status.
 
 ## Done (on `main`)
-Pushed to GitHub up to "Add the level test…". The commits after that (tick/cross feedback, Speaking, Reading, Grammar, this file) are **local only**: the user chose not to push yet. Ask before pushing.
+Pushed to GitHub up to "Add the level test…". The commits after that (tick/cross feedback, Speaking, Reading, Grammar, Slang, this file) are **local only**: the user chose not to push yet. Ask before pushing.
 
 - **App shell:** React + Vite, dark green theme (colours are variables at the top of `src/styles.css`), sidebar that becomes a bottom bar on phones, dashboard with phrase of the day, streak, progress panel, backup/restore of progress as a JSON file. No leaderboard (user doesn't want one).
 - **Speech out:** `src/lib/speech.js` only speaks with a Portuguese voice (prefers pt-PT), never an English one. `speak(text, { rate })` supports a slower rate.
@@ -17,14 +17,14 @@ Pushed to GitHub up to "Add the level test…". The commits after that (tick/cro
 - **Speaking (built, switched off):** listen, speak into the mic, see which words the browser's recogniser picked up (`src/lib/recognition.js`). Honest labels: transcription only, not a pronunciation score; audio goes to Google/Microsoft in Chrome/Edge. It could not be tried with a real mic (the agent's preview pane blocks microphones), so the user asked to lock it. Turn it on with `speakingReady` in `src/App.jsx` and `ready` for Speaking in `src/pages/Dashboard.jsx`.
 - **Grammar:** `src/data/grammar/present.json`, 5 topics (ser, estar, ser or estar?, ter, ir), present tense only. Each topic: explanation, verb table with Listen, examples, pt-PT notes, then practice (type the form, type the verb in a sentence, pick ser/estar with a reason). Every drill is written by hand in the data; nothing is generated. No vós; você included with a note on how it sounds in Portugal. All `verified: false`.
 - **Menu:** 6 items (Home, Vocab, Speaking, Reading, Grammar, Slang); the user chose to keep Speaking visible while it's switched off.
-- **Slang:** not built (placeholder page).
+- **Slang:** `src/data/slang/pt-pt.json`, 29 expressions in groups (everyday chat, describing, people, café and bar with Lisbon/Porto words, exclamations, Portugal vs Brazil false friends, swear words). Each has formality and region tags, an example with Listen, and `confidence`; medium confidence shows a "Not sure: ask your native speaker" tag. Swear words are hidden until "Show swear words" is switched on, and are never in the quiz. Quiz: 10 random "what does it mean?" questions; wrong options never share a main word with the right one. All `verified: false`.
 
 ## Progress data
-Saved in `localStorage` (key `pt-app-progress-v1`), included in the backup file: `days`, `practisedPhrases`, `cards` (spaced repetition per vocab item), `vocab` (`passedLevels`, `tests`, best `choice`/`typing` scores per unit), `reading` (best score per text), `grammar` (best practice score per topic).
+Saved in `localStorage` (key `pt-app-progress-v1`), included in the backup file: `days`, `practisedPhrases`, `cards` (spaced repetition per vocab item), `vocab` (`passedLevels`, `tests`, best `choice`/`typing` scores per unit), `reading` (best score per text), `grammar` (best practice score per topic), `slang` (best quiz score).
 
 ## Next
 1. **Grammar, more topics:** regular -ar/-er/-ir verbs in the present, then fazer/poder/querer, then the past tense.
-2. **Slang section** (labelled formal/informal/rude, region; never invent slang, mark anything unsure).
+2. **Slang, more expressions** once the native speaker has checked the first batch (never invent slang; mark anything unsure).
 3. **Vocab Level 2** (more phrases) plus the "put the words in order" exercise from `VOCAB_PROMPT.md`.
 4. Try Speaking with a real microphone in Chrome or Edge, then switch it back on.
 

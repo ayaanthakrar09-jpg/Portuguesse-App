@@ -14,6 +14,7 @@ import GrammarHome from "./pages/grammar/GrammarHome";
 import GrammarTopic from "./pages/grammar/GrammarTopic";
 import GrammarPractice from "./pages/grammar/GrammarPractice";
 import SlangHome from "./pages/slang/SlangHome";
+import SlangQuiz from "./pages/slang/SlangQuiz";
 import SpeakingHome from "./pages/speaking/SpeakingHome";
 import SpeakingSession from "./pages/speaking/SpeakingSession";
 import { useProgress } from "./lib/useProgress";
@@ -51,7 +52,8 @@ export default function App() {
           <Route path="/grammar" element={<GrammarHome progress={progress} />} />
           <Route path="/grammar/:topicId" element={<GrammarTopic progress={progress} updateProgress={updateProgress} />} />
           <Route path="/grammar/:topicId/practice" element={<GrammarPractice updateProgress={updateProgress} />} />
-          <Route path="/slang" element={<SlangHome />} />
+          <Route path="/slang" element={<SlangHome progress={progress} />} />
+          <Route path="/slang/quiz" element={<SlangQuiz updateProgress={updateProgress} />} />
           {speakingReady ? (
             <>
               <Route path="/speaking" element={<SpeakingHome progress={progress} />} />

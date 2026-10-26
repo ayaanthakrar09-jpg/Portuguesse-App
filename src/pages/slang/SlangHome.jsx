@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Icon from "../../components/Icon";
 import slang from "../../data/slang/pt-pt.json";
 import { speak, speechMessages } from "../../lib/speech";
+import { QUIZ_LENGTH } from "./SlangQuiz";
 
 const formalityClass = { neutral: "", informal: "is-informal", rude: "is-rude", "very rude": "is-rude" };
 
-export default function SlangHome() {
+export default function SlangHome({ progress }) {
   const [group, setGroup] = useState("all");
   const [showRude, setShowRude] = useState(false); // swear words stay hidden until switched on
   const [voiceNote, setVoiceNote] = useState("");
@@ -29,6 +31,17 @@ export default function SlangHome() {
         <h1 className="page-title">Slang</h1>
         <p className="muted">Everyday expressions you'll hear in Portugal, with how casual they are and where they're used.</p>
       </header>
+
+      <div className="panel panel-row slang-quiz">
+        <div>
+          <h2 className="card-title">Quiz yourself</h2>
+          <p className="muted">
+            {QUIZ_LENGTH} random expressions: pick what each one means.
+            {progress.slang ? ` Your best: ${progress.slang.best} of ${progress.slang.total}.` : ""}
+          </p>
+        </div>
+        <Link to="/slang/quiz" className="btn btn-primary">Start quiz</Link>
+      </div>
 
       <div className="filters" role="group" aria-label="Show">
         <button className={`filter ${group === "all" ? "is-on" : ""}`} aria-pressed={group === "all"} onClick={() => setGroup("all")}>All</button>

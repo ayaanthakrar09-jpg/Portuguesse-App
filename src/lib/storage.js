@@ -12,6 +12,7 @@ export function emptyProgress() {
     vocab: { passedLevels: [], tests: {}, choice: {}, typing: {} }, // levels passed, test results, best exercise scores per unit
     reading: {}, // best question score per text: { textId: { best, total } }
     grammar: {}, // best practice score per topic: { topicId: { best, total } }
+    slang: null, // best quiz score: { best, total }
   };
 }
 

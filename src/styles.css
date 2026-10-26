@@ -632,3 +632,7 @@ ul { padding: 0; list-style: none; }
 @media (max-width: 760px) {
   .slang-list { grid-template-columns: 1fr; }
 }
+.slang-quiz { grid-template-columns: 1fr auto; }
+@media (max-width: 760px) {
+  .slang-quiz { grid-template-columns: 1fr; }
+}

@@ -12,7 +12,7 @@ export function shuffle(list) {
 }
 
 // The correct option plus up to three different ones from the other items, in random order.
-function options(correct, others) {
+export function options(correct, others) {
   const key = (text) => text.toLowerCase();
   const seen = new Set([key(correct)]);
   const wrong = [];
