@@ -9,10 +9,11 @@ export function findTopic(id) {
   return topics.find((topic) => topic.id === id);
 }
 
+// Drills in a topic about one verb use the topic title as the verb hint; topics covering many verbs name it per drill.
 // Practice order gets harder: verb forms first, then whole sentences. "Choose" drills are mixed in random order.
 export function practiceQuestions(topic) {
   const forms = shuffle(topic.drills.filter((d) => d.type === "form"));
   const sentences = shuffle(topic.drills.filter((d) => d.type === "sentence"));
   const choices = shuffle(topic.drills.filter((d) => d.type === "choice")).map((d) => ({ ...d, options: shuffle(d.options) }));
-  return [...forms, ...sentences, ...choices].map((drill, index) => ({ ...drill, key: `${topic.id}-${index}`, verb: topic.title }));
+  return [...forms, ...sentences, ...choices].map((drill, index) => ({ ...drill, key: `${topic.id}-${index}`, verb: drill.verb ?? topic.title }));
 }
