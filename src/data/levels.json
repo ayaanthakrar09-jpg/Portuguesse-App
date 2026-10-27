@@ -176,6 +176,17 @@
         { "id": "l16-adjectives", "title": "More useful adjectives", "topic": "describing" },
         { "id": "l16-where", "title": "Where things are", "topic": "position" }
       ]
+    },
+    {
+      "id": 17,
+      "title": "Everyday conversation",
+      "units": [
+        { "id": "l17-reacting", "title": "Reacting", "topic": "conversation" },
+        { "id": "l17-linking", "title": "Linking ideas", "topic": "linking" },
+        { "id": "l17-time", "title": "Time expressions", "topic": "time" },
+        { "id": "l17-asking", "title": "Asking and offering", "topic": "requests" },
+        { "id": "l17-howitwent", "title": "Saying how it went", "topic": "conversation" }
+      ]
     }
   ]
 }

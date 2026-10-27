@@ -4,7 +4,7 @@ import { StageBar } from "../../components/Stages";
 import { countStages } from "../../lib/mastery";
 import { dueCards } from "../../lib/srs";
 import { dateKey } from "../../lib/storage";
-import { isLevelOpen, levels, openItems } from "../../lib/vocab";
+import { allItems, isLevelOpen, levels, openItems } from "../../lib/vocab";
 
 export default function VocabHome({ progress }) {
   const passed = progress.vocab.passedLevels;
@@ -62,7 +62,7 @@ export default function VocabHome({ progress }) {
       </ul>
 
       <p className="note">
-        More levels are added once Level 1 has been checked. Every item is marked as not yet checked by a native speaker.
+        {allItems.length.toLocaleString("en-GB")} words and phrases in {levels.length} levels. None has been checked by a native speaker yet.
       </p>
     </section>
   );
