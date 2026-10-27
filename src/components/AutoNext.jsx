@@ -3,8 +3,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const QUICK_MS = 1500; // right first time
-const SLOW_MS = 4000; // wrong, or right with an accent to check
+const QUICK_MS = 1000; // right first time
+const SLOW_MS = 3000; // wrong, or right with an accent to check
 
 // `answered`: whether the current question has been marked. `quick`: use the short wait.
 export function useAutoNext(answered, quick, onNext) {
