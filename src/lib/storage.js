@@ -9,7 +9,7 @@ export function emptyProgress() {
     days: [], // dates (YYYY-MM-DD) on which you practised
     practisedPhrases: 0,
     cards: {}, // spaced repetition per vocab item: { id: { due: "YYYY-MM-DD", ... } }
-    vocab: { passedLevels: [], tests: {}, choice: {}, typing: {} }, // levels passed, test results, best exercise scores per unit
+    vocab: { passedLevels: [], tests: {}, choice: {}, typing: {}, order: {} }, // levels passed, test results, best exercise scores per unit (word order: per level)
     reading: {}, // best question score per text: { textId: { best, total } }
     grammar: {}, // best practice score per topic: { topicId: { best, total } }
     slang: null, // best quiz score: { best, total }

@@ -11,6 +11,17 @@
         { "id": "l1-people", "title": "People and family", "topic": "people" },
         { "id": "l1-time", "title": "Numbers and time", "topic": "time" }
       ]
+    },
+    {
+      "id": 2,
+      "title": "Everyday life",
+      "units": [
+        { "id": "l2-restaurant", "title": "At the restaurant", "topic": "food" },
+        { "id": "l2-shopping", "title": "Shopping", "topic": "shopping" },
+        { "id": "l2-directions", "title": "Asking the way", "topic": "travel" },
+        { "id": "l2-home", "title": "Home and daily routine", "topic": "home" },
+        { "id": "l2-plans", "title": "Days and plans", "topic": "time" }
+      ]
     }
   ]
 }

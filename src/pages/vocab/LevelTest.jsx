@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { markAnswer, markText } from "../../lib/answers";
-import { testQuestions, withTestResult } from "../../lib/exercises";
+import { orderedText, testQuestions, withTestResult } from "../../lib/exercises";
 import { dateKey } from "../../lib/storage";
 import { rate } from "../../lib/srs";
 import { findLevel, findUnit, isLevelOpen, levels, passMark } from "../../lib/vocab";
-import { AnswerField, Choices, QuestionPrompt, typeHint } from "./Questions";
+import { AnswerField, Choices, QuestionPrompt, typeHint, WordTiles } from "./Questions";
 
 function newTest(level) {
   const itemsOf = (lvl) => lvl.units.flatMap((unit) => unit.items);
@@ -25,6 +25,7 @@ function Test({ progress, updateProgress, levelId }) {
   const [answers, setAnswers] = useState([]); // { question, given, outcome } per question answered
   const [picked, setPicked] = useState(null);
   const [typed, setTyped] = useState("");
+  const [chosen, setChosen] = useState([]); // word-order tiles picked so far
   const input = useRef(null);
 
   const question = questions[answers.length];
@@ -52,6 +53,10 @@ function Test({ progress, updateProgress, levelId }) {
       if (!picked) return;
       given = picked;
       outcome = picked === question.answer ? "correct" : "wrong";
+    } else if (question.kind === "order") {
+      if (chosen.length < question.tiles.length) return;
+      given = orderedText(question, chosen);
+      outcome = markAnswer(given, question.item) === "wrong" ? "wrong" : "correct";
     } else {
       if (!typed.trim()) return;
       given = typed.trim();
@@ -61,6 +66,7 @@ function Test({ progress, updateProgress, levelId }) {
     setAnswers(all);
     setPicked(null);
     setTyped("");
+    setChosen([]);
     if (all.length === questions.length) finish(all);
   }
 
@@ -164,6 +170,13 @@ function Test({ progress, updateProgress, levelId }) {
           <>
             <Choices question={question} picked={picked} onPick={setPicked} />
             <button type="submit" className="btn btn-primary" disabled={!picked}>
+              {number === questions.length ? "Finish" : "Next"}
+            </button>
+          </>
+        ) : question.kind === "order" ? (
+          <>
+            <WordTiles question={question} chosen={chosen} onChange={setChosen} />
+            <button type="submit" className="btn btn-primary" disabled={chosen.length < question.tiles.length}>
               {number === questions.length ? "Finish" : "Next"}
             </button>
           </>

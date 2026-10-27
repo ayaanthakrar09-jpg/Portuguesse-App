@@ -12,6 +12,8 @@ Everything up to the Slang quiz is pushed to GitHub (26 October 2026). Ask the u
   - Casual pt-PT is the default (*desculpa*, *como estás?*); the polite form is in `alternatives` or the note. Polite forms stay where they're natural (waiter, strangers).
   - Each unit: Flashcards (spaced repetition, `src/lib/srs.js`), Multiple choice (Portuguese to English, English to Portuguese, fill the gap), Type it (from English). Wrong answers return at the end of a session; green tick / red cross feedback.
   - Marking (`src/lib/answers.js`): ignores capitals, punctuation and missing accents (shows the right spelling), nouns with or without article; anything else only if listed in `alternatives`. Never guesses.
+  - **Level 2** ("Everyday life", added 27 October 2026): `src/data/vocab/level-2.json`, 54 items in 5 units (restaurant, shopping, asking the way, home and routine, days and plans), more phrases than Level 1. All `verified: false`.
+  - **Word order** (per level, `src/pages/vocab/WordOrderSession.jsx`): tap word tiles to build every phrase of 3+ words in the level. Only fixed phrases are used, so one order is right; any other natural order must be listed in `alternatives` (done for the "por favor" / "obrigado" / time-first variants). Best score saved per level in `vocab.order`. It doesn't touch spaced repetition. Also used in the middle part of the level test.
   - Level test: 20 questions getting harder (choice, typed gap, typing), marked at the end (silent on purpose, user agreed). 80% passes and opens the next level permanently. Retake any time. From Level 2 on, a quarter of questions come from earlier levels.
 - **Reading:** `src/data/reading/level-1.json`, 3 texts (café, family, station). Every word has a meaning in the text's `glossary` (tap to see it). Listen to the text, 3 comprehension questions, best score saved. All `verified: false`.
 - **Speaking (built, switched off):** listen, speak into the mic, see which words the browser's recogniser picked up (`src/lib/recognition.js`). Honest labels: transcription only, not a pronunciation score; audio goes to Google/Microsoft in Chrome/Edge. It could not be tried with a real mic (the agent's preview pane blocks microphones), so the user asked to lock it. Turn it on with `speakingReady` in `src/App.jsx` and `ready` for Speaking in `src/pages/Dashboard.jsx`.
@@ -25,7 +27,7 @@ Saved in `localStorage` (key `pt-app-progress-v1`), included in the backup file:
 ## Next
 1. **Grammar, more topics:** the past tense next. (Regular -ar/-er/-ir and fazer/poder/querer done 26 October 2026.) The user wants "all the vocab and grammar"; agreed approach is one ~40-item batch at a time so the native speaker can keep up.
 2. **Slang, more expressions** once the native speaker has checked the first batch (never invent slang; mark anything unsure).
-3. **Vocab Level 2** (more phrases) plus the "put the words in order" exercise from `VOCAB_PROMPT.md`.
+3. **Vocab Level 3** when the user asks (Level 2 and word order done).
 4. Try Speaking with a real microphone in Chrome or Edge, then switch it back on.
 
 ## Still pending for the user

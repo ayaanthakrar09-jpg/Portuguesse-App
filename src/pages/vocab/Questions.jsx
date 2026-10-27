@@ -8,6 +8,7 @@ const instructions = {
   blank: "Fill the gap",
   "type-gap": "Type the missing word",
   type: "Type this in Portuguese",
+  order: "Put the words in order",
 };
 
 // Letters English keyboards lack. Optional: a missing accent still counts.
@@ -102,6 +103,34 @@ export function AnswerField({ inputRef, value, onChange, result, buttonText }) {
         </div>
       )}
     </>
+  );
+}
+
+// Word tiles: tap one to add it to the sentence, tap it in the sentence to take it back.
+// `chosen` is the list of tile ids picked so far.
+export function WordTiles({ question, chosen, onChange, result }) {
+  const placed = chosen.map((id) => question.tiles.find((tile) => tile.id === id));
+  const left = question.tiles.filter((tile) => !chosen.includes(tile.id));
+  return (
+    <div className="word-order">
+      <div className={`order-line ${result ? `is-${result}` : ""}`} aria-label="Your sentence">
+        {placed.length === 0 && <span className="muted">Tap the words below</span>}
+        {placed.map((tile) => (
+          <button key={tile.id} type="button" className="tile" lang="pt-PT" disabled={Boolean(result)}
+            onClick={() => onChange(chosen.filter((id) => id !== tile.id))}>
+            {tile.text}
+          </button>
+        ))}
+      </div>
+      <div className="tile-pool" aria-label="Words to use">
+        {left.map((tile) => (
+          <button key={tile.id} type="button" className="tile" lang="pt-PT" disabled={Boolean(result)}
+            onClick={() => onChange([...chosen, tile.id])}>
+            {tile.text}
+          </button>
+        ))}
+      </div>
+    </div>
   );
 }
 

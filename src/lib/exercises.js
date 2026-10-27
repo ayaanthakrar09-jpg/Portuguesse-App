@@ -78,9 +78,35 @@ export function typeQuestion(item) {
   return { item, kind: "type", prompt: item.en, answer: displayPt(item) };
 }
 
+// Word order: only phrases of three or more words. They're fixed expressions, so one order is right;
+// any other natural order must be listed in the item's `alternatives`.
+function words(text) {
+  return text.replace(/[.,!?¿¡;:…]/g, " ").split(/\s+/).filter(Boolean);
+}
+
+export function canOrder(item) {
+  return item.type === "phrase" && words(item.pt).length >= 3;
+}
+
+export function orderItems(level) {
+  return level.units.flatMap((unit) => unit.items).filter(canOrder);
+}
+
+export function orderQuestion(item) {
+  const tiles = words(item.pt).map((text, id) => ({ id, text }));
+  let shuffled = shuffle(tiles);
+  while (shuffled.every((tile, index) => tile.id === index)) shuffled = shuffle(tiles); // never start already solved
+  return { item, kind: "order", prompt: item.en, answer: item.pt, tiles: shuffled };
+}
+
+// The sentence built from the tiles picked so far (tile ids, in order).
+export function orderedText(question, chosen) {
+  return chosen.map((id) => question.tiles.find((tile) => tile.id === id).text).join(" ");
+}
+
 export const TEST_LENGTH = 20;
 
-// A level test: TEST_LENGTH questions getting harder (multiple choice, then typed gaps, then typing from English).
+// A level test: TEST_LENGTH questions getting harder (multiple choice, then word order or typed gaps, then typing from English).
 // From Level 2 on, a quarter of the questions revisit earlier levels.
 export function testQuestions(levelItems, earlierItems, unitItems) {
   const fromEarlier = earlierItems.length ? Math.min(earlierItems.length, Math.round(TEST_LENGTH / 4)) : 0;
@@ -92,7 +118,7 @@ export function testQuestions(levelItems, earlierItems, unitItems) {
   const withGap = chosen.slice(third, third * 2);
   return [
     ...chosen.slice(0, third).map((item) => choiceQuestion(item, unitItems(item))),
-    ...withGap.map((item) => (hasGap(item) ? typeGapQuestion(item) : typeQuestion(item))),
+    ...withGap.map((item) => (canOrder(item) ? orderQuestion(item) : hasGap(item) ? typeGapQuestion(item) : typeQuestion(item))),
     ...chosen.slice(third * 2).map(typeQuestion),
   ];
 }

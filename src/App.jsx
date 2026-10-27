@@ -6,6 +6,7 @@ import VocabHome from "./pages/vocab/VocabHome";
 import LevelPage from "./pages/vocab/LevelPage";
 import FlashcardSession from "./pages/vocab/FlashcardSession";
 import TypingSession from "./pages/vocab/TypingSession";
+import WordOrderSession from "./pages/vocab/WordOrderSession";
 import ChoiceSession from "./pages/vocab/ChoiceSession";
 import LevelTest from "./pages/vocab/LevelTest";
 import ReadingHome from "./pages/reading/ReadingHome";
@@ -44,6 +45,7 @@ export default function App() {
           <Route path="/vocab" element={<VocabHome progress={progress} />} />
           <Route path="/vocab/level/:levelId" element={<LevelPage progress={progress} />} />
           <Route path="/vocab/level/:levelId/test" element={<LevelTest progress={progress} updateProgress={updateProgress} />} />
+          <Route path="/vocab/level/:levelId/order" element={<WordOrderSession progress={progress} updateProgress={updateProgress} />} />
           <Route path="/vocab/unit/:unitId" element={<FlashcardSession progress={progress} updateProgress={updateProgress} />} />
           <Route path="/vocab/unit/:unitId/choose" element={<ChoiceSession progress={progress} updateProgress={updateProgress} />} />
           <Route path="/vocab/unit/:unitId/type" element={<TypingSession progress={progress} updateProgress={updateProgress} />} />

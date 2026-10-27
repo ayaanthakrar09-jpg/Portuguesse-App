@@ -1,7 +1,7 @@
 import { Link, Navigate, useParams } from "react-router-dom";
 import { dueCards } from "../../lib/srs";
 import { dateKey } from "../../lib/storage";
-import { TEST_LENGTH } from "../../lib/exercises";
+import { orderItems, TEST_LENGTH } from "../../lib/exercises";
 import { findLevel, isLevelOpen, passMark } from "../../lib/vocab";
 import { Meter } from "./VocabHome";
 
@@ -57,8 +57,28 @@ export default function LevelPage({ progress }) {
         })}
       </ol>
 
+      <WordOrderCard level={level} started={level.units.some((unit) => unit.items.some((item) => progress.cards[item.id]))} score={progress.vocab.order?.[level.id]} />
+
       <LevelTestCard level={level} result={progress.vocab.tests?.[level.id]} passed={progress.vocab.passedLevels.includes(level.id)} />
     </section>
+  );
+}
+
+// Builds the level's longer phrases from their words. Opens once any unit has been started.
+function WordOrderCard({ level, started, score }) {
+  const count = orderItems(level).length;
+  if (count === 0) return null;
+  return (
+    <div className="card panel-row word-order-card">
+      <div>
+        <h2 className="card-title">Word order</h2>
+        <p className="muted">
+          Build {count} phrases from this level, word by word.
+          {score ? ` Your best: ${score.best} of ${score.total} right first time.` : started ? "" : " Start a unit first."}
+        </p>
+      </div>
+      {started && <Link to={`/vocab/level/${level.id}/order`} className="btn">{score ? "Practise again" : "Start"}</Link>}
+    </div>
   );
 }
 

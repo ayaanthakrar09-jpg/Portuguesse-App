@@ -436,6 +436,30 @@ ul { padding: 0; list-style: none; }
 .gap.is-correct { border-color: #5fc08a; color: #7fd6a3; }
 .gap.is-wrong { border-color: var(--red); color: #ff8a7a; }
 
+/* Word order */
+.word-order { display: grid; gap: 16px; width: 100%; }
+.order-line, .tile-pool { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; min-height: 50px; }
+.order-line { padding: 0 0 10px; border-bottom: 3px solid var(--accent); }
+.order-line.is-correct { border-color: #5fc08a; }
+.order-line.is-wrong { border-color: var(--red); }
+.tile {
+  font: inherit;
+  font-size: 1.1rem;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--text);
+  cursor: pointer;
+}
+.tile:hover:not(:disabled) { border-color: #3f7a5f; background: #265c46; }
+.tile:disabled { cursor: default; }
+.order-line .tile { border-color: var(--accent); }
+.word-order-card { grid-template-columns: 1fr auto; }
+@media (max-width: 760px) {
+  .word-order-card { grid-template-columns: 1fr; }
+}
+
 /* Speaking */
 .page-section { display: grid; }
 .speak-sentence { font-size: clamp(1.6rem, 4.8vw, 2.3rem); font-weight: 600; letter-spacing: -0.015em; line-height: 1.25; }
