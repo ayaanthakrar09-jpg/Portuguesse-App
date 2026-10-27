@@ -1,0 +1,192 @@
+[
+  {
+    "id": "g-imperfect-regular",
+    "title": "falava, comia",
+    "summary": "the imperfeito: used to, was …ing",
+    "intro": [
+      "Portuguese has a second past tense, the imperfeito, for what used to happen or what was going on: Quando era pequeno, morava no Porto = When I was little, I lived in Porto.",
+      "-ar verbs: -ava, -avas, -ava, -ávamos, -avam. -er and -ir verbs: -ia, -ias, -ia, -íamos, -iam."
+    ],
+    "tables": [
+      { "verb": "falar", "meaning": "to speak", "caption": "Imperfeito of falar", "rows": [
+        { "person": "eu", "form": "falava" },
+        { "person": "tu", "form": "falavas" },
+        { "person": "ele / ela / você", "form": "falava" },
+        { "person": "nós", "form": "falávamos" },
+        { "person": "eles / elas / vocês", "form": "falavam" }
+      ] },
+      { "verb": "comer", "meaning": "to eat (-ir verbs work the same: partia)", "caption": "Imperfeito of comer", "rows": [
+        { "person": "eu", "form": "comia" },
+        { "person": "tu", "form": "comias" },
+        { "person": "ele / ela / você", "form": "comia" },
+        { "person": "nós", "form": "comíamos" },
+        { "person": "eles / elas / vocês", "form": "comiam" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Morava no Porto.", "en": "I used to live in Porto." },
+      { "pt": "Antigamente bebia muito café.", "en": "I used to drink a lot of coffee." },
+      { "pt": "Jogávamos à bola todos os dias.", "en": "We played football every day." },
+      { "pt": "A minha avó vivia perto da praia.", "en": "My grandmother lived near the beach." }
+    ],
+    "notes": [
+      "Eu and ele have the same form (eu falava, ele falava), so say the person when it isn't clear.",
+      "Nós has an accent: falávamos, comíamos.",
+      "Estar and ir are regular here: estava, ia. Ler too: lia, lias…",
+      "Time words that go with it: antigamente (in the old days), quando era pequeno (when I was little), todos os dias, sempre."
+    ],
+    "drills": [
+      { "type": "form", "verb": "morar", "person": "eu", "answer": "morava" },
+      { "type": "form", "verb": "falar", "person": "tu", "answer": "falavas" },
+      { "type": "form", "verb": "trabalhar", "person": "ela", "answer": "trabalhava" },
+      { "type": "form", "verb": "jogar", "person": "nós", "answer": "jogávamos" },
+      { "type": "form", "verb": "viver", "person": "eles", "answer": "viviam" },
+      { "type": "form", "verb": "beber", "person": "eu", "answer": "bebia" },
+      { "type": "sentence", "verb": "morar", "before": "Quando era pequeno, ", "after": " no Porto.", "answer": "morava", "en": "When I was little, I lived in Porto." },
+      { "type": "sentence", "verb": "beber", "before": "Antigamente eu ", "after": " muito café.", "answer": "bebia", "en": "I used to drink a lot of coffee." },
+      { "type": "sentence", "verb": "jogar", "before": "Nós ", "after": " à bola todos os dias.", "answer": "jogávamos", "en": "We played football every day." },
+      { "type": "sentence", "verb": "viver", "before": "A minha avó ", "after": " perto da praia.", "answer": "vivia", "en": "My grandmother lived near the beach." },
+      { "type": "sentence", "verb": "ler", "before": "Tu ", "after": " muito quando eras pequeno?", "answer": "lias", "en": "Did you read a lot when you were little?" },
+      { "type": "rewrite", "verb": "trabalhar", "from": "Agora trabalho em casa.", "before": "Antes ", "after": " num escritório.", "answer": "trabalhava", "en": "Before, I worked in an office." },
+      { "type": "rewrite", "verb": "comer", "from": "Agora a Ana come carne.", "before": "Antes a Ana não ", "after": " carne.", "answer": "comia", "en": "Ana didn't use to eat meat." },
+      { "type": "rewrite", "verb": "viver", "from": "Agora eles vivem em Faro.", "before": "Antes eles ", "after": " em Lisboa.", "answer": "viviam", "en": "They used to live in Lisbon." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-imperfect-irregular",
+    "title": "era, tinha, estava, ia",
+    "summary": "ser, ter, estar and ir in the imperfeito",
+    "intro": [
+      "Only four verbs are irregular in the imperfeito: ser, ter, vir and pôr. Estar and ir are regular, but you'll use them all the time, so they're here too."
+    ],
+    "tables": [
+      { "verb": "ser", "meaning": "to be", "caption": "Imperfeito of ser", "rows": [
+        { "person": "eu", "form": "era" },
+        { "person": "tu", "form": "eras" },
+        { "person": "ele / ela / você", "form": "era" },
+        { "person": "nós", "form": "éramos" },
+        { "person": "eles / elas / vocês", "form": "eram" }
+      ] },
+      { "verb": "ter", "meaning": "to have", "caption": "Imperfeito of ter", "rows": [
+        { "person": "eu", "form": "tinha" },
+        { "person": "tu", "form": "tinhas" },
+        { "person": "ele / ela / você", "form": "tinha" },
+        { "person": "nós", "form": "tínhamos" },
+        { "person": "eles / elas / vocês", "form": "tinham" }
+      ] },
+      { "verb": "estar", "meaning": "to be (how, where)", "caption": "Imperfeito of estar", "rows": [
+        { "person": "eu", "form": "estava" },
+        { "person": "tu", "form": "estavas" },
+        { "person": "ele / ela / você", "form": "estava" },
+        { "person": "nós", "form": "estávamos" },
+        { "person": "eles / elas / vocês", "form": "estavam" }
+      ] },
+      { "verb": "ir", "meaning": "to go", "caption": "Imperfeito of ir", "rows": [
+        { "person": "eu", "form": "ia" },
+        { "person": "tu", "form": "ias" },
+        { "person": "ele / ela / você", "form": "ia" },
+        { "person": "nós", "form": "íamos" },
+        { "person": "eles / elas / vocês", "form": "iam" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Quando era pequeno, tinha um cão.", "en": "When I was little, I had a dog." },
+      { "pt": "Estava muito calor.", "en": "It was very hot." },
+      { "pt": "Íamos à praia todos os verões.", "en": "We went to the beach every summer." },
+      { "pt": "Eram dez horas.", "en": "It was ten o'clock." }
+    ],
+    "notes": [
+      "The other two: vir → vinha, vinhas, vinha…; pôr → punha, punhas, punha…",
+      "Descriptions in the past use the imperfeito: O hotel era bonito e tinha piscina = The hotel was nice and had a pool.",
+      "Time and age in the past too: Eram três horas. Tinha dez anos."
+    ],
+    "drills": [
+      { "type": "form", "verb": "ser", "person": "eu", "answer": "era" },
+      { "type": "form", "verb": "ser", "person": "nós", "answer": "éramos" },
+      { "type": "form", "verb": "ter", "person": "tu", "answer": "tinhas" },
+      { "type": "form", "verb": "ter", "person": "eles", "answer": "tinham" },
+      { "type": "form", "verb": "estar", "person": "ela", "answer": "estava" },
+      { "type": "form", "verb": "ir", "person": "nós", "answer": "íamos" },
+      { "type": "sentence", "verb": "ser", "before": "Quando ", "after": " pequeno, tinha um cão.", "answer": "era", "en": "When I was little, I had a dog." },
+      { "type": "sentence", "verb": "ter", "before": "Quando eu era pequeno, ", "after": " um cão.", "answer": "tinha", "en": "When I was little, I had a dog." },
+      { "type": "sentence", "verb": "estar", "before": "Ontem ", "after": " muito calor.", "answer": "estava", "en": "It was very hot yesterday." },
+      { "type": "sentence", "verb": "ir", "before": "Nós ", "after": " à praia todos os verões.", "answer": "íamos", "en": "We went to the beach every summer." },
+      { "type": "sentence", "verb": "ser", "before": "", "after": " dez horas.", "answer": "Eram", "en": "It was ten o'clock." },
+      { "type": "sentence", "verb": "ter", "before": "Ela ", "after": " vinte anos quando foi para Lisboa.", "answer": "tinha", "en": "She was twenty when she went to Lisbon." },
+      { "type": "rewrite", "verb": "estar", "from": "Hoje estou cansado.", "before": "Ontem ", "after": " cansado.", "answer": "estava", "en": "Yesterday I was tired." },
+      { "type": "rewrite", "verb": "ser", "from": "Agora sou professor.", "before": "Antes ", "after": " estudante.", "answer": "era", "en": "Before, I was a student." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-perfeito-imperfeito",
+    "title": "fiz or fazia?",
+    "summary": "choosing the right past tense",
+    "intro": [
+      "Use the perfeito (fiz, falei) for a finished event: something that happened once, or at a clear moment. Ontem fui ao cinema.",
+      "Use the imperfeito (fazia, falava) for what used to happen, what was going on, and descriptions. Ia ao cinema todos os sábados. Estava a chover.",
+      "In a story, the imperfeito sets the scene and the perfeito says what happened: Estava a ler quando o telefone tocou."
+    ],
+    "examples": [
+      { "pt": "Ontem fui ao cinema.", "en": "Yesterday I went to the cinema." },
+      { "pt": "Ia ao cinema todos os sábados.", "en": "I used to go to the cinema every Saturday." },
+      { "pt": "Estava a chover quando saí.", "en": "It was raining when I went out." },
+      { "pt": "A casa era antiga e tinha um jardim.", "en": "The house was old and had a garden." }
+    ],
+    "notes": [
+      "Quick test: if English could say \"used to\" or \"was …ing\", it's usually the imperfeito.",
+      "Words that point to the perfeito: ontem, uma vez (once), de repente (suddenly), em 2020. Words that point to the imperfeito: sempre, todos os dias, antigamente, quando era pequeno."
+    ],
+    "drills": [
+      { "type": "choice", "before": "Ontem ", "after": " ao cinema.", "options": ["fui", "ia"], "answer": "fui", "en": "Yesterday I went to the cinema.", "why": "One finished event at a clear time (ontem): perfeito." },
+      { "type": "choice", "before": "Quando era pequeno, ", "after": " ao cinema todos os sábados.", "options": ["ia", "fui"], "answer": "ia", "en": "When I was little, I went to the cinema every Saturday.", "why": "Something that used to happen: imperfeito." },
+      { "type": "choice", "before": "", "after": " a chover quando saí.", "options": ["Estava", "Esteve"], "answer": "Estava", "en": "It was raining when I went out.", "why": "Setting the scene, what was going on: imperfeito." },
+      { "type": "choice", "before": "Estava a ler quando o telefone ", "after": ".", "options": ["tocou", "tocava"], "answer": "tocou", "en": "I was reading when the phone rang.", "why": "What happened in the middle of the scene: perfeito." },
+      { "type": "choice", "before": "A casa ", "after": " antiga e tinha um jardim.", "options": ["era", "foi"], "answer": "era", "en": "The house was old and had a garden.", "why": "A description: imperfeito." },
+      { "type": "choice", "before": "Em 2020 ", "after": " a Portugal pela primeira vez.", "options": ["vim", "vinha"], "answer": "vim", "en": "In 2020 I came to Portugal for the first time.", "why": "One event at a clear time: perfeito." },
+      { "type": "choice", "before": "Antigamente ", "after": " muito café.", "options": ["bebia", "bebi"], "answer": "bebia", "en": "I used to drink a lot of coffee.", "why": "A habit (antigamente): imperfeito." },
+      { "type": "choice", "before": "De repente, ", "after": " a luz.", "options": ["faltou", "faltava"], "answer": "faltou", "en": "Suddenly the power went off.", "why": "Something sudden: perfeito." },
+      { "type": "choice", "before": "Quando eu era criança, o meu avô ", "after": " numa quinta.", "options": ["vivia", "viveu"], "answer": "vivia", "en": "When I was a child, my grandfather lived on a farm.", "why": "What was the case at that time: imperfeito." },
+      { "type": "choice", "before": "Ontem ", "after": " o dia todo em casa.", "options": ["fiquei", "ficava"], "answer": "fiquei", "en": "Yesterday I stayed at home all day.", "why": "A finished stretch of time (all day yesterday): perfeito." },
+      { "type": "choice", "before": "Eram onze horas e eu ", "after": " fome.", "options": ["tinha", "tive"], "answer": "tinha", "en": "It was eleven o'clock and I was hungry.", "why": "A state at that moment: imperfeito." },
+      { "type": "choice", "before": "Ela ", "after": " anos ontem.", "options": ["fez", "fazia"], "answer": "fez", "en": "It was her birthday yesterday.", "why": "One event, yesterday: perfeito." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-imperfect-uses",
+    "title": "estava a fazer, queria, podia",
+    "summary": "was doing, and the polite imperfeito",
+    "intro": [
+      "Estava a + verb = was doing, something going on at that moment: Estava a dormir quando ligaste.",
+      "Portugal also uses the imperfeito to be polite: Queria um café (I'd like a coffee), Podia ajudar-me? (Could you help me?), Gostava de ir (I'd like to go).",
+      "In everyday speech it often means \"would\": Se tivesse tempo, ia contigo = If I had time, I'd go with you. (Tivesse comes in a later topic.)"
+    ],
+    "examples": [
+      { "pt": "Estava a dormir quando ligaste.", "en": "I was asleep when you called." },
+      { "pt": "O que estavas a fazer?", "en": "What were you doing?" },
+      { "pt": "Podia ajudar-me?", "en": "Could you help me?" },
+      { "pt": "Gostava de ir a Sintra.", "en": "I'd like to go to Sintra." }
+    ],
+    "notes": [
+      "Gostava de… is the usual way to say \"I'd like to…\" in Portugal: Gostava de visitar os Açores.",
+      "Brazil uses gostaria and poderia more. In Portugal those exist too but sound more formal."
+    ],
+    "drills": [
+      { "type": "sentence", "hint": "dormir", "before": "Eu ", "after": " quando ligaste.", "answer": "estava a dormir", "en": "I was asleep when you called." },
+      { "type": "sentence", "hint": "fazer, tu", "before": "O que ", "after": "?", "answer": "estavas a fazer", "en": "What were you doing?" },
+      { "type": "sentence", "hint": "fazer", "before": "Nós ", "after": " o jantar quando chegaram.", "answer": "estávamos a fazer", "en": "We were making dinner when they arrived." },
+      { "type": "sentence", "hint": "ver", "before": "Eles ", "after": " televisão.", "answer": "estavam a ver", "en": "They were watching TV." },
+      { "type": "sentence", "hint": "querer, polite", "before": "", "after": " um café, se faz favor.", "answer": "Queria", "en": "I'd like a coffee, please." },
+      { "type": "sentence", "hint": "poder, polite", "before": "", "after": " ajudar-me?", "answer": "Podia", "en": "Could you help me?" },
+      { "type": "sentence", "hint": "gostar, I'd like", "before": "", "after": " de ir a Sintra.", "answer": "Gostava", "en": "I'd like to go to Sintra." },
+      { "type": "sentence", "hint": "gostar, would you like", "before": "Tu ", "after": " de viver em Lisboa?", "answer": "gostavas", "en": "Would you like to live in Lisbon?" },
+      { "type": "choice", "before": "", "after": " um café, se faz favor.", "options": ["Queria", "Quis"], "answer": "Queria", "en": "I'd like a coffee, please.", "why": "Ordering politely uses the imperfeito: queria." },
+      { "type": "choice", "before": "Ontem à noite ", "after": " a ler quando a luz foi abaixo.", "options": ["estava", "estive"], "answer": "estava", "en": "Last night I was reading when the power went off.", "why": "What was going on when something happened: estava a." },
+      { "type": "choice", "before": "", "after": " ajudar-me, por favor?", "options": ["Podia", "Pude"], "answer": "Podia", "en": "Could you help me, please?", "why": "A polite request: podia." },
+      { "type": "choice", "before": "Se tivesse dinheiro, ", "after": " uma casa na praia.", "options": ["comprava", "comprei"], "answer": "comprava", "en": "If I had money, I'd buy a house by the beach.", "why": "In everyday Portuguese the imperfeito often means \"would\"." }
+    ],
+    "verified": false
+  }
+]
