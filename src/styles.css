@@ -11,8 +11,7 @@
   --accent-ink: #231a02;
   --tile: #7fbf9a; /* azulejo pattern on the phrase card */
 
-  /* colours of the four activity circles */
-  --pink: #e88f9a;
+  /* signal colours: wrong answers, and the flashcard rating buttons */
   --red: #e5503f;
   --blue: #3d7be0;
   --yellow: #f2b84b;
@@ -22,6 +21,7 @@
   --radius-sm: 10px;
   --sidebar-w: 232px;
   --font: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-pt: "Literata", Georgia, serif; /* every Portuguese word, so you always know which language you're reading */
 }
 
 * { box-sizing: border-box; }
@@ -38,6 +38,10 @@ body {
 
 h1, h2, p, ul { margin: 0; }
 ul { padding: 0; list-style: none; }
+
+[lang="pt-PT"] { font-family: var(--font-pt); letter-spacing: -0.005em; }
+/* Portuguese words inside English explanations */
+.pt-inline { font-style: italic; color: #d8eadc; }
 
 :focus-visible {
   outline: 2px solid var(--accent);
@@ -141,17 +145,26 @@ ul { padding: 0; list-style: none; }
   display: grid;
   gap: 12px;
 }
-/* Azulejo tiles, fading out towards the text so the phrase stays readable. */
-.hero::before {
-  content: "";
+/* Azulejo tiles, fading out towards the text so the phrase stays readable.
+   On the first visit of the day they turn over one by one, sweeping in from the right, then the phrase rises in. */
+.hero-tiles {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 56 56' fill='none' stroke='%237fbf9a' stroke-width='1.1'%3E%3Cpath d='M28 6c6 8 6 14 0 22-6-8-6-14 0-22zM28 28c6 8 6 14 0 22-6-8-6-14 0-22zM6 28c8-6 14-6 22 0-8 6-14 6-22 0zM28 28c8-6 14-6 22 0-8 6-14 6-22 0z'/%3E%3Crect x='.5' y='.5' width='55' height='55'/%3E%3C/svg%3E");
+  display: grid;
+  grid-template-columns: repeat(10, 64px);
+  grid-auto-rows: 64px;
+  justify-content: end;
+  align-content: start;
   opacity: 0.3;
   -webkit-mask-image: linear-gradient(to left, #000, transparent 65%);
   mask-image: linear-gradient(to left, #000, transparent 65%);
 }
+.hero-tiles span { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56' fill='none' stroke='%237fbf9a' stroke-width='1.6'%3E%3Cpath d='M28 6c6 8 6 14 0 22-6-8-6-14 0-22zM28 28c6 8 6 14 0 22-6-8-6-14 0-22zM6 28c8-6 14-6 22 0-8 6-14 6-22 0zM28 28c8-6 14-6 22 0-8 6-14 6-22 0z'/%3E%3Crect x='.8' y='.8' width='54.4' height='54.4'/%3E%3C/svg%3E") center / 100% no-repeat; }
+.hero.is-intro .hero-tiles span { animation: tile-turn 0.45s ease-out var(--delay) both; }
+.hero.is-intro > :not(.hero-tiles) { animation: rise-in 0.5s ease-out 0.55s both; }
+@keyframes tile-turn { from { opacity: 0; transform: perspective(200px) rotateY(80deg) scale(0.8); } to { opacity: 1; transform: none; } }
+@keyframes rise-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 .hero-label { color: var(--muted); font-size: 0.9rem; font-weight: 500; }
 .hero-phrase {
   font-size: clamp(1.9rem, 4.6vw, 3rem);
@@ -187,6 +200,8 @@ ul { padding: 0; list-style: none; }
 .btn:disabled { color: var(--muted); cursor: default; }
 .btn-primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 .btn-primary:hover:not(:disabled) { background: #f6cd6b; border-color: #f6cd6b; }
+/* A primary button that can't be used yet looks like a quiet one, so its label stays readable. */
+.btn-primary:disabled { background: var(--surface-2); border-color: var(--line); color: var(--muted); }
 .btn-quiet { background: transparent; border-color: transparent; color: var(--muted); padding-inline: 10px; }
 .btn-quiet:hover:not(:disabled) { background: var(--surface); border-color: transparent; color: var(--text); }
 .btn-icon { width: 46px; height: 46px; padding: 0; }
@@ -211,34 +226,51 @@ ul { padding: 0; list-style: none; }
 .day.done { color: var(--text); }
 .day.done .day-dot { background: var(--accent); border-color: var(--accent); }
 
-/* ---------- Activities ---------- */
-.activities { display: flex; flex-wrap: wrap; gap: 24px; }
-.activity {
+/* ---------- Carry on ---------- */
+.next-steps { gap: 6px; }
+.next-list { display: grid; }
+.next-row {
   display: grid;
-  justify-items: center;
-  gap: 8px;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  margin-inline: -12px;
+  border-radius: var(--radius-sm);
   color: var(--text);
   text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
 }
-.activity-circle {
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
+.next-row:hover { background: var(--surface-2); }
+.next-row svg { color: var(--accent); }
+.next-body { display: grid; font-size: 0.9rem; }
+.next-title { font-size: 1.05rem; font-weight: 600; }
+
+/* ---------- Areas: one calm tile per section, with where you are ---------- */
+.areas { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+.area {
   display: grid;
-  place-items: center;
-  color: #1a1010;
-  transition: transform 0.15s;
+  gap: 2px;
+  height: 100%;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
 }
-.activity:hover .activity-circle { transform: translateY(-2px); }
-.c-pink { background: var(--pink); }
-.c-red { background: var(--red); }
-.c-blue { background: var(--blue); color: #fff; }
-.c-yellow { background: var(--yellow); }
-.c-green { background: var(--tile); }
-.activity.is-soon .activity-circle { opacity: 0.45; }
-.activity-soon { color: var(--muted); font-size: 0.75rem; margin-top: -6px; }
+.area:hover { border-color: #3f7a5f; background: var(--surface-2); }
+.area-icon { color: var(--accent); margin-bottom: 8px; }
+.area-label { font-weight: 600; }
+.area-status { color: var(--muted); font-size: 0.85rem; }
+.area.is-soon { opacity: 0.6; }
+.area.is-soon .area-icon { color: var(--muted); }
+
+/* ---------- Tile wall ---------- */
+.wall { display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; }
+.wall-tile { aspect-ratio: 1; border-radius: 3px; border: 1px solid var(--line); }
+.wall-tile.is-filled { border-color: #3f7a5f; background: #2a6b4f url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56' fill='none' stroke='%237fbf9a' stroke-width='1.6'%3E%3Cpath d='M28 6c6 8 6 14 0 22-6-8-6-14 0-22zM28 28c6 8 6 14 0 22-6-8-6-14 0-22zM6 28c8-6 14-6 22 0-8 6-14 6-22 0zM28 28c8-6 14-6 22 0-8 6-14 6-22 0z'/%3E%3Crect x='.8' y='.8' width='54.4' height='54.4'/%3E%3C/svg%3E") center / 100% no-repeat; }
+.wall-tile.is-new { animation: tile-turn 0.5s ease-out var(--delay) both; }
 
 /* ---------- Vocab ---------- */
 .stats-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
@@ -461,6 +493,9 @@ ul { padding: 0; list-style: none; }
 .tile:hover:not(:disabled) { border-color: #3f7a5f; background: #265c46; }
 .tile:disabled { cursor: default; }
 .order-line .tile { border-color: var(--accent); }
+/* A tapped word slides into the sentence */
+.order-line .tile { animation: tile-place 0.2s ease-out; }
+@keyframes tile-place { from { opacity: 0; transform: translateY(10px) scale(0.92); } to { opacity: 1; transform: none; } }
 .word-order-card { grid-template-columns: 1fr auto; }
 @media (max-width: 760px) {
   .word-order-card { grid-template-columns: 1fr; }
@@ -609,16 +644,68 @@ ul { padding: 0; list-style: none; }
 .grammar-card { gap: 16px; max-width: 760px; }
 .grammar-card > p { max-width: 62ch; }
 .verb-block { display: grid; gap: 4px; }
-.grammar-stage { display: grid; gap: 12px; }
-.stage-title { font-size: 1.2rem; font-weight: 600; }
+/* Grammar list: one folding section per stage, compact rows that are links */
+.stages { display: grid; gap: 12px; }
+.stage { border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--surface); }
+.stage-summary {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  cursor: pointer;
+  list-style: none;
+}
+.stage-summary::-webkit-details-marker { display: none; }
+.stage-chevron { color: var(--muted); display: grid; transition: transform 0.2s; }
+.stage[open] .stage-chevron { transform: rotate(90deg); color: var(--accent); }
+.stage-heading { display: grid; gap: 2px; }
+.stage-title { font-size: 1.15rem; font-weight: 600; }
+.stage-count { display: grid; gap: 6px; justify-items: end; color: var(--muted); font-size: 0.875rem; white-space: nowrap; }
+.stage-meter { width: 64px; height: 4px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+.stage-meter span { display: block; height: 100%; background: var(--accent); }
+.topic-list { list-style: none; margin: 0; padding: 0 8px 8px; display: grid; }
+.topic-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  text-decoration: none;
+}
+.topic-row:hover { background: var(--surface-2); }
+.topic-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.topic-row.is-done .topic-number { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.topic-body { display: grid; gap: 0; font-size: 0.9rem; }
+.topic-title { font-size: 1.05rem; font-weight: 600; }
+.topic-score { color: var(--muted); font-size: 0.85rem; }
+@media (max-width: 760px) {
+  .stage-summary { grid-template-columns: auto 1fr; }
+  .stage-count { grid-column: 2; justify-items: start; grid-auto-flow: column; align-items: center; }
+}
 .rewrite-from { color: var(--muted); font-size: 1.1rem; }
 .rewrite-from::before { content: "Now: "; }
-.verb-table { border-collapse: collapse; width: 100%; max-width: 420px; }
+.verb-table { border-collapse: collapse; width: 100%; max-width: 500px; }
+/* Fixed columns, so two tables in the same topic line up */
+.verb-table th { width: 55%; }
+.verb-table td:last-child { width: 48px; }
 .verb-table th, .verb-table td { padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line); text-align: left; }
 .verb-table tr:last-child th, .verb-table tr:last-child td { border-bottom: 0; }
 .verb-table th { font-weight: 400; color: var(--muted); }
 .verb-table td[lang] { font-size: 1.3rem; font-weight: 600; color: var(--accent); }
-.verb-table td:last-child { width: 1%; padding-right: 0; }
+.verb-table td:last-child { padding-right: 0; }
 .grammar-examples { display: grid; gap: 10px; }
 .grammar-notes { display: grid; gap: 8px; padding-left: 18px; list-style: disc; color: var(--muted); }
 .grammar-practice { grid-template-columns: 1fr auto; max-width: 760px; }
@@ -671,3 +758,6 @@ ul { padding: 0; list-style: none; }
 @media (max-width: 760px) {
   .slang-quiz { grid-template-columns: 1fr; }
 }
+
+/* Buttons and inputs reset their font, so Portuguese ones get the Portuguese face back. */
+.tile[lang="pt-PT"], .choice[lang="pt-PT"], .type-input[lang="pt-PT"] { font-family: var(--font-pt); }

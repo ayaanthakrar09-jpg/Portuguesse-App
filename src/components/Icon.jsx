@@ -11,6 +11,7 @@ const paths = {
   cross: "M6.5 6.5l11 11M17.5 6.5l-11 11",
   download: "M12 4v11m0 0-4-4m4 4 4-4M5 19h14",
   upload: "M12 16V5m0 0-4 4m4-4 4 4M5 19h14",
+  chevron: "m9 6 6 6-6 6",
 };
 
 export default function Icon({ name, size = 20 }) {

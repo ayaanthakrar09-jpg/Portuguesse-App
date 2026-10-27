@@ -24,6 +24,14 @@ Everything up to the Slang quiz is pushed to GitHub (26 October 2026). Ask the u
 
 - **Auto-next** (`src/components/AutoNext.jsx`, user request 27 October 2026): after an answer is marked, vocab multiple choice, typing, word order, grammar practice and the slang quiz move on by themselves (1 s when right, 3 s when wrong or accent-only; user found 1.5/4 s too slow) with a shrinking bar and a Pause button. Listen also pauses. Next/Enter still work. The level test and flashcards are unchanged.
 
+- **Design pass** (28 October 2026):
+  - **Portuguese is set in Literata (serif)** wherever an element has `lang="pt-PT"`; English stays in Bricolage Grotesque. Buttons and inputs reset fonts, so `.tile`, `.choice`, `.type-input` re-apply it.
+  - **Portuguese inside English explanations** is marked in the data as `*palavra*` and rendered by `src/components/RichText.jsx` (italic, Portuguese font, `lang="pt-PT"`). 408 strings were marked by a script, then read through; shared words like cinema/Porto are only marked after a Portuguese article. When writing new notes, mark Portuguese by hand with `*...*`.
+  - **Home:** "Carry on" card (due flashcards, next vocab unit or level test, next grammar topic), calm area tiles with progress (replaced the coloured circles), and a **tile wall**: one azulejo tile per grammar topic practised and per vocab unit fully learned; new tiles turn over into place. The phrase card's tiles sweep in on the first visit of the day (`pt-app-intro` in localStorage; `pt-app-wall-seen` tracks wall tiles; both are per-device touches only).
+  - **Grammar list:** folding sections (the first unfinished one opens), compact clickable rows, ticks and per-section counts.
+  - **Practice:** progress bar on every session (`src/components/SessionProgress.jsx`), readable disabled primary button, word tiles slide into the sentence. All motion is off when the device asks for reduced motion.
+  - Agreed next: Vocab to 1,000 items (choose by frequency, not topic), then putting the app online for the phone (user said skip for now).
+
 ## Progress data
 Saved in `localStorage` (key `pt-app-progress-v1`), included in the backup file: `days`, `practisedPhrases`, `cards` (spaced repetition per vocab item), `vocab` (`passedLevels`, `tests`, best `choice`/`typing` scores per unit), `reading` (best score per text), `grammar` (best practice score per topic), `slang` (best quiz score).
 

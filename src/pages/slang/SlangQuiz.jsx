@@ -5,6 +5,7 @@ import { options, shuffle } from "../../lib/exercises";
 import { dateKey } from "../../lib/storage";
 import { Choices, ResultMark } from "../vocab/Questions";
 import { AutoNextControl, useAutoNext } from "../../components/AutoNext";
+import SessionProgress from "../../components/SessionProgress";
 
 export const QUIZ_LENGTH = 10;
 
@@ -108,6 +109,7 @@ export default function SlangQuiz({ updateProgress }) {
         <Link to="/slang" className="btn btn-quiet">End quiz</Link>
         <span className="muted">{queue.length} left</span>
       </div>
+      <SessionProgress left={queue.length} />
 
       <div className="flashcard">
         <span className="chip">Slang quiz</span>
