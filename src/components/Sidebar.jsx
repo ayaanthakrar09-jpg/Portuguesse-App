@@ -17,7 +17,7 @@ export default function Sidebar() {
   return (
     <nav className="sidebar" aria-label="Main">
       <div className="brand">
-        <span className="brand-name">Português</span>
+        <span className="brand-name">Azulejo</span>
         <Flag width={21} />
       </div>
       <ul className="nav-list">

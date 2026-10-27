@@ -2,6 +2,8 @@
 
 Read `CLAUDE.md` first (goals, stack, content rules, working style). This file is the current status.
 
+The app is called **Azulejo** (user chose it 28 October 2026, after the tile you earn on the Home tile wall). The name is in `index.html`, the sidebar, `package.json` and the backup file name (`azulejo-backup-<date>.json`; older `portugues-backup-…` files still restore). The project folder and GitHub repo keep their old names. Dev server name in `.claude/launch.json`: `azulejo`.
+
 ## Done (on `main`)
 Everything up to the Slang quiz is pushed to GitHub (26 October 2026). Ask the user before each push; they run it from their Terminal panel.
 

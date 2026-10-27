@@ -59,7 +59,7 @@ export function exportBackup(progress) {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = `portugues-backup-${dateKey()}.json`;
+  link.download = `azulejo-backup-${dateKey()}.json`;
   link.click();
   URL.revokeObjectURL(url);
 }

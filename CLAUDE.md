@@ -1,4 +1,4 @@
-# Portuguese (pt-PT) learning app
+# Azulejo: a European Portuguese (pt-PT) learning app
 
 **Start here:** read `HANDOFF.md` for the current status and what to do next.
 
