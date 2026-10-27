@@ -154,6 +154,17 @@
         { "id": "l14-cooking", "title": "Cooking", "topic": "cooking" },
         { "id": "l14-eating", "title": "Eating out", "topic": "restaurant" }
       ]
+    },
+    {
+      "id": 15,
+      "title": "Town and society",
+      "units": [
+        { "id": "l15-town", "title": "In town", "topic": "town" },
+        { "id": "l15-people", "title": "People around you", "topic": "people" },
+        { "id": "l15-shops", "title": "Shops and services", "topic": "services" },
+        { "id": "l15-society", "title": "Society", "topic": "society" },
+        { "id": "l15-study", "title": "Work and study", "topic": "work" }
+      ]
     }
   ]
 }
