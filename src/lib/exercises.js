@@ -92,11 +92,18 @@ export function orderItems(level) {
   return level.units.flatMap((unit) => unit.items).filter(canOrder);
 }
 
-export function orderQuestion(item) {
-  const tiles = words(item.pt).map((text, id) => ({ id, text }));
+// Shuffled word tiles for a sentence, never already in order. With `splitHyphens`, vejo-te becomes two tiles
+// (vejo, te) and the first word loses its capital, so neither gives away where the words go.
+export function wordTiles(text, { splitHyphens = false } = {}) {
+  const list = splitHyphens ? words(text).flatMap((word) => word.split("-")) : words(text);
+  const tiles = list.map((word, id) => ({ id, text: splitHyphens && id === 0 ? word[0].toLowerCase() + word.slice(1) : word }));
   let shuffled = shuffle(tiles);
-  while (shuffled.every((tile, index) => tile.id === index)) shuffled = shuffle(tiles); // never start already solved
-  return { item, kind: "order", prompt: item.en, answer: item.pt, tiles: shuffled };
+  while (shuffled.every((tile, index) => tile.id === index)) shuffled = shuffle(tiles);
+  return shuffled;
+}
+
+export function orderQuestion(item) {
+  return { item, kind: "order", prompt: item.en, answer: item.pt, tiles: wordTiles(item.pt) };
 }
 
 // The sentence built from the tiles picked so far (tile ids, in order).

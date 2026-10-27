@@ -2,15 +2,17 @@ import { useEffect, useRef, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { AutoNextControl, useAutoNext } from "../../components/AutoNext";
 import { markText } from "../../lib/answers";
-import { findTopic, practiceQuestions } from "../../lib/grammar";
+import { orderedText } from "../../lib/exercises";
+import { findTopic, orderTiles, practiceQuestions } from "../../lib/grammar";
 import { dateKey } from "../../lib/storage";
-import { AnswerField, Choices, ResultMark } from "../vocab/Questions";
+import { AnswerField, Choices, ResultMark, WordTiles } from "../vocab/Questions";
 
 const instructions = {
   form: "Type the right form",
   sentence: "Type the missing verb",
   choice: "Pick the right verb",
   rewrite: "Change it to the past",
+  order: "Put the words in order",
 };
 
 // Topics about words rather than verbs ("focus": "word").
@@ -27,6 +29,8 @@ function Practice({ updateProgress, topicId }) {
   const [queue, setQueue] = useState(() => (topic ? practiceQuestions(topic) : []));
   const [typed, setTyped] = useState("");
   const [picked, setPicked] = useState(null);
+  const [chosen, setChosen] = useState([]); // word tiles picked so far, for "order" questions
+  const [written, setWritten] = useState(""); // the accepted sentence that the tiles matched
   const [result, setResult] = useState(null); // null while answering, then "correct" | "accent" | "wrong"
   const [missed, setMissed] = useState([]); // questions wrong at the first attempt
   const input = useRef(null);
@@ -62,15 +66,26 @@ function Practice({ updateProgress, topicId }) {
   function submit(event) {
     event.preventDefault();
     if (result) return next();
+    const accepted = [question.answer, ...(question.alternatives ?? [])];
+    if (question.type === "order") {
+      if (chosen.length < question.tiles.length) return;
+      // Tiles have no hyphens, so compare without them: "vejo te" counts as vejo-te. The answer shows the spelling.
+      const loose = (text) => text.replace(/-/g, " ");
+      const built = loose(orderedText(question, chosen));
+      setWritten(accepted.find((sentence) => markText(built, [loose(sentence)]) !== "wrong") ?? "");
+      return mark(markText(built, accepted.map(loose)));
+    }
     if (!typed.trim()) return;
-    mark(markText(typed, [question.answer, ...(question.alternatives ?? [])]));
+    mark(markText(typed, accepted));
   }
 
   function next() {
     // A wrong answer goes to the back of the queue: practice ends once each one has been answered correctly.
-    const nextQueue = result === "wrong" ? [...queue.slice(1), question] : queue.slice(1);
+    const again = question.type === "order" ? { ...question, tiles: orderTiles(question.answer) } : question;
+    const nextQueue = result === "wrong" ? [...queue.slice(1), again] : queue.slice(1);
     setQueue(nextQueue);
     setTyped("");
+    setChosen([]);
     setPicked(null);
     setResult(null);
     if (nextQueue.length === 0) saveScore();
@@ -126,6 +141,7 @@ function Practice({ updateProgress, topicId }) {
 
   /* ---------- Question ---------- */
   const isChoice = question.type === "choice";
+  const isOrder = question.type === "order";
   const gapState = result ? (result === "wrong" ? "is-wrong" : "is-correct") : "";
 
   return (
@@ -139,21 +155,32 @@ function Practice({ updateProgress, topicId }) {
         <span className="chip" lang="pt-PT">{topic.title}</span>
         <p className="muted">{(topic.focus === "word" ? wordInstructions : instructions)[question.type]}</p>
 
-        <div className="gap-sentence">
-          {question.from && <p className="rewrite-from" lang="pt-PT">{question.from}</p>}
-          <p className="gap-pt" lang="pt-PT">
-            {question.type === "form" ? `${question.person} ` : question.before}
-            <span className={`gap ${gapState}`}>{result ? question.answer : picked || " "}</span>
-            {question.type === "form" ? "" : question.after}
-          </p>
-          <p className="muted">
-            {question.en ? `${question.en} ` : ""}
-            {question.hint && !isChoice ? <span lang="pt-PT">({question.hint})</span> : ""}
-          </p>
-        </div>
+        {isOrder ? (
+          <h1 className="flash-english">{question.en}</h1>
+        ) : (
+          <div className="gap-sentence">
+            {question.from && <p className="rewrite-from" lang="pt-PT">{question.from}</p>}
+            <p className="gap-pt" lang="pt-PT">
+              {question.type === "form" ? `${question.person} ` : question.before}
+              <span className={`gap ${gapState}`}>{result ? question.answer : picked || " "}</span>
+              {question.type === "form" ? "" : question.after}
+            </p>
+            <p className="muted">
+              {question.en ? `${question.en} ` : ""}
+              {question.hint && !isChoice ? <span lang="pt-PT">({question.hint})</span> : ""}
+            </p>
+          </div>
+        )}
 
         {isChoice ? (
           <Choices question={{ ...question, kind: "choice" }} picked={picked} reveal={Boolean(result)} onPick={choose} />
+        ) : isOrder ? (
+          <>
+            <WordTiles question={question} chosen={chosen} onChange={setChosen} result={result} />
+            <button type="submit" className="btn btn-primary" disabled={!result && chosen.length < question.tiles.length}>
+              {result ? "Next" : "Check"}
+            </button>
+          </>
         ) : (
           <AnswerField inputRef={input} value={typed} onChange={setTyped} result={result} buttonText={result ? "Next" : "Check"} />
         )}
@@ -164,10 +191,10 @@ function Practice({ updateProgress, topicId }) {
               <ResultMark ok={result !== "wrong"} />
               {result === "correct" ? "Correct" : result === "accent" ? "Correct, but check the accents" : "Not quite"}
             </p>
-            {result !== "correct" && (
+            {(result !== "correct" || isOrder) && (
               <p>
-                {result === "wrong" ? "The answer is " : "It's spelt "}
-                <strong lang="pt-PT">{question.answer}</strong>
+                {result === "wrong" ? "The answer is " : isOrder ? "Written: " : "It's spelt "}
+                <strong lang="pt-PT">{(isOrder && written) || question.answer}</strong>
               </p>
             )}
             {question.why && <p className="muted">{question.why}</p>}
@@ -182,7 +209,7 @@ function Practice({ updateProgress, topicId }) {
       </form>
 
       <p className="note">
-        {isChoice ? "Keys 1 and 2 pick an answer." : "Press Enter to check."} It then moves on by itself; Pause stops it. Wrong answers come back at the end.
+        {isChoice ? "Keys 1 and 2 pick an answer." : isOrder ? "Tap the words in order, then Check." : "Press Enter to check."} It then moves on by itself; Pause stops it. Wrong answers come back at the end.
       </p>
     </section>
   );
@@ -191,5 +218,6 @@ function Practice({ updateProgress, topicId }) {
 // The question as a complete sentence, for the result list.
 function filled(question) {
   if (question.type === "form") return `${question.person} ${question.answer}`;
+  if (question.type === "order") return question.answer;
   return `${question.before}${question.answer}${question.after}`;
 }

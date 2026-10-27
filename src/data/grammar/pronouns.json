@@ -1,0 +1,186 @@
+[
+  {
+    "id": "g-pronoun-after",
+    "title": "vejo-te, ajuda-me",
+    "summary": "me, te, o, a: where they normally go",
+    "focus": "word",
+    "intro": [
+      "Small words like me, te, o (him, it), a (her, it), nos (us) and os / as (them) stand in for a person or thing: Vejo a Ana → Vejo-a (I see her).",
+      "In Portugal they normally go after the verb, joined with a hyphen: Ajuda-me! Conheço-te. Ela convidou-nos.",
+      "This is one of the clearest differences from Brazil, where they usually go in front (Me ajuda!)."
+    ],
+    "tables": [
+      { "verb": "object pronouns", "caption": "Object pronouns", "listen": "form", "rows": [
+        { "person": "me", "form": "me" },
+        { "person": "you (tu)", "form": "te" },
+        { "person": "him, it / her, it", "form": "o · a" },
+        { "person": "us", "form": "nos" },
+        { "person": "them", "form": "os · as" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Ajuda-me, por favor.", "en": "Help me, please." },
+      { "pt": "Conheço-te de algum lado.", "en": "I know you from somewhere." },
+      { "pt": "Ela convidou-nos para jantar.", "en": "She invited us to dinner." },
+      { "pt": "Vejo-te amanhã!", "en": "See you tomorrow!" }
+    ],
+    "notes": [
+      "O and a also mean \"it\" for things: O livro? Comprei-o ontem. (The book? I bought it yesterday.)",
+      "Me, te and nos also mean \"to me\", \"to you\", \"to us\": Dá-me o sal = Give me the salt.",
+      "Chamo-me and levanto-me, from the reflexive topic, follow the same rule."
+    ],
+    "drills": [
+      { "type": "sentence", "hint": "ver + te", "before": "", "after": " amanhã!", "answer": "Vejo-te", "en": "See you tomorrow!" },
+      { "type": "sentence", "hint": "ajudar + me, to a friend", "before": "", "after": ", por favor.", "answer": "Ajuda-me", "en": "Help me, please." },
+      { "type": "sentence", "hint": "us", "before": "Ela convidou-", "after": " para jantar.", "answer": "nos", "en": "She invited us to dinner." },
+      { "type": "sentence", "hint": "it", "before": "O livro? Comprei-", "after": " ontem.", "answer": "o", "en": "The book? I bought it yesterday." },
+      { "type": "sentence", "hint": "her", "before": "A Ana? Vi-", "after": " no café.", "answer": "a", "en": "Ana? I saw her at the café." },
+      { "type": "sentence", "hint": "them", "before": "Os bilhetes? Tenho-", "after": " aqui.", "answer": "os", "en": "The tickets? I've got them here." },
+      { "type": "order", "answer": "Conheço-te de algum lado.", "en": "I know you from somewhere." },
+      { "type": "order", "answer": "Ela ajudou-me muito.", "en": "She helped me a lot." },
+      { "type": "order", "answer": "Convidaram-nos para a festa.", "en": "They invited us to the party." },
+      { "type": "order", "answer": "Chamo-me Pedro.", "en": "My name is Pedro." },
+      { "type": "choice", "before": "", "after": " amanhã!", "options": ["Vejo-te", "Te vejo"], "answer": "Vejo-te", "en": "See you tomorrow!", "why": "In Portugal a sentence doesn't start with te: it goes after the verb." },
+      { "type": "choice", "before": "", "after": "", "options": ["Ajuda-me!", "Me ajuda!"], "answer": "Ajuda-me!", "en": "Help me!", "why": "Me ajuda! sounds Brazilian. In Portugal: Ajuda-me!" }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-pronoun-before",
+    "title": "não te vejo",
+    "summary": "when the small word moves in front",
+    "focus": "word",
+    "intro": [
+      "Some words pull the pronoun in front of the verb. The main ones:",
+      "não, nunca (never), ninguém (nobody): Não te vejo. Nunca me ligas.",
+      "question words (quem, onde, quando, como, o que, porque): Como te chamas? Onde a conheceste?",
+      "que (that): Acho que te conheço.",
+      "a few short words before the verb, such as já, também, ainda, só, sempre: Já te disse. Também me lembro."
+    ],
+    "tables": [
+      { "verb": "placement", "caption": "Where the pronoun goes", "listen": "form", "rows": [
+        { "person": "normally", "form": "vejo-te" },
+        { "person": "with não", "form": "não te vejo" },
+        { "person": "with a question word", "form": "como te chamas?" },
+        { "person": "after que", "form": "acho que te conheço" },
+        { "person": "after já", "form": "já te disse" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Não te vejo há muito tempo.", "en": "I haven't seen you for ages." },
+      { "pt": "Como te chamas?", "en": "What's your name?" },
+      { "pt": "Acho que te conheço.", "en": "I think I know you." },
+      { "pt": "Já te disse!", "en": "I've already told you!" }
+    ],
+    "notes": [
+      "A yes/no question has no question word, so the pronoun stays after: Conheces-me? (Do you know me?)",
+      "Putting it after with these words (não vejo-te) is a very common learner mistake and sounds wrong."
+    ],
+    "drills": [
+      { "type": "order", "answer": "Não te conheço.", "en": "I don't know you." },
+      { "type": "order", "answer": "Como te chamas?", "en": "What's your name?" },
+      { "type": "order", "answer": "Acho que te conheço.", "en": "I think I know you." },
+      { "type": "order", "answer": "Já te disse.", "en": "I've already told you." },
+      { "type": "order", "answer": "Nunca me ligas.", "en": "You never call me." },
+      { "type": "order", "answer": "Onde a conheceste?", "en": "Where did you meet her?" },
+      { "type": "order", "answer": "Também me lembro.", "alternatives": ["Lembro-me também."], "en": "I remember too." },
+      { "type": "order", "answer": "Ninguém me ajudou.", "en": "Nobody helped me." },
+      { "type": "choice", "before": "Não ", "after": ".", "options": ["te vejo", "vejo-te"], "answer": "te vejo", "en": "I can't see you.", "why": "Não pulls the pronoun in front." },
+      { "type": "choice", "before": "Quem ", "after": "?", "options": ["te disse", "disse-te"], "answer": "te disse", "en": "Who told you?", "why": "Question words like quem pull it in front." },
+      { "type": "choice", "before": "", "after": "?", "options": ["Conheces-me", "Me conheces"], "answer": "Conheces-me", "en": "Do you know me?", "why": "A yes/no question has no question word, so the pronoun stays after." },
+      { "type": "choice", "before": "Acho que ", "after": ".", "options": ["te conheço", "conheço-te"], "answer": "te conheço", "en": "I think I know you.", "why": "After que, it goes in front." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-lhe",
+    "title": "dou-lhe, disse-lhe",
+    "summary": "lhe and lhes: to him, to her, to you",
+    "focus": "word",
+    "intro": [
+      "Lhe means \"to him\", \"to her\" or a polite \"to you\"; lhes is the plural. It goes with verbs like dar, dizer, perguntar, telefonar, escrever and mostrar: Dei-lhe o livro = I gave him (or her) the book.",
+      "It follows the same placement rules as te: Disse-lhe que sim, but Não lhe disse nada."
+    ],
+    "tables": [
+      { "verb": "indirect pronouns", "caption": "To me, to you, to him…", "listen": "form", "rows": [
+        { "person": "to me", "form": "me" },
+        { "person": "to you (tu)", "form": "te" },
+        { "person": "to him / her / you (polite)", "form": "lhe" },
+        { "person": "to us", "form": "nos" },
+        { "person": "to them / you all", "form": "lhes" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Telefono-lhe amanhã.", "en": "I'll phone him tomorrow." },
+      { "pt": "Disse-lhe a verdade.", "en": "I told her the truth." },
+      { "pt": "Não lhe disse nada.", "en": "I didn't tell him anything." },
+      { "pt": "Posso perguntar-lhe uma coisa?", "en": "Can I ask you something? (polite)" }
+    ],
+    "notes": [
+      "Lhe is also the polite \"you\" you'll hear from staff: Já lhe trago a conta = I'll bring you the bill right away.",
+      "In speech, me + o join into mo, and lhe + o into lho: Dá-mo (give it to me). You'll hear them; you don't need to use them yet."
+    ],
+    "drills": [
+      { "type": "sentence", "hint": "to him", "before": "Telefono-", "after": " amanhã.", "answer": "lhe", "en": "I'll phone him tomorrow." },
+      { "type": "sentence", "hint": "to her", "before": "Disse-", "after": " a verdade.", "answer": "lhe", "en": "I told her the truth." },
+      { "type": "sentence", "hint": "to them", "before": "Escrevi-", "after": " uma carta.", "answer": "lhes", "en": "I wrote them a letter." },
+      { "type": "sentence", "hint": "to you, polite", "before": "Posso perguntar-", "after": " uma coisa?", "answer": "lhe", "en": "Can I ask you something?" },
+      { "type": "sentence", "hint": "to me", "before": "Dá-", "after": " o sal, por favor.", "answer": "me", "en": "Give me the salt, please." },
+      { "type": "order", "answer": "Não lhe disse nada.", "en": "I didn't tell him anything." },
+      { "type": "order", "answer": "Já lhe trago a conta.", "alternatives": ["Trago-lhe já a conta."], "en": "I'll bring you the bill right away." },
+      { "type": "order", "answer": "Mostrei-lhe a casa.", "en": "I showed her the house." },
+      { "type": "order", "answer": "Ofereci-lhes um livro.", "en": "I gave them a book (as a present)." },
+      { "type": "choice", "before": "", "after": " o livro.", "options": ["Dei-lhe", "Lhe dei"], "answer": "Dei-lhe", "en": "I gave him the book.", "why": "At the start of a sentence, the pronoun goes after the verb." },
+      { "type": "choice", "before": "Vi a Ana e ", "after": " olá.", "options": ["disse-lhe", "disse-a"], "answer": "disse-lhe", "en": "I saw Ana and said hello to her.", "why": "You say something to someone: lhe (to her)." },
+      { "type": "choice", "before": "Conheço a Ana. Vi-", "after": " ontem.", "options": ["a", "lhe"], "answer": "a", "en": "I know Ana. I saw her yesterday.", "why": "You see someone directly, with no \"to\": a." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-lo-la",
+    "title": "comprá-lo, fazem-no",
+    "summary": "how o and a change after some verb endings",
+    "focus": "word",
+    "intro": [
+      "O, a, os and as change shape after certain endings, to keep the sound smooth.",
+      "After -r, -s or -z, that letter drops and o becomes lo: comprar + o = comprá-lo, compramos + o = compramo-lo, fiz + o = fi-lo.",
+      "After a nasal sound (-m, -ão, -õe), o becomes no: compram + o = compram-no, dão + a = dão-na.",
+      "The accent in comprá-lo or vendê-lo keeps the stress where it was."
+    ],
+    "tables": [
+      { "verb": "lo, la, no, na", "caption": "How o and a change", "listen": "form", "rows": [
+        { "person": "comprar + o", "form": "comprá-lo" },
+        { "person": "vender + a", "form": "vendê-la" },
+        { "person": "abrir + o", "form": "abri-lo" },
+        { "person": "fazer + o", "form": "fazê-lo" },
+        { "person": "compramos + o", "form": "compramo-lo" },
+        { "person": "compram + o", "form": "compram-no" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Posso ajudá-lo?", "en": "Can I help you? (to a man, politely)" },
+      { "pt": "Gosto deste casaco. Vou comprá-lo.", "en": "I like this coat. I'm going to buy it." },
+      { "pt": "As chaves? Tenho de encontrá-las.", "en": "The keys? I have to find them." },
+      { "pt": "Eles fazem-no todos os dias.", "en": "They do it every day." }
+    ],
+    "notes": [
+      "Posso ajudá-lo? / Posso ajudá-la? is what shop staff say: Can I help you?",
+      "With two verbs, the pronoun usually joins the second one: Vou comprá-lo. (Vou-o comprar is also heard.)"
+    ],
+    "drills": [
+      { "type": "sentence", "hint": "comprar + o", "before": "Gosto deste casaco. Vou ", "after": ".", "answer": "comprá-lo", "en": "I like this coat. I'm going to buy it." },
+      { "type": "sentence", "hint": "ajudar + o", "before": "Posso ", "after": "?", "answer": "ajudá-lo", "en": "Can I help you, sir?" },
+      { "type": "sentence", "hint": "vender + a", "before": "A casa? Querem ", "after": ".", "answer": "vendê-la", "en": "The house? They want to sell it." },
+      { "type": "sentence", "hint": "abrir + a", "before": "A janela? Vou ", "after": ".", "answer": "abri-la", "en": "The window? I'm going to open it." },
+      { "type": "sentence", "hint": "fazer + o", "before": "O trabalho? Tenho de ", "after": " hoje.", "answer": "fazê-lo", "en": "The work? I have to do it today." },
+      { "type": "sentence", "hint": "encontrar + as", "before": "As chaves? Tenho de ", "after": ".", "answer": "encontrá-las", "en": "The keys? I have to find them." },
+      { "type": "sentence", "hint": "fazem + o", "before": "O bolo? Eles ", "after": " todos os domingos.", "answer": "fazem-no", "en": "The cake? They make it every Sunday." },
+      { "type": "sentence", "hint": "compramos + os", "before": "Os livros? Nós ", "after": " amanhã.", "answer": "compramo-los", "en": "The books? We'll buy them tomorrow." },
+      { "type": "sentence", "hint": "vendem + o", "before": "O carro? Eles ", "after": " amanhã.", "answer": "vendem-no", "en": "The car? They're selling it tomorrow." },
+      { "type": "choice", "before": "Posso ", "after": "?", "options": ["ajudá-la", "ajudar-a"], "answer": "ajudá-la", "en": "Can I help you, madam?", "why": "After -r, the r drops and a becomes la." },
+      { "type": "choice", "before": "O jantar? Eles ", "after": ".", "options": ["fazem-no", "fazem-o"], "answer": "fazem-no", "en": "Dinner? They're making it.", "why": "After a nasal ending (-m), o becomes no." },
+      { "type": "choice", "before": "Gosto desta camisa. Vou ", "after": ".", "options": ["levá-la", "levar-a"], "answer": "levá-la", "en": "I like this shirt. I'll take it.", "why": "After -r: la." }
+    ],
+    "verified": false
+  }
+]
