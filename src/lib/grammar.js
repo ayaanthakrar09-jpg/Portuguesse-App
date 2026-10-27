@@ -3,11 +3,13 @@
 
 import present from "../data/grammar/present.json";
 import basics from "../data/grammar/basics.json";
+import patterns from "../data/grammar/patterns.json";
 import { shuffle } from "./exercises";
 
 const stageList = [
   { id: "present", title: "Present tense", summary: "The verbs you'll use most, then the regular patterns and common irregular verbs.", topics: present },
   { id: "basics", title: "Building blocks", summary: "Gender and plurals, the little words that join together, my and your, this and that.", topics: basics },
+  { id: "patterns", title: "Everyday patterns", summary: "Reflexive verbs, what's happening now, verbs that team up with other verbs, and ficar.", topics: patterns },
 ];
 
 // Topics are numbered straight through all stages.

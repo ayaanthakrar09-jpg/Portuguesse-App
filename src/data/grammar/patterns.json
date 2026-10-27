@@ -1,0 +1,168 @@
+[
+  {
+    "id": "g-reflexive",
+    "title": "levanto-me",
+    "summary": "reflexive verbs: get up, go to bed, be called",
+    "intro": [
+      "Some verbs come with a small word that points back to the person doing it: levantar-se (to get up, literally \"to raise oneself\").",
+      "In Portugal that small word normally goes after the verb, joined with a hyphen: levanto-me (I get up).",
+      "The small words are me, te, se, nos, se. With nós, the verb drops its -s: levantamos + nos = levantamo-nos."
+    ],
+    "tables": [
+      { "verb": "levantar-se", "meaning": "to get up", "rows": [
+        { "person": "eu", "form": "levanto-me" },
+        { "person": "tu", "form": "levantas-te" },
+        { "person": "ele / ela / você", "form": "levanta-se" },
+        { "person": "nós", "form": "levantamo-nos" },
+        { "person": "eles / elas / vocês", "form": "levantam-se" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Levanto-me às sete.", "en": "I get up at seven." },
+      { "pt": "Deitamo-nos tarde.", "en": "We go to bed late." },
+      { "pt": "Sinto-me cansado.", "en": "I feel tired." },
+      { "pt": "Como te chamas?", "en": "What's your name?" }
+    ],
+    "notes": [
+      "With não, and after question words such as como, onde or a que horas, the small word moves in front: Não me levanto cedo. Como te chamas? There's a full topic on this later.",
+      "Starting a sentence with the small word (Me levanto…) sounds Brazilian. In Portugal: Levanto-me…",
+      "Common ones: chamar-se (to be called), levantar-se, deitar-se (to go to bed), sentar-se (to sit down), sentir-se (to feel), esquecer-se de (to forget), lembrar-se de (to remember).",
+      "Sentir changes in the eu form: sinto-me."
+    ],
+    "drills": [
+      { "type": "form", "verb": "levantar-se", "person": "eu", "answer": "levanto-me" },
+      { "type": "form", "verb": "deitar-se", "person": "tu", "answer": "deitas-te" },
+      { "type": "form", "verb": "chamar-se", "person": "ela", "answer": "chama-se" },
+      { "type": "form", "verb": "levantar-se", "person": "nós", "answer": "levantamo-nos" },
+      { "type": "form", "verb": "sentar-se", "person": "eles", "answer": "sentam-se" },
+      { "type": "form", "verb": "sentir-se", "person": "eu", "answer": "sinto-me" },
+      { "type": "sentence", "verb": "levantar-se", "before": "Eu ", "after": " às sete.", "answer": "levanto-me", "en": "I get up at seven." },
+      { "type": "sentence", "verb": "levantar-se", "before": "A que horas te ", "after": "?", "answer": "levantas", "en": "What time do you get up?" },
+      { "type": "sentence", "verb": "chamar-se", "before": "Ela ", "after": " Marta.", "answer": "chama-se", "en": "Her name is Marta." },
+      { "type": "sentence", "verb": "deitar-se", "before": "Nós ", "after": " tarde ao sábado.", "answer": "deitamo-nos", "en": "We go to bed late on Saturdays." },
+      { "type": "sentence", "verb": "esquecer-se", "before": "Eu ", "after": " sempre das chaves.", "answer": "esqueço-me", "en": "I always forget my keys." },
+      { "type": "sentence", "verb": "sentir-se", "before": "Eu não me ", "after": " bem.", "answer": "sinto", "en": "I don't feel well." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-estar-a",
+    "title": "estar a + verb",
+    "summary": "what's happening right now",
+    "intro": [
+      "To say what's happening right now, Portugal uses estar + a + the verb in its dictionary form: Estou a trabalhar = I'm working.",
+      "Only estar changes (estou, estás, está, estamos, estão). The second verb stays as it is."
+    ],
+    "examples": [
+      { "pt": "Estou a trabalhar.", "en": "I'm working." },
+      { "pt": "O que estás a fazer?", "en": "What are you doing?" },
+      { "pt": "Está a chover.", "en": "It's raining." },
+      { "pt": "Estou a aprender português.", "en": "I'm learning Portuguese." }
+    ],
+    "notes": [
+      "Brazil says estou trabalhando instead. In Portugal that sounds Brazilian, although you'll hear it in parts of the south (Alentejo, Algarve).",
+      "It also covers things going on around now, not just this second: Estou a aprender português."
+    ],
+    "drills": [
+      { "type": "sentence", "hint": "trabalhar", "before": "Eu ", "after": " agora.", "answer": "estou a trabalhar", "en": "I'm working now." },
+      { "type": "sentence", "hint": "fazer, tu", "before": "O que ", "after": "?", "answer": "estás a fazer", "en": "What are you doing?" },
+      { "type": "sentence", "hint": "ver", "before": "Nós ", "after": " um filme.", "answer": "estamos a ver", "en": "We're watching a film." },
+      { "type": "sentence", "hint": "brincar", "before": "Os miúdos ", "after": " no jardim.", "answer": "estão a brincar", "en": "The kids are playing in the garden." },
+      { "type": "sentence", "hint": "falar", "before": "A Ana ", "after": " ao telefone.", "answer": "está a falar", "en": "Ana is on the phone." },
+      { "type": "sentence", "hint": "aprender", "before": "Eu ", "after": " português.", "answer": "estou a aprender", "en": "I'm learning Portuguese." },
+      { "type": "sentence", "hint": "ouvir, tu", "before": "", "after": "?", "answer": "Estás a ouvir", "en": "Are you listening?" },
+      { "type": "sentence", "hint": "jantar", "before": "Eles ", "after": ".", "answer": "estão a jantar", "en": "They're having dinner." },
+      { "type": "sentence", "hint": "chover", "before": "", "after": ".", "answer": "Está a chover", "en": "It's raining." },
+      { "type": "choice", "before": "Agora não posso, ", "after": ".", "options": ["estou a comer", "estou comendo"], "answer": "estou a comer", "en": "I can't right now, I'm eating.", "why": "Estou comendo is how Brazil says it. In Portugal: estou a comer." },
+      { "type": "choice", "before": "O que ", "after": " a fazer?", "options": ["estás", "és"], "answer": "estás", "en": "What are you doing?", "why": "It's always estar a + verb." },
+      { "type": "choice", "before": "O bebé ", "after": " a dormir.", "options": ["está", "é"], "answer": "está", "en": "The baby is sleeping.", "why": "It's always estar a + verb." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-verb-patterns",
+    "title": "tenho de, costumo, preciso de",
+    "summary": "verbs that team up with another verb",
+    "focus": "word",
+    "intro": [
+      "Some verbs team up with a second verb, which stays in its dictionary form. Often there's a small word in between (de or a), and it's worth learning together with the verb."
+    ],
+    "tables": [
+      { "verb": "patterns", "caption": "Verb + verb patterns", "listen": "form", "rows": [
+        { "person": "have to", "form": "tenho de sair" },
+        { "person": "usually", "form": "costumo jantar cedo" },
+        { "person": "need to", "form": "preciso de dormir" },
+        { "person": "start to", "form": "começo a perceber" },
+        { "person": "do again", "form": "volto a ligar" },
+        { "person": "stop doing", "form": "deixo de fumar" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Tenho de ir embora.", "en": "I have to go." },
+      { "pt": "Costumo almoçar ao meio-dia.", "en": "I usually have lunch at midday." },
+      { "pt": "Preciso de descansar.", "en": "I need to rest." },
+      { "pt": "Volto a ligar mais tarde.", "en": "I'll call again later." }
+    ],
+    "notes": [
+      "Costumar has no English match. It's the everyday way to say \"usually\": Costumo ir a pé = I usually walk.",
+      "Portugal keeps the de after precisar: preciso de sair, preciso de ajuda. Brazil often drops it before a verb.",
+      "Gostar always takes de too: Gosto de nadar."
+    ],
+    "drills": [
+      { "type": "sentence", "hint": "have to", "before": "Eu ", "after": " sair cedo.", "answer": "tenho de", "en": "I have to leave early." },
+      { "type": "sentence", "hint": "have to", "before": "Eles ", "after": " trabalhar amanhã.", "answer": "têm de", "en": "They have to work tomorrow." },
+      { "type": "sentence", "hint": "usually", "before": "Nós ", "after": " jantar às oito.", "answer": "costumamos", "en": "We usually have dinner at eight." },
+      { "type": "sentence", "hint": "usually", "before": "Tu ", "after": " ir ao ginásio?", "answer": "costumas", "en": "Do you usually go to the gym?" },
+      { "type": "sentence", "hint": "need to", "before": "Eu ", "after": " descansar.", "answer": "preciso de", "en": "I need to rest." },
+      { "type": "sentence", "hint": "começar …", "before": "Ela começa ", "after": " trabalhar às nove.", "answer": "a", "en": "She starts work at nine." },
+      { "type": "sentence", "hint": "voltar …", "before": "Volto ", "after": " ligar mais tarde.", "answer": "a", "en": "I'll call again later." },
+      { "type": "sentence", "hint": "deixar …", "before": "Vou deixar ", "after": " fumar.", "answer": "de", "en": "I'm going to stop smoking." },
+      { "type": "choice", "before": "", "after": "", "options": ["Preciso de ajuda.", "Preciso ajuda."], "answer": "Preciso de ajuda.", "en": "I need help.", "why": "Portugal keeps the de after precisar." },
+      { "type": "choice", "before": "Gosto ", "after": " nadar.", "options": ["de", "a"], "answer": "de", "en": "I like swimming.", "why": "Gostar always takes de." },
+      { "type": "choice", "before": "Começo ", "after": " perceber.", "options": ["a", "de"], "answer": "a", "en": "I'm starting to understand.", "why": "Começar takes a." },
+      { "type": "choice", "before": "Tenho ", "after": " ir.", "options": ["de", "a"], "answer": "de", "en": "I have to go.", "why": "Ter de = to have to." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-ficar",
+    "title": "ficar",
+    "summary": "to stay, to be (for places), to become",
+    "intro": [
+      "Ficar is a regular -ar verb and one of the most useful in Portugal. It has several meanings:",
+      "to stay (Fico em casa), to be somewhere for places that don't move (Onde fica o museu?), to become or get (Fica nervosa = she gets nervous), and ficar com = to take or keep (Fico com este = I'll take this one)."
+    ],
+    "table": [
+      { "person": "eu", "form": "fico" },
+      { "person": "tu", "form": "ficas" },
+      { "person": "ele / ela / você", "form": "fica" },
+      { "person": "nós", "form": "ficamos" },
+      { "person": "eles / elas / vocês", "form": "ficam" }
+    ],
+    "examples": [
+      { "pt": "Hoje fico em casa.", "en": "I'm staying at home today." },
+      { "pt": "Onde fica o museu?", "en": "Where is the museum?" },
+      { "pt": "Ela fica nervosa antes dos exames.", "en": "She gets nervous before exams." },
+      { "pt": "Fico com este, obrigado.", "en": "I'll take this one, thanks." }
+    ],
+    "notes": [
+      "Fica para a próxima! = Maybe next time!",
+      "Fica-te bem = it suits you (clothes, a haircut)."
+    ],
+    "drills": [
+      { "type": "form", "person": "eu", "answer": "fico" },
+      { "type": "form", "person": "tu", "answer": "ficas" },
+      { "type": "form", "person": "ela", "answer": "fica" },
+      { "type": "form", "person": "nós", "answer": "ficamos" },
+      { "type": "form", "person": "eles", "answer": "ficam" },
+      { "type": "form", "person": "você", "answer": "fica" },
+      { "type": "sentence", "before": "Hoje eu ", "after": " em casa.", "answer": "fico", "en": "I'm staying at home today." },
+      { "type": "sentence", "before": "Onde ", "after": " a estação?", "answer": "fica", "en": "Where is the station?" },
+      { "type": "sentence", "before": "Nós ", "after": " num hotel perto da praia.", "answer": "ficamos", "en": "We're staying at a hotel near the beach." },
+      { "type": "sentence", "before": "Ela ", "after": " nervosa antes dos exames.", "answer": "fica", "en": "She gets nervous before exams." },
+      { "type": "sentence", "before": "", "after": " com este, obrigado.", "answer": "Fico", "en": "I'll take this one, thanks." },
+      { "type": "sentence", "before": "", "after": " para a próxima!", "answer": "Fica", "en": "Maybe next time!" }
+    ],
+    "verified": false
+  }
+]
