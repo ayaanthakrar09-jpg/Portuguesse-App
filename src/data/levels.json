@@ -110,6 +110,17 @@
         { "id": "l10-feelings", "title": "How you feel", "topic": "feelings" },
         { "id": "l10-character", "title": "What people are like", "topic": "people" }
       ]
+    },
+    {
+      "id": 11,
+      "title": "Numbers, colours and dates",
+      "units": [
+        { "id": "l11-numbers", "title": "Numbers 6 to 100", "topic": "numbers" },
+        { "id": "l11-amounts", "title": "Big numbers and amounts", "topic": "numbers" },
+        { "id": "l11-colours", "title": "Colours", "topic": "colours" },
+        { "id": "l11-months", "title": "Months", "topic": "dates" },
+        { "id": "l11-dates", "title": "Days and dates", "topic": "dates" }
+      ]
     }
   ]
 }
