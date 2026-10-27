@@ -29,6 +29,13 @@ export function countStages(items, cards) {
 
 /* ---------- Grammar, reading, slang: from practice scores ---------- */
 
+// { new, weak, secure, mastered } for a list of practice records (missing ones count as new).
+export function countPracticeStages(records) {
+  const counts = { new: 0, weak: 0, secure: 0, mastered: 0 };
+  for (const record of records) counts[practiceStage(record) ?? "new"] += 1;
+  return counts;
+}
+
 // Weak: the last score was under 80%. Secure: 80% or more last time.
 // Mastered: 80% or more on three different days, at least a week from the first to the last.
 export const PASS = 0.8;

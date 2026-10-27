@@ -5,11 +5,11 @@ import phrases from "../data/phrases.json";
 import { stages, topics } from "../lib/grammar";
 import { texts } from "../lib/reading";
 import { speak, speechMessages } from "../lib/speech";
-import { SECURE_DAYS, countStages, needsRevision, practiceStage } from "../lib/mastery";
+import { StageBar } from "../components/Stages";
+import { SECURE_DAYS, countPracticeStages, countStages, needsRevision, practiceStage } from "../lib/mastery";
 import { dueCards } from "../lib/srs";
 import { currentStreak, dateKey, exportBackup, readBackup } from "../lib/storage";
 import { allItems, isLevelOpen, levels, openItems } from "../lib/vocab";
-import { QUIZ_LENGTH } from "./slang/SlangQuiz";
 
 function greeting() {
   const hour = new Date().getHours();
@@ -80,23 +80,13 @@ function nextSteps(progress, today) {
   return steps.slice(0, 3);
 }
 
-// The learning areas, each with a one-line summary of where you are.
-// "3 mastered, 5 secure, 2 weak" for practice records (grammar topics, reading texts).
-function practiceSummary(records, none) {
-  const counts = { mastered: 0, secure: 0, weak: 0 };
-  for (const record of records) if (record) counts[practiceStage(record)] += 1;
-  const parts = ["mastered", "secure", "weak"].filter((stage) => counts[stage]).map((stage) => `${counts[stage]} ${stage}`);
-  return parts.length ? parts.join(", ") : none;
-}
-
+// The learning areas, each with a bar of how much is weak, secure and mastered.
 function areas(progress) {
-  const words = countStages(allItems, progress.cards);
-  const started = allItems.length - words.new;
   return [
-    { to: "/vocab", label: "Vocab", icon: "vocab", status: started ? `${words.mastered} mastered, ${words.secure} secure, ${words.weak} weak` : `${allItems.length} words to learn` },
-    { to: "/grammar", label: "Grammar", icon: "grammar", status: practiceSummary(topics.map((t) => progress.grammar?.[t.id]), `${topics.length} topics to practise`) },
-    { to: "/reading", label: "Reading", icon: "reading", status: practiceSummary(texts.map((t) => progress.reading?.[t.id]), `${texts.length} texts to read`) },
-    { to: "/slang", label: "Slang", icon: "slang", status: progress.slang ? `Quiz: ${practiceStage(progress.slang)}, best ${progress.slang.best}/${QUIZ_LENGTH}` : "Quiz not taken yet" },
+    { to: "/vocab", label: "Vocab", icon: "vocab", counts: countStages(allItems, progress.cards) },
+    { to: "/grammar", label: "Grammar", icon: "grammar", counts: countPracticeStages(topics.map((t) => progress.grammar?.[t.id])) },
+    { to: "/reading", label: "Reading", icon: "reading", counts: countPracticeStages(texts.map((t) => progress.reading?.[t.id])) },
+    { to: "/slang", label: "Slang", icon: "slang", counts: countPracticeStages([progress.slang]) },
     { to: "/speaking", label: "Speaking", icon: "speaking", status: "Switched off for now", soon: true },
   ];
 }
@@ -192,11 +182,17 @@ export default function Dashboard({ progress, updateProgress }) {
               <Link to={area.to} className={`area ${area.soon ? "is-soon" : ""}`}>
                 <span className="area-icon"><Icon name={area.icon} size={22} /></span>
                 <span className="area-label">{area.label}</span>
-                <span className="area-status">{area.status}</span>
+                {area.counts ? <StageBar counts={area.counts} bare /> : <span className="area-status">{area.status}</span>}
               </Link>
             </li>
           ))}
         </ul>
+        <p className="muted stage-key">
+          <span className="stage-key-item"><span className="stage-swatch is-weak" aria-hidden="true" /> Weak</span>
+          <span className="stage-key-item"><span className="stage-swatch is-secure" aria-hidden="true" /> Secure</span>
+          <span className="stage-key-item"><span className="stage-swatch is-mastered" aria-hidden="true" /> Mastered</span>
+          <span className="stage-key-item"><span className="stage-swatch" aria-hidden="true" /> Not started</span>
+        </p>
       </section>
 
       <aside className="home-side">
@@ -204,7 +200,6 @@ export default function Dashboard({ progress, updateProgress }) {
           <h2 className="card-title">Your progress</h2>
           <div className="side-stats">
             <div className="side-stat"><span className="stat-value">{currentStreak(progress.days)}</span><span className="stat-label">day streak</span></div>
-            <div className="side-stat"><span className="stat-value">{countStages(allItems, progress.cards).mastered}</span><span className="stat-label">words mastered</span></div>
             <div className="side-stat"><span className="stat-value">{progress.practisedPhrases}</span><span className="stat-label">phrases practised</span></div>
           </div>
           <ul className="week">

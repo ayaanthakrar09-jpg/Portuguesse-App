@@ -1,7 +1,8 @@
 import { STAGES, stageLabel } from "../lib/mastery";
 
-// One bar split into mastered, secure and weak, with the counts written underneath.
-export function StageBar({ counts, extra }) {
+// One bar split into mastered, secure and weak, with the counts written underneath
+// (or, with `bare`, only read out to screen readers).
+export function StageBar({ counts, extra, bare = false }) {
   const total = counts.new + counts.weak + counts.secure + counts.mastered;
   const parts = STAGES.filter((stage) => counts[stage] > 0).map((stage) => `${counts[stage]} ${stage}`);
   if (counts.new > 0) parts.push(`${counts.new} new`);
@@ -13,7 +14,7 @@ export function StageBar({ counts, extra }) {
           <span key={stage} className={`stage-fill is-${stage}`} style={{ width: `${total ? (counts[stage] / total) * 100 : 0}%` }} />
         ))}
       </div>
-      <span className="meter-label">{label}</span>
+      {!bare && <span className="meter-label">{label}</span>}
     </div>
   );
 }

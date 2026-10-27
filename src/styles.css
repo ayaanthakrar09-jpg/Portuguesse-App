@@ -545,6 +545,11 @@ ul { padding: 0; list-style: none; }
 .stage-tag.is-weak { color: var(--weak); }
 .stage-key { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.85rem; margin-top: 6px; }
 .stage-key-item { display: inline-flex; align-items: center; gap: 6px; }
+.stage-swatch { width: 14px; height: 6px; border-radius: 999px; background: var(--surface-2); }
+.stage-swatch.is-weak { background: var(--weak); }
+.stage-swatch.is-secure { background: var(--secure); }
+.stage-swatch.is-mastered { background: var(--mastered); }
+.area .meter { width: 100%; margin-top: 8px; }
 .stage-line { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 6px; }
 
 /* ---------- Narrower screens ---------- */
