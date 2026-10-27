@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
+import { AutoNextControl, useAutoNext } from "../../components/AutoNext";
 import Icon from "../../components/Icon";
 import { choiceQuestions, shuffle, withBestScore } from "../../lib/exercises";
 import { speak, speechMessages } from "../../lib/speech";
@@ -26,6 +27,7 @@ function Session({ progress, updateProgress, unitId }) {
   const question = queue[0];
   const answered = picked !== null;
   const correct = answered && picked === question.answer;
+  const auto = useAutoNext(answered, correct, next);
 
   // Keyboard: 1-4 pick an option, Enter goes on.
   useEffect(() => {
@@ -66,6 +68,7 @@ function Session({ progress, updateProgress, unitId }) {
   }
 
   async function say(text) {
+    auto.pause();
     const outcome = await speak(text);
     setVoiceNote(outcome === "ok" ? "" : speechMessages[outcome]);
   }
@@ -111,13 +114,14 @@ function Session({ progress, updateProgress, unitId }) {
             <div className="actions">
               <button className="btn btn-primary" onClick={next} autoFocus>Next</button>
             </div>
+            <AutoNextControl auto={auto} />
           </div>
         )}
       </div>
 
       <div className="session-foot">
         {voiceNote && <p className="note" role="status">{voiceNote}</p>}
-        <p className="note">Keys 1 to 4 pick an answer, Enter goes on. Wrong answers come back at the end.</p>
+        <p className="note">Keys 1 to 4 pick an answer. It then moves on by itself; Pause stops it. Wrong answers come back at the end.</p>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
+import { AutoNextControl, useAutoNext } from "../../components/AutoNext";
 import Icon from "../../components/Icon";
 import { markAnswer } from "../../lib/answers";
 import { orderItems, orderedText, orderQuestion, shuffle, withBestScore } from "../../lib/exercises";
@@ -27,6 +28,7 @@ function Session({ progress, updateProgress, levelId }) {
   const [result, setResult] = useState(null); // null while building, then "correct" | "wrong"
   const [missed, setMissed] = useState([]); // items wrong at the first attempt
   const [voiceNote, setVoiceNote] = useState("");
+  const auto = useAutoNext(Boolean(result), result === "correct", next);
 
   if (!level || !isLevelOpen(level.id, progress.vocab.passedLevels)) return <Navigate to="/vocab" replace />;
   // Scores are kept per level, in the same shape as the per-unit exercise scores.
@@ -57,6 +59,7 @@ function Session({ progress, updateProgress, levelId }) {
   }
 
   async function say(text) {
+    auto.pause();
     const outcome = await speak(text);
     setVoiceNote(outcome === "ok" ? "" : speechMessages[outcome]);
   }
@@ -104,13 +107,14 @@ function Session({ progress, updateProgress, levelId }) {
               </div>
             </div>
             {question.item.note && <p className="note">{question.item.note}</p>}
+            <AutoNextControl auto={auto} />
           </div>
         )}
       </form>
 
       <div className="session-foot">
         {voiceNote && <p className="note" role="status">{voiceNote}</p>}
-        <p className="note">Tap a word to add it, tap it again to take it back. Wrong answers come back at the end.</p>
+        <p className="note">Tap a word to add it, tap it again to take it back. After checking it moves on by itself; Pause stops it. Wrong answers come back at the end.</p>
       </div>
     </section>
   );

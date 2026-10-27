@@ -380,6 +380,12 @@ ul { padding: 0; list-style: none; }
 .feedback.is-correct .feedback-title, .feedback.is-accent .feedback-title { color: #7fd6a3; }
 .feedback.is-wrong .feedback-title { color: #ff8a7a; }
 
+/* Moving on by itself after an answer */
+.auto-next { display: flex; align-items: center; gap: 12px; width: 100%; }
+.auto-next-track { flex: 1; height: 4px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+.auto-next-track span { display: block; height: 100%; background: var(--muted); transform-origin: left; animation: auto-next-shrink linear forwards; }
+@keyframes auto-next-shrink { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+
 /* Multiple choice and fill the gap */
 .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; }
 .choice {

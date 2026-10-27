@@ -21,6 +21,8 @@ Everything up to the Slang quiz is pushed to GitHub (26 October 2026). Ask the u
 - **Menu:** 6 items (Home, Vocab, Speaking, Reading, Grammar, Slang); the user chose to keep Speaking visible while it's switched off.
 - **Slang:** `src/data/slang/pt-pt.json`, 29 expressions in groups (everyday chat, describing, people, café and bar with Lisbon/Porto words, exclamations, Portugal vs Brazil false friends, swear words). Each has formality and region tags, an example with Listen, and `confidence`; medium confidence shows a "Not sure: ask your native speaker" tag. Swear words are hidden until "Show swear words" is switched on, and are never in the quiz. Quiz: 10 random "what does it mean?" questions; wrong options never share a main word with the right one. All `verified: false`.
 
+- **Auto-next** (`src/components/AutoNext.jsx`, user request 27 October 2026): after an answer is marked, vocab multiple choice, typing, word order, grammar practice and the slang quiz move on by themselves (1.5 s when right, 4 s when wrong or accent-only) with a shrinking bar and a Pause button. Listen also pauses. Next/Enter still work. The level test and flashcards are unchanged.
+
 ## Progress data
 Saved in `localStorage` (key `pt-app-progress-v1`), included in the backup file: `days`, `practisedPhrases`, `cards` (spaced repetition per vocab item), `vocab` (`passedLevels`, `tests`, best `choice`/`typing` scores per unit), `reading` (best score per text), `grammar` (best practice score per topic), `slang` (best quiz score).
 

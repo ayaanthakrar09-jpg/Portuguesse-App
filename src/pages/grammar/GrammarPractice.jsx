@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
+import { AutoNextControl, useAutoNext } from "../../components/AutoNext";
 import { markText } from "../../lib/answers";
 import { findTopic, practiceQuestions } from "../../lib/grammar";
 import { dateKey } from "../../lib/storage";
@@ -30,6 +31,7 @@ function Practice({ updateProgress, topicId }) {
   const input = useRef(null);
 
   const question = queue[0];
+  const auto = useAutoNext(Boolean(result), result === "correct", next);
 
   // Keyboard for "pick" questions: 1 or 2 to choose, Enter for the next question.
   useEffect(() => {
@@ -167,6 +169,7 @@ function Practice({ updateProgress, topicId }) {
               </p>
             )}
             {question.why && <p className="muted">{question.why}</p>}
+            <AutoNextControl auto={auto} />
             {isChoice && (
               <div className="actions">
                 <button type="button" className="btn btn-primary" onClick={next} autoFocus>Next</button>
@@ -177,7 +180,7 @@ function Practice({ updateProgress, topicId }) {
       </form>
 
       <p className="note">
-        {isChoice ? "Keys 1 and 2 pick an answer, Enter goes on." : "Press Enter to check, then Enter again for the next one."} Wrong answers come back at the end.
+        {isChoice ? "Keys 1 and 2 pick an answer." : "Press Enter to check."} It then moves on by itself; Pause stops it. Wrong answers come back at the end.
       </p>
     </section>
   );

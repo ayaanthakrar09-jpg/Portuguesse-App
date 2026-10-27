@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
+import { AutoNextControl, useAutoNext } from "../../components/AutoNext";
 import Icon from "../../components/Icon";
 import { markAnswer } from "../../lib/answers";
 import { shuffle, typeQuestion, withBestScore } from "../../lib/exercises";
@@ -25,6 +26,7 @@ function Session({ progress, updateProgress, unitId }) {
   const [missed, setMissed] = useState([]); // items wrong at the first attempt
   const [voiceNote, setVoiceNote] = useState("");
   const input = useRef(null);
+  const auto = useAutoNext(Boolean(result), result === "correct", next);
 
   if (!unit || !isLevelOpen(unit.level, progress.vocab.passedLevels)) return <Navigate to="/vocab" replace />;
   const backTo = `/vocab/level/${unit.level}`;
@@ -68,6 +70,7 @@ function Session({ progress, updateProgress, unitId }) {
   }
 
   async function say(text) {
+    auto.pause();
     const outcome = await speak(text);
     setVoiceNote(outcome === "ok" ? "" : speechMessages[outcome]);
   }
@@ -123,13 +126,14 @@ function Session({ progress, updateProgress, unitId }) {
               </div>
             </div>
             {item.note && <p className="note">{item.note}</p>}
+            <AutoNextControl auto={auto} />
           </div>
         )}
       </form>
 
       <div className="session-foot">
         {voiceNote && <p className="note" role="status">{voiceNote}</p>}
-        <p className="note">Press Enter to check, then Enter again for the next one. Wrong answers come back at the end.</p>
+        <p className="note">Press Enter to check. It then moves on by itself; Pause stops it. Wrong answers come back at the end.</p>
       </div>
     </section>
   );

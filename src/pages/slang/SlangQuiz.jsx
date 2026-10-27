@@ -4,6 +4,7 @@ import slang from "../../data/slang/pt-pt.json";
 import { options, shuffle } from "../../lib/exercises";
 import { dateKey } from "../../lib/storage";
 import { Choices, ResultMark } from "../vocab/Questions";
+import { AutoNextControl, useAutoNext } from "../../components/AutoNext";
 
 export const QUIZ_LENGTH = 10;
 
@@ -33,6 +34,7 @@ export default function SlangQuiz({ updateProgress }) {
   const question = queue[0];
   const answered = picked !== null;
   const correct = answered && picked === question.answer;
+  const auto = useAutoNext(answered, correct, next);
 
   // Keyboard: 1-4 pick an option, Enter goes on.
   useEffect(() => {
@@ -121,11 +123,12 @@ export default function SlangQuiz({ updateProgress }) {
             <div className="actions">
               <button className="btn btn-primary" onClick={next} autoFocus>Next</button>
             </div>
+            <AutoNextControl auto={auto} />
           </div>
         )}
       </div>
 
-      <p className="note">Keys 1 to 4 pick an answer, Enter goes on. Swear words are not in the quiz.</p>
+      <p className="note">Keys 1 to 4 pick an answer. It then moves on by itself; Pause stops it. Swear words are not in the quiz.</p>
     </section>
   );
 }
