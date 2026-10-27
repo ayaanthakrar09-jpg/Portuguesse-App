@@ -143,6 +143,17 @@
         { "id": "l13-objects", "title": "Everyday objects", "topic": "objects" },
         { "id": "l13-transport", "title": "Cars, bikes and roads", "topic": "transport" }
       ]
+    },
+    {
+      "id": 14,
+      "title": "Food and drink",
+      "units": [
+        { "id": "l14-basics", "title": "Food basics", "topic": "food" },
+        { "id": "l14-sweet", "title": "Fruit and sweet things", "topic": "food" },
+        { "id": "l14-drinks", "title": "Drinks", "topic": "drinks" },
+        { "id": "l14-cooking", "title": "Cooking", "topic": "cooking" },
+        { "id": "l14-eating", "title": "Eating out", "topic": "restaurant" }
+      ]
     }
   ]
 }
