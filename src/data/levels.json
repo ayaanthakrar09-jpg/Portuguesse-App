@@ -165,6 +165,17 @@
         { "id": "l15-society", "title": "Society", "topic": "society" },
         { "id": "l15-study", "title": "Work and study", "topic": "work" }
       ]
+    },
+    {
+      "id": 16,
+      "title": "Life and describing",
+      "units": [
+        { "id": "l16-life", "title": "Life and the world", "topic": "life" },
+        { "id": "l16-expressions", "title": "Expressions with ter, estar, fazer", "topic": "expressions" },
+        { "id": "l16-describe", "title": "Describing things", "topic": "describing" },
+        { "id": "l16-adjectives", "title": "More useful adjectives", "topic": "describing" },
+        { "id": "l16-where", "title": "Where things are", "topic": "position" }
+      ]
     }
   ]
 }
