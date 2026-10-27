@@ -88,6 +88,17 @@
         { "id": "l8-often", "title": "How often, how much", "topic": "adverbs" },
         { "id": "l8-linking", "title": "Linking words", "topic": "linking" }
       ]
+    },
+    {
+      "id": 9,
+      "title": "Everyday essentials",
+      "units": [
+        { "id": "l9-things", "title": "People and things", "topic": "nouns" },
+        { "id": "l9-places", "title": "Places", "topic": "places" },
+        { "id": "l9-time", "title": "Time words", "topic": "time" },
+        { "id": "l9-verbs", "title": "More everyday verbs", "topic": "verbs" },
+        { "id": "l9-questions", "title": "Questions and amounts", "topic": "questions" }
+      ]
     }
   ]
 }

@@ -10,8 +10,9 @@ import level5 from "../data/vocab/level-5.json";
 import level6 from "../data/vocab/level-6.json";
 import level7 from "../data/vocab/level-7.json";
 import level8 from "../data/vocab/level-8.json";
+import level9 from "../data/vocab/level-9.json";
 
-const itemsByLevel = { 1: level1, 2: level2, 3: level3, 4: level4, 5: level5, 6: level6, 7: level7, 8: level8 };
+const itemsByLevel = { 1: level1, 2: level2, 3: level3, 4: level4, 5: level5, 6: level6, 7: level7, 8: level8, 9: level9 };
 
 export const passMark = config.passMark;
 
