@@ -121,6 +121,17 @@
         { "id": "l11-months", "title": "Months", "topic": "dates" },
         { "id": "l11-dates", "title": "Days and dates", "topic": "dates" }
       ]
+    },
+    {
+      "id": 12,
+      "title": "More verbs",
+      "units": [
+        { "id": "l12-happen", "title": "Things that happen", "topic": "verbs" },
+        { "id": "l12-hands", "title": "Doing things", "topic": "verbs" },
+        { "id": "l12-routine", "title": "Daily routine", "topic": "routine" },
+        { "id": "l12-people", "title": "Talking with people", "topic": "verbs" },
+        { "id": "l12-change", "title": "Starting, stopping, changing", "topic": "verbs" }
+      ]
     }
   ]
 }
