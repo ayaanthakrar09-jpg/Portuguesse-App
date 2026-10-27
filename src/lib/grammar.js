@@ -10,6 +10,7 @@ import pronouns from "../data/grammar/pronouns.json";
 import commands from "../data/grammar/commands.json";
 import future from "../data/grammar/future.json";
 import perfect from "../data/grammar/perfect.json";
+import subjunctive from "../data/grammar/subjunctive.json";
 import { shuffle, wordTiles } from "./exercises";
 
 const stageList = [
@@ -21,6 +22,7 @@ const stageList = [
   { id: "commands", title: "Commands", summary: "Telling someone what to do: to a friend, politely, to several people, and with pronouns.", topics: commands },
   { id: "future", title: "Future and \"would\"", summary: "The future tense and the conditional, how people really talk about the future in Portugal, guessing with será que, and recognising dir-te-ei.", topics: future },
   { id: "perfect", title: "Have done, had done", summary: "Tenho feito (I've been doing lately), which isn't English \"have done\", and tinha feito (had done).", topics: perfect },
+  { id: "subjunctive", title: "Subjunctive", summary: "Wishes, doubts and \"if\": que eu fale, se eu fosse, quando fores, and how to choose between them.", topics: subjunctive },
 ];
 
 // Topics are numbered straight through all stages.
