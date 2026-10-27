@@ -99,6 +99,17 @@
         { "id": "l9-verbs", "title": "More everyday verbs", "topic": "verbs" },
         { "id": "l9-questions", "title": "Questions and amounts", "topic": "questions" }
       ]
+    },
+    {
+      "id": 10,
+      "title": "Body and feelings",
+      "units": [
+        { "id": "l10-body", "title": "The body", "topic": "body" },
+        { "id": "l10-health", "title": "Feeling ill", "topic": "health" },
+        { "id": "l10-senses", "title": "The senses", "topic": "senses" },
+        { "id": "l10-feelings", "title": "How you feel", "topic": "feelings" },
+        { "id": "l10-character", "title": "What people are like", "topic": "people" }
+      ]
     }
   ]
 }
