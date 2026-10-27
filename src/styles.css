@@ -611,6 +611,8 @@ ul { padding: 0; list-style: none; }
 .verb-block { display: grid; gap: 4px; }
 .grammar-stage { display: grid; gap: 12px; }
 .stage-title { font-size: 1.2rem; font-weight: 600; }
+.rewrite-from { color: var(--muted); font-size: 1.1rem; }
+.rewrite-from::before { content: "Now: "; }
 .verb-table { border-collapse: collapse; width: 100%; max-width: 420px; }
 .verb-table th, .verb-table td { padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line); text-align: left; }
 .verb-table tr:last-child th, .verb-table tr:last-child td { border-bottom: 0; }

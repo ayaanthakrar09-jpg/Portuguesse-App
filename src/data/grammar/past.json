@@ -1,0 +1,295 @@
+[
+  {
+    "id": "g-past-ar",
+    "title": "-ar verbs in the past",
+    "summary": "what happened: falei, comprei, cheguei",
+    "intro": [
+      "This past tense (the pretérito perfeito) is for finished actions: Ontem falei com a Ana = Yesterday I spoke to Ana.",
+      "For -ar verbs, take off -ar and add: -ei, -aste, -ou, -ámos, -aram. Here is falar:"
+    ],
+    "tables": [
+      { "verb": "falar", "meaning": "to speak", "caption": "Past tense of falar", "rows": [
+        { "person": "eu", "form": "falei" },
+        { "person": "tu", "form": "falaste" },
+        { "person": "ele / ela / você", "form": "falou" },
+        { "person": "nós", "form": "falámos" },
+        { "person": "eles / elas / vocês", "form": "falaram" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Ontem trabalhei até tarde.", "en": "I worked late yesterday." },
+      { "pt": "Compraste o pão?", "en": "Did you buy the bread?" },
+      { "pt": "O comboio chegou às dez.", "en": "The train arrived at ten." },
+      { "pt": "Jantámos fora no sábado.", "en": "We ate out on Saturday." }
+    ],
+    "notes": [
+      "In Portugal, falámos (we spoke) has an accent to tell it apart from falamos (we speak). Typed without it, it counts here, but you'll be shown the right spelling.",
+      "The eu form changes its spelling to keep the sound: chegar → cheguei, ficar → fiquei, começar → comecei.",
+      "There's no \"did\" in Portuguese questions, just the past form: Compraste o pão? = Did you buy the bread?",
+      "Time words that go with it: ontem (yesterday), no sábado passado (last Saturday), na semana passada (last week), há dois dias (two days ago)."
+    ],
+    "drills": [
+      { "type": "form", "verb": "falar", "person": "eu", "answer": "falei" },
+      { "type": "form", "verb": "comprar", "person": "tu", "answer": "compraste" },
+      { "type": "form", "verb": "trabalhar", "person": "ela", "answer": "trabalhou" },
+      { "type": "form", "verb": "jantar", "person": "nós", "answer": "jantámos" },
+      { "type": "form", "verb": "chegar", "person": "eu", "answer": "cheguei" },
+      { "type": "form", "verb": "ficar", "person": "eu", "answer": "fiquei" },
+      { "type": "sentence", "verb": "trabalhar", "before": "Ontem eu ", "after": " até tarde.", "answer": "trabalhei", "en": "I worked late yesterday." },
+      { "type": "sentence", "verb": "comprar", "before": "Tu ", "after": " o pão?", "answer": "compraste", "en": "Did you buy the bread?" },
+      { "type": "sentence", "verb": "chegar", "before": "O comboio ", "after": " às dez.", "answer": "chegou", "en": "The train arrived at ten." },
+      { "type": "sentence", "verb": "jantar", "before": "Nós ", "after": " fora no sábado.", "answer": "jantámos", "en": "We ate out on Saturday." },
+      { "type": "sentence", "verb": "ficar", "before": "Eles ", "after": " o dia todo na praia.", "answer": "ficaram", "en": "They spent the whole day at the beach." },
+      { "type": "rewrite", "verb": "falar", "from": "Hoje falo com a Ana.", "before": "Ontem ", "after": " com a Ana.", "answer": "falei", "en": "Yesterday I spoke to Ana." },
+      { "type": "rewrite", "verb": "trabalhar", "from": "Hoje a Rita trabalha em casa.", "before": "Ontem a Rita ", "after": " em casa.", "answer": "trabalhou", "en": "Yesterday Rita worked from home." },
+      { "type": "rewrite", "verb": "começar", "from": "Hoje começo cedo.", "before": "Ontem ", "after": " cedo.", "answer": "comecei", "en": "Yesterday I started early." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-past-er-ir",
+    "title": "-er and -ir verbs in the past",
+    "summary": "comi, bebi, percebi, abri",
+    "intro": [
+      "For -er verbs, take off -er and add: -i, -este, -eu, -emos, -eram.",
+      "For -ir verbs, take off -ir and add: -i, -iste, -iu, -imos, -iram.",
+      "The nós form is the same as in the present (comemos, partimos). The sentence tells you which one is meant."
+    ],
+    "tables": [
+      { "verb": "comer", "meaning": "to eat", "caption": "Past tense of comer", "rows": [
+        { "person": "eu", "form": "comi" },
+        { "person": "tu", "form": "comeste" },
+        { "person": "ele / ela / você", "form": "comeu" },
+        { "person": "nós", "form": "comemos" },
+        { "person": "eles / elas / vocês", "form": "comeram" }
+      ] },
+      { "verb": "partir", "meaning": "to leave", "caption": "Past tense of partir", "rows": [
+        { "person": "eu", "form": "parti" },
+        { "person": "tu", "form": "partiste" },
+        { "person": "ele / ela / você", "form": "partiu" },
+        { "person": "nós", "form": "partimos" },
+        { "person": "eles / elas / vocês", "form": "partiram" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Comi bacalhau ao almoço.", "en": "I had salt cod for lunch." },
+      { "pt": "Bebeste o meu café?", "en": "Did you drink my coffee?" },
+      { "pt": "Desculpe, não percebi.", "en": "Sorry, I didn't understand." },
+      { "pt": "A loja abriu às nove.", "en": "The shop opened at nine." }
+    ],
+    "notes": [
+      "Não percebi (I didn't understand) is one of the most useful phrases you can learn.",
+      "Some verbs that are irregular in the present are regular here: dormi, pedi, ouvi, saí.",
+      "Others are irregular in the past too (fazer, dizer, ver, vir…). They're in the next topics."
+    ],
+    "drills": [
+      { "type": "form", "verb": "comer", "person": "eu", "answer": "comi" },
+      { "type": "form", "verb": "beber", "person": "tu", "answer": "bebeste" },
+      { "type": "form", "verb": "perceber", "person": "ela", "answer": "percebeu" },
+      { "type": "form", "verb": "viver", "person": "nós", "answer": "vivemos" },
+      { "type": "form", "verb": "abrir", "person": "eles", "answer": "abriram" },
+      { "type": "form", "verb": "decidir", "person": "eu", "answer": "decidi" },
+      { "type": "sentence", "verb": "comer", "before": "Eu ", "after": " bacalhau ao almoço.", "answer": "comi", "en": "I had salt cod for lunch." },
+      { "type": "sentence", "verb": "perceber", "before": "Desculpa, não ", "after": ".", "answer": "percebi", "en": "Sorry, I didn't understand." },
+      { "type": "sentence", "verb": "abrir", "before": "A loja ", "after": " às nove.", "answer": "abriu", "en": "The shop opened at nine." },
+      { "type": "sentence", "verb": "partir", "before": "Eles ", "after": " ontem para Lisboa.", "answer": "partiram", "en": "They left for Lisbon yesterday." },
+      { "type": "sentence", "verb": "dormir", "before": "Tu ", "after": " bem esta noite?", "answer": "dormiste", "en": "Did you sleep well last night?" },
+      { "type": "rewrite", "verb": "beber", "from": "Hoje bebo água.", "before": "Ontem ", "after": " água.", "answer": "bebi", "en": "Yesterday I drank water." },
+      { "type": "rewrite", "verb": "escrever", "from": "Hoje a Ana escreve ao pai.", "before": "Ontem a Ana ", "after": " ao pai.", "answer": "escreveu", "en": "Yesterday Ana wrote to her father." },
+      { "type": "rewrite", "verb": "abrir", "from": "Hoje eles abrem a janela.", "before": "Ontem eles ", "after": " a janela.", "answer": "abriram", "en": "Yesterday they opened the window." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-past-fui-tive-estive",
+    "title": "fui, tive, estive",
+    "summary": "ser, ir, ter and estar in the past",
+    "intro": [
+      "The most common verbs are irregular in the past, so learn them as tables.",
+      "Ser and ir share the same past forms: fui means \"I was\" or \"I went\". The sentence tells you which: Fui ao Porto (I went to Porto), Foi ótimo (it was great)."
+    ],
+    "tables": [
+      { "verb": "ser / ir", "meaning": "to be / to go", "caption": "Past tense of ser and ir", "rows": [
+        { "person": "eu", "form": "fui" },
+        { "person": "tu", "form": "foste" },
+        { "person": "ele / ela / você", "form": "foi" },
+        { "person": "nós", "form": "fomos" },
+        { "person": "eles / elas / vocês", "form": "foram" }
+      ] },
+      { "verb": "ter", "meaning": "to have", "caption": "Past tense of ter", "rows": [
+        { "person": "eu", "form": "tive" },
+        { "person": "tu", "form": "tiveste" },
+        { "person": "ele / ela / você", "form": "teve" },
+        { "person": "nós", "form": "tivemos" },
+        { "person": "eles / elas / vocês", "form": "tiveram" }
+      ] },
+      { "verb": "estar", "meaning": "to be (how, where)", "caption": "Past tense of estar", "rows": [
+        { "person": "eu", "form": "estive" },
+        { "person": "tu", "form": "estiveste" },
+        { "person": "ele / ela / você", "form": "esteve" },
+        { "person": "nós", "form": "estivemos" },
+        { "person": "eles / elas / vocês", "form": "estiveram" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Fui ao Porto no fim de semana.", "en": "I went to Porto at the weekend." },
+      { "pt": "Foi muito bom.", "en": "It was really good." },
+      { "pt": "Tive um dia difícil.", "en": "I had a hard day." },
+      { "pt": "Onde estiveste ontem?", "en": "Where were you yesterday?" }
+    ],
+    "notes": [
+      "Ser and estar split the same way as in the present: Foi simpático (he was nice), Esteve doente (he was ill).",
+      "Como foi? = How was it?"
+    ],
+    "drills": [
+      { "type": "form", "verb": "ir", "person": "eu", "answer": "fui" },
+      { "type": "form", "verb": "ser", "person": "ela", "answer": "foi" },
+      { "type": "form", "verb": "ir", "person": "nós", "answer": "fomos" },
+      { "type": "form", "verb": "ter", "person": "eu", "answer": "tive" },
+      { "type": "form", "verb": "ter", "person": "ele", "answer": "teve" },
+      { "type": "form", "verb": "estar", "person": "tu", "answer": "estiveste" },
+      { "type": "sentence", "verb": "ir", "before": "Eu ", "after": " ao Porto no fim de semana.", "answer": "fui", "en": "I went to Porto at the weekend." },
+      { "type": "sentence", "verb": "ser", "before": "O jantar ", "after": " muito bom.", "answer": "foi", "en": "Dinner was really good." },
+      { "type": "sentence", "verb": "ter", "before": "Ontem ", "after": " um dia difícil.", "answer": "tive", "en": "Yesterday I had a hard day." },
+      { "type": "sentence", "verb": "estar", "before": "Onde ", "after": " tu ontem?", "answer": "estiveste", "en": "Where were you yesterday?" },
+      { "type": "sentence", "verb": "ir", "before": "Eles ", "after": " à praia.", "answer": "foram", "en": "They went to the beach." },
+      { "type": "rewrite", "verb": "estar", "from": "Hoje estou em casa.", "before": "Ontem ", "after": " em casa.", "answer": "estive", "en": "Yesterday I was at home." },
+      { "type": "rewrite", "verb": "ir", "from": "Hoje vou ao cinema.", "before": "Ontem ", "after": " ao cinema.", "answer": "fui", "en": "Yesterday I went to the cinema." },
+      { "type": "rewrite", "verb": "ter", "from": "Hoje temos aulas.", "before": "Ontem ", "after": " aulas.", "answer": "tivemos", "en": "Yesterday we had classes." },
+      { "type": "choice", "before": "O Pedro ", "after": " doente na semana passada.", "options": ["esteve", "foi"], "answer": "esteve", "en": "Pedro was ill last week.", "why": "Being ill is a state that changes: estar, so esteve." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-past-fiz-disse-vi-dei",
+    "title": "fiz, disse, vi, dei",
+    "summary": "fazer, dizer, ver and dar in the past",
+    "intro": [
+      "More everyday verbs with irregular past forms. Watch eu and ele: fiz but fez, vi but viu."
+    ],
+    "tables": [
+      { "verb": "fazer", "meaning": "to do, to make", "caption": "Past tense of fazer", "rows": [
+        { "person": "eu", "form": "fiz" },
+        { "person": "tu", "form": "fizeste" },
+        { "person": "ele / ela / você", "form": "fez" },
+        { "person": "nós", "form": "fizemos" },
+        { "person": "eles / elas / vocês", "form": "fizeram" }
+      ] },
+      { "verb": "dizer", "meaning": "to say", "caption": "Past tense of dizer", "rows": [
+        { "person": "eu", "form": "disse" },
+        { "person": "tu", "form": "disseste" },
+        { "person": "ele / ela / você", "form": "disse" },
+        { "person": "nós", "form": "dissemos" },
+        { "person": "eles / elas / vocês", "form": "disseram" }
+      ] },
+      { "verb": "ver", "meaning": "to see", "caption": "Past tense of ver", "rows": [
+        { "person": "eu", "form": "vi" },
+        { "person": "tu", "form": "viste" },
+        { "person": "ele / ela / você", "form": "viu" },
+        { "person": "nós", "form": "vimos" },
+        { "person": "eles / elas / vocês", "form": "viram" }
+      ] },
+      { "verb": "dar", "meaning": "to give", "caption": "Past tense of dar", "rows": [
+        { "person": "eu", "form": "dei" },
+        { "person": "tu", "form": "deste" },
+        { "person": "ele / ela / você", "form": "deu" },
+        { "person": "nós", "form": "demos" },
+        { "person": "eles / elas / vocês", "form": "deram" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "O que fizeste no fim de semana?", "en": "What did you do at the weekend?" },
+      { "pt": "Ela disse que não.", "en": "She said no." },
+      { "pt": "Viste o jogo?", "en": "Did you see the match?" },
+      { "pt": "Demos um passeio na praia.", "en": "We went for a walk on the beach." }
+    ],
+    "notes": [
+      "Fez anos = it was his or her birthday (from fazer anos).",
+      "Vimos means \"we saw\" (ver, past) and also \"we come\" (vir, present). The sentence makes it clear.",
+      "Deste (you gave) looks like deste (of this, de + este). Again, the sentence makes it clear."
+    ],
+    "drills": [
+      { "type": "form", "verb": "fazer", "person": "eu", "answer": "fiz" },
+      { "type": "form", "verb": "fazer", "person": "ele", "answer": "fez" },
+      { "type": "form", "verb": "dizer", "person": "eu", "answer": "disse" },
+      { "type": "form", "verb": "ver", "person": "tu", "answer": "viste" },
+      { "type": "form", "verb": "ver", "person": "ela", "answer": "viu" },
+      { "type": "form", "verb": "dar", "person": "nós", "answer": "demos" },
+      { "type": "sentence", "verb": "fazer", "before": "O que ", "after": " tu no fim de semana?", "answer": "fizeste", "en": "What did you do at the weekend?" },
+      { "type": "sentence", "verb": "dizer", "before": "Ela ", "after": " que não.", "answer": "disse", "en": "She said no." },
+      { "type": "sentence", "verb": "ver", "before": "Ontem ", "after": " um filme muito bom.", "answer": "vi", "en": "Yesterday I saw a really good film." },
+      { "type": "sentence", "verb": "dar", "before": "Eles ", "after": " os parabéns à Rita.", "answer": "deram", "en": "They wished Rita a happy birthday." },
+      { "type": "sentence", "verb": "fazer", "before": "A Ana ", "after": " anos ontem.", "answer": "fez", "en": "It was Ana's birthday yesterday." },
+      { "type": "rewrite", "verb": "fazer", "from": "Hoje faço o jantar.", "before": "Ontem ", "after": " o jantar.", "answer": "fiz", "en": "Yesterday I made dinner." },
+      { "type": "rewrite", "verb": "ver", "from": "Hoje vemos a avó.", "before": "Ontem ", "after": " a avó.", "answer": "vimos", "en": "Yesterday we saw grandma." },
+      { "type": "rewrite", "verb": "dar", "from": "Hoje dou um passeio.", "before": "Ontem ", "after": " um passeio.", "answer": "dei", "en": "Yesterday I went for a walk." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-past-vim-pus-pude-quis",
+    "title": "vim, pus, pude, quis",
+    "summary": "vir, pôr, poder and querer in the past",
+    "intro": [
+      "The last group of common irregular past forms.",
+      "Careful with poder: ele pôde (he could, past) has an accent; ele pode (he can, present) doesn't."
+    ],
+    "tables": [
+      { "verb": "vir", "meaning": "to come", "caption": "Past tense of vir", "rows": [
+        { "person": "eu", "form": "vim" },
+        { "person": "tu", "form": "vieste" },
+        { "person": "ele / ela / você", "form": "veio" },
+        { "person": "nós", "form": "viemos" },
+        { "person": "eles / elas / vocês", "form": "vieram" }
+      ] },
+      { "verb": "pôr", "meaning": "to put", "caption": "Past tense of pôr", "rows": [
+        { "person": "eu", "form": "pus" },
+        { "person": "tu", "form": "puseste" },
+        { "person": "ele / ela / você", "form": "pôs" },
+        { "person": "nós", "form": "pusemos" },
+        { "person": "eles / elas / vocês", "form": "puseram" }
+      ] },
+      { "verb": "poder", "meaning": "can", "caption": "Past tense of poder", "rows": [
+        { "person": "eu", "form": "pude" },
+        { "person": "tu", "form": "pudeste" },
+        { "person": "ele / ela / você", "form": "pôde" },
+        { "person": "nós", "form": "pudemos" },
+        { "person": "eles / elas / vocês", "form": "puderam" }
+      ] },
+      { "verb": "querer", "meaning": "to want", "caption": "Past tense of querer", "rows": [
+        { "person": "eu", "form": "quis" },
+        { "person": "tu", "form": "quiseste" },
+        { "person": "ele / ela / você", "form": "quis" },
+        { "person": "nós", "form": "quisemos" },
+        { "person": "eles / elas / vocês", "form": "quiseram" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Vim de comboio.", "en": "I came by train." },
+      { "pt": "Onde puseste as chaves?", "en": "Where did you put the keys?" },
+      { "pt": "Não pude ir.", "en": "I couldn't go." },
+      { "pt": "Ela não quis comer.", "en": "She didn't want to eat." }
+    ],
+    "notes": [
+      "Two more you'll hear: saber → soube, which often means \"found out\" (Soube ontem = I found out yesterday), and trazer → trouxe (I brought), where the x sounds like ss.",
+      "Não quis can mean \"I didn't want to\" or \"I refused\"."
+    ],
+    "drills": [
+      { "type": "form", "verb": "vir", "person": "eu", "answer": "vim" },
+      { "type": "form", "verb": "vir", "person": "ele", "answer": "veio" },
+      { "type": "form", "verb": "pôr", "person": "tu", "answer": "puseste" },
+      { "type": "form", "verb": "pôr", "person": "ela", "answer": "pôs" },
+      { "type": "form", "verb": "poder", "person": "eu", "answer": "pude" },
+      { "type": "form", "verb": "querer", "person": "eles", "answer": "quiseram" },
+      { "type": "sentence", "verb": "vir", "before": "Eu ", "after": " de comboio.", "answer": "vim", "en": "I came by train." },
+      { "type": "sentence", "verb": "pôr", "before": "Onde ", "after": " tu as chaves?", "answer": "puseste", "en": "Where did you put the keys?" },
+      { "type": "sentence", "verb": "poder", "before": "Não ", "after": " ir à festa.", "answer": "pude", "en": "I couldn't go to the party." },
+      { "type": "sentence", "verb": "querer", "before": "Ela não ", "after": " comer.", "answer": "quis", "en": "She didn't want to eat." },
+      { "type": "sentence", "verb": "vir", "before": "Os meus pais ", "after": " visitar-me.", "answer": "vieram", "en": "My parents came to visit me." },
+      { "type": "rewrite", "verb": "vir", "from": "Hoje venho a pé.", "before": "Ontem ", "after": " a pé.", "answer": "vim", "en": "Yesterday I came on foot." },
+      { "type": "rewrite", "verb": "pôr", "from": "Hoje ponho a mesa.", "before": "Ontem ", "after": " a mesa.", "answer": "pus", "en": "Yesterday I set the table." },
+      { "type": "rewrite", "verb": "poder", "from": "Hoje ele não pode vir.", "before": "Ontem ele não ", "after": " vir.", "answer": "pôde", "en": "Yesterday he couldn't come." }
+    ],
+    "verified": false
+  }
+]

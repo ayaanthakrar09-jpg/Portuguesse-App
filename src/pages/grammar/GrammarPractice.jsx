@@ -10,6 +10,7 @@ const instructions = {
   form: "Type the right form",
   sentence: "Type the missing verb",
   choice: "Pick the right verb",
+  rewrite: "Change it to the past",
 };
 
 // Topics about words rather than verbs ("focus": "word").
@@ -139,6 +140,7 @@ function Practice({ updateProgress, topicId }) {
         <p className="muted">{(topic.focus === "word" ? wordInstructions : instructions)[question.type]}</p>
 
         <div className="gap-sentence">
+          {question.from && <p className="rewrite-from" lang="pt-PT">{question.from}</p>}
           <p className="gap-pt" lang="pt-PT">
             {question.type === "form" ? `${question.person} ` : question.before}
             <span className={`gap ${gapState}`}>{result ? question.answer : picked || " "}</span>
