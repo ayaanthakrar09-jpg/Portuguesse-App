@@ -10,6 +10,8 @@ import { rate } from "../../lib/srs";
 import { findUnit, isLevelOpen } from "../../lib/vocab";
 import { AnswerField, QuestionPrompt, ResultMark, typeHint } from "./Questions";
 import SessionResult from "./SessionResult";
+import SessionProgress from "../../components/SessionProgress";
+import RichText from "../../components/RichText";
 
 // The key starts a fresh session when you move from one unit straight to another.
 export default function TypingSession(props) {
@@ -97,6 +99,7 @@ function Session({ progress, updateProgress, unitId }) {
         <Link to={backTo} className="btn btn-quiet">End session</Link>
         <span className="muted">{queue.length} left</span>
       </div>
+      <SessionProgress left={queue.length} />
 
       <form className="flashcard" onSubmit={check}>
         <span className="chip">{unit.title}</span>
@@ -125,7 +128,7 @@ function Session({ progress, updateProgress, unitId }) {
                 <p className="muted">{item.example.en}</p>
               </div>
             </div>
-            {item.note && <p className="note">{item.note}</p>}
+            {item.note && <p className="note"><RichText text={item.note} /></p>}
             <AutoNextControl auto={auto} />
           </div>
         )}

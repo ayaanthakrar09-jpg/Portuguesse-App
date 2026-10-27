@@ -9,6 +9,8 @@ import { dateKey } from "../../lib/storage";
 import { findLevel, isLevelOpen } from "../../lib/vocab";
 import { QuestionPrompt, ResultMark, WordTiles } from "./Questions";
 import SessionResult from "./SessionResult";
+import SessionProgress from "../../components/SessionProgress";
+import RichText from "../../components/RichText";
 
 // Put the words in order, for every phrase of three or more words in a level.
 // It practises sentence building, so it doesn't change the spaced-repetition schedule.
@@ -84,6 +86,7 @@ function Session({ progress, updateProgress, levelId }) {
         <Link to={`/vocab/level/${level.id}`} className="btn btn-quiet">End session</Link>
         <span className="muted">{queue.length} left</span>
       </div>
+      <SessionProgress left={queue.length} />
 
       <form className="flashcard" onSubmit={check}>
         <span className="chip">Level {level.id}: word order</span>
@@ -106,7 +109,7 @@ function Session({ progress, updateProgress, levelId }) {
                 <p className="muted">{question.item.en}</p>
               </div>
             </div>
-            {question.item.note && <p className="note">{question.item.note}</p>}
+            {question.item.note && <p className="note"><RichText text={question.item.note} /></p>}
             <AutoNextControl auto={auto} />
           </div>
         )}

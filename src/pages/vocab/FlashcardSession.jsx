@@ -5,6 +5,8 @@ import { speak, speechMessages } from "../../lib/speech";
 import { dateKey } from "../../lib/storage";
 import { RATINGS, dueCards, intervalLabel, markKnown, newCards, rate } from "../../lib/srs";
 import { displayPt, findUnit, genderText, isLevelOpen, openItems } from "../../lib/vocab";
+import SessionProgress from "../../components/SessionProgress";
+import RichText from "../../components/RichText";
 
 const ratingText = { again: "Again", hard: "Hard", good: "Good", easy: "Easy" };
 
@@ -103,6 +105,7 @@ function Session({ progress, updateProgress, review = false, unitId }) {
         <Link to={backTo} className="btn btn-quiet">End session</Link>
         <span className="muted">{queue.length} left</span>
       </div>
+      <SessionProgress left={queue.length} />
 
       <div className="flashcard">
         <span className="chip">{review ? `Level ${item.level} review` : unit.title}</span>
@@ -124,7 +127,7 @@ function Session({ progress, updateProgress, review = false, unitId }) {
                 <p className="muted">{item.example.en}</p>
               </div>
             </div>
-            {item.note && <p className="note">{item.note}</p>}
+            {item.note && <p className="note"><RichText text={item.note} /></p>}
           </div>
         ) : (
           <button className="btn btn-primary" onClick={() => setRevealed(true)}>Show answer</button>

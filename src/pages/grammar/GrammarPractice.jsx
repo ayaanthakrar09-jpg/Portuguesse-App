@@ -6,6 +6,8 @@ import { orderedText } from "../../lib/exercises";
 import { findTopic, orderTiles, practiceQuestions } from "../../lib/grammar";
 import { dateKey } from "../../lib/storage";
 import { AnswerField, Choices, ResultMark, WordTiles } from "../vocab/Questions";
+import SessionProgress from "../../components/SessionProgress";
+import RichText from "../../components/RichText";
 
 const instructions = {
   form: "Type the right form",
@@ -150,6 +152,7 @@ function Practice({ updateProgress, topicId }) {
         <Link to={`/grammar/${topic.id}`} className="btn btn-quiet">End practice</Link>
         <span className="muted">{queue.length} left</span>
       </div>
+      <SessionProgress left={queue.length} />
 
       <form className="flashcard" onSubmit={submit}>
         <span className="chip" lang="pt-PT">{topic.title}</span>
@@ -197,7 +200,7 @@ function Practice({ updateProgress, topicId }) {
                 <strong lang="pt-PT">{(isOrder && written) || question.answer}</strong>
               </p>
             )}
-            {question.why && <p className="muted">{question.why}</p>}
+            {question.why && <p className="muted"><RichText text={question.why} /></p>}
             <AutoNextControl auto={auto} />
             {isChoice && (
               <div className="actions">

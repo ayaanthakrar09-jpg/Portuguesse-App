@@ -3,6 +3,7 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import Icon from "../../components/Icon";
 import { findTopic } from "../../lib/grammar";
 import { speak, speechMessages } from "../../lib/speech";
+import RichText from "../../components/RichText";
 
 // A topic has one verb `table`, or several `tables` (one per verb, with its meaning).
 function verbTables(topic) {
@@ -39,7 +40,7 @@ export default function GrammarTopic({ progress }) {
       </header>
 
       <div className="card grammar-card">
-        {topic.intro.map((line) => <p key={line}>{line}</p>)}
+        {topic.intro.map((line) => <p key={line}><RichText text={line} /></p>)}
 
         {verbTables(topic).map((table) => (
           <div key={table.verb} className="verb-block">
@@ -86,7 +87,7 @@ export default function GrammarTopic({ progress }) {
 
         {topic.notes?.length > 0 && (
           <ul className="grammar-notes">
-            {topic.notes.map((note) => <li key={note} className="note">{note}</li>)}
+            {topic.notes.map((note) => <li key={note} className="note"><RichText text={note} /></li>)}
           </ul>
         )}
         {voiceNote && <p className="note" role="status">{voiceNote}</p>}

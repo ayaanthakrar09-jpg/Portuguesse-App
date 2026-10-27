@@ -21,9 +21,9 @@
       { "pt": "São oito horas.", "en": "It's eight o'clock." }
     ],
     "notes": [
-      "No \"a\" before jobs: Sou estudante = I'm a student.",
-      "Você exists, but in Portugal it can sound distant or even rude. Use tu with friends; with strangers use o senhor / a senhora, or just the verb: É de Lisboa?",
-      "Vós (an old form of \"you all\") is only heard in some northern regions. This app uses vocês."
+      "No \"a\" before jobs: *Sou estudante* = I'm a student.",
+      "*Você* exists, but in Portugal it can sound distant or even rude. Use *tu* with friends; with strangers use o *senhor* / a senhora, or just the verb: *É de Lisboa*?",
+      "*Vós* (an old form of \"you all\") is only heard in some northern regions. This app uses *vocês*."
     ],
     "drills": [
       { "type": "form", "person": "eu", "answer": "sou" },
@@ -62,8 +62,8 @@
       { "pt": "Hoje está calor.", "en": "It's hot today." }
     ],
     "notes": [
-      "Estar a + verb is how European Portuguese says you're doing something now: Estou a comer = I'm eating. (In Brazil: estou comendo.)",
-      "Describing words change with gender: cansado (man), cansada (woman)."
+      "Estar a + verb is how European Portuguese says you're doing something now: *Estou a comer* = I'm eating. (In Brazil: *estou comendo*.)",
+      "Describing words change with gender: *cansado* (man), cansada (woman)."
     ],
     "drills": [
       { "type": "form", "person": "eu", "answer": "estou" },
@@ -97,7 +97,7 @@
       { "pt": "A sopa está boa.", "en": "The soup tastes good. (this bowl, now)" }
     ],
     "notes": [
-      "For where a fixed place is, Portuguese uses ser or ficar, not estar: Onde é a estação? / Onde fica a estação?"
+      "For where a fixed place is, Portuguese uses ser or *ficar*, not estar: *Onde é a estação*? / *Onde fica a estação*?"
     ],
     "drills": [
       { "type": "choice", "before": "O Pedro ", "after": " alto.", "options": ["é", "está"], "answer": "é", "en": "Pedro is tall.", "why": "Height describes him in general: ser." },
@@ -118,7 +118,7 @@
     "title": "ter",
     "summary": "to have, and to be hungry, cold, twenty…",
     "intro": [
-      "Ter means \"to have\". Portuguese also uses it where English uses \"to be\": for age, hunger, thirst, feeling cold or hot, and fear."
+      "*Ter* means \"to have\". Portuguese also uses it where English uses \"to be\": for age, hunger, thirst, feeling cold or hot, and fear."
     ],
     "table": [
       { "person": "eu", "form": "tenho" },
@@ -134,8 +134,8 @@
       { "pt": "Ela tem frio.", "en": "She's cold." }
     ],
     "notes": [
-      "têm (they have) has a hat on the e; tem (he or she has) doesn't. They sound almost the same.",
-      "Tenho de + verb = I have to: Tenho de trabalhar. In Portugal you'll mostly hear tenho de; Brazilians usually say tenho que."
+      "*têm* (they have) has a hat on the e; *tem* (he or she has) doesn't. They sound almost the same.",
+      "*Tenho* de + verb = I have to: *Tenho de trabalhar*. In Portugal you'll mostly hear *tenho* de; Brazilians usually say *tenho* que."
     ],
     "drills": [
       { "type": "form", "person": "eu", "answer": "tenho" },
@@ -158,8 +158,8 @@
     "title": "ir",
     "summary": "to go, and \"going to\" for the future",
     "intro": [
-      "Ir means \"to go\".",
-      "It's also the everyday way to talk about the future: ir + verb, just like English \"going to\". Vou comer = I'm going to eat."
+      "*Ir* means \"to go\".",
+      "It's also the everyday way to talk about the future: *ir* + verb, just like English \"going to\". *Vou comer* = I'm going to eat."
     ],
     "table": [
       { "person": "eu", "form": "vou" },
@@ -175,8 +175,8 @@
       { "pt": "Eles vão à praia.", "en": "They're going to the beach." }
     ],
     "notes": [
-      "Going to a place: ir a. With the: a + o = ao (ao Porto), a + a = à (à praia).",
-      "Vamos! on its own means \"Let's go!\""
+      "Going to a place: *ir* a. With the: a + o = ao (ao Porto), a + a = *à* (*à praia*).",
+      "*Vamos*! on its own means \"Let's go!\""
     ],
     "drills": [
       { "type": "form", "person": "eu", "answer": "vou" },
@@ -200,7 +200,7 @@
     "summary": "regular verbs like falar, morar, trabalhar",
     "intro": [
       "Most Portuguese verbs are regular: once you know the pattern, you know them all. The biggest group ends in -ar.",
-      "Take off -ar and add the endings: -o, -as, -a, -amos, -am. Here is falar (to speak):"
+      "Take off -ar and add the endings: -o, -as, -a, -amos, -am. Here is *falar* (to speak):"
     ],
     "table": [
       { "person": "eu", "form": "falo" },
@@ -216,10 +216,10 @@
       { "pt": "Apanho o autocarro às oito.", "en": "I catch the bus at eight." }
     ],
     "notes": [
-      "The verb ending already shows who is doing it, so eu, tu and nós are often left out: Falo inglês = I speak English.",
-      "Gostar (to like) always takes de: Gosto de café. With the: de + o = do, de + a = da (Gosto do Porto).",
-      "Apanhar o autocarro (to catch the bus) is the Portugal way of saying it.",
-      "In Portugal, falamos = we speak, and falámos (with an accent) = we spoke."
+      "The verb ending already shows who is doing it, so *eu*, *tu* and *nós* are often left out: *Falo inglês* = I speak English.",
+      "Gostar (to like) always takes de: *Gosto de café*. With the: de + o = do, de + a = da (*Gosto do Porto*).",
+      "Apanhar o *autocarro* (to catch the bus) is the Portugal way of saying it.",
+      "In Portugal, *falamos* = we speak, and *falámos* (with an accent) = we spoke."
     ],
     "drills": [
       { "type": "form", "verb": "falar", "person": "eu", "answer": "falo" },
@@ -242,7 +242,7 @@
     "title": "-er verbs",
     "summary": "regular verbs like comer, beber, viver",
     "intro": [
-      "The second group ends in -er. Take off -er and add: -o, -es, -e, -emos, -em. Here is comer (to eat):"
+      "The second group ends in -er. Take off -er and add: -o, -es, -e, -emos, -em. Here is *comer* (to eat):"
     ],
     "table": [
       { "person": "eu", "form": "como" },
@@ -258,9 +258,9 @@
       { "pt": "Vivo no Porto.", "en": "I live in Porto." }
     ],
     "notes": [
-      "Perceber (to understand) is what you'll hear most in Portugal: Não percebo. Brazilians usually say entender; both are understood.",
-      "Viver and morar both mean to live somewhere. Morar is very common for where your home is.",
-      "Not every -er verb is regular: ler (to read) goes leio, lês, lê. Those come later."
+      "*Perceber* (to understand) is what you'll hear most in Portugal: *Não percebo*. Brazilians usually say entender; both are understood.",
+      "*Viver* and morar both mean to live somewhere. Morar is very common for where your home is.",
+      "Not every -er verb is regular: *ler* (to read) goes *leio*, *lês*, *lê*. Those come later."
     ],
     "drills": [
       { "type": "form", "verb": "beber", "person": "eu", "answer": "bebo" },
@@ -283,7 +283,7 @@
     "title": "-ir verbs",
     "summary": "regular verbs like partir, abrir, decidir",
     "intro": [
-      "The third group ends in -ir. The endings are the same as -er verbs except for nós: -o, -es, -e, -imos, -em. Here is partir (to leave):"
+      "The third group ends in -ir. The endings are the same as -er verbs except for *nós*: -o, -es, -e, -imos, -em. Here is partir (to leave):"
     ],
     "table": [
       { "person": "eu", "form": "parto" },
@@ -299,9 +299,9 @@
       { "pt": "Decido amanhã.", "en": "I'll decide tomorrow." }
     ],
     "notes": [
-      "The present tense often covers the near future too: Decido amanhã = I'll decide tomorrow.",
-      "Assistir a = to watch (a match, a film) or to attend: Assisto ao jogo. (a + o = ao)",
-      "Some -ir verbs change a vowel: dormir → durmo, preferir → prefiro, subir → sobes. They come later."
+      "The present tense often covers the near future too: *Decido amanhã* = I'll decide tomorrow.",
+      "Assistir a = to watch (a match, a film) or to attend: Assisto *ao jogo*. (a + o = ao)",
+      "Some -ir verbs change a vowel: *dormir* → *durmo*, preferir → prefiro, subir → sobes. They come later."
     ],
     "drills": [
       { "type": "form", "verb": "abrir", "person": "eu", "answer": "abro" },
@@ -324,8 +324,8 @@
     "title": "fazer",
     "summary": "to do, to make, and the weather",
     "intro": [
-      "Fazer means \"to do\" or \"to make\". It's also used for the weather and, in Portugal, for birthdays.",
-      "It's irregular: watch eu faço and ele faz."
+      "*Fazer* means \"to do\" or \"to make\". It's also used for the weather and, in Portugal, for birthdays.",
+      "It's irregular: watch *eu faço* and *ele faz*."
     ],
     "table": [
       { "person": "eu", "form": "faço" },
@@ -341,9 +341,9 @@
       { "pt": "Eles fazem desporto.", "en": "They do sport." }
     ],
     "notes": [
-      "Fazer anos (literally \"to make years\") is how Portugal says it's someone's birthday: A Rita faz anos hoje.",
-      "Weather: faz frio / faz calor. Está frio / está calor are also common.",
-      "Desporto (sport) is the Portugal word; esporte is Brazilian."
+      "*Fazer anos* (literally \"to make years\") is how Portugal says it's someone's birthday: A Rita *faz anos hoje*.",
+      "Weather: *faz frio* / *faz calor*. *Está frio* / *está calor* are also common.",
+      "*Desporto* (sport) is the Portugal word; esporte is Brazilian."
     ],
     "drills": [
       { "type": "form", "person": "eu", "answer": "faço" },
@@ -366,8 +366,8 @@
     "title": "poder",
     "summary": "can, may, and asking politely",
     "intro": [
-      "Poder means \"can\" or \"may\". Put another verb straight after it: Posso ajudar = I can help.",
-      "It's irregular only in the eu form: posso."
+      "Poder means \"can\" or \"may\". Put another verb straight after it: *Posso ajudar* = I can help.",
+      "It's irregular only in the *eu* form: *posso*."
     ],
     "table": [
       { "person": "eu", "form": "posso" },
@@ -383,8 +383,8 @@
       { "pt": "Hoje não podemos.", "en": "We can't today." }
     ],
     "notes": [
-      "To a waiter or a stranger, use the ele/ela form without a pronoun: Pode trazer…? It's polite without sounding distant.",
-      "Não pode ser = that's not possible / that can't be right."
+      "To a waiter or a stranger, use the *ele*/*ela* form without a pronoun: *Pode trazer*…? It's polite without sounding distant.",
+      "*Não pode* ser = that's not possible / that can't be right."
     ],
     "drills": [
       { "type": "form", "person": "eu", "answer": "posso" },
@@ -407,8 +407,8 @@
     "title": "querer",
     "summary": "to want, and how to order politely",
     "intro": [
-      "Querer means \"to want\". Like poder, put another verb straight after it: Quero ir = I want to go.",
-      "Watch ele quer: no -e on the end."
+      "Querer means \"to want\". Like poder, put another verb straight after it: *Quero ir* = I want to go.",
+      "Watch *ele quer*: no -e on the end."
     ],
     "table": [
       { "person": "eu", "form": "quero" },
@@ -424,7 +424,7 @@
       { "pt": "Queria um café, se faz favor.", "en": "I'd like a coffee, please." }
     ],
     "notes": [
-      "In cafés and shops, people say Queria… (I'd like) rather than Quero… (I want). Queria is a past form used to sound polite; just learn it as a phrase for now."
+      "In cafés and shops, people say *Queria*… (I'd like) rather than *Quero*… (I want). *Queria* is a past form used to sound polite; just learn it as a phrase for now."
     ],
     "drills": [
       { "type": "form", "person": "eu", "answer": "quero" },
@@ -447,7 +447,7 @@
     "title": "ver, dar, ler",
     "summary": "to see, to give, to read",
     "intro": [
-      "Three short, irregular verbs you'll use every day. Ver and ler follow almost the same pattern."
+      "Three short, irregular verbs you'll use every day. *Ver* and *ler* follow almost the same pattern."
     ],
     "tables": [
       { "verb": "ver", "meaning": "to see", "rows": [
@@ -479,9 +479,9 @@
       { "pt": "Leio o jornal ao pequeno-almoço.", "en": "I read the paper at breakfast." }
     ],
     "notes": [
-      "Veem and leem used to be written vêem and lêem. You'll still see the old spelling, and both are accepted here.",
-      "Ver is also \"to watch\": ver televisão, ver um filme, ver o jogo.",
-      "Dar appears in many expressions: dar um passeio (to go for a walk), dar os parabéns (to wish happy birthday)."
+      "*Veem* and *leem* used to be written *vêem* and *lêem*. You'll still see the old spelling, and both are accepted here.",
+      "*Ver* is also \"to watch\": *ver televisão*, *ver um filme*, *ver o jogo*.",
+      "*Dar* appears in many expressions: *dar um passeio* (to go for a walk), *dar os parabéns* (to wish happy birthday)."
     ],
     "drills": [
       { "type": "form", "verb": "ver", "person": "eu", "answer": "vejo" },
@@ -504,8 +504,8 @@
     "title": "dizer, trazer, saber",
     "summary": "to say, to bring, to know",
     "intro": [
-      "Dizer and trazer change in the eu form (digo, trago) and lose the final -e in ele diz, ele traz, just like fazer.",
-      "Saber only changes in the eu form: sei."
+      "*Dizer* and *trazer* change in the *eu* form (*digo*, *trago*) and lose the final -e in *ele diz*, *ele traz*, just like *fazer*.",
+      "Saber only changes in the *eu* form: *sei*."
     ],
     "tables": [
       { "verb": "dizer", "meaning": "to say", "rows": [
@@ -537,8 +537,8 @@
       { "pt": "Sabes onde fica a estação?", "en": "Do you know where the station is?" }
     ],
     "notes": [
-      "Saber is knowing a fact, or knowing how to do something: Sei nadar = I can swim.",
-      "Knowing a person or a place is a different verb, conhecer: Conheço o Porto = I know Porto."
+      "Saber is knowing a fact, or knowing how to do something: *Sei nadar* = I can swim.",
+      "Knowing a person or a place is a different verb, conhecer: *Conheço o Porto* = I know Porto."
     ],
     "drills": [
       { "type": "form", "verb": "dizer", "person": "eu", "answer": "digo" },
@@ -561,8 +561,8 @@
     "title": "vir, pôr",
     "summary": "to come, to put",
     "intro": [
-      "Vir and pôr are very irregular, so learn them as tables.",
-      "Careful: ele vem (he comes) but eles vêm (they come), just like tem and têm."
+      "*Vir* and *pôr* are very irregular, so learn them as tables.",
+      "Careful: *ele vem* (he comes) but *eles vêm* (they come), just like *tem* and *têm*."
     ],
     "tables": [
       { "verb": "vir", "meaning": "to come", "rows": [
@@ -587,9 +587,9 @@
       { "pt": "Onde pões as chaves?", "en": "Where do you put the keys?" }
     ],
     "notes": [
-      "Vir is coming towards where the speaker is; ir is going somewhere else. Vens à festa? = Are you coming to the party? (the speaker will be there)",
-      "Pôr has an accent to tell it apart from por (by, through).",
-      "Nós vimos (we come) looks exactly like vimos (we saw, from ver). The sentence tells you which one it is."
+      "*Vir* is coming towards where the speaker is; *ir* is going somewhere else. *Vens à festa*? = Are you coming to the party? (the speaker will be there)",
+      "*Pôr* has an accent to tell it apart from por (by, through).",
+      "*Nós vimos* (we come) looks exactly like *vimos* (we saw, from *ver*). The sentence tells you which one it is."
     ],
     "drills": [
       { "type": "form", "verb": "vir", "person": "eu", "answer": "venho" },
@@ -612,7 +612,7 @@
     "title": "pedir, ouvir, dormir, sair",
     "summary": "-ir verbs that change in a few forms",
     "intro": [
-      "These -ir verbs are regular apart from a few forms, mostly eu: peço, ouço, durmo, saio."
+      "These -ir verbs are regular apart from a few forms, mostly *eu*: *peço*, *ouço*, *durmo*, *saio*."
     ],
     "tables": [
       { "verb": "pedir", "meaning": "to ask for, to order", "rows": [
@@ -651,10 +651,10 @@
       { "pt": "A que horas sais do trabalho?", "en": "What time do you leave work?" }
     ],
     "notes": [
-      "In Portugal you'll also hear and see oiço instead of ouço. Both are correct and both are accepted here.",
-      "Pedir is asking for something (Peço um café). Asking a question is perguntar.",
-      "Preferir changes only in the eu form: prefiro, preferes, prefere…",
-      "Sair de = to leave a place: saio de casa, sais do trabalho (de + o = do)."
+      "In Portugal you'll also hear and see *oiço* instead of *ouço*. Both are correct and both are accepted here.",
+      "Pedir is asking for something (*Peço um* café). Asking a question is *perguntar*.",
+      "Preferir changes only in the *eu* form: prefiro, preferes, prefere…",
+      "*Sair* de = to leave a place: *saio de casa*, *sais do trabalho* (de + o = do)."
     ],
     "drills": [
       { "type": "form", "verb": "pedir", "person": "eu", "answer": "peço" },

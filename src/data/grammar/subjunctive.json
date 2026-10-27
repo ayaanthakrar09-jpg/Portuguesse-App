@@ -4,8 +4,8 @@
     "title": "que eu fale",
     "summary": "the present subjunctive: its forms",
     "intro": [
-      "The subjunctive (conjuntivo) is a set of verb forms used mostly after que, for wishes, doubts and feelings: Quero que venhas = I want you to come.",
-      "Good news: you already know these forms from commands. Take the eu form of the present, drop the -o and swap the vowel: falo → fale, como → coma, faço → faça, venho → venha."
+      "The subjunctive (conjuntivo) is a set of verb forms used mostly after que, for wishes, doubts and feelings: *Quero que venhas* = I want you to come.",
+      "Good news: you already know these forms from commands. Take the *eu* form of the present, drop the -o and swap the vowel: *falo* → *fale*, *como* → *coma*, *faço* → *faça*, *venho* → *venha*."
     ],
     "tables": [
       { "verb": "falar", "meaning": "to speak", "caption": "Present subjunctive of falar", "rows": [
@@ -41,8 +41,8 @@
       { "pt": "É preciso que saibas isto.", "en": "You need to know this." }
     ],
     "notes": [
-      "Espero que estejas bem is a standard way to start a message to a friend.",
-      "Ir goes vá, vás, vá, vamos, vão."
+      "*Espero que estejas bem* is a standard way to start a message to a friend.",
+      "*Ir* goes *vá*, *vás*, *vá*, *vamos*, *vão*."
     ],
     "drills": [
       { "type": "form", "verb": "falar", "person": "que tu", "answer": "fales" },
@@ -65,9 +65,9 @@
     "title": "quero que, talvez, embora",
     "summary": "when to use the present subjunctive",
     "intro": [
-      "Use it after que when the first verb is about a wish or request (querer que, pedir que, preferir que, esperar que), doubt (duvidar que, não acho que) or need (é preciso que, é importante que).",
-      "Also after talvez (maybe) and some linking words: para que (so that), embora (although), antes que (before), até que (until), caso (in case).",
-      "Not after certainty: Acho que ele vem (I think he's coming) uses the normal present. Não acho que ele venha (I don't think he's coming) uses the subjunctive."
+      "Use it after que when the first verb is about a wish or request (querer que, pedir que, preferir que, esperar que), doubt (duvidar que, *não acho* que) or need (*é preciso* que, *é importante* que).",
+      "Also after *talvez* (maybe) and some linking words: *para* que (so that), *embora* (although), *antes* que (before), *até* que (until), *caso* (in case).",
+      "Not after certainty: *Acho que ele vem* (I think he's coming) uses the normal present. *Não acho que ele venha* (I don't think he's coming) uses the subjunctive."
     ],
     "examples": [
       { "pt": "Peço-te que fales mais devagar.", "en": "I'm asking you to speak more slowly." },
@@ -76,22 +76,22 @@
       { "pt": "Leva o casaco, caso faça frio.", "en": "Take your coat in case it's cold." }
     ],
     "notes": [
-      "Quick test: are you stating a fact (acho que, sei que, é verdade que)? Normal present. Is it wished, doubted, needed or uncertain? Subjunctive.",
-      "If it's the same person, use the infinitive instead: Quero ir (I want to go), but Quero que vás (I want you to go)."
+      "Quick test: are you stating a fact (*acho* que, *sei* que, *é verdade* que)? Normal present. Is it wished, doubted, needed or uncertain? Subjunctive.",
+      "If it's the same person, use the infinitive instead: *Quero ir* (I want to go), but *Quero que vás* (I want you to go)."
     ],
     "drills": [
-      { "type": "choice", "before": "Acho que ele ", "after": ".", "options": ["vem", "venha"], "answer": "vem", "en": "I think he's coming.", "why": "Acho que states what you believe: normal present." },
-      { "type": "choice", "before": "Não acho que ele ", "after": ".", "options": ["venha", "vem"], "answer": "venha", "en": "I don't think he's coming.", "why": "Não acho que expresses doubt: subjunctive." },
-      { "type": "choice", "before": "Quero que tu ", "after": " comigo.", "options": ["vás", "vais"], "answer": "vás", "en": "I want you to go with me.", "why": "A wish about someone else: quero que + subjunctive." },
-      { "type": "choice", "before": "Sei que ela ", "after": " razão.", "options": ["tem", "tenha"], "answer": "tem", "en": "I know she's right.", "why": "Sei que states a fact: normal present." },
+      { "type": "choice", "before": "Acho que ele ", "after": ".", "options": ["vem", "venha"], "answer": "vem", "en": "I think he's coming.", "why": "*Acho* que states what you believe: normal present." },
+      { "type": "choice", "before": "Não acho que ele ", "after": ".", "options": ["venha", "vem"], "answer": "venha", "en": "I don't think he's coming.", "why": "*Não acho* que expresses doubt: subjunctive." },
+      { "type": "choice", "before": "Quero que tu ", "after": " comigo.", "options": ["vás", "vais"], "answer": "vás", "en": "I want you to go with me.", "why": "A wish about someone else: *quero* que + subjunctive." },
+      { "type": "choice", "before": "Sei que ela ", "after": " razão.", "options": ["tem", "tenha"], "answer": "tem", "en": "I know she's right.", "why": "*Sei* que states a fact: normal present." },
       { "type": "choice", "before": "Duvido que ela ", "after": " razão.", "options": ["tenha", "tem"], "answer": "tenha", "en": "I doubt she's right.", "why": "Doubt: subjunctive." },
-      { "type": "choice", "before": "Embora ", "after": " cansado, vou sair.", "options": ["esteja", "estou"], "answer": "esteja", "en": "Although I'm tired, I'm going out.", "why": "Embora (although) always takes the subjunctive." },
-      { "type": "choice", "before": "Leva o casaco, caso ", "after": " frio.", "options": ["faça", "faz"], "answer": "faça", "en": "Take your coat in case it's cold.", "why": "Caso (in case) takes the subjunctive." },
+      { "type": "choice", "before": "Embora ", "after": " cansado, vou sair.", "options": ["esteja", "estou"], "answer": "esteja", "en": "Although I'm tired, I'm going out.", "why": "*Embora* (although) always takes the subjunctive." },
+      { "type": "choice", "before": "Leva o casaco, caso ", "after": " frio.", "options": ["faça", "faz"], "answer": "faça", "en": "Take your coat in case it's cold.", "why": "*Caso* (in case) takes the subjunctive." },
       { "type": "choice", "before": "Quero ", "after": " ao cinema.", "options": ["ir", "que vá"], "answer": "ir", "en": "I want to go to the cinema.", "why": "The same person wants and goes: just the infinitive." },
-      { "type": "choice", "before": "Explico outra vez para que ", "after": ".", "options": ["percebas", "percebes"], "answer": "percebas", "en": "I'll explain again so that you understand.", "why": "Para que (so that) takes the subjunctive." },
-      { "type": "choice", "before": "É verdade que eles ", "after": " em Lisboa.", "options": ["vivem", "vivam"], "answer": "vivem", "en": "It's true that they live in Lisbon.", "why": "É verdade que states a fact: normal present." },
-      { "type": "choice", "before": "É importante que ", "after": " a horas.", "options": ["chegues", "chegas"], "answer": "chegues", "en": "It's important that you arrive on time.", "why": "É importante que: subjunctive." },
-      { "type": "choice", "before": "Talvez ", "after": " razão.", "options": ["tenhas", "tens"], "answer": "tenhas", "en": "Maybe you're right.", "why": "Talvez before the verb takes the subjunctive." }
+      { "type": "choice", "before": "Explico outra vez para que ", "after": ".", "options": ["percebas", "percebes"], "answer": "percebas", "en": "I'll explain again so that you understand.", "why": "*Para* que (so that) takes the subjunctive." },
+      { "type": "choice", "before": "É verdade que eles ", "after": " em Lisboa.", "options": ["vivem", "vivam"], "answer": "vivem", "en": "It's true that they live in Lisbon.", "why": "*É verdade* que states a fact: normal present." },
+      { "type": "choice", "before": "É importante que ", "after": " a horas.", "options": ["chegues", "chegas"], "answer": "chegues", "en": "It's important that you arrive on time.", "why": "*É importante* que: subjunctive." },
+      { "type": "choice", "before": "Talvez ", "after": " razão.", "options": ["tenhas", "tens"], "answer": "tenhas", "en": "Maybe you're right.", "why": "*Talvez* before the verb takes the subjunctive." }
     ],
     "verified": false
   },
@@ -100,9 +100,9 @@
     "title": "se eu fosse",
     "summary": "the imperfect subjunctive: if I were, if I had",
     "intro": [
-      "Take the eles form of the simple past, drop -ram and add -sse: falaram → falasse, fizeram → fizesse, foram → fosse. Endings: -sse, -sses, -sse, -ssemos, -ssem (nós has an accent: falássemos).",
-      "Use it for imaginary or unlikely conditions with se: Se eu tivesse tempo, ia contigo = If I had time, I'd go with you.",
-      "And where the present subjunctive would go, when the sentence is in the past: Quero que venhas → Queria que viesses (I wanted you to come). Como se (as if) always takes it."
+      "Take the *eles* form of the simple past, drop -ram and add -sse: *falaram* → *falasse*, *fizeram* → *fizesse*, *foram* → *fosse*. Endings: -sse, -sses, -sse, -ssemos, -ssem (*nós* has an accent: *falássemos*).",
+      "Use it for imaginary or unlikely conditions with se: *Se eu tivesse tempo*, *ia contigo* = If I had time, I'd go with you.",
+      "And where the present subjunctive would go, when the sentence is in the past: *Quero que venhas* → *Queria que viesses* (I wanted you to come). *Como* se (as if) always takes it."
     ],
     "tables": [
       { "verb": "falar", "meaning": "to speak", "caption": "Imperfect subjunctive of falar", "rows": [
@@ -131,8 +131,8 @@
       { "pt": "Fala como se soubesse tudo.", "en": "He talks as if he knew everything." }
     ],
     "notes": [
-      "For the \"would\" part, Portugal usually uses the imperfeito (ia, viajava). The conditional (iria, viajaria) sounds more formal.",
-      "Quem me dera que…! = If only…! Quem me dera que fosse sexta-feira!"
+      "For the \"would\" part, Portugal usually uses the imperfeito (*ia*, *viajava*). The conditional (iria, viajaria) sounds more formal.",
+      "*Quem me dera* que…! = If only…! *Quem me dera que fosse sexta-feira*!"
     ],
     "drills": [
       { "type": "form", "verb": "ser", "person": "se eu", "answer": "fosse" },
@@ -155,9 +155,9 @@
     "title": "quando fores",
     "summary": "the future subjunctive: when you go, if you can",
     "intro": [
-      "Portuguese has a future subjunctive, and Portugal uses it all the time. It's for something that may happen later, after quando (when), se (if), assim que (as soon as), enquanto (while, as long as), sempre que (whenever), and o que / quem / como (whatever, whoever, however).",
-      "Take the eles form of the simple past and drop -am: falaram → falar, fizeram → fizer, foram → for. Endings: -, -es, -, -mos, -em.",
-      "For regular verbs it looks like the infinitive: quando chegares, se falarmos."
+      "Portuguese has a future subjunctive, and Portugal uses it all the time. It's for something that may happen later, after *quando* (when), se (if), *assim* que (as soon as), *enquanto* (while, as long as), *sempre* que (whenever), and o que / *quem* / *como* (whatever, whoever, however).",
+      "Take the *eles* form of the simple past and drop -am: *falaram* → *falar*, *fizeram* → *fizer*, *foram* → for. Endings: -, -es, -, -mos, -em.",
+      "For regular verbs it looks like the infinitive: *quando chegares*, *se falarmos*."
     ],
     "tables": [
       { "verb": "ser / ir", "meaning": "to be / to go", "caption": "Future subjunctive of ser and ir", "rows": [
@@ -186,9 +186,9 @@
       { "pt": "Faz como quiseres.", "en": "Do as you like." }
     ],
     "notes": [
-      "Compare: Se tens tempo (if you have time, right now) and Se tiveres tempo (if you have time, later on). For plans, Portugal very often uses the second.",
-      "Careful: vir (to come) → vier, and ver (to see) → vir. Quando vires a Ana = When you see Ana.",
-      "Como queiras (as you like) is also very common."
+      "Compare: *Se tens tempo* (if you have time, right now) and Se tiveres *tempo* (if you have time, later on). For plans, Portugal very often uses the second.",
+      "Careful: *vir* (to come) → *vier*, and *ver* (to see) → *vir*. *Quando vires a Ana* = When you see Ana.",
+      "*Como queiras* (as you like) is also very common."
     ],
     "drills": [
       { "type": "form", "verb": "ir", "person": "quando tu", "answer": "fores" },
@@ -211,9 +211,9 @@
     "title": "venha, viesse or vier?",
     "summary": "choosing the right subjunctive",
     "intro": [
-      "Present subjunctive (venha): wishes, doubts and needs about now or the future, after quero que, espero que, talvez, embora…",
-      "Imperfect subjunctive (viesse): imaginary conditions (se eu fosse…), como se, and when the first verb is in the past (queria que…).",
-      "Future subjunctive (vier): something that may happen later, after quando, se, assim que, enquanto…"
+      "Present subjunctive (*venha*): wishes, doubts and needs about now or the future, after *quero* que, *espero* que, *talvez*, *embora*…",
+      "Imperfect subjunctive (*viesse*): imaginary conditions (*se eu fosse*…), *como* se, and when the first verb is in the past (*queria* que…).",
+      "Future subjunctive (*vier*): something that may happen later, after *quando*, se, *assim* que, *enquanto*…"
     ],
     "examples": [
       { "pt": "Quero que venhas amanhã.", "en": "I want you to come tomorrow." },
@@ -228,15 +228,15 @@
       { "type": "choice", "before": "Espero que ", "after": " bem.", "options": ["estejas", "estivesses"], "answer": "estejas", "en": "I hope you're well.", "why": "Hoping about now: present subjunctive." },
       { "type": "choice", "before": "Se eu ", "after": " dinheiro, comprava uma casa.", "options": ["tivesse", "tiver"], "answer": "tivesse", "en": "If I had money, I'd buy a house.", "why": "Imaginary (I don't have it): imperfect subjunctive." },
       { "type": "choice", "before": "Se ", "after": " dinheiro, compro uma casa.", "options": ["tiver", "tivesse"], "answer": "tiver", "en": "If I have money, I'll buy a house.", "why": "A real possibility later on: future subjunctive." },
-      { "type": "choice", "before": "Quando ", "after": " a Lisboa, liga-me.", "options": ["fores", "vás"], "answer": "fores", "en": "When you go to Lisbon, call me.", "why": "Quando + something later: future subjunctive." },
-      { "type": "choice", "before": "Quero que ", "after": " amanhã.", "options": ["venhas", "viesses"], "answer": "venhas", "en": "I want you to come tomorrow.", "why": "Quero (now) + que: present subjunctive." },
-      { "type": "choice", "before": "Queria que ", "after": " ontem.", "options": ["viesses", "venhas"], "answer": "viesses", "en": "I wanted you to come yesterday.", "why": "Queria (past) + que: imperfect subjunctive." },
-      { "type": "choice", "before": "Talvez ", "after": " tarde.", "options": ["chegue", "chegar"], "answer": "chegue", "en": "Maybe I'll arrive late.", "why": "Talvez: present subjunctive." },
-      { "type": "choice", "before": "Assim que ", "after": " notícias, digo-te.", "options": ["souber", "saiba"], "answer": "souber", "en": "As soon as I have news, I'll tell you.", "why": "Assim que + something later: future subjunctive." },
-      { "type": "choice", "before": "Fala como se ", "after": " o chefe.", "options": ["fosse", "for"], "answer": "fosse", "en": "He talks as if he were the boss.", "why": "Como se (as if) always takes the imperfect subjunctive." },
-      { "type": "choice", "before": "Embora ", "after": " frio, vou à praia.", "options": ["esteja", "estiver"], "answer": "esteja", "en": "Although it's cold, I'm going to the beach.", "why": "Embora about now: present subjunctive." },
-      { "type": "choice", "before": "Quem me dera que ", "after": " verão!", "options": ["fosse", "seja"], "answer": "fosse", "en": "If only it were summer!", "why": "Quem me dera que takes the imperfect subjunctive." },
-      { "type": "choice", "before": "Liga-me quando ", "after": " em casa.", "options": ["estiveres", "estejas"], "answer": "estiveres", "en": "Call me when you're home.", "why": "Quando + something later: future subjunctive." }
+      { "type": "choice", "before": "Quando ", "after": " a Lisboa, liga-me.", "options": ["fores", "vás"], "answer": "fores", "en": "When you go to Lisbon, call me.", "why": "*Quando* + something later: future subjunctive." },
+      { "type": "choice", "before": "Quero que ", "after": " amanhã.", "options": ["venhas", "viesses"], "answer": "venhas", "en": "I want you to come tomorrow.", "why": "*Quero* (now) + que: present subjunctive." },
+      { "type": "choice", "before": "Queria que ", "after": " ontem.", "options": ["viesses", "venhas"], "answer": "viesses", "en": "I wanted you to come yesterday.", "why": "*Queria* (past) + que: imperfect subjunctive." },
+      { "type": "choice", "before": "Talvez ", "after": " tarde.", "options": ["chegue", "chegar"], "answer": "chegue", "en": "Maybe I'll arrive late.", "why": "*Talvez*: present subjunctive." },
+      { "type": "choice", "before": "Assim que ", "after": " notícias, digo-te.", "options": ["souber", "saiba"], "answer": "souber", "en": "As soon as I have news, I'll tell you.", "why": "*Assim* que + something later: future subjunctive." },
+      { "type": "choice", "before": "Fala como se ", "after": " o chefe.", "options": ["fosse", "for"], "answer": "fosse", "en": "He talks as if he were the boss.", "why": "*Como* se (as if) always takes the imperfect subjunctive." },
+      { "type": "choice", "before": "Embora ", "after": " frio, vou à praia.", "options": ["esteja", "estiver"], "answer": "esteja", "en": "Although it's cold, I'm going to the beach.", "why": "*Embora* about now: present subjunctive." },
+      { "type": "choice", "before": "Quem me dera que ", "after": " verão!", "options": ["fosse", "seja"], "answer": "fosse", "en": "If only it were summer!", "why": "*Quem me dera* que takes the imperfect subjunctive." },
+      { "type": "choice", "before": "Liga-me quando ", "after": " em casa.", "options": ["estiveres", "estejas"], "answer": "estiveres", "en": "Call me when you're home.", "why": "*Quando* + something later: future subjunctive." }
     ],
     "verified": false
   }

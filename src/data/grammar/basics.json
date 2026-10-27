@@ -5,8 +5,8 @@
     "summary": "masculine, feminine, and more than one",
     "focus": "word",
     "intro": [
-      "Every noun is masculine (o) or feminine (a). Most words ending in -o are masculine and most ending in -a are feminine, but not all: o dia, o mapa, a mão.",
-      "For more than one, o becomes os and a becomes as, and the noun usually just adds -s: o livro → os livros, a casa → as casas.",
+      "Every noun is masculine (o) or feminine (a). Most words ending in -o are masculine and most ending in -a are feminine, but not all: o *dia*, o *mapa*, a *mão*.",
+      "For more than one, o becomes os and a becomes as, and the noun usually just adds -s: o *livro* → *os livros*, a *casa* → as *casas*.",
       "Other endings change a little more:"
     ],
     "tables": [
@@ -26,9 +26,9 @@
       { "pt": "Queria dois pães, se faz favor.", "en": "I'd like two bread rolls, please." }
     ],
     "notes": [
-      "Words ending in -ão have three possible plurals: -ões (estação → estações), -ães (pão → pães, cão → cães) and -ãos (mão → mãos, irmão → irmãos). Most take -ões; learn the others as you meet them.",
-      "Describing words follow the noun: uma casa bonita, duas casas bonitas, um carro bonito, dois carros bonitos.",
-      "A / some: um, uma, uns, umas."
+      "Words ending in -ão have three possible plurals: -ões (*estação* → *estações*), -ães (*pão* → *pães*, *cão* → *cães*) and -ãos (*mão* → *mãos*, *irmão* → *irmãos*). Most take -ões; learn the others as you meet them.",
+      "Describing words follow the noun: *uma casa bonita*, *duas casas bonitas*, *um carro bonito*, *dois* carros *bonitos*.",
+      "A / some: *um*, *uma*, *uns*, umas."
     ],
     "drills": [
       { "type": "sentence", "hint": "livro", "before": "um livro, dois ", "after": "", "answer": "livros", "en": "one book, two books" },
@@ -39,10 +39,10 @@
       { "type": "sentence", "hint": "homem", "before": "um homem, dois ", "after": "", "answer": "homens", "en": "one man, two men" },
       { "type": "sentence", "hint": "pão", "before": "um pão, dois ", "after": "", "answer": "pães", "en": "one bread roll, two bread rolls" },
       { "type": "sentence", "hint": "irmão", "before": "um irmão, dois ", "after": "", "answer": "irmãos", "en": "one brother, two brothers" },
-      { "type": "choice", "before": "", "after": " mapa é antigo.", "options": ["O", "A"], "answer": "O", "en": "The map is old.", "why": "Mapa ends in -a but is masculine." },
-      { "type": "choice", "before": "", "after": " mão está fria.", "options": ["O", "A"], "answer": "A", "en": "The hand is cold.", "why": "Mão is feminine, even though it doesn't end in -a." },
-      { "type": "choice", "before": "", "after": " dia está bonito.", "options": ["O", "A"], "answer": "O", "en": "It's a lovely day.", "why": "Dia ends in -a but is masculine." },
-      { "type": "choice", "before": "As casas são ", "after": ".", "options": ["bonitas", "bonitos"], "answer": "bonitas", "en": "The houses are pretty.", "why": "Casas is feminine plural, so the describing word is too." }
+      { "type": "choice", "before": "", "after": " mapa é antigo.", "options": ["O", "A"], "answer": "O", "en": "The map is old.", "why": "*Mapa* ends in -a but is masculine." },
+      { "type": "choice", "before": "", "after": " mão está fria.", "options": ["O", "A"], "answer": "A", "en": "The hand is cold.", "why": "*Mão* is feminine, even though it doesn't end in -a." },
+      { "type": "choice", "before": "", "after": " dia está bonito.", "options": ["O", "A"], "answer": "O", "en": "It's a lovely day.", "why": "*Dia* ends in -a but is masculine." },
+      { "type": "choice", "before": "As casas são ", "after": ".", "options": ["bonitas", "bonitos"], "answer": "bonitas", "en": "The houses are pretty.", "why": "*Casas* is feminine plural, so the describing word is too." }
     ],
     "verified": false
   },
@@ -81,9 +81,9 @@
       { "pt": "Obrigado pela ajuda.", "en": "Thanks for the help." }
     ],
     "notes": [
-      "Cities without an article don't join: Sou de Lisboa, Vou a Lisboa. But o Porto has one: Sou do Porto, Vou ao Porto.",
-      "À (a + a) has a grave accent. It sounds almost the same as a, so you'll mostly notice it in writing: Vou à praia.",
-      "Times use às: às seis (at six). But à uma (at one), because uma is singular."
+      "Cities without an article don't join: *Sou de Lisboa*, *Vou a Lisboa*. But o Porto has one: *Sou do Porto*, *Vou ao Porto*.",
+      "*À* (a + a) has a grave accent. It sounds almost the same as a, so you'll mostly notice it in writing: *Vou à praia*.",
+      "Times use *às*: *às seis* (at six). But *à uma* (at one), because *uma* is singular."
     ],
     "drills": [
       { "type": "sentence", "hint": "de + o", "before": "Sou ", "after": " Porto.", "answer": "do", "en": "I'm from Porto." },
@@ -107,8 +107,8 @@
     "summary": "my, your, his, her, our",
     "focus": "word",
     "intro": [
-      "In Portugal, my, your and our come with o or a in front: o meu carro (my car), a minha casa (my house).",
-      "They match the thing owned, not the owner: a minha irmã (my sister), whether a man or a woman says it."
+      "In Portugal, my, your and our come with o or a in front: o *meu carro* (my car), a *minha casa* (my house).",
+      "They match the thing owned, not the owner: a *minha irmã* (my sister), whether a man or a woman says it."
     ],
     "tables": [
       { "verb": "possessives", "caption": "Possessives, masculine and feminine", "listen": "form", "rows": [
@@ -127,9 +127,9 @@
       { "pt": "Os nossos amigos vêm jantar.", "en": "Our friends are coming to dinner." }
     ],
     "notes": [
-      "Plurals: os meus, as minhas, os teus, as tuas, os nossos, as nossas.",
-      "For his and her, Portugal usually puts dele / dela after the noun: o carro dele (his car), a casa dela (her house). O seu carro normally means your car, said politely.",
-      "Leaving out the o / a (minha mãe) sounds Brazilian. In Portugal, keep it: a minha mãe."
+      "Plurals: *os meus*, as *minhas*, *os teus*, as *tuas*, *os nossos*, as nossas.",
+      "For his and her, Portugal usually puts *dele* / *dela* after the noun: o *carro dele* (his car), a *casa dela* (her house). O *seu carro* normally means your car, said politely.",
+      "Leaving out the o / a (*minha mãe*) sounds Brazilian. In Portugal, keep it: a *minha mãe*."
     ],
     "drills": [
       { "type": "sentence", "hint": "my", "before": "", "after": " irmão vive em Lisboa.", "answer": "O meu", "en": "My brother lives in Lisbon." },
@@ -141,9 +141,9 @@
       { "type": "sentence", "hint": "our", "before": "", "after": " amigos vêm jantar.", "answer": "Os nossos", "en": "Our friends are coming to dinner." },
       { "type": "sentence", "hint": "his", "before": "O carro ", "after": " é novo.", "answer": "dele", "en": "His car is new." },
       { "type": "sentence", "hint": "her", "before": "A mala ", "after": " é azul.", "answer": "dela", "en": "Her bag is blue." },
-      { "type": "choice", "before": "A ", "after": " irmã é professora.", "options": ["minha", "meu"], "answer": "minha", "en": "My sister is a teacher.", "why": "Irmã is feminine, so minha, whoever is speaking." },
-      { "type": "choice", "before": "Os ", "after": " livros estão na mesa.", "options": ["meus", "minhas"], "answer": "meus", "en": "My books are on the table.", "why": "Livros is masculine plural: meus." },
-      { "type": "choice", "before": "O senhor tem ", "after": " bilhete?", "options": ["o seu", "o teu"], "answer": "o seu", "en": "Do you have your ticket, sir?", "why": "Speaking politely (o senhor): o seu." }
+      { "type": "choice", "before": "A ", "after": " irmã é professora.", "options": ["minha", "meu"], "answer": "minha", "en": "My sister is a teacher.", "why": "*Irmã* is feminine, so *minha*, whoever is speaking." },
+      { "type": "choice", "before": "Os ", "after": " livros estão na mesa.", "options": ["meus", "minhas"], "answer": "meus", "en": "My books are on the table.", "why": "*Livros* is masculine plural: *meus*." },
+      { "type": "choice", "before": "O senhor tem ", "after": " bilhete?", "options": ["o seu", "o teu"], "answer": "o seu", "en": "Do you have your ticket, sir?", "why": "Speaking politely (o *senhor*): o *seu*." }
     ],
     "verified": false
   },
@@ -153,9 +153,9 @@
     "summary": "this, that, and that over there",
     "focus": "word",
     "intro": [
-      "Portuguese has three words where English has two: este (this, near me), esse (that, near you) and aquele (that, over there, away from us both).",
-      "They change like o and a: este, esta, estes, estas; esse, essa, esses, essas; aquele, aquela, aqueles, aquelas.",
-      "For a thing you don't name, or an idea, use isto, isso, aquilo: O que é isto? (What's this?)"
+      "Portuguese has three words where English has two: *este* (this, near me), *esse* (that, near you) and *aquele* (that, over there, away from us both).",
+      "They change like o and a: *este*, *esta*, *estes*, *estas*; *esse*, *essa*, esses, essas; *aquele*, *aquela*, aqueles, aquelas.",
+      "For a thing you don't name, or an idea, use *isto*, *isso*, *aquilo*: O *que é isto*? (What's this?)"
     ],
     "tables": [
       { "verb": "demonstratives", "caption": "este, esse, aquele", "listen": "form", "rows": [
@@ -172,8 +172,8 @@
       { "pt": "Isso mesmo!", "en": "Exactly! That's it!" }
     ],
     "notes": [
-      "They join with de and em like o and a do: de + este = deste, em + esse = nesse, em + aquele = naquele.",
-      "Isso! or Isso mesmo! is a very common way to say \"Exactly!\""
+      "They join with de and em like o and a do: de + *este* = *deste*, em + *esse* = nesse, em + *aquele* = *naquele*.",
+      "*Isso*! or *Isso mesmo*! is a very common way to say \"Exactly!\""
     ],
     "drills": [
       { "type": "sentence", "hint": "this, near me", "before": "", "after": " café está frio.", "answer": "Este", "en": "This coffee is cold." },
@@ -184,10 +184,10 @@
       { "type": "sentence", "hint": "that", "before": "", "after": " mesmo!", "answer": "Isso", "en": "Exactly!" },
       { "type": "sentence", "hint": "de + este", "before": "Gosto ", "after": " restaurante.", "answer": "deste", "en": "I like this restaurant." },
       { "type": "sentence", "hint": "em + aquele", "before": "Moro ", "after": " prédio.", "answer": "naquele", "en": "I live in that building over there." },
-      { "type": "choice", "before": "", "after": " flores são bonitas.", "options": ["Estas", "Estes"], "answer": "Estas", "en": "These flowers are pretty.", "why": "Flores is feminine plural: estas." },
-      { "type": "choice", "before": "Vês ", "after": " castelo lá em cima?", "options": ["aquele", "este"], "answer": "aquele", "en": "Do you see that castle up there?", "why": "Up there is far from you both: aquele." },
-      { "type": "choice", "before": "O que é ", "after": " ali ao fundo?", "options": ["aquilo", "aquele"], "answer": "aquilo", "en": "What's that over there at the back?", "why": "A thing you can't name, with no noun after it: aquilo." },
-      { "type": "choice", "before": "Queria ", "after": " bolo, se faz favor.", "options": ["este", "esta"], "answer": "este", "en": "I'd like this cake, please.", "why": "Bolo is masculine: este." }
+      { "type": "choice", "before": "", "after": " flores são bonitas.", "options": ["Estas", "Estes"], "answer": "Estas", "en": "These flowers are pretty.", "why": "*Flores* is feminine plural: *estas*." },
+      { "type": "choice", "before": "Vês ", "after": " castelo lá em cima?", "options": ["aquele", "este"], "answer": "aquele", "en": "Do you see that castle up there?", "why": "Up there is far from you both: *aquele*." },
+      { "type": "choice", "before": "O que é ", "after": " ali ao fundo?", "options": ["aquilo", "aquele"], "answer": "aquilo", "en": "What's that over there at the back?", "why": "A thing you can't name, with no noun after it: *aquilo*." },
+      { "type": "choice", "before": "Queria ", "after": " bolo, se faz favor.", "options": ["este", "esta"], "answer": "este", "en": "I'd like this cake, please.", "why": "*Bolo* is masculine: *este*." }
     ],
     "verified": false
   }

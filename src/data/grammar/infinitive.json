@@ -4,8 +4,8 @@
     "title": "para fazermos",
     "summary": "the personal infinitive: a dictionary form with an ending",
     "intro": [
-      "Portuguese can add endings to the infinitive to show who is doing it: falar, falares, falar, falarmos, falarem. English and Spanish can't do this.",
-      "Use it after words like para, sem, antes de, depois de, até and ao, and after é melhor or é preciso, when you want to say who: É melhor irmos = We'd better go. Antes de saíres, fecha a janela = Before you go out, close the window."
+      "Portuguese can add endings to the infinitive to show who is doing it: *falar*, *falares*, *falar*, *falarmos*, *falarem*. English and Spanish can't do this.",
+      "Use it after words like *para*, *sem*, *antes* de, *depois* de, *até* and ao, and after *é melhor* or *é preciso*, when you want to say who: *É melhor irmos* = We'd better go. *Antes de saíres*, *fecha a janela* = Before you go out, close the window."
     ],
     "tables": [
       { "verb": "falar", "meaning": "to speak", "caption": "Personal infinitive of falar", "rows": [
@@ -23,9 +23,9 @@
       { "pt": "Obrigado por teres vindo.", "en": "Thanks for coming." }
     ],
     "notes": [
-      "It's never irregular: fazeres, irmos, sermos, termos.",
-      "Obrigado por teres vindo and Obrigado por me teres ajudado are very natural ways to thank someone.",
-      "For regular verbs it looks like the future subjunctive (quando chegares, antes de chegares). Irregular verbs show the difference: quando fores (subjunctive), antes de ires (infinitive)."
+      "It's never irregular: fazeres, *irmos*, sermos, termos.",
+      "Obrigado *por teres vindo* and Obrigado *por me teres* ajudado are very natural ways to thank someone.",
+      "For regular verbs it looks like the future subjunctive (*quando chegares*, *antes de chegares*). Irregular verbs show the difference: *quando fores* (subjunctive), *antes de ires* (infinitive)."
     ],
     "drills": [
       { "type": "sentence", "hint": "ir, nós", "before": "É melhor ", "after": " embora.", "answer": "irmos", "en": "We'd better go." },
@@ -38,8 +38,8 @@
       { "type": "sentence", "hint": "chegar, tu", "before": "Ao ", "after": " a casa, liga-me.", "answer": "chegares", "en": "When you get home, call me." },
       { "type": "order", "answer": "É melhor irmos embora.", "en": "We'd better go." },
       { "type": "order", "answer": "Obrigado por teres vindo.", "en": "Thanks for coming." },
-      { "type": "choice", "before": "Obrigado por ", "after": " vindo.", "options": ["teres", "tens"], "answer": "teres", "en": "Thanks for coming.", "why": "After por comes an infinitive; with tu it's teres." },
-      { "type": "choice", "before": "Antes de ", "after": " embora, liga-me.", "options": ["ires", "fores"], "answer": "ires", "en": "Before you go, call me.", "why": "After antes de: the personal infinitive (ires). Fores is the future subjunctive, used after quando or se." }
+      { "type": "choice", "before": "Obrigado por ", "after": " vindo.", "options": ["teres", "tens"], "answer": "teres", "en": "Thanks for coming.", "why": "After por comes an infinitive; with *tu* it's *teres*." },
+      { "type": "choice", "before": "Antes de ", "after": " embora, liga-me.", "options": ["ires", "fores"], "answer": "ires", "en": "Before you go, call me.", "why": "After *antes* de: the personal infinitive (*ires*). *Fores* is the future subjunctive, used after *quando* or se." }
     ],
     "verified": false
   },
@@ -48,7 +48,7 @@
     "title": "para leres, para que leias",
     "summary": "two ways to say the same thing",
     "intro": [
-      "After para, sem, antes de and até you can often choose: the personal infinitive (para leres) or que + subjunctive (para que leias). Both mean \"so that you read\".",
+      "After *para*, *sem*, *antes* de and *até* you can often choose: the personal infinitive (*para leres*) or que + subjunctive (*para que leias*). Both mean \"so that you read\".",
       "In everyday Portugal the personal infinitive is more common, because it's shorter."
     ],
     "tables": [
@@ -66,7 +66,7 @@
       { "pt": "Não saias sem levares o casaco.", "en": "Don't go out without taking your coat." }
     ],
     "notes": [
-      "Some words only take the subjunctive: embora, talvez, caso. Ao only takes the infinitive: ao chegares (when you arrive)."
+      "Some words only take the subjunctive: *embora*, *talvez*, *caso*. Ao only takes the infinitive: *ao chegares* (when you arrive)."
     ],
     "drills": [
       { "type": "sentence", "hint": "ler, tu: infinitive", "before": "Trago o livro para ", "after": ".", "answer": "leres", "en": "I'm bringing the book for you to read." },
@@ -77,10 +77,10 @@
       { "type": "sentence", "hint": "perceber, tu: infinitive", "before": "Vou explicar para ", "after": ".", "answer": "perceberes", "en": "I'll explain so that you understand." },
       { "type": "sentence", "hint": "perceber, tu: subjunctive", "before": "Vou explicar para que ", "after": ".", "answer": "percebas", "en": "I'll explain so that you understand." },
       { "type": "order", "answer": "Espera até eu chegar.", "en": "Wait until I arrive." },
-      { "type": "choice", "before": "", "after": " chegares, liga-me.", "options": ["Ao", "Embora"], "answer": "Ao", "en": "When you arrive, call me.", "why": "Ao + personal infinitive means \"when\": ao chegares." },
-      { "type": "choice", "before": "Embora ", "after": " cansado, vou.", "options": ["esteja", "estar"], "answer": "esteja", "en": "Although I'm tired, I'll go.", "why": "Embora only takes the subjunctive." },
-      { "type": "choice", "before": "Leva o guarda-chuva caso ", "after": ".", "options": ["chova", "chover"], "answer": "chova", "en": "Take the umbrella in case it rains.", "why": "Caso only takes the subjunctive." },
-      { "type": "choice", "before": "Fala mais alto para ", "after": ".", "options": ["ouvirmos", "ouvimos"], "answer": "ouvirmos", "en": "Speak louder so that we can hear.", "why": "After para comes the infinitive, here with the nós ending." }
+      { "type": "choice", "before": "", "after": " chegares, liga-me.", "options": ["Ao", "Embora"], "answer": "Ao", "en": "When you arrive, call me.", "why": "Ao + personal infinitive means \"when\": *ao chegares*." },
+      { "type": "choice", "before": "Embora ", "after": " cansado, vou.", "options": ["esteja", "estar"], "answer": "esteja", "en": "Although I'm tired, I'll go.", "why": "*Embora* only takes the subjunctive." },
+      { "type": "choice", "before": "Leva o guarda-chuva caso ", "after": ".", "options": ["chova", "chover"], "answer": "chova", "en": "Take the umbrella in case it rains.", "why": "*Caso* only takes the subjunctive." },
+      { "type": "choice", "before": "Fala mais alto para ", "after": ".", "options": ["ouvirmos", "ouvimos"], "answer": "ouvirmos", "en": "Speak louder so that we can hear.", "why": "After *para* comes the infinitive, here with the *nós* ending." }
     ],
     "verified": false
   }

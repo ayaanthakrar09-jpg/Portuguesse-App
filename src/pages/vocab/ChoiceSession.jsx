@@ -9,6 +9,8 @@ import { rate } from "../../lib/srs";
 import { displayPt, findUnit, isLevelOpen } from "../../lib/vocab";
 import { Choices, QuestionPrompt, ResultMark } from "./Questions";
 import SessionResult from "./SessionResult";
+import SessionProgress from "../../components/SessionProgress";
+import RichText from "../../components/RichText";
 
 // The key starts a fresh session when you move from one unit straight to another.
 export default function ChoiceSession(props) {
@@ -92,6 +94,7 @@ function Session({ progress, updateProgress, unitId }) {
         <Link to={`/vocab/level/${unit.level}`} className="btn btn-quiet">End session</Link>
         <span className="muted">{queue.length} left</span>
       </div>
+      <SessionProgress left={queue.length} />
 
       <div className="flashcard">
         <span className="chip">{unit.title}</span>
@@ -110,7 +113,7 @@ function Session({ progress, updateProgress, unitId }) {
                 {kind !== "blank" && <p className="muted" lang="pt-PT">{item.example.pt}</p>}
               </div>
             </div>
-            {item.note && <p className="note">{item.note}</p>}
+            {item.note && <p className="note"><RichText text={item.note} /></p>}
             <div className="actions">
               <button className="btn btn-primary" onClick={next} autoFocus>Next</button>
             </div>

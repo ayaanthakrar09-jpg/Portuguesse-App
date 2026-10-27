@@ -4,8 +4,8 @@
     "title": "-ar verbs in the past",
     "summary": "what happened: falei, comprei, cheguei",
     "intro": [
-      "This past tense (the pretérito perfeito) is for finished actions: Ontem falei com a Ana = Yesterday I spoke to Ana.",
-      "For -ar verbs, take off -ar and add: -ei, -aste, -ou, -ámos, -aram. Here is falar:"
+      "This past tense (the *pretérito* perfeito) is for finished actions: *Ontem falei com a Ana* = Yesterday I spoke to Ana.",
+      "For -ar verbs, take off -ar and add: -ei, -aste, -ou, -ámos, -aram. Here is *falar*:"
     ],
     "tables": [
       { "verb": "falar", "meaning": "to speak", "caption": "Past tense of falar", "rows": [
@@ -23,10 +23,10 @@
       { "pt": "Jantámos fora no sábado.", "en": "We ate out on Saturday." }
     ],
     "notes": [
-      "In Portugal, falámos (we spoke) has an accent to tell it apart from falamos (we speak). Typed without it, it counts here, but you'll be shown the right spelling.",
-      "The eu form changes its spelling to keep the sound: chegar → cheguei, ficar → fiquei, começar → comecei.",
-      "There's no \"did\" in Portuguese questions, just the past form: Compraste o pão? = Did you buy the bread?",
-      "Time words that go with it: ontem (yesterday), no sábado passado (last Saturday), na semana passada (last week), há dois dias (two days ago)."
+      "In Portugal, *falámos* (we spoke) has an accent to tell it apart from *falamos* (we speak). Typed without it, it counts here, but you'll be shown the right spelling.",
+      "The *eu* form changes its spelling to keep the sound: *chegar* → *cheguei*, *ficar* → *fiquei*, *começar* → *comecei*.",
+      "There's no \"did\" in Portuguese questions, just the past form: *Compraste o pão*? = Did you buy the bread?",
+      "Time words that go with it: *ontem* (yesterday), no *sábado passado* (last Saturday), *na semana passada* (last week), *há dois dias* (two days ago)."
     ],
     "drills": [
       { "type": "form", "verb": "falar", "person": "eu", "answer": "falei" },
@@ -53,7 +53,7 @@
     "intro": [
       "For -er verbs, take off -er and add: -i, -este, -eu, -emos, -eram.",
       "For -ir verbs, take off -ir and add: -i, -iste, -iu, -imos, -iram.",
-      "The nós form is the same as in the present (comemos, partimos). The sentence tells you which one is meant."
+      "The *nós* form is the same as in the present (*comemos*, *partimos*). The sentence tells you which one is meant."
     ],
     "tables": [
       { "verb": "comer", "meaning": "to eat", "caption": "Past tense of comer", "rows": [
@@ -78,9 +78,9 @@
       { "pt": "A loja abriu às nove.", "en": "The shop opened at nine." }
     ],
     "notes": [
-      "Não percebi (I didn't understand) is one of the most useful phrases you can learn.",
-      "Some verbs that are irregular in the present are regular here: dormi, pedi, ouvi, saí.",
-      "Others are irregular in the past too (fazer, dizer, ver, vir…). They're in the next topics."
+      "*Não percebi* (I didn't understand) is one of the most useful phrases you can learn.",
+      "Some verbs that are irregular in the present are regular here: dormi, pedi, ouvi, *saí*.",
+      "Others are irregular in the past too (*fazer*, *dizer*, *ver*, *vir*…). They're in the next topics."
     ],
     "drills": [
       { "type": "form", "verb": "comer", "person": "eu", "answer": "comi" },
@@ -106,7 +106,7 @@
     "summary": "ser, ir, ter and estar in the past",
     "intro": [
       "The most common verbs are irregular in the past, so learn them as tables.",
-      "Ser and ir share the same past forms: fui means \"I was\" or \"I went\". The sentence tells you which: Fui ao Porto (I went to Porto), Foi ótimo (it was great)."
+      "Ser and *ir* share the same past forms: *fui* means \"I was\" or \"I went\". The sentence tells you which: *Fui ao Porto* (I went to Porto), *Foi ótimo* (it was great)."
     ],
     "tables": [
       { "verb": "ser / ir", "meaning": "to be / to go", "caption": "Past tense of ser and ir", "rows": [
@@ -138,8 +138,8 @@
       { "pt": "Onde estiveste ontem?", "en": "Where were you yesterday?" }
     ],
     "notes": [
-      "Ser and estar split the same way as in the present: Foi simpático (he was nice), Esteve doente (he was ill).",
-      "Como foi? = How was it?"
+      "Ser and estar split the same way as in the present: *Foi simpático* (he was nice), *Esteve doente* (he was ill).",
+      "*Como foi*? = How was it?"
     ],
     "drills": [
       { "type": "form", "verb": "ir", "person": "eu", "answer": "fui" },
@@ -156,7 +156,7 @@
       { "type": "rewrite", "verb": "estar", "from": "Hoje estou em casa.", "before": "Ontem ", "after": " em casa.", "answer": "estive", "en": "Yesterday I was at home." },
       { "type": "rewrite", "verb": "ir", "from": "Hoje vou ao cinema.", "before": "Ontem ", "after": " ao cinema.", "answer": "fui", "en": "Yesterday I went to the cinema." },
       { "type": "rewrite", "verb": "ter", "from": "Hoje temos aulas.", "before": "Ontem ", "after": " aulas.", "answer": "tivemos", "en": "Yesterday we had classes." },
-      { "type": "choice", "before": "O Pedro ", "after": " doente na semana passada.", "options": ["esteve", "foi"], "answer": "esteve", "en": "Pedro was ill last week.", "why": "Being ill is a state that changes: estar, so esteve." }
+      { "type": "choice", "before": "O Pedro ", "after": " doente na semana passada.", "options": ["esteve", "foi"], "answer": "esteve", "en": "Pedro was ill last week.", "why": "Being ill is a state that changes: estar, so *esteve*." }
     ],
     "verified": false
   },
@@ -165,7 +165,7 @@
     "title": "fiz, disse, vi, dei",
     "summary": "fazer, dizer, ver and dar in the past",
     "intro": [
-      "More everyday verbs with irregular past forms. Watch eu and ele: fiz but fez, vi but viu."
+      "More everyday verbs with irregular past forms. Watch *eu* and *ele*: *fiz* but *fez*, *vi* but *viu*."
     ],
     "tables": [
       { "verb": "fazer", "meaning": "to do, to make", "caption": "Past tense of fazer", "rows": [
@@ -204,9 +204,9 @@
       { "pt": "Demos um passeio na praia.", "en": "We went for a walk on the beach." }
     ],
     "notes": [
-      "Fez anos = it was his or her birthday (from fazer anos).",
-      "Vimos means \"we saw\" (ver, past) and also \"we come\" (vir, present). The sentence makes it clear.",
-      "Deste (you gave) looks like deste (of this, de + este). Again, the sentence makes it clear."
+      "*Fez anos* = it was his or her birthday (from *fazer anos*).",
+      "*Vimos* means \"we saw\" (*ver*, past) and also \"we come\" (*vir*, present). The sentence makes it clear.",
+      "*Deste* (you gave) looks like *deste* (of this, de + *este*). Again, the sentence makes it clear."
     ],
     "drills": [
       { "type": "form", "verb": "fazer", "person": "eu", "answer": "fiz" },
@@ -232,7 +232,7 @@
     "summary": "vir, pôr, poder and querer in the past",
     "intro": [
       "The last group of common irregular past forms.",
-      "Careful with poder: ele pôde (he could, past) has an accent; ele pode (he can, present) doesn't."
+      "Careful with poder: *ele pôde* (he could, past) has an accent; *ele pode* (he can, present) doesn't."
     ],
     "tables": [
       { "verb": "vir", "meaning": "to come", "caption": "Past tense of vir", "rows": [
@@ -271,8 +271,8 @@
       { "pt": "Ela não quis comer.", "en": "She didn't want to eat." }
     ],
     "notes": [
-      "Two more you'll hear: saber → soube, which often means \"found out\" (Soube ontem = I found out yesterday), and trazer → trouxe (I brought), where the x sounds like ss.",
-      "Não quis can mean \"I didn't want to\" or \"I refused\"."
+      "Two more you'll hear: saber → soube, which often means \"found out\" (Soube *ontem* = I found out yesterday), and *trazer* → *trouxe* (I brought), where the x sounds like ss.",
+      "*Não quis* can mean \"I didn't want to\" or \"I refused\"."
     ],
     "drills": [
       { "type": "form", "verb": "vir", "person": "eu", "answer": "vim" },

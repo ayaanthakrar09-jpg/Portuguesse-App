@@ -4,9 +4,9 @@
     "title": "fala, não fales",
     "summary": "telling a friend what to do",
     "intro": [
-      "To tell a friend (tu) to do something, use the ele / ela form of the present: Fala mais devagar! Come! Abre a janela.",
-      "To tell a friend not to do something, the ending swaps its vowel: -ar verbs end in -es, -er and -ir verbs end in -as. Não fales! Não comas! Não abras!",
-      "The \"don't\" form is built from the eu form of the present: faço → não faças, digo → não digas, venho → não venhas."
+      "To tell a friend (*tu*) to do something, use the *ele* / *ela* form of the present: *Fala mais devagar*! Come! *Abre a janela*.",
+      "To tell a friend not to do something, the ending swaps its vowel: -ar verbs end in -es, -er and -ir verbs end in -as. *Não fales*! *Não comas*! *Não abras*!",
+      "The \"don't\" form is built from the *eu* form of the present: *faço* → *não faças*, *digo* → *não digas*, *venho* → *não venhas*."
     ],
     "tables": [
       { "verb": "commands to a friend", "caption": "Do it · don't do it (tu)", "listen": "form", "rows": [
@@ -28,9 +28,9 @@
       { "pt": "Não digas nada!", "en": "Don't say anything!" }
     ],
     "notes": [
-      "Add por favor or se faz favor to soften it.",
-      "Spelling keeps the sound: chegar → não chegues, ficar → não fiques.",
-      "Toma! = Here you go! (handing something over). Tem calma! = Calm down!"
+      "Add *por favor* or *se faz favor* to soften it.",
+      "Spelling keeps the sound: *chegar* → *não chegues*, *ficar* → *não* fiques.",
+      "Toma! = Here you go! (handing something over). *Tem calma*! = Calm down!"
     ],
     "drills": [
       { "type": "sentence", "hint": "falar, tu", "before": "", "after": " mais devagar, por favor.", "answer": "Fala", "en": "Speak more slowly, please." },
@@ -42,9 +42,9 @@
       { "type": "sentence", "hint": "falar, tu", "before": "Não ", "after": " tão depressa!", "answer": "fales", "en": "Don't talk so fast!" },
       { "type": "sentence", "hint": "ir, tu", "before": "Não ", "after": " embora!", "answer": "vás", "en": "Don't go!" },
       { "type": "sentence", "hint": "chegar, tu", "before": "Não ", "after": " tarde!", "answer": "chegues", "en": "Don't be late!" },
-      { "type": "choice", "before": "", "after": " a porta, por favor.", "options": ["Fecha", "Feche"], "answer": "Fecha", "en": "Close the door, please. (to a friend)", "why": "To a friend: fecha. Feche is the polite form." },
-      { "type": "choice", "before": "Não ", "after": " isso!", "options": ["faças", "fazes"], "answer": "faças", "en": "Don't do that!", "why": "\"Don't\" to a friend uses the swapped ending: não faças." },
-      { "type": "choice", "before": "", "after": " calma!", "options": ["Tem", "Tens"], "answer": "Tem", "en": "Calm down!", "why": "A command to a friend uses the ele form: tem." }
+      { "type": "choice", "before": "", "after": " a porta, por favor.", "options": ["Fecha", "Feche"], "answer": "Fecha", "en": "Close the door, please. (to a friend)", "why": "To a friend: *fecha*. *Feche* is the polite form." },
+      { "type": "choice", "before": "Não ", "after": " isso!", "options": ["faças", "fazes"], "answer": "faças", "en": "Don't do that!", "why": "\"Don't\" to a friend uses the swapped ending: *não faças*." },
+      { "type": "choice", "before": "", "after": " calma!", "options": ["Tem", "Tens"], "answer": "Tem", "en": "Calm down!", "why": "A command to a friend uses the *ele* form: *tem*." }
     ],
     "verified": false
   },
@@ -53,9 +53,9 @@
     "title": "fale, falem",
     "summary": "polite commands, and to more than one person",
     "intro": [
-      "To be polite (o senhor, a senhora, você), use the swapped vowel without the -s: fale, coma, abra. It's the same with or without não: Fale mais devagar. Não fale tão alto.",
-      "To more than one person (vocês), add -m: falem, comam, abram.",
-      "These are the forms you'll see on signs and hear in directions: Vire à direita. Siga em frente."
+      "To be polite (o *senhor*, a senhora, *você*), use the swapped vowel without the -s: *fale*, *coma*, *abra*. It's the same with or without *não*: *Fale mais devagar*. *Não fale tão alto*.",
+      "To more than one person (*vocês*), add -m: *falem*, *comam*, *abram*.",
+      "These are the forms you'll see on signs and hear in directions: *Vire à direita*. *Siga em frente*."
     ],
     "tables": [
       { "verb": "polite commands", "caption": "Polite · to more than one person", "listen": "form", "rows": [
@@ -78,9 +78,9 @@
       { "pt": "Venham jantar connosco!", "en": "Come and have dinner with us! (to several people)" }
     ],
     "notes": [
-      "Diga? at a counter or on the phone means \"Yes? Go ahead.\"",
-      "Esteja à vontade = Make yourself at home.",
-      "Deem (give, plural) used to be written dêem."
+      "*Diga*? at a counter or on the phone means \"Yes? Go ahead.\"",
+      "*Esteja à* vontade = Make yourself at home.",
+      "*Deem* (give, plural) used to be written *dêem*."
     ],
     "drills": [
       { "type": "sentence", "hint": "virar, polite", "before": "", "after": " à direita.", "answer": "Vire", "en": "Turn right." },
@@ -92,9 +92,9 @@
       { "type": "sentence", "hint": "dizer, polite", "before": "", "after": " o que precisa.", "answer": "Diga", "en": "Tell me what you need." },
       { "type": "sentence", "hint": "vir, vocês", "before": "", "after": " jantar connosco!", "answer": "Venham", "en": "Come and have dinner with us!" },
       { "type": "sentence", "hint": "ter, vocês", "before": "", "after": " cuidado!", "answer": "Tenham", "en": "Be careful! (to several people)" },
-      { "type": "choice", "before": "", "after": " à esquerda na segunda rua.", "options": ["Vire", "Vira"], "answer": "Vire", "en": "Turn left at the second street. (to a stranger)", "why": "To a stranger, be polite: vire. Vira is for a friend." },
-      { "type": "choice", "before": "Por favor, ", "after": " aqui.", "options": ["espere", "espera"], "answer": "espere", "en": "Please wait here. (to a customer)", "why": "Polite form: espere." },
-      { "type": "choice", "before": "Meninos, ", "after": " a mesa!", "options": ["ponham", "ponha"], "answer": "ponham", "en": "Kids, set the table!", "why": "To more than one person: ponham." }
+      { "type": "choice", "before": "", "after": " à esquerda na segunda rua.", "options": ["Vire", "Vira"], "answer": "Vire", "en": "Turn left at the second street. (to a stranger)", "why": "To a stranger, be polite: *vire*. *Vira* is for a friend." },
+      { "type": "choice", "before": "Por favor, ", "after": " aqui.", "options": ["espere", "espera"], "answer": "espere", "en": "Please wait here. (to a customer)", "why": "Polite form: *espere*." },
+      { "type": "choice", "before": "Meninos, ", "after": " a mesa!", "options": ["ponham", "ponha"], "answer": "ponham", "en": "Kids, set the table!", "why": "To more than one person: *ponham*." }
     ],
     "verified": false
   },
@@ -104,8 +104,8 @@
     "summary": "commands with me, te, se",
     "focus": "word",
     "intro": [
-      "In a \"do it\" command, the pronoun goes after the verb: Diz-me (tell me), Senta-te (sit down, to a friend), Sente-se (sit down, polite).",
-      "In a \"don't\" command, não pulls it in front: Não te preocupes (don't worry, to a friend), Não se preocupe (polite)."
+      "In a \"do it\" command, the pronoun goes after the verb: *Diz-me* (tell me), *Senta-te* (sit down, to a friend), *Sente-se* (sit down, polite).",
+      "In a \"don't\" command, *não* pulls it in front: *Não te preocupes* (don't worry, to a friend), *Não se preocupe* (polite)."
     ],
     "tables": [
       { "verb": "commands with pronouns", "caption": "To a friend · polite", "listen": "form", "rows": [
@@ -123,8 +123,8 @@
       { "pt": "Deixa-me ver.", "en": "Let me see." }
     ],
     "notes": [
-      "Não te preocupes and não se preocupe are some of the most useful phrases there are.",
-      "Não me digas! = You don't say! / No way!"
+      "*Não te preocupes* and *não se preocupe* are some of the most useful phrases there are.",
+      "*Não me digas*! = You don't say! / No way!"
     ],
     "drills": [
       { "type": "sentence", "hint": "sentar-se, polite", "before": "", "after": ", por favor.", "answer": "Sente-se", "en": "Please sit down." },
@@ -137,7 +137,7 @@
       { "type": "order", "answer": "Diz-me a verdade.", "en": "Tell me the truth." },
       { "type": "order", "answer": "Deixa-me ver.", "en": "Let me see." },
       { "type": "order", "answer": "Não me digas!", "en": "You don't say! / No way!" },
-      { "type": "choice", "before": "Não ", "after": "!", "options": ["te preocupes", "preocupa-te"], "answer": "te preocupes", "en": "Don't worry!", "why": "With não, the pronoun goes in front and the verb takes the \"don't\" form." },
+      { "type": "choice", "before": "Não ", "after": "!", "options": ["te preocupes", "preocupa-te"], "answer": "te preocupes", "en": "Don't worry!", "why": "With *não*, the pronoun goes in front and the verb takes the \"don't\" form." },
       { "type": "choice", "before": "", "after": ", por favor.", "options": ["Sente-se", "Se sente"], "answer": "Sente-se", "en": "Please sit down.", "why": "In a \"do it\" command, the pronoun goes after the verb." }
     ],
     "verified": false

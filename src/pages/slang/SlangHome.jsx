@@ -4,6 +4,7 @@ import Icon from "../../components/Icon";
 import slang from "../../data/slang/pt-pt.json";
 import { speak, speechMessages } from "../../lib/speech";
 import { QUIZ_LENGTH } from "./SlangQuiz";
+import RichText from "../../components/RichText";
 
 const formalityClass = { neutral: "", informal: "is-informal", rude: "is-rude", "very rude": "is-rude" };
 
@@ -86,7 +87,7 @@ export default function SlangHome({ progress }) {
                 <p className="muted">{item.example.en}</p>
               </div>
             </div>
-            {item.note && <p className="note">{item.note}</p>}
+            {item.note && <p className="note"><RichText text={item.note} /></p>}
           </li>
         ))}
       </ul>
