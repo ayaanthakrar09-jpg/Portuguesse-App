@@ -16,6 +16,11 @@
   --blue: #3d7be0;
   --yellow: #f2b84b;
 
+  /* how well something is known */
+  --mastered: var(--accent);
+  --secure: var(--tile);
+  --weak: #d98a72;
+
   --radius-lg: 22px;
   --radius-md: 16px;
   --radius-sm: 10px;
@@ -522,6 +527,25 @@ ul { padding: 0; list-style: none; }
 .meter-track { height: 6px; border-radius: 999px; background: var(--surface-2); overflow: hidden; max-width: 320px; }
 .meter-fill { display: block; height: 100%; background: var(--accent); border-radius: inherit; }
 .meter-label { color: var(--muted); font-size: 0.85rem; }
+.stage-track { display: flex; }
+.stage-fill { display: block; height: 100%; }
+.stage-fill.is-mastered { background: var(--mastered); }
+.stage-fill.is-secure { background: var(--secure); }
+.stage-fill.is-weak { background: var(--weak); }
+.stage-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+.stage-tag.is-mastered { color: var(--mastered); }
+.stage-tag.is-secure { color: var(--secure); }
+.stage-tag.is-weak { color: var(--weak); }
+.stage-key { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.85rem; margin-top: 6px; }
+.stage-key-item { display: inline-flex; align-items: center; gap: 6px; }
+.stage-line { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 6px; }
 
 /* ---------- Narrower screens ---------- */
 @media (max-width: 1100px) {

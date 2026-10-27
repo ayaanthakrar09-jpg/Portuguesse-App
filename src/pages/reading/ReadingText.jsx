@@ -7,6 +7,7 @@ import { speak, speechMessages } from "../../lib/speech";
 import { dateKey } from "../../lib/storage";
 import { isLevelOpen } from "../../lib/vocab";
 import { ResultMark } from "../vocab/Questions";
+import { withPractice } from "../../lib/mastery";
 
 // The key starts fresh when you move from one text straight to another.
 export default function ReadingText(props) {
@@ -40,10 +41,9 @@ function Reader({ progress, updateProgress, textId }) {
     const today = dateKey();
     updateProgress((previous) => {
       const reading = previous.reading ?? {};
-      const best = Math.max(score, reading[text.id]?.best ?? 0);
       return {
         ...previous,
-        reading: { ...reading, [text.id]: { best, total: questions.length } },
+        reading: { ...reading, [text.id]: withPractice(reading[text.id], score, questions.length, today) },
         days: previous.days.includes(today) ? previous.days : [...previous.days, today],
       };
     });

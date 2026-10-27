@@ -39,9 +39,10 @@ export function rate(card, rating, today) {
   return { due: addDays(today, interval), interval, ease, reps, lapses };
 }
 
-// For "I already know this": skips the early steps.
+// For "I already know this": skips the early steps. It counts as secure, not mastered:
+// mastering still needs you to remember it when it comes back in a week.
 export function markKnown(today) {
-  return { due: addDays(today, 21), interval: 21, ease: 2.5, reps: 3, lapses: 0 };
+  return { due: addDays(today, 7), interval: 7, ease: 2.5, reps: 2, lapses: 0 };
 }
 
 export function intervalLabel(card, rating, today) {
@@ -55,8 +56,4 @@ export function dueCards(vocab, cards, today) {
 
 export function newCards(vocab, cards) {
   return vocab.filter((word) => !cards[word.id]);
-}
-
-export function learnedCount(cards) {
-  return Object.values(cards).filter((card) => card.reps > 0).length;
 }

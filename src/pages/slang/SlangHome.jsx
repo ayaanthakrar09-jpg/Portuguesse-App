@@ -5,6 +5,8 @@ import slang from "../../data/slang/pt-pt.json";
 import { speak, speechMessages } from "../../lib/speech";
 import { QUIZ_LENGTH } from "./SlangQuiz";
 import RichText from "../../components/RichText";
+import { StageTag } from "../../components/Stages";
+import { practiceHint, practiceStage } from "../../lib/mastery";
 
 const formalityClass = { neutral: "", informal: "is-informal", rude: "is-rude", "very rude": "is-rude" };
 
@@ -40,6 +42,7 @@ export default function SlangHome({ progress }) {
             {QUIZ_LENGTH} random expressions: pick what each one means.
             {progress.slang ? ` Your best: ${progress.slang.best} of ${progress.slang.total}.` : ""}
           </p>
+          {progress.slang && <p className="muted stage-line"><StageTag stage={practiceStage(progress.slang)} /> {practiceHint(progress.slang)}</p>}
         </div>
         <Link to="/slang/quiz" className="btn btn-primary">Start quiz</Link>
       </div>

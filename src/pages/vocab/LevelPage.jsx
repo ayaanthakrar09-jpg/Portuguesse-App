@@ -3,7 +3,8 @@ import { dueCards } from "../../lib/srs";
 import { dateKey } from "../../lib/storage";
 import { orderItems, TEST_LENGTH } from "../../lib/exercises";
 import { findLevel, isLevelOpen, passMark } from "../../lib/vocab";
-import { Meter } from "./VocabHome";
+import { StageBar } from "../../components/Stages";
+import { countStages } from "../../lib/mastery";
 
 export default function LevelPage({ progress }) {
   const level = findLevel(useParams().levelId);
@@ -22,7 +23,6 @@ export default function LevelPage({ progress }) {
 
       <ol className="units">
         {level.units.map((unit) => {
-          const learned = unit.items.filter((item) => progress.cards[item.id]?.reps > 0).length;
           const due = dueCards(unit.items, progress.cards, today).length;
           const started = unit.items.some((item) => progress.cards[item.id]);
           const fresh = unit.items.filter((item) => !progress.cards[item.id]).length;
@@ -34,7 +34,7 @@ export default function LevelPage({ progress }) {
               <span className="unit-number" aria-hidden="true">{unit.number}</span>
               <div className="unit-body">
                 <h2 className="card-title">{unit.title}</h2>
-                <Meter value={learned} max={unit.items.length} label={`${learned} of ${unit.items.length} learned${due ? `, ${due} due` : ""}`} />
+                <StageBar counts={countStages(unit.items, progress.cards)} extra={due ? `${due} due for review` : ""} />
                 {(choice || typing) && (
                   <p className="meter-label">
                     Best first time: {[choice && `multiple choice ${choice.best} of ${choice.total}`, typing && `typing ${typing.best} of ${typing.total}`].filter(Boolean).join(", ")}

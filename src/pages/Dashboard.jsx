@@ -5,7 +5,8 @@ import phrases from "../data/phrases.json";
 import { stages, topics } from "../lib/grammar";
 import { texts } from "../lib/reading";
 import { speak, speechMessages } from "../lib/speech";
-import { dueCards, learnedCount } from "../lib/srs";
+import { SECURE_DAYS, countStages, needsRevision, practiceStage } from "../lib/mastery";
+import { dueCards } from "../lib/srs";
 import { currentStreak, dateKey, exportBackup, readBackup } from "../lib/storage";
 import { allItems, isLevelOpen, levels, openItems } from "../lib/vocab";
 import { QUIZ_LENGTH } from "./slang/SlangQuiz";
@@ -57,6 +58,13 @@ function nextSteps(progress, today) {
   if (due > 0) steps.push({ to: "/vocab/review", title: `Review ${due} ${due === 1 ? "flashcard" : "flashcards"}`, detail: "Due today, so they stick" });
 
   const openLevels = levels.filter((level) => isLevelOpen(level.id, passed));
+  // Grammar you scored badly on, or haven't revised for a week, comes before new topics.
+  const revise = topics.find((t) => progress.grammar?.[t.id] && needsRevision(progress.grammar[t.id], today));
+  if (revise) {
+    const weak = practiceStage(progress.grammar[revise.id]) === "weak";
+    steps.push({ to: `/grammar/${revise.id}/practice`, title: revise.title, pt: true, detail: weak ? "Grammar: weak, practise it again" : "Grammar: a week since you practised it" });
+  }
+
   const unit = openLevels.flatMap((level) => level.units).find((u) => u.items.some((item) => !progress.cards[item.id]));
   if (unit) steps.push({ to: `/vocab/unit/${unit.id}`, title: unit.title, detail: `Vocab, level ${unit.level}` });
   else {
@@ -73,14 +81,22 @@ function nextSteps(progress, today) {
 }
 
 // The learning areas, each with a one-line summary of where you are.
+// "3 mastered, 5 secure, 2 weak" for practice records (grammar topics, reading texts).
+function practiceSummary(records, none) {
+  const counts = { mastered: 0, secure: 0, weak: 0 };
+  for (const record of records) if (record) counts[practiceStage(record)] += 1;
+  const parts = ["mastered", "secure", "weak"].filter((stage) => counts[stage]).map((stage) => `${counts[stage]} ${stage}`);
+  return parts.length ? parts.join(", ") : none;
+}
+
 function areas(progress) {
-  const practised = topics.filter((t) => progress.grammar?.[t.id]).length;
-  const read = texts.filter((t) => progress.reading?.[t.id]).length;
+  const words = countStages(allItems, progress.cards);
+  const started = allItems.length - words.new;
   return [
-    { to: "/vocab", label: "Vocab", icon: "vocab", status: `${learnedCount(progress.cards)} of ${allItems.length} learned` },
-    { to: "/grammar", label: "Grammar", icon: "grammar", status: `${practised} of ${topics.length} practised` },
-    { to: "/reading", label: "Reading", icon: "reading", status: `${read} of ${texts.length} read` },
-    { to: "/slang", label: "Slang", icon: "slang", status: progress.slang ? `Best quiz ${progress.slang.best}/${QUIZ_LENGTH}` : "Quiz not taken yet" },
+    { to: "/vocab", label: "Vocab", icon: "vocab", status: started ? `${words.mastered} mastered, ${words.secure} secure, ${words.weak} weak` : `${allItems.length} words to learn` },
+    { to: "/grammar", label: "Grammar", icon: "grammar", status: practiceSummary(topics.map((t) => progress.grammar?.[t.id]), `${topics.length} topics to practise`) },
+    { to: "/reading", label: "Reading", icon: "reading", status: practiceSummary(texts.map((t) => progress.reading?.[t.id]), `${texts.length} texts to read`) },
+    { to: "/slang", label: "Slang", icon: "slang", status: progress.slang ? `Quiz: ${practiceStage(progress.slang)}, best ${progress.slang.best}/${QUIZ_LENGTH}` : "Quiz not taken yet" },
     { to: "/speaking", label: "Speaking", icon: "speaking", status: "Switched off for now", soon: true },
   ];
 }
@@ -188,7 +204,7 @@ export default function Dashboard({ progress, updateProgress }) {
           <h2 className="card-title">Your progress</h2>
           <div className="side-stats">
             <div className="side-stat"><span className="stat-value">{currentStreak(progress.days)}</span><span className="stat-label">day streak</span></div>
-            <div className="side-stat"><span className="stat-value">{learnedCount(progress.cards)}</span><span className="stat-label">words learned</span></div>
+            <div className="side-stat"><span className="stat-value">{countStages(allItems, progress.cards).mastered}</span><span className="stat-label">words mastered</span></div>
             <div className="side-stat"><span className="stat-value">{progress.practisedPhrases}</span><span className="stat-label">phrases practised</span></div>
           </div>
           <ul className="week">
@@ -241,15 +257,15 @@ function HeroTiles() {
   );
 }
 
-// One tile for each grammar topic practised and each vocab unit fully learned.
+// One tile for each grammar topic and each vocab unit that is secure (every word secure or better).
 // Tiles added since your last visit to Home turn over into place.
 function TileWall({ progress }) {
   const pieces = [
     ...levels.flatMap((level) => level.units).map((unit) => ({
       id: unit.id,
-      done: unit.items.every((item) => progress.cards[item.id]?.reps > 0),
+      done: unit.items.every((item) => progress.cards[item.id]?.interval >= SECURE_DAYS),
     })),
-    ...topics.map((topic) => ({ id: topic.id, done: Boolean(progress.grammar?.[topic.id]) })),
+    ...topics.map((topic) => ({ id: topic.id, done: ["secure", "mastered"].includes(practiceStage(progress.grammar?.[topic.id])) })),
   ];
   const doneIds = pieces.filter((piece) => piece.done).map((piece) => piece.id);
   const [seen] = useState(() => {
@@ -267,7 +283,7 @@ function TileWall({ progress }) {
   return (
     <div className="panel">
       <h2 className="card-title">Your tile wall</h2>
-      <p className="muted">A tile for every grammar topic you practise and every vocab unit you learn. {doneIds.length} of {pieces.length} so far.</p>
+      <p className="muted">A tile for every grammar topic and vocab unit that becomes secure. {doneIds.length} of {pieces.length} so far.</p>
       <div className="wall" aria-hidden="true">
         {pieces.map((piece, i) => {
           const filled = i < doneIds.length;

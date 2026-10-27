@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import Icon from "../../components/Icon";
+import { StageBar } from "../../components/Stages";
+import { countStages } from "../../lib/mastery";
 import { dueCards } from "../../lib/srs";
 import { dateKey } from "../../lib/storage";
 import { isLevelOpen, levels, openItems } from "../../lib/vocab";
@@ -13,6 +15,11 @@ export default function VocabHome({ progress }) {
       <header className="page-head">
         <h1 className="page-title">Vocab</h1>
         <p className="muted">Work through each level unit by unit. Words you get wrong come back sooner.</p>
+        <p className="muted stage-key">
+          <span className="stage-key-item"><span className="stage-tag is-weak">Weak</span> seen, not yet remembered a week later</span>
+          <span className="stage-key-item"><span className="stage-tag is-secure">Secure</span> remembered after a week</span>
+          <span className="stage-key-item"><span className="stage-tag is-mastered">Mastered</span> remembered after three weeks</span>
+        </p>
       </header>
 
       <div className="panel panel-row">
@@ -32,7 +39,6 @@ export default function VocabHome({ progress }) {
         {levels.map((level) => {
           const open = isLevelOpen(level.id, passed);
           const items = level.units.flatMap((unit) => unit.items);
-          const learned = items.filter((item) => progress.cards[item.id]?.reps > 0).length;
           return (
             <li key={level.id}>
               <div className={`level-card ${open ? "" : "is-locked"}`}>
@@ -42,7 +48,7 @@ export default function VocabHome({ progress }) {
                   <p className="muted">
                     {level.units.length} units, {items.length} words and phrases
                   </p>
-                  <Meter value={learned} max={items.length} label={`${learned} of ${items.length} learned`} />
+                  {open && <StageBar counts={countStages(items, progress.cards)} />}
                 </div>
                 {open ? (
                   <Link to={`/vocab/level/${level.id}`} className="btn btn-primary">Open</Link>
@@ -62,13 +68,3 @@ export default function VocabHome({ progress }) {
   );
 }
 
-export function Meter({ value, max, label }) {
-  return (
-    <div className="meter">
-      <div className="meter-track" role="progressbar" aria-valuemin={0} aria-valuemax={max} aria-valuenow={value} aria-label={label}>
-        <span className="meter-fill" style={{ width: `${max ? (value / max) * 100 : 0}%` }} />
-      </div>
-      <span className="meter-label">{label}</span>
-    </div>
-  );
-}

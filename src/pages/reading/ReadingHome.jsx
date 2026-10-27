@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { StageTag } from "../../components/Stages";
+import { practiceStage } from "../../lib/mastery";
 import { texts, wordCount } from "../../lib/reading";
 import { isLevelOpen } from "../../lib/vocab";
 
@@ -25,6 +27,7 @@ export default function ReadingHome({ progress }) {
                     {text.titleEn}, {wordCount(text)} words
                     {score ? `, best ${score.best} of ${score.total} questions right` : ""}
                   </span>
+                  {score && <span className="stage-line"><StageTag stage={practiceStage(score)} /></span>}
                 </span>
                 <span className="btn">{score ? "Read again" : "Read"}</span>
               </Link>

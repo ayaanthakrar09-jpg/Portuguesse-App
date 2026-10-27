@@ -4,6 +4,8 @@ import Icon from "../../components/Icon";
 import { findTopic } from "../../lib/grammar";
 import { speak, speechMessages } from "../../lib/speech";
 import RichText from "../../components/RichText";
+import { StageTag } from "../../components/Stages";
+import { practiceHint, practiceStage } from "../../lib/mastery";
 
 // A topic has one verb `table`, or several `tables` (one per verb, with its meaning).
 function verbTables(topic) {
@@ -100,6 +102,7 @@ export default function GrammarTopic({ progress }) {
             {topic.drills.length} questions, getting harder.
             {score ? ` Your best: ${score.best} of ${score.total} right first time.` : ""}
           </p>
+          {score && <p className="muted stage-line"><StageTag stage={practiceStage(score)} /> {practiceHint(score)}</p>}
         </div>
         <Link to={`/grammar/${topic.id}/practice`} className="btn btn-primary">{score ? "Practise again" : "Practise"}</Link>
       </div>

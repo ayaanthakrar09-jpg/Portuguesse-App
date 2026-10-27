@@ -6,6 +6,7 @@ import { dateKey } from "../../lib/storage";
 import { Choices, ResultMark } from "../vocab/Questions";
 import { AutoNextControl, useAutoNext } from "../../components/AutoNext";
 import SessionProgress from "../../components/SessionProgress";
+import { withPractice } from "../../lib/mastery";
 
 export const QUIZ_LENGTH = 10;
 
@@ -65,7 +66,7 @@ export default function SlangQuiz({ updateProgress }) {
       const today = dateKey();
       updateProgress((previous) => ({
         ...previous,
-        slang: { best: Math.max(score, previous.slang?.best ?? 0), total: QUIZ_LENGTH },
+        slang: withPractice(previous.slang, score, QUIZ_LENGTH, today),
         days: previous.days.includes(today) ? previous.days : [...previous.days, today],
       }));
     }

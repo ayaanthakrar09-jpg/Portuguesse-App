@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Icon from "../../components/Icon";
+import { StageTag } from "../../components/Stages";
 import { stages } from "../../lib/grammar";
+import { practiceStage } from "../../lib/mastery";
 
 export default function GrammarHome({ progress }) {
   const practised = (topic) => Boolean(progress.grammar?.[topic.id]);
@@ -12,6 +14,11 @@ export default function GrammarHome({ progress }) {
       <header className="page-head">
         <h1 className="page-title">Grammar</h1>
         <p className="muted">Short explanations, then practice. Best done in this order.</p>
+        <p className="muted stage-key">
+          <span className="stage-key-item"><span className="stage-tag is-weak">Weak</span> last score under 80%</span>
+          <span className="stage-key-item"><span className="stage-tag is-secure">Secure</span> 80% or more</span>
+          <span className="stage-key-item"><span className="stage-tag is-mastered">Mastered</span> 80% on three days, a week apart</span>
+        </p>
       </header>
 
       <div className="stages">
@@ -43,8 +50,8 @@ export default function GrammarHome({ progress }) {
                           <span className="topic-title" lang="pt-PT">{topic.title}</span>
                           <span className="muted">{topic.summary}</span>
                         </span>
-                        {score && <span className="topic-score">{score.best}/{score.total}</span>}
-                        <span className="visually-hidden">{score ? `Practised, best ${score.best} of ${score.total}` : "Not practised yet"}</span>
+                        <StageTag stage={practiceStage(score)} />
+                        <span className="visually-hidden">{score ? `Best ${score.best} of ${score.total}` : "Not practised yet"}</span>
                       </Link>
                     </li>
                   );

@@ -8,6 +8,7 @@ import { dateKey } from "../../lib/storage";
 import { AnswerField, Choices, ResultMark, WordTiles } from "../vocab/Questions";
 import SessionProgress from "../../components/SessionProgress";
 import RichText from "../../components/RichText";
+import { withPractice } from "../../lib/mastery";
 
 const instructions = {
   form: "Type the right form",
@@ -100,10 +101,9 @@ function Practice({ updateProgress, topicId }) {
     const today = dateKey();
     updateProgress((previous) => {
       const grammar = previous.grammar ?? {};
-      const best = Math.max(score, grammar[topic.id]?.best ?? 0);
       return {
         ...previous,
-        grammar: { ...grammar, [topic.id]: { best, total } },
+        grammar: { ...grammar, [topic.id]: withPractice(grammar[topic.id], score, total, today) },
         days: previous.days.includes(today) ? previous.days : [...previous.days, today],
       };
     });
