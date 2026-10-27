@@ -18,6 +18,7 @@ import SlangHome from "./pages/slang/SlangHome";
 import SlangQuiz from "./pages/slang/SlangQuiz";
 import SpeakingHome from "./pages/speaking/SpeakingHome";
 import SpeakingSession from "./pages/speaking/SpeakingSession";
+import Tutor from "./pages/tutor/Tutor";
 import { useProgress } from "./lib/useProgress";
 
 // Speaking is built but switched off until it has been tried with a real microphone.
@@ -56,6 +57,7 @@ export default function App() {
           <Route path="/grammar/:topicId/practice" element={<GrammarPractice updateProgress={updateProgress} />} />
           <Route path="/slang" element={<SlangHome progress={progress} />} />
           <Route path="/slang/quiz" element={<SlangQuiz updateProgress={updateProgress} />} />
+          <Route path="/tutor" element={<Tutor progress={progress} />} />
           {speakingReady ? (
             <>
               <Route path="/speaking" element={<SpeakingHome progress={progress} />} />

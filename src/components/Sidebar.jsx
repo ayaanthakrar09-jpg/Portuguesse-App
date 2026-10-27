@@ -9,6 +9,7 @@ const links = [
   { to: "/reading", label: "Reading", icon: "reading" },
   { to: "/grammar", label: "Grammar", icon: "grammar" },
   { to: "/slang", label: "Slang", icon: "slang" },
+  { to: "/tutor", label: "Tutor", icon: "tutor" },
 ];
 
 // A sidebar on desktop; the same links become a bottom bar on phones (see styles.css).

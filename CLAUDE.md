@@ -3,7 +3,7 @@
 **Start here:** read `HANDOFF.md` for the current status and what to do next.
 
 ## Goal
-Web app to learn **European Portuguese** (never Brazilian). Five areas: Vocab (levels, flashcards, exercises, spaced repetition), Speaking (listen, repeat into mic, compare), Reading (short texts, tap-to-translate, questions), Grammar (short explanations plus drills, starting with the present tense), Slang (labelled expressions). CEFR levels and the AI tutor are out of scope until later.
+Web app to learn **European Portuguese** (never Brazilian). Five areas: Vocab (levels, flashcards, exercises, spaced repetition), Speaking (listen, repeat into mic, compare), Reading (short texts, tap-to-translate, questions), Grammar (short explanations plus drills, starting with the present tense), Slang (labelled expressions). CEFR levels are out of scope until later. An AI tutor exists, using the learner's own free Gemini API key (see `HANDOFF.md`).
 
 ## Stack
 React + Vite, JavaScript, plain CSS (variables, dark theme default), JSON content files, `localStorage` for progress. Keep dependencies minimal. No database or login yet.
@@ -23,4 +23,4 @@ React + Vite, JavaScript, plain CSS (variables, dark theme default), JSON conten
 
 ## Git
 - Branch: `main`. Test a milestone, review the diff, commit with a clear message, then push.
-- Never commit secrets (`.env`, API keys). Ask before any destructive Git command.
+- Never commit secrets (`.env`, API keys). The app never contains a key; each learner pastes their own. Ask before any destructive Git command.

@@ -12,7 +12,7 @@ const instructions = {
 };
 
 // Letters English keyboards lack. Optional: a missing accent still counts.
-const ACCENTS = ["á", "à", "â", "ã", "ç", "é", "ê", "í", "ó", "ô", "õ", "ú"];
+export const ACCENTS = ["á", "à", "â", "ã", "ç", "é", "ê", "í", "ó", "ô", "õ", "ú"];
 
 // The prompt: a gapped sentence with its English, or a single word or phrase.
 export function QuestionPrompt({ question, filled, state = "" }) {
