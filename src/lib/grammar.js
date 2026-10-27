@@ -9,6 +9,7 @@ import imperfect from "../data/grammar/imperfect.json";
 import pronouns from "../data/grammar/pronouns.json";
 import commands from "../data/grammar/commands.json";
 import future from "../data/grammar/future.json";
+import perfect from "../data/grammar/perfect.json";
 import { shuffle, wordTiles } from "./exercises";
 
 const stageList = [
@@ -19,6 +20,7 @@ const stageList = [
   { id: "pronouns", title: "Pronouns", summary: "Me, te, o, lhe: where they go (after the verb in Portugal, in front after não and question words) and how they change.", topics: pronouns },
   { id: "commands", title: "Commands", summary: "Telling someone what to do: to a friend, politely, to several people, and with pronouns.", topics: commands },
   { id: "future", title: "Future and \"would\"", summary: "The future tense and the conditional, how people really talk about the future in Portugal, guessing with será que, and recognising dir-te-ei.", topics: future },
+  { id: "perfect", title: "Have done, had done", summary: "Tenho feito (I've been doing lately), which isn't English \"have done\", and tinha feito (had done).", topics: perfect },
 ];
 
 // Topics are numbered straight through all stages.

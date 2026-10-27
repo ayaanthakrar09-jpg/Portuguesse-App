@@ -1,0 +1,85 @@
+[
+  {
+    "id": "g-tenho-feito",
+    "title": "tenho feito",
+    "summary": "I've been doing (lately): a trap for English speakers",
+    "intro": [
+      "Tenho + past participle looks like English \"I have done\", but it means something different: an action repeated or ongoing up to now. Tenho trabalhado muito = I've been working a lot (lately).",
+      "For one finished event, even where English says \"have\", Portuguese uses the simple past: Já viste o filme? = Have you seen the film?",
+      "Only ter changes (tenho, tens, tem, temos, têm). The participle stays the same: -ar verbs end in -ado, -er and -ir verbs in -ido. Some are irregular:"
+    ],
+    "tables": [
+      { "verb": "participles", "caption": "Past participles", "listen": "both", "rows": [
+        { "person": "falar", "form": "falado" },
+        { "person": "comer", "form": "comido" },
+        { "person": "partir", "form": "partido" },
+        { "person": "fazer", "form": "feito" },
+        { "person": "dizer", "form": "dito" },
+        { "person": "ver", "form": "visto" },
+        { "person": "vir", "form": "vindo" },
+        { "person": "pôr", "form": "posto" },
+        { "person": "escrever", "form": "escrito" },
+        { "person": "abrir", "form": "aberto" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Ultimamente tenho trabalhado muito.", "en": "Lately I've been working a lot." },
+      { "pt": "Tem feito muito calor.", "en": "It's been very hot." },
+      { "pt": "Como tens passado?", "en": "How have you been?" },
+      { "pt": "Já viste o filme?", "en": "Have you seen the film? (one event: simple past)" }
+    ],
+    "notes": [
+      "Como tens passado? (How have you been?) is a friendly question to someone you haven't seen for a while.",
+      "Words that go with it: ultimamente (lately), nos últimos tempos, esta semana, este mês."
+    ],
+    "drills": [
+      { "type": "sentence", "hint": "trabalhar, eu", "before": "Ultimamente ", "after": " muito.", "answer": "tenho trabalhado", "en": "Lately I've been working a lot." },
+      { "type": "sentence", "hint": "fazer", "before": "", "after": " muito calor esta semana.", "answer": "Tem feito", "en": "It's been very hot this week." },
+      { "type": "sentence", "hint": "passar, tu", "before": "Como ", "after": "?", "answer": "tens passado", "en": "How have you been?" },
+      { "type": "sentence", "hint": "dormir", "before": "Ela não ", "after": " bem.", "answer": "tem dormido", "en": "She hasn't been sleeping well." },
+      { "type": "sentence", "hint": "ver", "before": "Eles ", "after": " muitos filmes portugueses.", "answer": "têm visto", "en": "They've been watching a lot of Portuguese films." },
+      { "type": "sentence", "hint": "sair", "before": "Nós ", "after": " pouco este mês.", "answer": "temos saído", "en": "We haven't been going out much this month." },
+      { "type": "sentence", "hint": "escrever", "before": "Tenho ", "after": " muitos e-mails.", "answer": "escrito", "en": "I've been writing a lot of emails." },
+      { "type": "order", "answer": "Como tens passado?", "en": "How have you been?" },
+      { "type": "order", "answer": "Não tenho dormido bem.", "en": "I haven't been sleeping well." },
+      { "type": "choice", "before": "Já ", "after": " o filme?", "options": ["viste", "tens visto"], "answer": "viste", "en": "Have you seen the film?", "why": "One finished event: the simple past. Tens visto would mean \"have you been seeing\"." },
+      { "type": "choice", "before": "", "after": " muito ultimamente.", "options": ["Tenho trabalhado", "Trabalhei"], "answer": "Tenho trabalhado", "en": "I've been working a lot lately.", "why": "Ongoing up to now (ultimamente): tenho + participle." },
+      { "type": "choice", "before": "Ela ", "after": " a Lisboa ontem.", "options": ["foi", "tem ido"], "answer": "foi", "en": "She went to Lisbon yesterday.", "why": "Ontem, one finished event: the simple past." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-tinha-feito",
+    "title": "tinha feito",
+    "summary": "had done",
+    "intro": [
+      "Tinha + past participle = had done, something that happened before another moment in the past: Quando cheguei, o comboio já tinha partido = When I arrived, the train had already left.",
+      "Only ter changes (tinha, tinhas, tinha, tínhamos, tinham). The participles are the ones from the previous topic."
+    ],
+    "examples": [
+      { "pt": "Quando cheguei, o comboio já tinha partido.", "en": "When I arrived, the train had already left." },
+      { "pt": "Nunca tinha visto o mar.", "en": "I had never seen the sea." },
+      { "pt": "Ela disse que já tinha comido.", "en": "She said she had already eaten." },
+      { "pt": "Tínhamos combinado às oito.", "en": "We had arranged to meet at eight." }
+    ],
+    "notes": [
+      "Já (already) and nunca (never) often go with it.",
+      "In books you'll also meet an older one-word form: falara, fizera (= tinha falado, tinha feito). Recognise it; you don't need to use it."
+    ],
+    "drills": [
+      { "type": "sentence", "hint": "partir", "before": "Quando cheguei, o comboio já ", "after": ".", "answer": "tinha partido", "en": "When I arrived, the train had already left." },
+      { "type": "sentence", "hint": "ver", "before": "Eu nunca ", "after": " o mar.", "answer": "tinha visto", "en": "I had never seen the sea." },
+      { "type": "sentence", "hint": "comer", "before": "Ela disse que já ", "after": ".", "answer": "tinha comido", "en": "She said she had already eaten." },
+      { "type": "sentence", "hint": "fazer", "before": "Nós já ", "after": " o jantar quando eles chegaram.", "answer": "tínhamos feito", "en": "We had already made dinner when they arrived." },
+      { "type": "sentence", "hint": "ir", "before": "Tu já ", "after": " a Portugal antes?", "answer": "tinhas ido", "en": "Had you been to Portugal before?" },
+      { "type": "sentence", "hint": "dizer", "before": "Eles ", "after": " que vinham.", "answer": "tinham dito", "en": "They had said they were coming." },
+      { "type": "order", "answer": "Nunca tinha visto o mar.", "en": "I had never seen the sea." },
+      { "type": "order", "answer": "Ela já tinha saído.", "en": "She had already left." },
+      { "type": "order", "answer": "Quando cheguei, já tinham jantado.", "en": "When I arrived, they had already had dinner." },
+      { "type": "choice", "before": "Quando cheguei à estação, o comboio já ", "after": ".", "options": ["tinha partido", "partiu"], "answer": "tinha partido", "en": "When I got to the station, the train had already left.", "why": "It happened before another past moment (when I arrived): tinha + participle." },
+      { "type": "choice", "before": "", "after": " o mar pela primeira vez em 2019.", "options": ["Vi", "Tinha visto"], "answer": "Vi", "en": "I saw the sea for the first time in 2019.", "why": "One event at a clear time: the simple past." },
+      { "type": "choice", "before": "Ela disse que ", "after": " o livro.", "options": ["tinha lido", "tem lido"], "answer": "tinha lido", "en": "She said she had read the book.", "why": "Something earlier than a past moment (she said): tinha + participle." }
+    ],
+    "verified": false
+  }
+]
