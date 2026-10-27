@@ -9,7 +9,8 @@
   --muted: #a2c0ad;
   --accent: #f2c14e; /* the main action colour */
   --accent-ink: #231a02;
-  --tile: #7fbf9a; /* azulejo pattern on the phrase card */
+  --tile: #7fbf9a; /* secure stage colour */
+  --azulejo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Crect width='56' height='56' fill='%23f3eee2'/%3E%3Cg fill='%231d4f9c'%3E%3Cpath d='M0 0h10A10 10 0 0 1 0 10z'/%3E%3Cpath d='M56 0v10A10 10 0 0 1 46 0z'/%3E%3Cpath d='M0 56v-10A10 10 0 0 1 10 56z'/%3E%3Cpath d='M56 56h-10A10 10 0 0 1 56 46z'/%3E%3Cpath d='M23 0a5 5 0 0 0 10 0z'/%3E%3Cpath d='M23 56a5 5 0 0 1 10 0z'/%3E%3Cpath d='M0 23a5 5 0 0 1 0 10z'/%3E%3Cpath d='M56 23a5 5 0 0 0 0 10z'/%3E%3Cpath d='M28 12l16 16-16 16-16-16z'/%3E%3C/g%3E%3Cg stroke='%231d4f9c' stroke-width='1.6'%3E%3Cpath d='M28 5v7M28 44v7M5 28h7M44 28h7'/%3E%3C/g%3E%3Cpath d='M28 19.5l2.3 6.2 6.2 2.3-6.2 2.3-2.3 6.2-2.3-6.2-6.2-2.3 6.2-2.3z' fill='%23f3eee2'/%3E%3Ccircle cx='28' cy='28' r='1.8' fill='%231d4f9c'/%3E%3C/svg%3E"); /* one blue-and-white tile: the phrase card and the tile wall */
 
   /* signal colours: wrong answers, and the flashcard rating buttons */
   --red: #e5503f;
@@ -91,16 +92,8 @@ ul { padding: 0; list-style: none; }
 
 .brand { display: flex; align-items: center; gap: 12px; padding: 0 10px; }
 .brand-name { font-size: 1.25rem; font-weight: 650; letter-spacing: -0.01em; }
-.brand-tile {
-  width: 28px;
-  height: 28px;
-  border-radius: 7px;
-  background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56' fill='none' stroke='%237fbf9a' stroke-width='3'%3E%3Cpath d='M28 6c6 8 6 14 0 22-6-8-6-14 0-22zM28 28c6 8 6 14 0 22-6-8-6-14 0-22zM6 28c8-6 14-6 22 0-8 6-14 6-22 0zM28 28c8-6 14-6 22 0-8 6-14 6-22 0z'/%3E%3C/svg%3E") center / 22px no-repeat;
-  border: 1px solid var(--line);
-}
 
 .flag { flex-shrink: 0; border-radius: 3px; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18); }
-.brand .flag { margin-left: -4px; }
 .page-title .flag { margin-left: 12px; vertical-align: 0.1em; }
 
 .nav-list { display: grid; gap: 4px; }
@@ -165,11 +158,20 @@ ul { padding: 0; list-style: none; }
   grid-auto-rows: 64px;
   justify-content: end;
   align-content: start;
-  opacity: 0.3;
-  -webkit-mask-image: linear-gradient(to left, #000, transparent 65%);
-  mask-image: linear-gradient(to left, #000, transparent 65%);
+  opacity: 0.85;
+  -webkit-mask-image: linear-gradient(to left, #000 15%, transparent 60%);
+  mask-image: linear-gradient(to left, #000 15%, transparent 60%);
 }
-.hero-tiles span { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56' fill='none' stroke='%237fbf9a' stroke-width='1.6'%3E%3Cpath d='M28 6c6 8 6 14 0 22-6-8-6-14 0-22zM28 28c6 8 6 14 0 22-6-8-6-14 0-22zM6 28c8-6 14-6 22 0-8 6-14 6-22 0zM28 28c8-6 14-6 22 0-8 6-14 6-22 0z'/%3E%3Crect x='.8' y='.8' width='54.4' height='54.4'/%3E%3C/svg%3E") center / 100% no-repeat; }
+.hero-tiles span { background: var(--azulejo) center / 100% no-repeat; }
+@media (max-width: 760px) {
+  /* Narrow card: smaller tiles that fade out sooner, so they stay clear of the text */
+  .hero-tiles {
+    grid-template-columns: repeat(10, 40px);
+    grid-auto-rows: 40px;
+    -webkit-mask-image: linear-gradient(to left, #000, transparent 38%);
+    mask-image: linear-gradient(to left, #000, transparent 38%);
+  }
+}
 .hero.is-intro .hero-tiles span { animation: tile-turn 0.45s ease-out var(--delay) both; }
 .hero.is-intro > :not(.hero-tiles) { animation: rise-in 0.5s ease-out 0.55s both; }
 @keyframes tile-turn { from { opacity: 0; transform: perspective(200px) rotateY(80deg) scale(0.8); } to { opacity: 1; transform: none; } }
@@ -278,7 +280,7 @@ ul { padding: 0; list-style: none; }
 /* ---------- Tile wall ---------- */
 .wall { display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; }
 .wall-tile { aspect-ratio: 1; border-radius: 3px; border: 1px solid var(--line); }
-.wall-tile.is-filled { border-color: #3f7a5f; background: #2a6b4f url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56' fill='none' stroke='%237fbf9a' stroke-width='1.6'%3E%3Cpath d='M28 6c6 8 6 14 0 22-6-8-6-14 0-22zM28 28c6 8 6 14 0 22-6-8-6-14 0-22zM6 28c8-6 14-6 22 0-8 6-14 6-22 0zM28 28c8-6 14-6 22 0-8 6-14 6-22 0z'/%3E%3Crect x='.8' y='.8' width='54.4' height='54.4'/%3E%3C/svg%3E") center / 100% no-repeat; }
+.wall-tile.is-filled { border-color: #b9c6d8; background: var(--azulejo) center / 100% no-repeat; }
 .wall-tile.is-new { animation: tile-turn 0.5s ease-out var(--delay) both; }
 
 /* ---------- Vocab ---------- */

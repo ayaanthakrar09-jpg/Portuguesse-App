@@ -17,7 +17,6 @@ export default function Sidebar() {
   return (
     <nav className="sidebar" aria-label="Main">
       <div className="brand">
-        <span className="brand-tile" aria-hidden="true" />
         <span className="brand-name">Português</span>
         <Flag width={21} />
       </div>
