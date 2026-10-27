@@ -132,6 +132,17 @@
         { "id": "l12-people", "title": "Talking with people", "topic": "verbs" },
         { "id": "l12-change", "title": "Starting, stopping, changing", "topic": "verbs" }
       ]
+    },
+    {
+      "id": 13,
+      "title": "Home and things",
+      "units": [
+        { "id": "l13-house", "title": "Around the house", "topic": "home" },
+        { "id": "l13-furniture", "title": "Furniture", "topic": "home" },
+        { "id": "l13-kitchen", "title": "In the kitchen", "topic": "home" },
+        { "id": "l13-objects", "title": "Everyday objects", "topic": "objects" },
+        { "id": "l13-transport", "title": "Cars, bikes and roads", "topic": "transport" }
+      ]
     }
   ]
 }
