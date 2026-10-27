@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import Flag from "../components/Flag";
 import Icon from "../components/Icon";
 import phrases from "../data/phrases.json";
 import { stages, topics } from "../lib/grammar";
@@ -134,7 +135,7 @@ export default function Dashboard({ progress, updateProgress }) {
     <div className="home">
       <section className="page home-main">
         <header className="page-head">
-          <h1 className="page-title" lang="pt-PT">{greeting()}!</h1>
+          <h1 className="page-title" lang="pt-PT">{greeting()}!<Flag width={30} /></h1>
           <p className="muted">
             {new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" })}
           </p>

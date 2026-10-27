@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import Flag from "./Flag";
 import Icon from "./Icon";
 
 const links = [
@@ -17,6 +18,7 @@ export default function Sidebar() {
       <div className="brand">
         <span className="brand-tile" aria-hidden="true" />
         <span className="brand-name">Português</span>
+        <Flag width={21} />
       </div>
       <ul className="nav-list">
         {links.map((link) => (

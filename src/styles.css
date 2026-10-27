@@ -99,6 +99,10 @@ ul { padding: 0; list-style: none; }
   border: 1px solid var(--line);
 }
 
+.flag { flex-shrink: 0; border-radius: 3px; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18); }
+.brand .flag { margin-left: -4px; }
+.page-title .flag { margin-left: 12px; vertical-align: 0.1em; }
+
 .nav-list { display: grid; gap: 4px; }
 .nav-link {
   display: flex;
