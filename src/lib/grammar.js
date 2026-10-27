@@ -8,6 +8,7 @@ import past from "../data/grammar/past.json";
 import imperfect from "../data/grammar/imperfect.json";
 import pronouns from "../data/grammar/pronouns.json";
 import commands from "../data/grammar/commands.json";
+import future from "../data/grammar/future.json";
 import { shuffle, wordTiles } from "./exercises";
 
 const stageList = [
@@ -17,6 +18,7 @@ const stageList = [
   { id: "past", title: "Past tense", summary: "What happened (perfeito), what used to happen (imperfeito), and how to choose.", topics: [...past, ...imperfect] },
   { id: "pronouns", title: "Pronouns", summary: "Me, te, o, lhe: where they go (after the verb in Portugal, in front after não and question words) and how they change.", topics: pronouns },
   { id: "commands", title: "Commands", summary: "Telling someone what to do: to a friend, politely, to several people, and with pronouns.", topics: commands },
+  { id: "future", title: "Future and \"would\"", summary: "The future tense and the conditional, how people really talk about the future in Portugal, guessing with será que, and recognising dir-te-ei.", topics: future },
 ];
 
 // Topics are numbered straight through all stages.

@@ -1,0 +1,181 @@
+[
+  {
+    "id": "g-future",
+    "title": "falarei, farei",
+    "summary": "the future tense, and when people use it",
+    "intro": [
+      "The future tense adds endings to the whole verb: falar → falarei. The endings are the same for -ar, -er and -ir: -ei, -ás, -á, -emos, -ão.",
+      "In conversation, Portugal usually says vou + verb, or the present with a time word: Amanhã vou falar com ele / Amanhã falo com ele. The future tense is more common in writing, the news, promises and formal speech.",
+      "Three verbs shorten: fazer → farei, dizer → direi, trazer → trarei."
+    ],
+    "tables": [
+      { "verb": "falar", "meaning": "to speak", "caption": "Future of falar", "rows": [
+        { "person": "eu", "form": "falarei" },
+        { "person": "tu", "form": "falarás" },
+        { "person": "ele / ela / você", "form": "falará" },
+        { "person": "nós", "form": "falaremos" },
+        { "person": "eles / elas / vocês", "form": "falarão" }
+      ] },
+      { "verb": "fazer", "meaning": "to do, to make", "caption": "Future of fazer", "rows": [
+        { "person": "eu", "form": "farei" },
+        { "person": "tu", "form": "farás" },
+        { "person": "ele / ela / você", "form": "fará" },
+        { "person": "nós", "form": "faremos" },
+        { "person": "eles / elas / vocês", "form": "farão" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Amanhã falarei com o diretor.", "en": "Tomorrow I'll speak to the director." },
+      { "pt": "O tempo estará bom no fim de semana.", "en": "The weather will be good at the weekend." },
+      { "pt": "Prometo que te ligarei.", "en": "I promise I'll call you." },
+      { "pt": "Farei o possível.", "en": "I'll do my best." }
+    ],
+    "notes": [
+      "For ir itself, just use the present: Amanhã vou ao Porto. Vou ir sounds wrong in Portugal.",
+      "You'll meet the future a lot in weather forecasts and the news."
+    ],
+    "drills": [
+      { "type": "form", "verb": "falar", "person": "eu", "answer": "falarei" },
+      { "type": "form", "verb": "comer", "person": "tu", "answer": "comerás" },
+      { "type": "form", "verb": "abrir", "person": "ela", "answer": "abrirá" },
+      { "type": "form", "verb": "ser", "person": "nós", "answer": "seremos" },
+      { "type": "form", "verb": "fazer", "person": "eu", "answer": "farei" },
+      { "type": "form", "verb": "dizer", "person": "eles", "answer": "dirão" },
+      { "type": "sentence", "verb": "falar", "before": "Amanhã ", "after": " com o diretor.", "answer": "falarei", "en": "Tomorrow I'll speak to the director." },
+      { "type": "sentence", "verb": "estar", "before": "O tempo ", "after": " bom no fim de semana.", "answer": "estará", "en": "The weather will be good at the weekend." },
+      { "type": "sentence", "verb": "fazer", "before": "", "after": " o possível.", "answer": "Farei", "en": "I'll do my best." },
+      { "type": "sentence", "verb": "dizer", "before": "Eles ", "after": " a verdade.", "answer": "dirão", "en": "They will tell the truth." },
+      { "type": "sentence", "verb": "chegar", "before": "Nós ", "after": " às oito.", "answer": "chegaremos", "en": "We'll arrive at eight." },
+      { "type": "choice", "before": "Amanhã ", "after": " ao Porto.", "options": ["vou", "vou ir"], "answer": "vou", "en": "Tomorrow I'm going to Porto.", "why": "For ir itself, just the present: vou ao Porto. Vou ir sounds wrong in Portugal." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-conditional",
+    "title": "falaria, faria",
+    "summary": "would",
+    "intro": [
+      "The conditional means \"would\". Like the future, add endings to the whole verb: -ia, -ias, -ia, -íamos, -iam. Falaria = I would speak.",
+      "The same three verbs shorten: fazer → faria, dizer → diria, trazer → traria.",
+      "In everyday Portugal the imperfeito often does this job instead: Gostava de ir (I'd like to go) is more common than Gostaria de ir, which sounds more formal."
+    ],
+    "tables": [
+      { "verb": "falar", "meaning": "to speak", "caption": "Conditional of falar", "rows": [
+        { "person": "eu", "form": "falaria" },
+        { "person": "tu", "form": "falarias" },
+        { "person": "ele / ela / você", "form": "falaria" },
+        { "person": "nós", "form": "falaríamos" },
+        { "person": "eles / elas / vocês", "form": "falariam" }
+      ] },
+      { "verb": "fazer", "meaning": "to do, to make", "caption": "Conditional of fazer", "rows": [
+        { "person": "eu", "form": "faria" },
+        { "person": "tu", "form": "farias" },
+        { "person": "ele / ela / você", "form": "faria" },
+        { "person": "nós", "form": "faríamos" },
+        { "person": "eles / elas / vocês", "form": "fariam" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Gostaria de marcar uma consulta.", "en": "I'd like to make an appointment. (formal)" },
+      { "pt": "Eu no teu lugar não faria isso.", "en": "If I were you, I wouldn't do that." },
+      { "pt": "Ele disse que viria.", "en": "He said he would come." },
+      { "pt": "Seria ótimo!", "en": "That would be great!" }
+    ],
+    "notes": [
+      "Reporting what someone said about the future uses it: Ele disse que viria (He said he would come).",
+      "Seria possível…? (Would it be possible…?) is a good polite start for emails and phone calls."
+    ],
+    "drills": [
+      { "type": "form", "verb": "falar", "person": "eu", "answer": "falaria" },
+      { "type": "form", "verb": "gostar", "person": "ele", "answer": "gostaria" },
+      { "type": "form", "verb": "ser", "person": "nós", "answer": "seríamos" },
+      { "type": "form", "verb": "fazer", "person": "eu", "answer": "faria" },
+      { "type": "form", "verb": "dizer", "person": "tu", "answer": "dirias" },
+      { "type": "form", "verb": "vir", "person": "eles", "answer": "viriam" },
+      { "type": "sentence", "hint": "gostar, formal", "before": "", "after": " de marcar uma consulta.", "answer": "Gostaria", "en": "I'd like to make an appointment." },
+      { "type": "sentence", "verb": "fazer", "before": "Eu no teu lugar não ", "after": " isso.", "answer": "faria", "en": "If I were you, I wouldn't do that." },
+      { "type": "sentence", "verb": "vir", "before": "Ele disse que ", "after": " amanhã.", "answer": "viria", "en": "He said he would come tomorrow." },
+      { "type": "sentence", "verb": "ser", "before": "", "after": " ótimo!", "answer": "Seria", "en": "That would be great!" },
+      { "type": "sentence", "verb": "trazer", "before": "Ela disse que ", "after": " o vinho.", "answer": "traria", "en": "She said she'd bring the wine." },
+      { "type": "choice", "before": "", "after": " de ir a Sintra.", "options": ["Gostava", "Gostarei"], "answer": "Gostava", "en": "I'd like to go to Sintra.", "why": "I'd like: gostava (everyday) or gostaria (formal). Gostarei means \"I will like\"." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-sera-que",
+    "title": "será que…?",
+    "summary": "wondering and guessing",
+    "intro": [
+      "The future also guesses or wonders about now: Serão dez horas = It must be about ten. Onde estará a Ana? = Where can Ana be?",
+      "Será que…? is a very common way to say \"Do you think…?\" or \"I wonder if…\": Será que vai chover?",
+      "The conditional does the same for the past: Seriam dez horas = It must have been about ten."
+    ],
+    "examples": [
+      { "pt": "Será que ela vem?", "en": "Do you think she's coming?" },
+      { "pt": "Onde estará o meu telemóvel?", "en": "Where can my phone be?" },
+      { "pt": "Quem será a esta hora?", "en": "Who can that be at this time?" },
+      { "pt": "Teria uns vinte anos.", "en": "He must have been about twenty." }
+    ],
+    "notes": [
+      "Será? on its own = Really? / Do you think so?"
+    ],
+    "drills": [
+      { "type": "sentence", "verb": "ser", "before": "", "after": " que vai chover?", "answer": "Será", "en": "Do you think it's going to rain?" },
+      { "type": "sentence", "verb": "estar", "before": "Onde ", "after": " o meu telemóvel?", "answer": "estará", "en": "Where can my phone be?" },
+      { "type": "sentence", "verb": "ser", "before": "Quem ", "after": "?", "answer": "será", "en": "Who can that be?" },
+      { "type": "sentence", "hint": "ser, a guess", "before": "", "after": " dez horas.", "answer": "Serão", "en": "It must be about ten." },
+      { "type": "sentence", "hint": "ter, a guess about the past", "before": "Ele ", "after": " uns vinte anos.", "answer": "teria", "en": "He must have been about twenty." },
+      { "type": "order", "answer": "Será que vai chover?", "en": "Do you think it's going to rain?" },
+      { "type": "order", "answer": "Onde estará o meu telemóvel?", "en": "Where can my phone be?" },
+      { "type": "order", "answer": "Quem será a esta hora?", "en": "Who can that be at this time?" },
+      { "type": "order", "answer": "Será que ela já chegou?", "en": "Do you think she's arrived yet?" },
+      { "type": "choice", "before": "Não sei onde está a Ana. ", "after": " em casa?", "options": ["Estará", "Estaria"], "answer": "Estará", "en": "I don't know where Ana is. Could she be at home?", "why": "Wondering about now: the future." },
+      { "type": "choice", "before": "Quando o conheci, ", "after": " uns trinta anos.", "options": ["teria", "terá"], "answer": "teria", "en": "When I met him, he must have been about thirty.", "why": "Guessing about the past: the conditional." },
+      { "type": "choice", "before": "", "after": " que o restaurante está aberto?", "options": ["Será", "Seria"], "answer": "Será", "en": "Do you think the restaurant is open?", "why": "Será que…? asks \"do you think…?\" about now or soon." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-mesoclisis",
+    "title": "dir-te-ei",
+    "summary": "pronouns inside the future: recognise it",
+    "focus": "word",
+    "intro": [
+      "With the future and the conditional, a pronoun after the verb goes inside it: dir-te-ei (I'll tell you), far-se-á (it will be done), dar-lhe-ia (I would give him).",
+      "The pronoun sits between the verb and the ending: dizer → dir + te + ei. Fazer, dizer and trazer use their short forms.",
+      "It's formal and mostly written: the news, letters, official texts. In conversation people avoid it by using vou + verb (Vou-te dizer) or, when não or que comes first, by putting the pronoun in front (Não te direi)."
+    ],
+    "tables": [
+      { "verb": "mesoclisis", "caption": "Pronouns inside the verb", "listen": "form", "rows": [
+        { "person": "I'll tell you", "form": "dir-te-ei" },
+        { "person": "I'll phone him", "form": "telefonar-lhe-ei" },
+        { "person": "it will be done", "form": "far-se-á" },
+        { "person": "I would give her", "form": "dar-lhe-ia" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Dir-te-ei amanhã.", "en": "I'll tell you tomorrow. (formal)" },
+      { "pt": "Vou-te dizer amanhã.", "en": "I'll tell you tomorrow. (everyday)" },
+      { "pt": "Não te direi nada.", "en": "I won't tell you anything." },
+      { "pt": "Far-se-á tudo o possível.", "en": "Everything possible will be done." }
+    ],
+    "notes": [
+      "You need to recognise this when you read, not use it in conversation. Brazil doesn't use it at all."
+    ],
+    "drills": [
+      { "type": "sentence", "hint": "dizer + te, future", "before": "", "after": " amanhã.", "answer": "Dir-te-ei", "en": "I'll tell you tomorrow. (formal)" },
+      { "type": "sentence", "hint": "telefonar + lhe, future", "before": "", "after": " amanhã.", "answer": "Telefonar-lhe-ei", "en": "I'll phone him tomorrow. (formal)" },
+      { "type": "sentence", "hint": "fazer + se, future", "before": "", "after": " tudo o possível.", "answer": "Far-se-á", "en": "Everything possible will be done." },
+      { "type": "sentence", "hint": "dar + lhe, conditional", "before": "Eu ", "after": " o livro, mas ele não está cá.", "answer": "dar-lhe-ia", "en": "I'd give him the book, but he isn't here." },
+      { "type": "order", "answer": "Vou-te dizer amanhã.", "alternatives": ["Vou dizer-te amanhã."], "en": "I'll tell you tomorrow. (everyday)" },
+      { "type": "order", "answer": "Não te direi nada.", "en": "I won't tell you anything." },
+      { "type": "order", "answer": "Vou-lhe telefonar logo.", "alternatives": ["Vou telefonar-lhe logo."], "en": "I'll phone him later. (everyday)" },
+      { "type": "order", "answer": "Nunca te direi.", "en": "I'll never tell you." },
+      { "type": "choice", "before": "", "after": " amanhã.", "options": ["Dir-te-ei", "Direi-te"], "answer": "Dir-te-ei", "en": "I'll tell you tomorrow. (formal)", "why": "With the future, the pronoun goes inside the verb: dir-te-ei." },
+      { "type": "choice", "before": "Não ", "after": " nada.", "options": ["te direi", "dir-te-ei"], "answer": "te direi", "en": "I won't tell you anything.", "why": "Não pulls the pronoun in front, so nothing is split." },
+      { "type": "choice", "before": "", "after": " amanhã.", "options": ["Vou-te dizer", "Dir-te-ei"], "answer": "Vou-te dizer", "en": "I'll tell you tomorrow. (casually, to a friend)", "why": "Both are correct, but in conversation vou + verb is far more natural. Dir-te-ei sounds formal." },
+      { "type": "choice", "before": "", "after": " amanhã.", "options": ["Telefonar-lhe-ei", "Telefonarei-lhe"], "answer": "Telefonar-lhe-ei", "en": "I'll phone him tomorrow. (formal)", "why": "The pronoun goes inside: telefonar-lhe-ei." }
+    ],
+    "verified": false
+  }
+]
