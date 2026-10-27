@@ -10,7 +10,7 @@
   --accent: #f2c14e; /* the main action colour */
   --accent-ink: #231a02;
   --tile: #7fbf9a; /* secure stage colour */
-  --azulejo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Crect width='56' height='56' fill='%23f3eee2'/%3E%3Cg fill='%231d4f9c'%3E%3Cpath d='M0 0h10A10 10 0 0 1 0 10z'/%3E%3Cpath d='M56 0v10A10 10 0 0 1 46 0z'/%3E%3Cpath d='M0 56v-10A10 10 0 0 1 10 56z'/%3E%3Cpath d='M56 56h-10A10 10 0 0 1 56 46z'/%3E%3Cpath d='M23 0a5 5 0 0 0 10 0z'/%3E%3Cpath d='M23 56a5 5 0 0 1 10 0z'/%3E%3Cpath d='M0 23a5 5 0 0 1 0 10z'/%3E%3Cpath d='M56 23a5 5 0 0 0 0 10z'/%3E%3Cpath d='M28 12l16 16-16 16-16-16z'/%3E%3C/g%3E%3Cg stroke='%231d4f9c' stroke-width='1.6'%3E%3Cpath d='M28 5v7M28 44v7M5 28h7M44 28h7'/%3E%3C/g%3E%3Cpath d='M28 19.5l2.3 6.2 6.2 2.3-6.2 2.3-2.3 6.2-2.3-6.2-6.2-2.3 6.2-2.3z' fill='%23f3eee2'/%3E%3Ccircle cx='28' cy='28' r='1.8' fill='%231d4f9c'/%3E%3C/svg%3E"); /* one blue-and-white tile: the phrase card and the tile wall */
+  --azulejo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Crect width='56' height='56' fill='%23f3eee2'/%3E%3Cg fill='%231d4f9c'%3E%3Cpath d='M0 0h10A10 10 0 0 1 0 10z'/%3E%3Cpath d='M56 0v10A10 10 0 0 1 46 0z'/%3E%3Cpath d='M0 56v-10A10 10 0 0 1 10 56z'/%3E%3Cpath d='M56 56h-10A10 10 0 0 1 56 46z'/%3E%3Cpath d='M23 0a5 5 0 0 0 10 0z'/%3E%3Cpath d='M23 56a5 5 0 0 1 10 0z'/%3E%3Cpath d='M0 23a5 5 0 0 1 0 10z'/%3E%3Cpath d='M56 23a5 5 0 0 0 0 10z'/%3E%3Cpath d='M28 12l16 16-16 16-16-16z'/%3E%3C/g%3E%3Cg stroke='%231d4f9c' stroke-width='1.6'%3E%3Cpath d='M28 5v7M28 44v7M5 28h7M44 28h7'/%3E%3C/g%3E%3Cpath d='M28 19.5l2.3 6.2 6.2 2.3-6.2 2.3-2.3 6.2-2.3-6.2-6.2-2.3 6.2-2.3z' fill='%23f3eee2'/%3E%3Ccircle cx='28' cy='28' r='1.8' fill='%231d4f9c'/%3E%3C/svg%3E"); /* one blue-and-white tile, used on the tile wall */
 
   /* signal colours: wrong answers, and the flashcard rating buttons */
   --red: #e5503f;
@@ -147,7 +147,7 @@ ul { padding: 0; list-style: none; }
   display: grid;
   gap: 12px;
 }
-/* Azulejo tiles, fading out towards the text so the phrase stays readable.
+/* Empty tiles, fading out towards the text so the phrase stays readable.
    On the first visit of the day they turn over one by one, sweeping in from the right, then the phrase rises in. */
 .hero-tiles {
   position: absolute;
@@ -158,11 +158,11 @@ ul { padding: 0; list-style: none; }
   grid-auto-rows: 64px;
   justify-content: end;
   align-content: start;
-  opacity: 0.85;
+  opacity: 0.7;
   -webkit-mask-image: linear-gradient(to left, #000 15%, transparent 60%);
   mask-image: linear-gradient(to left, #000 15%, transparent 60%);
 }
-.hero-tiles span { background: var(--azulejo) center / 100% no-repeat; }
+.hero-tiles span { box-shadow: inset 0 0 0 1px var(--line); } /* empty tiles: outlines only */
 @media (max-width: 760px) {
   /* Narrow card: smaller tiles that fade out sooner, so they stay clear of the text */
   .hero-tiles {
