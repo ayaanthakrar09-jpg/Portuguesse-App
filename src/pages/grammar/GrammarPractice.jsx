@@ -11,6 +11,9 @@ const instructions = {
   choice: "Pick the right verb",
 };
 
+// Topics about words rather than verbs ("focus": "word").
+const wordInstructions = { ...instructions, sentence: "Type the missing word", choice: "Pick the right word" };
+
 // The key starts fresh when you move from one topic straight to another.
 export default function GrammarPractice(props) {
   const { topicId } = useParams();
@@ -131,7 +134,7 @@ function Practice({ updateProgress, topicId }) {
 
       <form className="flashcard" onSubmit={submit}>
         <span className="chip" lang="pt-PT">{topic.title}</span>
-        <p className="muted">{instructions[question.type]}</p>
+        <p className="muted">{(topic.focus === "word" ? wordInstructions : instructions)[question.type]}</p>
 
         <div className="gap-sentence">
           <p className="gap-pt" lang="pt-PT">
@@ -141,7 +144,7 @@ function Practice({ updateProgress, topicId }) {
           </p>
           <p className="muted">
             {question.en ? `${question.en} ` : ""}
-            {isChoice ? "" : <span lang="pt-PT">({question.verb})</span>}
+            {question.hint && !isChoice ? <span lang="pt-PT">({question.hint})</span> : ""}
           </p>
         </div>
 

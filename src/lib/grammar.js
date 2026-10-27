@@ -1,19 +1,39 @@
-// Grammar topics. Every drill sentence is written by hand in the data file; nothing is generated.
+// Grammar topics, grouped into stages. Every drill sentence is written by hand in the data files; nothing is generated.
+// To add a stage: create a JSON file of topics in src/data/grammar/ and list it below.
 
 import present from "../data/grammar/present.json";
+import basics from "../data/grammar/basics.json";
 import { shuffle } from "./exercises";
 
-export const topics = present.map((topic, index) => ({ ...topic, number: index + 1 }));
+const stageList = [
+  { id: "present", title: "Present tense", summary: "The verbs you'll use most, then the regular patterns and common irregular verbs.", topics: present },
+  { id: "basics", title: "Building blocks", summary: "Gender and plurals, the little words that join together, my and your, this and that.", topics: basics },
+];
+
+// Topics are numbered straight through all stages.
+let number = 0;
+export const stages = stageList.map((stage) => ({
+  ...stage,
+  topics: stage.topics.map((topic) => ({ ...topic, number: (number += 1) })),
+}));
+
+export const topics = stages.flatMap((stage) => stage.topics);
 
 export function findTopic(id) {
   return topics.find((topic) => topic.id === id);
 }
 
-// Drills in a topic about one verb use the topic title as the verb hint; topics covering many verbs name it per drill.
+// The hint shown after a question: the drill's own hint or verb, otherwise the topic's verb.
+// Topics about words rather than one verb ("focus": "word") only show a drill's own hint.
 // Practice order gets harder: verb forms first, then whole sentences. "Choose" drills are mixed in random order.
 export function practiceQuestions(topic) {
   const forms = shuffle(topic.drills.filter((d) => d.type === "form"));
   const sentences = shuffle(topic.drills.filter((d) => d.type === "sentence"));
   const choices = shuffle(topic.drills.filter((d) => d.type === "choice")).map((d) => ({ ...d, options: shuffle(d.options) }));
-  return [...forms, ...sentences, ...choices].map((drill, index) => ({ ...drill, key: `${topic.id}-${index}`, verb: drill.verb ?? topic.title }));
+  const topicHint = topic.focus === "word" ? null : topic.title;
+  return [...forms, ...sentences, ...choices].map((drill, index) => ({
+    ...drill,
+    key: `${topic.id}-${index}`,
+    hint: drill.hint ?? drill.verb ?? topicHint,
+  }));
 }

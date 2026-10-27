@@ -10,6 +10,14 @@ function verbTables(topic) {
   return topic.table ? [{ verb: topic.title, rows: topic.table }] : [];
 }
 
+// What a row's Listen button says. Verb tables say the person and the form ("eu sou");
+// other tables say just the form, or both sides ("o livro, os livros").
+function spoken(table, row) {
+  if (table.listen === "form") return row.form;
+  if (table.listen === "both") return `${row.person}, ${row.form}`;
+  return `${row.person.split(" / ")[0]} ${row.form}`;
+}
+
 export default function GrammarTopic({ progress }) {
   const topic = findTopic(useParams().topicId);
   const [voiceNote, setVoiceNote] = useState("");
@@ -39,7 +47,7 @@ export default function GrammarTopic({ progress }) {
               <h2 className="card-title"><span lang="pt-PT">{table.verb}</span> <span className="muted">{table.meaning}</span></h2>
             )}
             <table className="verb-table">
-              <caption className="visually-hidden">Present tense of {table.verb}</caption>
+              <caption className="visually-hidden">{table.caption ?? `Present tense of ${table.verb}`}</caption>
               <tbody>
                 {table.rows.map((row) => (
                   <tr key={row.person}>
@@ -48,8 +56,8 @@ export default function GrammarTopic({ progress }) {
                     <td>
                       <button
                         className="btn btn-icon btn-small"
-                        onClick={() => say(`${row.person.split(" / ")[0]} ${row.form}`)}
-                        aria-label={`Listen to ${row.person.split(" / ")[0]} ${row.form}`}
+                        onClick={() => say(spoken(table, row))}
+                        aria-label={`Listen to ${spoken(table, row)}`}
                       >
                         <Icon name="speaker" size={16} />
                       </button>
