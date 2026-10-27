@@ -22,6 +22,50 @@
         { "id": "l2-home", "title": "Home and daily routine", "topic": "home" },
         { "id": "l2-plans", "title": "Days and plans", "topic": "time" }
       ]
+    },
+    {
+      "id": 3,
+      "title": "Getting by",
+      "units": [
+        { "id": "l3-work", "title": "Work and jobs", "topic": "work" },
+        { "id": "l3-health", "title": "Health", "topic": "health" },
+        { "id": "l3-weather", "title": "Weather and seasons", "topic": "weather" },
+        { "id": "l3-clothes", "title": "Clothes", "topic": "clothes" },
+        { "id": "l3-people", "title": "Describing people", "topic": "people" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Out and about",
+      "units": [
+        { "id": "l4-travel", "title": "Travel and holidays", "topic": "travel" },
+        { "id": "l4-hotel", "title": "At the hotel", "topic": "hotel" },
+        { "id": "l4-food", "title": "Cooking and food shopping", "topic": "food" },
+        { "id": "l4-leisure", "title": "Free time", "topic": "leisure" },
+        { "id": "l4-feelings", "title": "Feelings", "topic": "feelings" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Getting things done",
+      "units": [
+        { "id": "l5-phone", "title": "Phone and messages", "topic": "phone" },
+        { "id": "l5-services", "title": "Bank, post office, services", "topic": "services" },
+        { "id": "l5-home", "title": "Renting and repairs", "topic": "home" },
+        { "id": "l5-appointments", "title": "Appointments", "topic": "appointments" },
+        { "id": "l5-problems", "title": "Problems and complaints", "topic": "problems" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Opinions and the news",
+      "units": [
+        { "id": "l6-opinions", "title": "Giving opinions", "topic": "opinions" },
+        { "id": "l6-debate", "title": "Agreeing and disagreeing", "topic": "debate" },
+        { "id": "l6-story", "title": "Telling a story", "topic": "story" },
+        { "id": "l6-news", "title": "News and society", "topic": "news" },
+        { "id": "l6-nature", "title": "Nature and the environment", "topic": "nature" }
+      ]
     }
   ]
 }
