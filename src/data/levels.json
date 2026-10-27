@@ -77,6 +77,17 @@
         { "id": "l7-talk", "title": "Talking to people", "topic": "verbs" },
         { "id": "l7-daily", "title": "Everyday actions", "topic": "verbs" }
       ]
+    },
+    {
+      "id": 8,
+      "title": "Describing and linking",
+      "units": [
+        { "id": "l8-size", "title": "Good, bad, big, small", "topic": "describing" },
+        { "id": "l8-state", "title": "How things are", "topic": "describing" },
+        { "id": "l8-judging", "title": "Right, wrong, important", "topic": "describing" },
+        { "id": "l8-often", "title": "How often, how much", "topic": "adverbs" },
+        { "id": "l8-linking", "title": "Linking words", "topic": "linking" }
+      ]
     }
   ]
 }
