@@ -66,6 +66,17 @@
         { "id": "l6-news", "title": "News and society", "topic": "news" },
         { "id": "l6-nature", "title": "Nature and the environment", "topic": "nature" }
       ]
+    },
+    {
+      "id": 7,
+      "title": "Core verbs",
+      "units": [
+        { "id": "l7-basics", "title": "The key verbs", "topic": "verbs" },
+        { "id": "l7-mind", "title": "Wanting and knowing", "topic": "verbs" },
+        { "id": "l7-moving", "title": "Coming and going", "topic": "verbs" },
+        { "id": "l7-talk", "title": "Talking to people", "topic": "verbs" },
+        { "id": "l7-daily", "title": "Everyday actions", "topic": "verbs" }
+      ]
     }
   ]
 }
