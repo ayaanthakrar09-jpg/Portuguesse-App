@@ -7,6 +7,7 @@ import patterns from "../data/grammar/patterns.json";
 import past from "../data/grammar/past.json";
 import imperfect from "../data/grammar/imperfect.json";
 import pronouns from "../data/grammar/pronouns.json";
+import commands from "../data/grammar/commands.json";
 import { shuffle, wordTiles } from "./exercises";
 
 const stageList = [
@@ -15,6 +16,7 @@ const stageList = [
   { id: "patterns", title: "Everyday patterns", summary: "Reflexive verbs, what's happening now, verbs that team up with other verbs, and ficar.", topics: patterns },
   { id: "past", title: "Past tense", summary: "What happened (perfeito), what used to happen (imperfeito), and how to choose.", topics: [...past, ...imperfect] },
   { id: "pronouns", title: "Pronouns", summary: "Me, te, o, lhe: where they go (after the verb in Portugal, in front after não and question words) and how they change.", topics: pronouns },
+  { id: "commands", title: "Commands", summary: "Telling someone what to do: to a friend, politely, to several people, and with pronouns.", topics: commands },
 ];
 
 // Topics are numbered straight through all stages.
