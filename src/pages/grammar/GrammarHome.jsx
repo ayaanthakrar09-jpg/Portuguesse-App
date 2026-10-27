@@ -38,7 +38,7 @@ export default function GrammarHome({ progress }) {
         </section>
       ))}
 
-      <p className="note">More stages come later: the past tenses, pronouns, commands, the future and the subjunctive. Nothing here has been checked by a native speaker yet.</p>
+      <p className="note">Nothing here has been checked by a native speaker yet.</p>
     </section>
   );
 }

@@ -12,6 +12,7 @@ import future from "../data/grammar/future.json";
 import perfect from "../data/grammar/perfect.json";
 import subjunctive from "../data/grammar/subjunctive.json";
 import infinitive from "../data/grammar/infinitive.json";
+import linking from "../data/grammar/linking.json";
 import { shuffle, wordTiles } from "./exercises";
 
 const stageList = [
@@ -25,6 +26,7 @@ const stageList = [
   { id: "perfect", title: "Have done, had done", summary: "Tenho feito (I've been doing lately), which isn't English \"have done\", and tinha feito (had done).", topics: perfect },
   { id: "subjunctive", title: "Subjunctive", summary: "Wishes, doubts and \"if\": que eu fale, se eu fosse, quando fores, and how to choose between them.", topics: subjunctive },
   { id: "infinitive", title: "Personal infinitive", summary: "The infinitive with an ending (para fazermos, antes de saíres), and when it can replace the subjunctive.", topics: infinitive },
+  { id: "linking", title: "Linking words", summary: "Por or para, que / quem / onde / o que, and words that join ideas: porque, por isso, embora, porquê.", topics: linking },
 ];
 
 // Topics are numbered straight through all stages.

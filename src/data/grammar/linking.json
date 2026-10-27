@@ -1,0 +1,135 @@
+[
+  {
+    "id": "g-por-para",
+    "title": "por or para?",
+    "summary": "two words for \"for\"",
+    "focus": "word",
+    "intro": [
+      "Both can mean \"for\", but they're used differently.",
+      "Para: where you're going, what for, who it's for, a deadline. Vou para Lisboa. Estudo para aprender. É para ti. É para amanhã.",
+      "Por: through or along, the reason, an exchange or price, \"by\" someone, \"per\". Passei pelo parque. Obrigado pela ajuda. Paguei dez euros por isto. Três vezes por semana.",
+      "Remember: por + o = pelo, por + a = pela."
+    ],
+    "tables": [
+      { "verb": "por and para", "caption": "Uses of por and para", "listen": "form", "rows": [
+        { "person": "destination (para)", "form": "Vou para casa." },
+        { "person": "purpose (para)", "form": "Estudo para aprender." },
+        { "person": "who it's for (para)", "form": "Este presente é para ti." },
+        { "person": "deadline (para)", "form": "É para amanhã." },
+        { "person": "through, along (por)", "form": "Passei pelo parque." },
+        { "person": "reason, thanks (por)", "form": "Obrigado pela ajuda." },
+        { "person": "price, exchange (por)", "form": "Paguei dez euros por isto." },
+        { "person": "per (por)", "form": "Três vezes por semana." }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Este café é para ti.", "en": "This coffee is for you." },
+      { "pt": "Obrigado por tudo!", "en": "Thanks for everything!" },
+      { "pt": "Vou para casa.", "en": "I'm going home." },
+      { "pt": "Vamos pela praia.", "en": "Let's go along the beach." }
+    ],
+    "notes": [
+      "Ir para suggests going somewhere to stay a while (Vou para casa); ir a is a shorter visit (Vou ao supermercado).",
+      "Por favor uses por; para sempre (forever) uses para."
+    ],
+    "drills": [
+      { "type": "choice", "before": "Vou ", "after": " casa.", "options": ["para", "por"], "answer": "para", "en": "I'm going home.", "why": "Where you're going: para." },
+      { "type": "choice", "before": "Obrigado ", "after": " tudo!", "options": ["por", "para"], "answer": "por", "en": "Thanks for everything!", "why": "Thanking someone for something: por." },
+      { "type": "choice", "before": "Este presente é ", "after": " ti.", "options": ["para", "por"], "answer": "para", "en": "This present is for you.", "why": "Who it's for: para." },
+      { "type": "choice", "before": "Passámos ", "after": " parque.", "options": ["pelo", "para o"], "answer": "pelo", "en": "We went through the park.", "why": "Through or along: por (por + o = pelo)." },
+      { "type": "choice", "before": "Estudo ", "after": " aprender.", "options": ["para", "por"], "answer": "para", "en": "I study in order to learn.", "why": "Purpose (in order to): para." },
+      { "type": "choice", "before": "Paguei dez euros ", "after": " este livro.", "options": ["por", "para"], "answer": "por", "en": "I paid ten euros for this book.", "why": "A price or exchange: por." },
+      { "type": "choice", "before": "Vou ao ginásio três vezes ", "after": " semana.", "options": ["por", "para"], "answer": "por", "en": "I go to the gym three times a week.", "why": "Per: por." },
+      { "type": "choice", "before": "O trabalho é ", "after": " amanhã.", "options": ["para", "por"], "answer": "para", "en": "The work is due tomorrow.", "why": "A deadline: para." },
+      { "type": "choice", "before": "O livro foi escrito ", "after": " Saramago.", "options": ["por", "para"], "answer": "por", "en": "The book was written by Saramago.", "why": "By (who did it): por." },
+      { "type": "choice", "before": "Obrigado ", "after": " ajuda.", "options": ["pela", "para a"], "answer": "pela", "en": "Thanks for the help.", "why": "Thanks for: por + a = pela." },
+      { "type": "choice", "before": "Partimos ", "after": " Faro amanhã.", "options": ["para", "por"], "answer": "para", "en": "We're leaving for Faro tomorrow.", "why": "Where you're going: para." },
+      { "type": "choice", "before": "Fiquei em casa ", "after": " causa da chuva.", "options": ["por", "para"], "answer": "por", "en": "I stayed at home because of the rain.", "why": "Because of: por causa de." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-relatives",
+    "title": "que, quem, onde, o que",
+    "summary": "who, which, where, what",
+    "focus": "word",
+    "intro": [
+      "Que is the all-purpose \"who\", \"which\" or \"that\": O homem que mora aqui. O livro que li.",
+      "Quem is \"who\" after a small word like com or de, or \"whoever\": A pessoa com quem falei. Quem quiser pode vir.",
+      "Onde = where: A cidade onde nasci. O que = what, \"the thing that\": Não percebi o que disseste.",
+      "Cujo = whose. It's mostly written, so just recognise it: O autor cujo livro li (the author whose book I read)."
+    ],
+    "examples": [
+      { "pt": "O homem que mora aqui é médico.", "en": "The man who lives here is a doctor." },
+      { "pt": "A pessoa com quem falei foi simpática.", "en": "The person I spoke to was nice." },
+      { "pt": "Esta é a cidade onde nasci.", "en": "This is the city where I was born." },
+      { "pt": "Não percebi o que disseste.", "en": "I didn't understand what you said." }
+    ],
+    "notes": [
+      "English often drops \"that\" (the book I read). Portuguese never drops que: o livro que li.",
+      "The small word goes in front: a pessoa com quem falei, never \"quem falei com\".",
+      "Quem quiser pode vir = Whoever wants can come (with the future subjunctive)."
+    ],
+    "drills": [
+      { "type": "sentence", "hint": "who", "before": "O homem ", "after": " mora aqui é médico.", "answer": "que", "en": "The man who lives here is a doctor." },
+      { "type": "sentence", "hint": "that, often left out in English", "before": "O livro ", "after": " li era ótimo.", "answer": "que", "en": "The book I read was great." },
+      { "type": "sentence", "hint": "who, after com", "before": "A pessoa com ", "after": " falei foi simpática.", "answer": "quem", "en": "The person I spoke to was nice." },
+      { "type": "sentence", "hint": "where", "before": "Esta é a cidade ", "after": " nasci.", "answer": "onde", "en": "This is the city where I was born." },
+      { "type": "sentence", "hint": "what", "before": "Não percebi ", "after": " disseste.", "answer": "o que", "en": "I didn't understand what you said." },
+      { "type": "sentence", "hint": "whoever", "before": "", "after": " quiser pode vir.", "answer": "Quem", "en": "Whoever wants to can come." },
+      { "type": "order", "answer": "Não percebi o que disseste.", "en": "I didn't understand what you said." },
+      { "type": "order", "answer": "Esta é a cidade onde nasci.", "en": "This is the city where I was born." },
+      { "type": "choice", "before": "O livro ", "after": " comprei é caro.", "options": ["que", "quem"], "answer": "que", "en": "The book I bought is expensive.", "why": "For things: que." },
+      { "type": "choice", "before": "O amigo de ", "after": " te falei chega hoje.", "options": ["quem", "que"], "answer": "quem", "en": "The friend I told you about arrives today.", "why": "A person after a small word like de: quem." },
+      { "type": "choice", "before": "Faz ", "after": " quiseres.", "options": ["o que", "que"], "answer": "o que", "en": "Do what you want.", "why": "\"What\", meaning \"the thing that\": o que." },
+      { "type": "choice", "before": "A casa ", "after": " vivo é pequena.", "options": ["onde", "que"], "answer": "onde", "en": "The house where I live is small.", "why": "A place where something happens: onde." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-linking",
+    "title": "porque, por isso, embora",
+    "summary": "joining ideas together",
+    "focus": "word",
+    "intro": [
+      "Words that join ideas: porque (because), por isso (so, that's why), mas (but), então (so, then), embora (although, with the subjunctive), apesar de (despite, with an infinitive or a noun), enquanto (while).",
+      "To ask why, Portugal usually says Porque é que…? On its own or at the end of a question, it's porquê, with an accent: Porquê? Estás triste porquê?"
+    ],
+    "tables": [
+      { "verb": "linking words", "caption": "Linking words", "listen": "form", "rows": [
+        { "person": "because", "form": "porque" },
+        { "person": "so, that's why", "form": "por isso" },
+        { "person": "although", "form": "embora" },
+        { "person": "despite", "form": "apesar de" },
+        { "person": "while", "form": "enquanto" },
+        { "person": "so, then", "form": "então" },
+        { "person": "why? (alone or at the end)", "form": "porquê?" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Fiquei em casa porque estava a chover.", "en": "I stayed at home because it was raining." },
+      { "pt": "Estava a chover, por isso fiquei em casa.", "en": "It was raining, so I stayed at home." },
+      { "pt": "Apesar de estar cansado, fui.", "en": "Although I was tired, I went." },
+      { "pt": "Porque é que não vieste?", "en": "Why didn't you come?" }
+    ],
+    "notes": [
+      "Apesar de takes an infinitive, and the personal infinitive works too: apesar de estarmos cansados.",
+      "Aliás (in fact, actually) is very common in conversation."
+    ],
+    "drills": [
+      { "type": "sentence", "hint": "because", "before": "Fiquei em casa ", "after": " estava a chover.", "answer": "porque", "en": "I stayed at home because it was raining." },
+      { "type": "sentence", "hint": "so, that's why", "before": "Estava a chover, ", "after": " fiquei em casa.", "answer": "por isso", "en": "It was raining, so I stayed at home." },
+      { "type": "sentence", "hint": "despite", "before": "", "after": " estar cansado, fui.", "answer": "Apesar de", "en": "Although I was tired, I went." },
+      { "type": "sentence", "hint": "why", "before": "", "after": " é que não vieste?", "answer": "Porque", "en": "Why didn't you come?" },
+      { "type": "sentence", "hint": "why, at the end", "before": "Estás triste ", "after": "?", "answer": "porquê", "en": "Why are you sad?" },
+      { "type": "sentence", "hint": "while", "before": "Eu cozinho ", "after": " tu pões a mesa.", "answer": "enquanto", "en": "I'll cook while you set the table." },
+      { "type": "order", "answer": "Porque é que não vieste?", "en": "Why didn't you come?" },
+      { "type": "order", "answer": "Estava a chover, por isso fiquei em casa.", "en": "It was raining, so I stayed at home." },
+      { "type": "choice", "before": "", "after": " esteja frio, vou à praia.", "options": ["Embora", "Apesar de"], "answer": "Embora", "en": "Although it's cold, I'm going to the beach.", "why": "Embora takes the subjunctive (esteja); apesar de takes an infinitive." },
+      { "type": "choice", "before": "", "after": " estar frio, vou à praia.", "options": ["Apesar de", "Embora"], "answer": "Apesar de", "en": "Even though it's cold, I'm going to the beach.", "why": "Apesar de takes an infinitive (estar)." },
+      { "type": "choice", "before": "Não vieste ", "after": "?", "options": ["porquê", "porque"], "answer": "porquê", "en": "Why didn't you come?", "why": "At the end of a question: porquê, with an accent." },
+      { "type": "choice", "before": "Tenho fome, ", "after": " vou comer.", "options": ["por isso", "porque"], "answer": "por isso", "en": "I'm hungry, so I'm going to eat.", "why": "A result (so): por isso. Porque gives a reason." }
+    ],
+    "verified": false
+  }
+]
