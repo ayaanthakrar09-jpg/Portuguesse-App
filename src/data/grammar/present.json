@@ -441,5 +441,235 @@
       { "type": "sentence", "before": "O que ", "after": " tu fazer amanhã?", "answer": "queres", "en": "What do you want to do tomorrow?" }
     ],
     "verified": false
+  },
+  {
+    "id": "g-ver-dar-ler",
+    "title": "ver, dar, ler",
+    "summary": "to see, to give, to read",
+    "intro": [
+      "Three short, irregular verbs you'll use every day. Ver and ler follow almost the same pattern."
+    ],
+    "tables": [
+      { "verb": "ver", "meaning": "to see", "rows": [
+        { "person": "eu", "form": "vejo" },
+        { "person": "tu", "form": "vês" },
+        { "person": "ele / ela / você", "form": "vê" },
+        { "person": "nós", "form": "vemos" },
+        { "person": "eles / elas / vocês", "form": "veem" }
+      ] },
+      { "verb": "dar", "meaning": "to give", "rows": [
+        { "person": "eu", "form": "dou" },
+        { "person": "tu", "form": "dás" },
+        { "person": "ele / ela / você", "form": "dá" },
+        { "person": "nós", "form": "damos" },
+        { "person": "eles / elas / vocês", "form": "dão" }
+      ] },
+      { "verb": "ler", "meaning": "to read", "rows": [
+        { "person": "eu", "form": "leio" },
+        { "person": "tu", "form": "lês" },
+        { "person": "ele / ela / você", "form": "lê" },
+        { "person": "nós", "form": "lemos" },
+        { "person": "eles / elas / vocês", "form": "leem" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Vejo televisão à noite.", "en": "I watch TV in the evening." },
+      { "pt": "Vês aquele prédio?", "en": "Do you see that building?" },
+      { "pt": "Damos os parabéns à Rita.", "en": "We wish Rita a happy birthday." },
+      { "pt": "Leio o jornal ao pequeno-almoço.", "en": "I read the paper at breakfast." }
+    ],
+    "notes": [
+      "Veem and leem used to be written vêem and lêem. You'll still see the old spelling, and both are accepted here.",
+      "Ver is also \"to watch\": ver televisão, ver um filme, ver o jogo.",
+      "Dar appears in many expressions: dar um passeio (to go for a walk), dar os parabéns (to wish happy birthday)."
+    ],
+    "drills": [
+      { "type": "form", "verb": "ver", "person": "eu", "answer": "vejo" },
+      { "type": "form", "verb": "ver", "person": "tu", "answer": "vês" },
+      { "type": "form", "verb": "dar", "person": "ela", "answer": "dá" },
+      { "type": "form", "verb": "dar", "person": "nós", "answer": "damos" },
+      { "type": "form", "verb": "ler", "person": "eles", "answer": "leem", "alternatives": ["lêem"] },
+      { "type": "form", "verb": "ler", "person": "você", "answer": "lê" },
+      { "type": "sentence", "verb": "ver", "before": "Eu ", "after": " televisão à noite.", "answer": "vejo", "en": "I watch TV in the evening." },
+      { "type": "sentence", "verb": "ver", "before": "Tu ", "after": " bem sem óculos?", "answer": "vês", "en": "Can you see well without glasses?" },
+      { "type": "sentence", "verb": "ler", "before": "Eles ", "after": " o jornal todos os dias.", "answer": "leem", "alternatives": ["lêem"], "en": "They read the paper every day." },
+      { "type": "sentence", "verb": "ler", "before": "A Ana ", "after": " muitos livros.", "answer": "lê", "en": "Ana reads a lot of books." },
+      { "type": "sentence", "verb": "dar", "before": "Eu ", "after": " um passeio depois do jantar.", "answer": "dou", "en": "I go for a walk after dinner." },
+      { "type": "sentence", "verb": "dar", "before": "Nós ", "after": " os parabéns à Rita.", "answer": "damos", "en": "We wish Rita a happy birthday." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-dizer-trazer-saber",
+    "title": "dizer, trazer, saber",
+    "summary": "to say, to bring, to know",
+    "intro": [
+      "Dizer and trazer change in the eu form (digo, trago) and lose the final -e in ele diz, ele traz, just like fazer.",
+      "Saber only changes in the eu form: sei."
+    ],
+    "tables": [
+      { "verb": "dizer", "meaning": "to say", "rows": [
+        { "person": "eu", "form": "digo" },
+        { "person": "tu", "form": "dizes" },
+        { "person": "ele / ela / você", "form": "diz" },
+        { "person": "nós", "form": "dizemos" },
+        { "person": "eles / elas / vocês", "form": "dizem" }
+      ] },
+      { "verb": "trazer", "meaning": "to bring", "rows": [
+        { "person": "eu", "form": "trago" },
+        { "person": "tu", "form": "trazes" },
+        { "person": "ele / ela / você", "form": "traz" },
+        { "person": "nós", "form": "trazemos" },
+        { "person": "eles / elas / vocês", "form": "trazem" }
+      ] },
+      { "verb": "saber", "meaning": "to know", "rows": [
+        { "person": "eu", "form": "sei" },
+        { "person": "tu", "form": "sabes" },
+        { "person": "ele / ela / você", "form": "sabe" },
+        { "person": "nós", "form": "sabemos" },
+        { "person": "eles / elas / vocês", "form": "sabem" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Como se diz \"thank you\" em português?", "en": "How do you say \"thank you\" in Portuguese?" },
+      { "pt": "Eu trago o vinho.", "en": "I'll bring the wine." },
+      { "pt": "Não sei.", "en": "I don't know." },
+      { "pt": "Sabes onde fica a estação?", "en": "Do you know where the station is?" }
+    ],
+    "notes": [
+      "Saber is knowing a fact, or knowing how to do something: Sei nadar = I can swim.",
+      "Knowing a person or a place is a different verb, conhecer: Conheço o Porto = I know Porto."
+    ],
+    "drills": [
+      { "type": "form", "verb": "dizer", "person": "eu", "answer": "digo" },
+      { "type": "form", "verb": "dizer", "person": "ela", "answer": "diz" },
+      { "type": "form", "verb": "trazer", "person": "eu", "answer": "trago" },
+      { "type": "form", "verb": "trazer", "person": "tu", "answer": "trazes" },
+      { "type": "form", "verb": "saber", "person": "eu", "answer": "sei" },
+      { "type": "form", "verb": "saber", "person": "nós", "answer": "sabemos" },
+      { "type": "sentence", "verb": "dizer", "before": "Como se ", "after": " \"obrigado\" em inglês?", "answer": "diz", "en": "How do you say \"obrigado\" in English?" },
+      { "type": "sentence", "verb": "dizer", "before": "Eu ", "after": " sempre a verdade.", "answer": "digo", "en": "I always tell the truth." },
+      { "type": "sentence", "verb": "trazer", "before": "Eu ", "after": " a sobremesa.", "answer": "trago", "en": "I'll bring dessert." },
+      { "type": "sentence", "verb": "trazer", "before": "O empregado ", "after": " a conta.", "answer": "traz", "en": "The waiter brings the bill." },
+      { "type": "sentence", "verb": "saber", "before": "Desculpe, não ", "after": ".", "answer": "sei", "en": "Sorry, I don't know." },
+      { "type": "sentence", "verb": "saber", "before": "Tu ", "after": " onde fica a farmácia?", "answer": "sabes", "en": "Do you know where the chemist's is?" }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-vir-por",
+    "title": "vir, pôr",
+    "summary": "to come, to put",
+    "intro": [
+      "Vir and pôr are very irregular, so learn them as tables.",
+      "Careful: ele vem (he comes) but eles vêm (they come), just like tem and têm."
+    ],
+    "tables": [
+      { "verb": "vir", "meaning": "to come", "rows": [
+        { "person": "eu", "form": "venho" },
+        { "person": "tu", "form": "vens" },
+        { "person": "ele / ela / você", "form": "vem" },
+        { "person": "nós", "form": "vimos" },
+        { "person": "eles / elas / vocês", "form": "vêm" }
+      ] },
+      { "verb": "pôr", "meaning": "to put", "rows": [
+        { "person": "eu", "form": "ponho" },
+        { "person": "tu", "form": "pões" },
+        { "person": "ele / ela / você", "form": "põe" },
+        { "person": "nós", "form": "pomos" },
+        { "person": "eles / elas / vocês", "form": "põem" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Vens jantar connosco?", "en": "Are you coming to dinner with us?" },
+      { "pt": "O autocarro vem às dez.", "en": "The bus comes at ten." },
+      { "pt": "Eu ponho a mesa.", "en": "I'll set the table." },
+      { "pt": "Onde pões as chaves?", "en": "Where do you put the keys?" }
+    ],
+    "notes": [
+      "Vir is coming towards where the speaker is; ir is going somewhere else. Vens à festa? = Are you coming to the party? (the speaker will be there)",
+      "Pôr has an accent to tell it apart from por (by, through).",
+      "Nós vimos (we come) looks exactly like vimos (we saw, from ver). The sentence tells you which one it is."
+    ],
+    "drills": [
+      { "type": "form", "verb": "vir", "person": "eu", "answer": "venho" },
+      { "type": "form", "verb": "vir", "person": "tu", "answer": "vens" },
+      { "type": "form", "verb": "vir", "person": "eles", "answer": "vêm" },
+      { "type": "form", "verb": "pôr", "person": "eu", "answer": "ponho" },
+      { "type": "form", "verb": "pôr", "person": "ela", "answer": "põe" },
+      { "type": "form", "verb": "pôr", "person": "nós", "answer": "pomos" },
+      { "type": "sentence", "verb": "vir", "before": "Tu ", "after": " à festa?", "answer": "vens", "en": "Are you coming to the party?" },
+      { "type": "sentence", "verb": "vir", "before": "O autocarro ", "after": " às dez.", "answer": "vem", "en": "The bus comes at ten." },
+      { "type": "sentence", "verb": "vir", "before": "Eles ", "after": " jantar connosco.", "answer": "vêm", "en": "They're coming to dinner with us." },
+      { "type": "sentence", "verb": "pôr", "before": "Eu ", "after": " a mesa.", "answer": "ponho", "en": "I'll set the table." },
+      { "type": "sentence", "verb": "pôr", "before": "Onde ", "after": " tu as chaves?", "answer": "pões", "en": "Where do you put the keys?" },
+      { "type": "sentence", "verb": "pôr", "before": "Eles ", "after": " açúcar no café.", "answer": "põem", "en": "They put sugar in their coffee." }
+    ],
+    "verified": false
+  },
+  {
+    "id": "g-pedir-ouvir-dormir-sair",
+    "title": "pedir, ouvir, dormir, sair",
+    "summary": "-ir verbs that change in a few forms",
+    "intro": [
+      "These -ir verbs are regular apart from a few forms, mostly eu: peço, ouço, durmo, saio."
+    ],
+    "tables": [
+      { "verb": "pedir", "meaning": "to ask for, to order", "rows": [
+        { "person": "eu", "form": "peço" },
+        { "person": "tu", "form": "pedes" },
+        { "person": "ele / ela / você", "form": "pede" },
+        { "person": "nós", "form": "pedimos" },
+        { "person": "eles / elas / vocês", "form": "pedem" }
+      ] },
+      { "verb": "ouvir", "meaning": "to hear, to listen", "rows": [
+        { "person": "eu", "form": "ouço" },
+        { "person": "tu", "form": "ouves" },
+        { "person": "ele / ela / você", "form": "ouve" },
+        { "person": "nós", "form": "ouvimos" },
+        { "person": "eles / elas / vocês", "form": "ouvem" }
+      ] },
+      { "verb": "dormir", "meaning": "to sleep", "rows": [
+        { "person": "eu", "form": "durmo" },
+        { "person": "tu", "form": "dormes" },
+        { "person": "ele / ela / você", "form": "dorme" },
+        { "person": "nós", "form": "dormimos" },
+        { "person": "eles / elas / vocês", "form": "dormem" }
+      ] },
+      { "verb": "sair", "meaning": "to leave, to go out", "rows": [
+        { "person": "eu", "form": "saio" },
+        { "person": "tu", "form": "sais" },
+        { "person": "ele / ela / você", "form": "sai" },
+        { "person": "nós", "form": "saímos" },
+        { "person": "eles / elas / vocês", "form": "saem" }
+      ] }
+    ],
+    "examples": [
+      { "pt": "Peço sempre o prato do dia.", "en": "I always order the dish of the day." },
+      { "pt": "Ela ouve música no autocarro.", "en": "She listens to music on the bus." },
+      { "pt": "Não durmo bem.", "en": "I don't sleep well." },
+      { "pt": "A que horas sais do trabalho?", "en": "What time do you leave work?" }
+    ],
+    "notes": [
+      "In Portugal you'll also hear and see oiço instead of ouço. Both are correct and both are accepted here.",
+      "Pedir is asking for something (Peço um café). Asking a question is perguntar.",
+      "Preferir changes only in the eu form: prefiro, preferes, prefere…",
+      "Sair de = to leave a place: saio de casa, sais do trabalho (de + o = do)."
+    ],
+    "drills": [
+      { "type": "form", "verb": "pedir", "person": "eu", "answer": "peço" },
+      { "type": "form", "verb": "ouvir", "person": "eu", "answer": "ouço", "alternatives": ["oiço"] },
+      { "type": "form", "verb": "dormir", "person": "eu", "answer": "durmo" },
+      { "type": "form", "verb": "dormir", "person": "tu", "answer": "dormes" },
+      { "type": "form", "verb": "sair", "person": "eu", "answer": "saio" },
+      { "type": "form", "verb": "sair", "person": "nós", "answer": "saímos" },
+      { "type": "sentence", "verb": "pedir", "before": "Eu ", "after": " sempre o prato do dia.", "answer": "peço", "en": "I always order the dish of the day." },
+      { "type": "sentence", "verb": "ouvir", "before": "Ela ", "after": " música no autocarro.", "answer": "ouve", "en": "She listens to music on the bus." },
+      { "type": "sentence", "verb": "dormir", "before": "Os miúdos ", "after": " muito.", "answer": "dormem", "en": "The kids sleep a lot." },
+      { "type": "sentence", "verb": "sair", "before": "A que horas ", "after": " tu do trabalho?", "answer": "sais", "en": "What time do you leave work?" },
+      { "type": "sentence", "verb": "sair", "before": "Nós ", "after": " ao sábado à noite.", "answer": "saímos", "en": "We go out on Saturday nights." },
+      { "type": "sentence", "verb": "pedir", "before": "Eles ", "after": " a conta.", "answer": "pedem", "en": "They ask for the bill." }
+    ],
+    "verified": false
   }
 ]

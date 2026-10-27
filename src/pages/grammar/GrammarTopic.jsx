@@ -4,6 +4,12 @@ import Icon from "../../components/Icon";
 import { findTopic } from "../../lib/grammar";
 import { speak, speechMessages } from "../../lib/speech";
 
+// A topic has one verb `table`, or several `tables` (one per verb, with its meaning).
+function verbTables(topic) {
+  if (topic.tables) return topic.tables;
+  return topic.table ? [{ verb: topic.title, rows: topic.table }] : [];
+}
+
 export default function GrammarTopic({ progress }) {
   const topic = findTopic(useParams().topicId);
   const [voiceNote, setVoiceNote] = useState("");
@@ -27,28 +33,33 @@ export default function GrammarTopic({ progress }) {
       <div className="card grammar-card">
         {topic.intro.map((line) => <p key={line}>{line}</p>)}
 
-        {topic.table && (
-          <table className="verb-table">
-            <caption className="visually-hidden">Present tense of {topic.title}</caption>
-            <tbody>
-              {topic.table.map((row) => (
-                <tr key={row.person}>
-                  <th scope="row" lang="pt-PT">{row.person}</th>
-                  <td lang="pt-PT">{row.form}</td>
-                  <td>
-                    <button
-                      className="btn btn-icon btn-small"
-                      onClick={() => say(`${row.person.split(" / ")[0]} ${row.form}`)}
-                      aria-label={`Listen to ${row.person.split(" / ")[0]} ${row.form}`}
-                    >
-                      <Icon name="speaker" size={16} />
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
+        {verbTables(topic).map((table) => (
+          <div key={table.verb} className="verb-block">
+            {table.meaning && (
+              <h2 className="card-title"><span lang="pt-PT">{table.verb}</span> <span className="muted">{table.meaning}</span></h2>
+            )}
+            <table className="verb-table">
+              <caption className="visually-hidden">Present tense of {table.verb}</caption>
+              <tbody>
+                {table.rows.map((row) => (
+                  <tr key={row.person}>
+                    <th scope="row" lang="pt-PT">{row.person}</th>
+                    <td lang="pt-PT">{row.form}</td>
+                    <td>
+                      <button
+                        className="btn btn-icon btn-small"
+                        onClick={() => say(`${row.person.split(" / ")[0]} ${row.form}`)}
+                        aria-label={`Listen to ${row.person.split(" / ")[0]} ${row.form}`}
+                      >
+                        <Icon name="speaker" size={16} />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ))}
 
         <div className="grammar-examples">
           <h2 className="card-title">Examples</h2>

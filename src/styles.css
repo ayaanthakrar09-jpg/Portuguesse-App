@@ -602,6 +602,7 @@ ul { padding: 0; list-style: none; }
 /* ---------- Grammar ---------- */
 .grammar-card { gap: 16px; max-width: 760px; }
 .grammar-card > p { max-width: 62ch; }
+.verb-block { display: grid; gap: 4px; }
 .verb-table { border-collapse: collapse; width: 100%; max-width: 420px; }
 .verb-table th, .verb-table td { padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line); text-align: left; }
 .verb-table tr:last-child th, .verb-table tr:last-child td { border-bottom: 0; }

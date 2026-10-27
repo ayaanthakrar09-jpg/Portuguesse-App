@@ -57,7 +57,7 @@ function Practice({ updateProgress, topicId }) {
     event.preventDefault();
     if (result) return next();
     if (!typed.trim()) return;
-    mark(markText(typed, [question.answer]));
+    mark(markText(typed, [question.answer, ...(question.alternatives ?? [])]));
   }
 
   function next() {
