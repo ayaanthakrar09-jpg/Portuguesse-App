@@ -887,12 +887,12 @@ ul { padding: 0; list-style: none; }
 }
 .path-test .path-tile { border-style: dashed; }
 .path-level-head { display: grid; gap: 2px; }
-/* Level colours: traditional azulejo paints, one per level in turn */
-.paint-cobalt { --paint: #4a86e8; }
-.paint-ochre { --paint: #e0a63a; }
-.paint-green { --paint: #4fb37a; }
-.paint-manganese { --paint: #a07ad6; }
-.paint-terracotta { --paint: #e07a55; }
+/* Level colours: Portugal's flag red, green and gold, and azulejo blue, one per level in turn
+   (the green is brighter than the flag's so it stands out on the dark green background) */
+.paint-red { --paint: #e5483d; }
+.paint-green { --paint: #2fbf6f; }
+.paint-gold { --paint: #f0c419; }
+.paint-blue { --paint: #4a86e8; }
 .path-level-title { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .level-badge {
   padding: 3px 12px;
@@ -903,8 +903,9 @@ ul { padding: 0; list-style: none; }
   font-weight: 700;
 }
 .path-level .path-node:not(.is-done):not(.is-current) .path-tile {
-  border-color: color-mix(in srgb, var(--paint) 75%, var(--line));
-  background: color-mix(in srgb, var(--paint) 26%, var(--surface));
+  border-color: var(--paint);
+  background: var(--surface);
+  box-shadow: inset 0 -5px 0 color-mix(in srgb, var(--paint) 45%, transparent);
 }
 .path-level .path-pips span.is-on { background: var(--paint); }
 .path-level.is-locked .level-badge { background: transparent; color: var(--paint); box-shadow: inset 0 0 0 1.5px var(--paint); }

@@ -5,8 +5,8 @@ import { setSoundOn, soundOn } from "../../lib/sound";
 import { currentStreak, dateKey } from "../../lib/storage";
 import GoalRing from "./GoalRing";
 
-// Each level takes one of the traditional azulejo paints, in turn.
-const LEVEL_COLOURS = ["cobalt", "ochre", "green", "manganese", "terracotta"];
+// Each level takes one of Portugal's colours in turn: the flag's red, green and gold, and azulejo blue.
+const LEVEL_COLOURS = ["red", "green", "gold", "blue"];
 
 // The path wanders left and right like a walk through tiled streets.
 const OFFSETS = [0, 1, 2, 1, 0, -1, -2, -1];
