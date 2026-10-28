@@ -5,8 +5,12 @@ import level2 from "../data/reading/level-2.json";
 import level3 from "../data/reading/level-3.json";
 import level4 from "../data/reading/level-4.json";
 import level5 from "../data/reading/level-5.json";
+import level6 from "../data/reading/level-6.json";
+import level7 from "../data/reading/level-7.json";
+import level8 from "../data/reading/level-8.json";
+import level9 from "../data/reading/level-9.json";
 
-export const texts = [...level1, ...level2, ...level3, ...level4, ...level5];
+export const texts = [...level1, ...level2, ...level3, ...level4, ...level5, ...level6, ...level7, ...level8, ...level9];
 
 export function findText(id) {
   return texts.find((text) => text.id === id);
