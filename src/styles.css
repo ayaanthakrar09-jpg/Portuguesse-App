@@ -988,3 +988,4 @@ ul { padding: 0; list-style: none; }
   .end-value { font-size: 1.5rem; }
   .end-stat .goal-ring { width: 48px; height: 48px; }
 }
+.reading-why { font-size: 0.95rem; padding-left: 12px; border-left: 2px solid var(--line); }

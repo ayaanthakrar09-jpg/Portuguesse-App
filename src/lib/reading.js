@@ -1,8 +1,12 @@
-// Reading texts. To add more: create src/data/reading/level-N.json and import it below.
+// Reading texts, two per Vocab level. To add more: create src/data/reading/level-N.json and import it below.
 
 import level1 from "../data/reading/level-1.json";
+import level2 from "../data/reading/level-2.json";
+import level3 from "../data/reading/level-3.json";
+import level4 from "../data/reading/level-4.json";
+import level5 from "../data/reading/level-5.json";
 
-export const texts = [...level1];
+export const texts = [...level1, ...level2, ...level3, ...level4, ...level5];
 
 export function findText(id) {
   return texts.find((text) => text.id === id);

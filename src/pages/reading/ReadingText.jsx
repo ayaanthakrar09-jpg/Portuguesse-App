@@ -16,8 +16,12 @@ export default function ReadingText(props) {
 }
 
 // Questions with their options in random order; `answer` becomes the right option's text.
+// True-or-false questions ("type": "tf", "answer": true/false) always show True first.
 function prepareQuestions(text) {
-  return text.questions.map((question) => ({ ...question, answer: question.options[question.answer], options: shuffle(question.options) }));
+  return text.questions.map((question) => {
+    if (question.type === "tf") return { ...question, options: ["True", "False"], answer: question.answer ? "True" : "False" };
+    return { ...question, answer: question.options[question.answer], options: shuffle(question.options) };
+  });
 }
 
 function Reader({ progress, updateProgress, textId }) {
@@ -136,6 +140,12 @@ function Reader({ progress, updateProgress, textId }) {
                   );
                 })}
               </div>
+              {checked && question.why && (
+                <p className="reading-why">
+                  <span className="muted">In the text: </span>
+                  <span lang="pt-PT">“{question.why}”</span>
+                </p>
+              )}
             </li>
           ))}
         </ol>
