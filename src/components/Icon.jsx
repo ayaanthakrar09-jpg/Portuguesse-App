@@ -1,5 +1,6 @@
 // Small shared set of line icons so every screen looks consistent.
 const paths = {
+  learn: "M5 19h4v-4h4v-4h4V7h2M17 5l2 2-2 2",
   home: "M4 11.5 12 5l8 6.5V19a1 1 0 0 1-1 1h-4v-5h-6v5H5a1 1 0 0 1-1-1z",
   vocab: "M5 6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zM9 9h6M9 13h4",
   speaking: "M12 4a3 3 0 0 1 3 3v5a3 3 0 0 1-6 0V7a3 3 0 0 1 3-3zM6 11a6 6 0 0 0 12 0M12 17v3",

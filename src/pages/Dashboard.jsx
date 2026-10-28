@@ -7,6 +7,7 @@ import { stages, topics } from "../lib/grammar";
 import { texts } from "../lib/reading";
 import { speak, speechMessages } from "../lib/speech";
 import { StageBar } from "../components/Stages";
+import { LESSONS_PER_UNIT, currentUnitStep } from "../lib/lessons";
 import { SECURE_DAYS, countPracticeStages, countStages, needsRevision, practiceStage } from "../lib/mastery";
 import { dueCards } from "../lib/srs";
 import { currentStreak, dateKey, exportBackup, readBackup } from "../lib/storage";
@@ -54,6 +55,8 @@ function remember(key, value) {
 // Up to three suggestions for what to do next, most urgent first.
 function nextSteps(progress, today) {
   const steps = [];
+  const lesson = currentUnitStep(progress);
+  if (lesson) steps.push({ to: `/learn/${lesson.unit.id}`, title: `Lesson: ${lesson.unit.title}`, detail: `Learn path, lesson ${lesson.count + 1} of ${LESSONS_PER_UNIT}` });
   const passed = progress.vocab.passedLevels;
   const due = dueCards(openItems(passed), progress.cards, today).length;
   if (due > 0) steps.push({ to: "/vocab/review", title: `Review ${due} ${due === 1 ? "flashcard" : "flashcards"}`, detail: "Due today, so they stick" });

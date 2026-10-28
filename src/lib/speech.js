@@ -18,6 +18,18 @@ function pickVoice() {
   return { voice: null, status: "no-portuguese-voice" };
 }
 
+// "ok" only when a European Portuguese voice is installed. Used to decide whether listening questions make sense.
+export async function voiceStatus() {
+  if (!speechSupported()) return "unsupported";
+  if (speechSynthesis.getVoices().length === 0) {
+    await new Promise((resolve) => {
+      speechSynthesis.addEventListener("voiceschanged", resolve, { once: true });
+      setTimeout(resolve, 500);
+    });
+  }
+  return pickVoice().status;
+}
+
 export const speechMessages = {
   unsupported: "This browser can't play speech. Try Edge or Chrome.",
   "no-portuguese-voice":

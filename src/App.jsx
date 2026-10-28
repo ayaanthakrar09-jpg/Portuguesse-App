@@ -19,6 +19,8 @@ import SlangQuiz from "./pages/slang/SlangQuiz";
 import SpeakingHome from "./pages/speaking/SpeakingHome";
 import SpeakingSession from "./pages/speaking/SpeakingSession";
 import Tutor from "./pages/tutor/Tutor";
+import LearnPath from "./pages/learn/LearnPath";
+import Lesson from "./pages/learn/Lesson";
 import { useProgress } from "./lib/useProgress";
 
 // Speaking is built but switched off until it has been tried with a real microphone.
@@ -43,6 +45,8 @@ export default function App() {
       <main className="main">
         <Routes>
           <Route path="/" element={<Dashboard progress={progress} updateProgress={updateProgress} />} />
+          <Route path="/learn" element={<LearnPath progress={progress} />} />
+          <Route path="/learn/:unitId" element={<Lesson progress={progress} updateProgress={updateProgress} />} />
           <Route path="/vocab" element={<VocabHome progress={progress} />} />
           <Route path="/vocab/level/:levelId" element={<LevelPage progress={progress} />} />
           <Route path="/vocab/level/:levelId/test" element={<LevelTest progress={progress} updateProgress={updateProgress} />} />

@@ -108,7 +108,7 @@ export function AnswerField({ inputRef, value, onChange, result, buttonText }) {
 
 // Word tiles: tap one to add it to the sentence, tap it in the sentence to take it back.
 // `chosen` is the list of tile ids picked so far.
-export function WordTiles({ question, chosen, onChange, result }) {
+export function WordTiles({ question, chosen, onChange, result, lang = "pt-PT" }) {
   const placed = chosen.map((id) => question.tiles.find((tile) => tile.id === id));
   const left = question.tiles.filter((tile) => !chosen.includes(tile.id));
   return (
@@ -116,7 +116,7 @@ export function WordTiles({ question, chosen, onChange, result }) {
       <div className={`order-line ${result ? `is-${result}` : ""}`} aria-label="Your sentence">
         {placed.length === 0 && <span className="muted">Tap the words below</span>}
         {placed.map((tile) => (
-          <button key={tile.id} type="button" className="tile" lang="pt-PT" disabled={Boolean(result)}
+          <button key={tile.id} type="button" className="tile" lang={lang} disabled={Boolean(result)}
             onClick={() => onChange(chosen.filter((id) => id !== tile.id))}>
             {tile.text}
           </button>
@@ -124,7 +124,7 @@ export function WordTiles({ question, chosen, onChange, result }) {
       </div>
       <div className="tile-pool" aria-label="Words to use">
         {left.map((tile) => (
-          <button key={tile.id} type="button" className="tile" lang="pt-PT" disabled={Boolean(result)}
+          <button key={tile.id} type="button" className="tile" lang={lang} disabled={Boolean(result)}
             onClick={() => onChange([...chosen, tile.id])}>
             {tile.text}
           </button>

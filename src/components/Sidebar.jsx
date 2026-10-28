@@ -4,6 +4,7 @@ import Icon from "./Icon";
 
 const links = [
   { to: "/", label: "Home", icon: "home" },
+  { to: "/learn", label: "Learn", icon: "learn" },
   { to: "/vocab", label: "Vocab", icon: "vocab" },
   { to: "/speaking", label: "Speaking", icon: "speaking" },
   { to: "/reading", label: "Reading", icon: "reading" },
