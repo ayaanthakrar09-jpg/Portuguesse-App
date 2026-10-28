@@ -887,7 +887,28 @@ ul { padding: 0; list-style: none; }
 }
 .path-test .path-tile { border-style: dashed; }
 .path-level-head { display: grid; gap: 2px; }
-.path-node.is-locked { opacity: 0.38; cursor: default; }
+/* Level colours: traditional azulejo paints, one per level in turn */
+.paint-cobalt { --paint: #4a86e8; }
+.paint-ochre { --paint: #e0a63a; }
+.paint-green { --paint: #4fb37a; }
+.paint-manganese { --paint: #a07ad6; }
+.paint-terracotta { --paint: #e07a55; }
+.path-level-title { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.level-badge {
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: var(--paint);
+  color: #10231a;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.path-level .path-node:not(.is-done):not(.is-current) .path-tile {
+  border-color: color-mix(in srgb, var(--paint) 75%, var(--line));
+  background: color-mix(in srgb, var(--paint) 26%, var(--surface));
+}
+.path-level .path-pips span.is-on { background: var(--paint); }
+.path-level.is-locked .level-badge { background: transparent; color: var(--paint); box-shadow: inset 0 0 0 1.5px var(--paint); }
+.path-node.is-locked { opacity: 0.5; cursor: default; }
 .path-node.is-locked:hover .path-tile { transform: none; }
 .path-level.is-locked .path-level-title { color: var(--muted); }
 .path-locked { display: grid; gap: 10px; }

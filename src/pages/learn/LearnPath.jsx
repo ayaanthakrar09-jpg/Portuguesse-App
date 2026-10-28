@@ -5,6 +5,9 @@ import { setSoundOn, soundOn } from "../../lib/sound";
 import { currentStreak, dateKey } from "../../lib/storage";
 import GoalRing from "./GoalRing";
 
+// Each level takes one of the traditional azulejo paints, in turn.
+const LEVEL_COLOURS = ["cobalt", "ochre", "green", "manganese", "terracotta"];
+
 // The path wanders left and right like a walk through tiled streets.
 const OFFSETS = [0, 1, 2, 1, 0, -1, -2, -1];
 
@@ -30,6 +33,7 @@ export default function LearnPath({ progress }) {
       <header className="learn-head">
         <div>
           <h1 className="page-title">Learn</h1>
+          <p className="muted">Start here: lessons teach each new word, so you don't need Vocab first. Use Vocab to look words up or for extra practice.</p>
           <p className="muted">One road through all {steps.length} levels. Each unit has {LESSONS_PER_UNIT} lessons, the last a review; each level ends with a checkpoint that opens the next.</p>
         </div>
         <div className="learn-today">
@@ -45,9 +49,9 @@ export default function LearnPath({ progress }) {
       </header>
 
       {steps.map(({ level, open, units, test }) => (
-        <section key={level.id} className={`path-level ${open ? "" : "is-locked"}`}>
+        <section key={level.id} className={`path-level paint-${LEVEL_COLOURS[(level.id - 1) % LEVEL_COLOURS.length]} ${open ? "" : "is-locked"}`}>
           <div className="path-level-head">
-            <h2 className="path-level-title">Level {level.id}: {level.title}</h2>
+            <h2 className="path-level-title"><span className="level-badge">Level {level.id}</span>{level.title}</h2>
             {!open && <p className="muted">Pass the Level {level.id - 1} checkpoint to open</p>}
           </div>
           <ol className="path">
