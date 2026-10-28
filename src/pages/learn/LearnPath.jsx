@@ -21,15 +21,16 @@ export default function LearnPath({ progress }) {
     setSound(!sound);
   }
 
-  const openLevels = steps.filter((step) => step.open);
-  const lockedLevels = steps.filter((step) => !step.open);
+  // One position counter for the whole road, so it keeps winding from one level into the next.
+  let position = 0;
+  const offset = () => OFFSETS[position++ % OFFSETS.length];
 
   return (
     <section className="page learn">
       <header className="learn-head">
         <div>
           <h1 className="page-title">Learn</h1>
-          <p className="muted">Short lessons, one unit at a time. Each unit has {LESSONS_PER_UNIT} lessons.</p>
+          <p className="muted">One road through all {steps.length} levels. Each unit has {LESSONS_PER_UNIT} lessons, the last a review; each level ends with a checkpoint that opens the next.</p>
         </div>
         <div className="learn-today">
           <GoalRing value={xpToday} goal={DAILY_GOAL_XP} size={56} />
@@ -43,54 +44,58 @@ export default function LearnPath({ progress }) {
         </div>
       </header>
 
-      {openLevels.map(({ level, units, test }) => (
-        <section key={level.id} className="path-level">
-          <h2 className="path-level-title">Level {level.id}: {level.title}</h2>
+      {steps.map(({ level, open, units, test }) => (
+        <section key={level.id} className={`path-level ${open ? "" : "is-locked"}`}>
+          <div className="path-level-head">
+            <h2 className="path-level-title">Level {level.id}: {level.title}</h2>
+            {!open && <p className="muted">Pass the Level {level.id - 1} checkpoint to open</p>}
+          </div>
           <ol className="path">
-            {units.map((step, i) => (
-              <li key={step.unit.id} className="path-step" style={{ "--offset": OFFSETS[i % OFFSETS.length] }} ref={step.current ? currentRef : undefined}>
-                <Link
-                  to={`/learn/${step.unit.id}`}
-                  className={`path-node ${step.done ? "is-done" : ""} ${step.current ? "is-current" : ""}`}
-                  aria-label={`${step.unit.title}: ${step.count} of ${LESSONS_PER_UNIT} lessons done`}
+            {units.map((step) => (
+              <li key={step.unit.id} className="path-step" style={{ "--offset": offset() }} ref={step.current ? currentRef : undefined}>
+                <PathNode
+                  to={open ? `/learn/${step.unit.id}` : null}
+                  className={`${step.done ? "is-done" : ""} ${step.current ? "is-current" : ""}`}
+                  label={open ? `${step.unit.title}: ${step.count} of ${LESSONS_PER_UNIT} lessons done` : `${step.unit.title}, locked`}
                 >
                   {step.current && <span className="path-start">{step.count ? "Continue" : "Start"}</span>}
                   <span className="path-tile" aria-hidden="true" />
                   <span className="path-label">
                     <span className="path-title">{step.unit.title}</span>
-                    <span className="path-pips" aria-hidden="true">
-                      {Array.from({ length: LESSONS_PER_UNIT }, (_, n) => <span key={n} className={n < step.count ? "is-on" : ""} />)}
-                    </span>
+                    {open && (
+                      <span className="path-pips" aria-hidden="true">
+                        {Array.from({ length: LESSONS_PER_UNIT }, (_, n) => <span key={n} className={n < step.count ? "is-on" : ""} />)}
+                      </span>
+                    )}
                   </span>
-                </Link>
+                </PathNode>
               </li>
             ))}
-            <li className="path-step" style={{ "--offset": OFFSETS[units.length % OFFSETS.length] }} ref={test.current ? currentRef : undefined}>
-              <Link to={`/vocab/level/${level.id}/test`} className={`path-node path-test ${test.passed ? "is-done" : ""} ${test.current ? "is-current" : ""}`}>
+            <li className="path-step" style={{ "--offset": offset() }} ref={test.current ? currentRef : undefined}>
+              <PathNode
+                to={open ? `/learn/checkpoint/${level.id}` : null}
+                className={`path-test ${test.passed ? "is-done" : ""} ${test.current ? "is-current" : ""}`}
+                label={`Level ${level.id} checkpoint${test.passed ? ", passed" : ""}`}
+              >
                 {test.current && <span className="path-start">Ready</span>}
                 <span className="path-tile" aria-hidden="true">{test.passed ? "" : "Test"}</span>
                 <span className="path-label">
-                  <span className="path-title">Level {level.id} test</span>
-                  <span className="muted">{test.passed ? "Passed" : "Pass it to open the next level"}</span>
+                  <span className="path-title">Level {level.id} checkpoint</span>
+                  {open && <span className="muted">{test.passed ? "Passed" : "20 questions, 80% opens the next level"}</span>}
                 </span>
-              </Link>
+              </PathNode>
             </li>
           </ol>
         </section>
       ))}
 
-      {lockedLevels.length > 0 && (
-        <section className="path-locked">
-          <h2 className="path-level-title">Still to come</h2>
-          <ul>
-            {lockedLevels.map(({ level }) => (
-              <li key={level.id}><span className="path-lock-tile" aria-hidden="true" />Level {level.id}: {level.title}</li>
-            ))}
-          </ul>
-        </section>
-      )}
-
       <p className="note">Lessons use the example sentences from Vocab. None of them has been checked by a native speaker yet.</p>
     </section>
   );
+}
+
+// A step on the road: a link while its level is open, plain and faded while it's locked.
+function PathNode({ to, className, label, children }) {
+  if (!to) return <div className={`path-node is-locked ${className}`} aria-label={label}>{children}</div>;
+  return <Link to={to} className={`path-node ${className}`} aria-label={label}>{children}</Link>;
 }

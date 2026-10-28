@@ -1,14 +1,15 @@
-// The Learn path: short mixed lessons, one unit at a time, mostly built from the example sentences.
-// A lesson meets up to five words of a unit (new ones first, then the ones you know least)
-// and asks two questions about each: word questions and whole-sentence ones.
+// The Learn path: mixed lessons of about 20 questions, one unit at a time, mostly built from the example sentences.
+// A lesson meets up to six words of a unit (new ones first, then the ones you know least) and asks three
+// questions about each; a unit's last lesson reviews all its words with sentences only.
 
 import { markAnswer, markText } from "./answers";
 import { choiceQuestion, shuffle, typeQuestion } from "./exercises";
 import { rate } from "./srs";
 import { allItems, isLevelOpen, levels } from "./vocab";
 
-export const LESSONS_PER_UNIT = 3;
-const FOCUS_PER_LESSON = 5;
+export const LESSONS_PER_UNIT = 4;
+const FOCUS_PER_LESSON = 6;
+const REVIEW_LENGTH = 20;
 export const XP_PER_LESSON = 10;
 export const XP_PERFECT_BONUS = 5;
 export const DAILY_GOAL_XP = 30;
@@ -58,6 +59,7 @@ export function lessonQuestion(kind, item, unitItems) {
   const others = unitItems.filter((other) => other.id !== item.id);
   if (kind === "choice") return choiceQuestion(item, unitItems);
   if (kind === "type") return typeQuestion(item);
+  if (kind === "type-sentence") return { item, kind, prompt: item.example.en, answer: item.example.pt };
   if (kind === "build-en") {
     return { item, kind, prompt: item.example.pt, answer: item.example.en, tiles: sentenceTiles(item.example.en, others.map((o) => o.example.en)) };
   }
@@ -75,22 +77,45 @@ function focusItems(unit, cards, today) {
   return shuffle(unit.items).sort((a, b) => rank(a) - rank(b)).slice(0, FOCUS_PER_LESSON);
 }
 
-// The lesson's screens: a "new word" card before a new word's first question, then two questions per word.
-export function buildLesson(unit, cards, today, { canListen }) {
+// The question types a word can have. Words with a sentence of three or more words lean on the sentence.
+function kindsFor(item, canListen) {
+  if (!isSentence(item)) return ["type", "choice"];
+  return ["build-pt", "type-sentence", "build-en", "type", ...(canListen ? ["listen"] : [])];
+}
+
+// The last lesson of a unit reviews every word of it with sentences only, about REVIEW_LENGTH questions.
+function reviewScreens(unit, canListen) {
+  const sentences = shuffle(unit.items.filter(isSentence));
+  const kinds = ["build-pt", "type-sentence", "build-en", ...(canListen ? ["listen"] : [])];
+  const screens = [];
+  for (let round = 0; screens.length < REVIEW_LENGTH && round < 2; round += 1) {
+    for (const [i, item] of sentences.entries()) {
+      if (screens.length === REVIEW_LENGTH) break;
+      screens.push(lessonQuestion(kinds[(i + round) % kinds.length], item, unit.items));
+    }
+  }
+  return shuffle(screens);
+}
+
+// A lesson's screens. Lesson LESSONS_PER_UNIT of a unit is its review; the others meet up to FOCUS_PER_LESSON
+// words: a "new word" card before a new word, then three different questions about each word.
+export function buildLesson(unit, cards, today, { canListen, lessonNumber }) {
+  if (lessonNumber === LESSONS_PER_UNIT) {
+    return { review: true, focus: unit.items, screens: reviewScreens(unit, canListen) };
+  }
   const focus = focusItems(unit, cards, today);
   const first = [];
   const later = [];
   for (const item of focus) {
-    const kinds = ["choice", "type"];
-    if (isSentence(item)) kinds.push("build-pt", "build-pt", "build-en", ...(canListen ? ["listen"] : []));
     const isNew = !cards[item.id];
-    const [a, b] = shuffle(kinds.filter((kind) => kind !== "choice")).filter((kind, i, list) => list.indexOf(kind) === i);
+    const [a, b, c] = shuffle(kindsFor(item, canListen));
     if (isNew) first.push({ item, kind: "new" });
     // A brand-new word starts with the easiest question.
     first.push(lessonQuestion(isNew ? "choice" : a, item, unit.items));
     later.push(lessonQuestion(isNew ? a : b ?? "choice", item, unit.items));
+    later.push(lessonQuestion(isNew ? b ?? "choice" : c ?? "choice", item, unit.items));
   }
-  return { focus, screens: [...first, ...shuffle(later)] };
+  return { review: false, focus, screens: [...first, ...shuffle(later)] };
 }
 
 // Whether an answer is right. Word tiles and typing are marked the same way as elsewhere:
@@ -157,4 +182,9 @@ export function pathSteps(progress) {
 
 export function currentUnitStep(progress) {
   return pathSteps(progress).flatMap((level) => level.units).find((step) => step.current);
+}
+
+// The level whose checkpoint is the next thing on the path, if that's where you are.
+export function currentCheckpoint(progress) {
+  return pathSteps(progress).find((step) => step.test.current)?.level;
 }

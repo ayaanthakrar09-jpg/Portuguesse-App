@@ -14,13 +14,15 @@ function newTest(level) {
 }
 
 // The key starts a fresh test when you move from one level straight to another.
+// Also the checkpoint at the end of each level on the Learn path (`fromLearn`): then its links lead back to the path.
 export default function LevelTest(props) {
   const { levelId } = useParams();
   return <Test key={levelId} levelId={levelId} {...props} />;
 }
 
-function Test({ progress, updateProgress, levelId }) {
+function Test({ progress, updateProgress, levelId, fromLearn = false }) {
   const level = findLevel(levelId);
+  const backTo = (id) => (fromLearn ? "/learn" : `/vocab/level/${id}`);
   const [questions, setQuestions] = useState(() => (level ? newTest(level) : []));
   const [answers, setAnswers] = useState([]); // { question, given, outcome } per question answered
   const [picked, setPicked] = useState(null);
@@ -43,7 +45,7 @@ function Test({ progress, updateProgress, levelId }) {
     return () => window.removeEventListener("keydown", onKey);
   });
 
-  if (!level || !isLevelOpen(level.id, progress.vocab.passedLevels)) return <Navigate to="/vocab" replace />;
+  if (!level || !isLevelOpen(level.id, progress.vocab.passedLevels)) return <Navigate to={fromLearn ? "/learn" : "/vocab"} replace />;
 
   function submit(event) {
     event.preventDefault();
@@ -116,9 +118,9 @@ function Test({ progress, updateProgress, levelId }) {
           </p>
           <div className="actions">
             {passed && nextLevel ? (
-              <Link to={`/vocab/level/${nextLevel.id}`} className="btn btn-primary">Go to Level {nextLevel.id}</Link>
+              <Link to={backTo(nextLevel.id)} className="btn btn-primary">{fromLearn ? "Back to the path" : `Go to Level ${nextLevel.id}`}</Link>
             ) : (
-              <Link to={`/vocab/level/${level.id}`} className="btn btn-primary">Back to Level {level.id}</Link>
+              <Link to={backTo(level.id)} className="btn btn-primary">{fromLearn ? "Back to the path" : `Back to Level ${level.id}`}</Link>
             )}
             <button className="btn" onClick={retake}>Retake the test</button>
           </div>
@@ -156,7 +158,7 @@ function Test({ progress, updateProgress, levelId }) {
   return (
     <section className="page">
       <div className="session-bar">
-        <Link to={`/vocab/level/${level.id}`} className="btn btn-quiet">Leave test</Link>
+        <Link to={backTo(level.id)} className="btn btn-quiet">Leave test</Link>
         <span className="muted">Question {number} of {questions.length}</span>
       </div>
       <div className="test-track" aria-hidden="true">

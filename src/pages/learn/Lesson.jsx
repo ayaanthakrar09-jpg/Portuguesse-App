@@ -27,6 +27,7 @@ export default function Lesson(props) {
 
 const instructions = {
   "build-pt": "Write this in Portuguese",
+  "type-sentence": "Type this in Portuguese",
   "build-en": "What does this mean?",
   listen: "Tap what you hear",
 };
@@ -35,7 +36,7 @@ function LessonRun({ progress, updateProgress, unitId, canListen, onAgain }) {
   const unit = findUnit(unitId);
   const navigate = useNavigate();
   const today = dateKey();
-  const [lesson] = useState(() => (unit ? buildLesson(unit, progress.cards, today, { canListen }) : null));
+  const [lesson] = useState(() => (unit ? buildLesson(unit, progress.cards, today, { canListen, lessonNumber: lessonsDone(progress, unit.id) + 1 }) : null));
   const [queue, setQueue] = useState(() => lesson?.screens.map((screen, sid) => ({ ...screen, sid })) ?? []);
   const [picked, setPicked] = useState(null);
   const [typed, setTyped] = useState("");
@@ -66,14 +67,14 @@ function LessonRun({ progress, updateProgress, unitId, canListen, onAgain }) {
   }
 
   function currentAnswer() {
-    if (screen.kind === "type") return typed;
+    if (screen.kind === "type" || screen.kind === "type-sentence") return typed;
     if (["build-pt", "build-en", "listen"].includes(screen.kind)) return chosen.map((id) => screen.tiles.find((t) => t.id === id).text).join(" ");
     return picked;
   }
 
   function ready() {
     if (screen.kind === "new") return true;
-    if (screen.kind === "type") return typed.trim() !== "";
+    if (screen.kind === "type" || screen.kind === "type-sentence") return typed.trim() !== "";
     if (screen.tiles) return chosen.length > 0;
     return picked !== null;
   }
@@ -127,6 +128,9 @@ function LessonRun({ progress, updateProgress, unitId, canListen, onAgain }) {
         <SessionProgress left={queue.length} />
         <span className={`combo ${combo >= 3 ? "is-on" : ""}`} aria-live="polite">{combo >= 3 ? `${combo} in a row` : ""}</span>
       </div>
+      <div className="lesson-label">
+        <span className="chip">{unit.title}{lesson.review ? ": unit review" : ""}</span>
+      </div>
 
       <form className="lesson-body" onSubmit={check}>
         <div className="lesson-question" key={`${screen.sid}-${queue.length}`}>
@@ -159,6 +163,14 @@ function LessonRun({ progress, updateProgress, unitId, canListen, onAgain }) {
             <>
               <QuestionPrompt question={screen} />
               <p className="muted">{typeHint(item)}</p>
+              <AnswerField inputRef={inputRef} value={typed} onChange={setTyped} result={result} buttonText={result ? "Continue" : "Check"} />
+            </>
+          )}
+
+          {screen.kind === "type-sentence" && (
+            <>
+              <p className="muted">{instructions[screen.kind]}</p>
+              <p className="sentence-text">{screen.prompt}</p>
               <AnswerField inputRef={inputRef} value={typed} onChange={setTyped} result={result} buttonText={result ? "Continue" : "Check"} />
             </>
           )}
@@ -196,15 +208,15 @@ function LessonRun({ progress, updateProgress, unitId, canListen, onAgain }) {
                   <ResultMark ok={result === "correct"} />
                   {result === "correct" ? "Right!" : "Correct answer:"}
                 </p>
-                {(result === "wrong" || screen.tiles) && (
+                {(result === "wrong" || screen.tiles || screen.kind === "type-sentence") && (
                   <p className="check-answer" lang={screen.kind === "build-en" || screen.kind === "pt-en" ? "en" : "pt-PT"}>{screen.answer}</p>
                 )}
-                {screen.tiles && screen.kind !== "build-en" && <p className="muted">{item.example.en}</p>}
+                {(screen.tiles || screen.kind === "type-sentence") && screen.kind !== "build-en" && <p className="muted">{item.example.en}</p>}
                 {screen.kind === "build-en" && <p className="muted" lang="pt-PT">{item.example.pt}</p>}
                 <AutoNextControl auto={auto} />
               </div>
             )}
-            {screen.kind !== "type" && (
+            {screen.kind !== "type" && screen.kind !== "type-sentence" && (
               <button type="submit" className="btn btn-primary check-button" disabled={!result && !ready()}>
                 {screen.kind === "new" || result ? "Continue" : "Check"}
               </button>
@@ -226,7 +238,7 @@ function LessonEnd({ unit, finished, onAgain }) {
       <p className="lesson-end-title" lang="pt-PT">{finished.perfect ? "Perfeito!" : "Muito bem!"}</p>
       <p className="muted">
         {unitDone
-          ? `${unit.title}: all ${LESSONS_PER_UNIT} lessons done.`
+          ? `${unit.title}: unit finished. Its tile on the path is now an azulejo.`
           : `${unit.title}: lesson ${finished.lessonNumber} of ${LESSONS_PER_UNIT} done.`}
       </p>
 

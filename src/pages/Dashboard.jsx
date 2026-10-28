@@ -7,7 +7,7 @@ import { stages, topics } from "../lib/grammar";
 import { texts } from "../lib/reading";
 import { speak, speechMessages } from "../lib/speech";
 import { StageBar } from "../components/Stages";
-import { LESSONS_PER_UNIT, currentUnitStep } from "../lib/lessons";
+import { LESSONS_PER_UNIT, currentCheckpoint, currentUnitStep } from "../lib/lessons";
 import { SECURE_DAYS, countPracticeStages, countStages, needsRevision, practiceStage } from "../lib/mastery";
 import { dueCards } from "../lib/srs";
 import { currentStreak, dateKey, exportBackup, readBackup } from "../lib/storage";
@@ -56,7 +56,9 @@ function remember(key, value) {
 function nextSteps(progress, today) {
   const steps = [];
   const lesson = currentUnitStep(progress);
+  const checkpoint = currentCheckpoint(progress);
   if (lesson) steps.push({ to: `/learn/${lesson.unit.id}`, title: `Lesson: ${lesson.unit.title}`, detail: `Learn path, lesson ${lesson.count + 1} of ${LESSONS_PER_UNIT}` });
+  else if (checkpoint) steps.push({ to: `/learn/checkpoint/${checkpoint.id}`, title: `Level ${checkpoint.id} checkpoint`, detail: "Learn path: pass it to open the next level" });
   const passed = progress.vocab.passedLevels;
   const due = dueCards(openItems(passed), progress.cards, today).length;
   if (due > 0) steps.push({ to: "/vocab/review", title: `Review ${due} ${due === 1 ? "flashcard" : "flashcards"}`, detail: "Due today, so they stick" });
@@ -73,7 +75,7 @@ function nextSteps(progress, today) {
   if (unit) steps.push({ to: `/vocab/unit/${unit.id}`, title: unit.title, detail: `Vocab, level ${unit.level}` });
   else {
     const untested = openLevels.find((level) => !passed.includes(level.id));
-    if (untested) steps.push({ to: `/vocab/level/${untested.id}/test`, title: `Level ${untested.id} test`, detail: "Vocab: pass it to open the next level" });
+    if (untested && !checkpoint) steps.push({ to: `/vocab/level/${untested.id}/test`, title: `Level ${untested.id} test`, detail: "Vocab: pass it to open the next level" });
   }
 
   const topic = topics.find((t) => !progress.grammar?.[t.id]);

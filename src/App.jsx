@@ -47,6 +47,7 @@ export default function App() {
           <Route path="/" element={<Dashboard progress={progress} updateProgress={updateProgress} />} />
           <Route path="/learn" element={<LearnPath progress={progress} />} />
           <Route path="/learn/:unitId" element={<Lesson progress={progress} updateProgress={updateProgress} />} />
+          <Route path="/learn/checkpoint/:levelId" element={<LevelTest fromLearn progress={progress} updateProgress={updateProgress} />} />
           <Route path="/vocab" element={<VocabHome progress={progress} />} />
           <Route path="/vocab/level/:levelId" element={<LevelPage progress={progress} />} />
           <Route path="/vocab/level/:levelId/test" element={<LevelTest progress={progress} updateProgress={updateProgress} />} />
