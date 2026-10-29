@@ -217,6 +217,14 @@ ul { padding: 0; list-style: none; }
 .btn-quiet:hover:not(:disabled) { background: var(--surface); border-color: transparent; color: var(--text); }
 .btn-icon { width: 46px; height: 46px; padding: 0; }
 .btn-small { width: 36px; height: 36px; flex: none; }
+.btn-danger { background: var(--red); border-color: var(--red); color: #fff; }
+.btn-danger:hover:not(:disabled) { background: #ee6a5a; border-color: #ee6a5a; }
+
+/* Crash screen */
+.error-card { display: grid; gap: 14px; }
+.error-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.error-reset { display: grid; justify-items: start; gap: 10px; padding-top: 14px; border-top: 1px solid var(--line); }
+.error-card code { display: block; margin-top: 8px; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.85rem; }
 
 /* ---------- Side stats and week ---------- */
 .side-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 12px; }

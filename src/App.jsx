@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import ErrorBoundary from "./components/ErrorBoundary";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import ComingSoon from "./pages/ComingSoon";
@@ -38,11 +39,14 @@ const upcoming = [
 
 export default function App() {
   const [progress, updateProgress] = useProgress();
+  const { pathname } = useLocation();
 
   return (
     <div className="app">
       <Sidebar />
       <main className="main">
+        {/* A crash on one page shows a way out there, and the menu keeps working. */}
+        <ErrorBoundary resetKey={pathname}>
         <Routes>
           <Route path="/" element={<Dashboard progress={progress} updateProgress={updateProgress} />} />
           <Route path="/learn" element={<LearnPath progress={progress} />} />
@@ -77,6 +81,7 @@ export default function App() {
           ))}
           <Route path="*" element={<ComingSoon title="Page not found" text="That page doesn't exist. Use the menu to go back." />} />
         </Routes>
+        </ErrorBoundary>
       </main>
     </div>
   );

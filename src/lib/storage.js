@@ -13,6 +13,7 @@ export function emptyProgress() {
     reading: {}, // best question score per text: { textId: { best, total } }
     grammar: {}, // best practice score per topic: { topicId: { best, total } }
     slang: null, // best quiz score: { best, total }
+    learn: { lessons: {}, xp: {} }, // lessons done per unit, XP per day
   };
 }
 
@@ -23,13 +24,94 @@ export function dateKey(date = new Date()) {
   return `${y}-${m}-${d}`;
 }
 
+/* ---------- Repairing saved data ---------- */
+// Saved progress can be old, half-written or edited by hand. Rather than crash, keep every part that
+// has the right shape, fill in what's missing and drop what can't be used.
+
+const isObject = (value) => value !== null && typeof value === "object" && !Array.isArray(value);
+const isDate = (value) => typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value);
+const isCount = (value) => Number.isFinite(value) && value >= 0;
+
+// The entries of an object that pass `ok`, after `fix` (if given) has repaired them.
+function keep(value, ok, fix = (entry) => entry) {
+  if (!isObject(value)) return {};
+  return Object.fromEntries(Object.entries(value).filter(([, entry]) => ok(entry)).map(([key, entry]) => [key, fix(entry)]));
+}
+
+// A flashcard needs a due date; the other numbers fall back to a fresh card's.
+const isCard = (card) => isObject(card) && isDate(card.due);
+const fixCard = (card) => ({
+  ...card,
+  interval: isCount(card.interval) ? card.interval : 0,
+  ease: Number.isFinite(card.ease) && card.ease >= 1.3 ? card.ease : 2.5,
+  reps: isCount(card.reps) ? card.reps : 0,
+  lapses: isCount(card.lapses) ? card.lapses : 0,
+});
+
+// A score record needs a best score and a total above zero (scores are divided by it).
+const isScore = (record) => isObject(record) && isCount(record.best) && Number.isFinite(record.total) && record.total > 0;
+const fixScore = (record) => ({
+  ...record,
+  ...(record.last !== undefined && !isCount(record.last) ? { last: record.best } : {}),
+  ...(record.passes !== undefined ? { passes: Array.isArray(record.passes) ? record.passes.filter(isDate).sort() : [] } : {}),
+});
+const isTest = (record) => isObject(record) && isCount(record.best);
+
+export function cleanProgress(data) {
+  if (!isObject(data)) return emptyProgress();
+  const vocab = isObject(data.vocab) ? data.vocab : {};
+  const learn = isObject(data.learn) ? data.learn : {};
+  return {
+    ...data,
+    version: 1,
+    days: Array.isArray(data.days) ? [...new Set(data.days.filter(isDate))] : [],
+    practisedPhrases: isCount(data.practisedPhrases) ? data.practisedPhrases : 0,
+    cards: keep(data.cards, isCard, fixCard),
+    vocab: {
+      ...vocab,
+      passedLevels: Array.isArray(vocab.passedLevels) ? vocab.passedLevels.filter(Number.isInteger) : [],
+      tests: keep(vocab.tests, isTest),
+      choice: keep(vocab.choice, isScore, fixScore),
+      typing: keep(vocab.typing, isScore, fixScore),
+      order: keep(vocab.order, isScore, fixScore),
+    },
+    reading: keep(data.reading, isScore, fixScore),
+    grammar: keep(data.grammar, isScore, fixScore),
+    slang: isScore(data.slang) ? fixScore(data.slang) : null,
+    learn: { ...learn, lessons: keep(learn.lessons, isCount), xp: keep(learn.xp, isCount) },
+  };
+}
+
 export function loadProgress() {
   try {
     const raw = localStorage.getItem(KEY);
     if (!raw) return emptyProgress();
-    return { ...emptyProgress(), ...JSON.parse(raw) };
+    return cleanProgress(JSON.parse(raw));
   } catch {
+    // Unreadable: keep a copy before the next save replaces it, so it can still be rescued by hand.
+    try {
+      localStorage.setItem(`${KEY}-unreadable`, localStorage.getItem(KEY));
+    } catch {
+      // Storage blocked.
+    }
     return emptyProgress();
+  }
+}
+
+// The saved text exactly as it is, so the crash screen can offer it as a download even if it can't be read.
+export function rawSavedProgress() {
+  try {
+    return localStorage.getItem(KEY);
+  } catch {
+    return null;
+  }
+}
+
+export function clearProgress() {
+  try {
+    localStorage.removeItem(KEY);
+  } catch {
+    // Storage blocked: nothing was saved anyway.
   }
 }
 
@@ -54,8 +136,10 @@ export function currentStreak(days) {
   return streak;
 }
 
+// `progress` can be the progress object or saved text that is passed through untouched.
 export function exportBackup(progress) {
-  const blob = new Blob([JSON.stringify(progress, null, 2)], { type: "application/json" });
+  const text = typeof progress === "string" ? progress : JSON.stringify(progress, null, 2);
+  const blob = new Blob([text], { type: "application/json" });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
@@ -72,8 +156,8 @@ export async function readBackup(file) {
   } catch {
     throw new Error("That file isn't a valid backup.");
   }
-  if (data?.version !== 1 || !Array.isArray(data.days) || typeof data.cards !== "object") {
+  if (!isObject(data) || data.version !== 1 || !Array.isArray(data.days) || !isObject(data.cards)) {
     throw new Error("That file isn't a backup from this app.");
   }
-  return { ...emptyProgress(), ...data };
+  return cleanProgress(data);
 }
