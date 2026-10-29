@@ -54,10 +54,14 @@ function sentenceTiles(sentence, otherSentences) {
 
 const isSentence = (item) => sentenceWords(item.example.pt).length >= 3;
 
+const choiceKinds = ["choice", "pt-en", "en-pt", "blank"];
+
 // One question of `kind` about `item`; `unitItems` supplies wrong options and extra tiles.
+// A multiple-choice question's own kind ("pt-en", "en-pt", "blank") asks a fresh multiple-choice question,
+// which is how a wrong one comes back at the end of a lesson.
 export function lessonQuestion(kind, item, unitItems) {
   const others = unitItems.filter((other) => other.id !== item.id);
-  if (kind === "choice") return choiceQuestion(item, unitItems);
+  if (choiceKinds.includes(kind)) return choiceQuestion(item, unitItems);
   if (kind === "type") return typeQuestion(item);
   if (kind === "type-sentence") return { item, kind, prompt: item.example.en, answer: item.example.pt };
   if (kind === "build-en") {

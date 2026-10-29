@@ -855,7 +855,8 @@ ul { padding: 0; list-style: none; }
 .path-level { display: grid; gap: 14px; }
 .path-level-title { font-size: 1.15rem; font-weight: 600; }
 .path { list-style: none; margin: 0; padding: 8px 0 12px; display: grid; gap: 22px; --step: 44px; }
-.path-step { transform: translateX(calc(var(--offset) * var(--step))); justify-self: center; width: min(100%, 300px); }
+/* Steps swing up to 2 × --step either way, so leave that much room on each side or a phone scrolls sideways. */
+.path-step { transform: translateX(calc(var(--offset) * var(--step))); justify-self: center; width: min(100% - 4 * var(--step), 300px); }
 .path-node { position: relative; display: flex; align-items: center; gap: 14px; color: var(--text); text-decoration: none; border-radius: var(--radius-md); }
 .path-tile {
   flex: none;

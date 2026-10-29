@@ -3,7 +3,7 @@
 
 import { describe, expect, it } from "vitest";
 import { choiceQuestion } from "./exercises";
-import { LESSONS_PER_UNIT, buildLesson, isRight, lessonsDone, pathSteps, withLessonResult, xpOn } from "./lessons";
+import { LESSONS_PER_UNIT, buildLesson, isRight, lessonQuestion, lessonsDone, pathSteps, withLessonResult, xpOn } from "./lessons";
 import { emptyProgress } from "./storage";
 import { allItems, levels } from "./vocab";
 
@@ -39,6 +39,24 @@ describe("every lesson of every unit can be answered", () => {
       }
     });
   }
+});
+
+// A wrong answer comes back as lessonQuestion(screen.kind, ...). This used to turn a wrong
+// multiple-choice question into one with no options, which crashed the lesson.
+describe("a question asked again", () => {
+  it("is the same type of question and can still be answered", () => {
+    for (const unit of units) {
+      for (let lessonNumber = 1; lessonNumber <= LESSONS_PER_UNIT; lessonNumber += 1) {
+        const lesson = buildLesson(unit, {}, today, { canListen: true, lessonNumber });
+        for (const screen of lesson.screens.filter((s) => s.kind !== "new")) {
+          const again = lessonQuestion(screen.kind, screen.item, unit.items);
+          expect(Boolean(again.options), `${screen.item.id} ${screen.kind}`).toBe(Boolean(screen.options));
+          expect(Boolean(again.tiles), `${screen.item.id} ${screen.kind}`).toBe(Boolean(screen.tiles));
+          expect(isRight(again, rightAnswer(again))).toBe(true);
+        }
+      }
+    }
+  });
 });
 
 describe("multiple choice", () => {

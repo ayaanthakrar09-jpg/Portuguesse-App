@@ -4,3 +4,5 @@ dist
 .env.*
 *.log
 .vite
+test-results
+playwright-report
