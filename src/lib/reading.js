@@ -13,10 +13,14 @@ import level10 from "../data/reading/level-10.json";
 import level11 from "../data/reading/level-11.json";
 import level12 from "../data/reading/level-12.json";
 import level13 from "../data/reading/level-13.json";
+import level14 from "../data/reading/level-14.json";
+import level15 from "../data/reading/level-15.json";
+import level16 from "../data/reading/level-16.json";
+import level17 from "../data/reading/level-17.json";
 
 export const texts = [
   ...level1, ...level2, ...level3, ...level4, ...level5, ...level6, ...level7, ...level8, ...level9,
-  ...level10, ...level11, ...level12, ...level13,
+  ...level10, ...level11, ...level12, ...level13, ...level14, ...level15, ...level16, ...level17,
 ];
 
 export function findText(id) {
