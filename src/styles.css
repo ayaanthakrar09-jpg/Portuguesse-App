@@ -26,8 +26,8 @@
   --radius-md: 16px;
   --radius-sm: 10px;
   --sidebar-w: 232px;
-  --font: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-pt: "Literata", Georgia, serif; /* every Portuguese word, so you always know which language you're reading */
+  --font: "Bricolage Grotesque Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-pt: "Literata Variable", Georgia, serif; /* every Portuguese word, so you always know which language you're reading */
 }
 
 * { box-sizing: border-box; }

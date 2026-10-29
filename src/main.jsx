@@ -3,6 +3,10 @@ import { createRoot } from "react-dom/client";
 import { HashRouter } from "react-router-dom";
 import App from "./App";
 import ErrorBoundary from "./components/ErrorBoundary";
+// Fonts are bundled with the app (no Google download), so they also work offline.
+import "@fontsource-variable/bricolage-grotesque/opsz.css";
+import "@fontsource-variable/literata/opsz.css";
+import "@fontsource-variable/literata/opsz-italic.css";
 import "./styles.css";
 
 createRoot(document.getElementById("root")).render(
